@@ -6,22 +6,21 @@
     <description>Recent content in News on Kula Raula Gaikovina, Dr.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>&amp;copy;2016 Raula Kula</copyright>
-    <lastBuildDate>Sun, 24 Sep 2017 19:50:47 +0530</lastBuildDate>
+    <copyright>&amp;copy;2017 Raula G. Kula</copyright>
+    <lastBuildDate>Wed, 27 Sep 2017 19:50:47 +0530</lastBuildDate>
     
 	<atom:link href="https://raux.github.io/categories/news/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>News &amp; Activities</title>
+      <title>Recent Activities</title>
       <link>https://raux.github.io/post/work2/</link>
-      <pubDate>Sun, 24 Sep 2017 19:50:47 +0530</pubDate>
+      <pubDate>Wed, 27 Sep 2017 19:50:47 +0530</pubDate>
       
       <guid>https://raux.github.io/post/work2/</guid>
-      <description>&lt;p&gt;Hi, I am Raula Kula, a member of the SE Lab  &lt;a href=&#34;http://isw3.naist.jp/Contents/Research/cs-05-en.html&#34;&gt;&lt;strong&gt;@NAIST&lt;/strong&gt;&lt;/a&gt;, as an Assistant Professor.
-As an empirical researcher, I use various techniques on &lt;strong&gt;libraries&lt;/strong&gt;, &lt;strong&gt;software visualizations&lt;/strong&gt; and &lt;strong&gt;software ecosystems&lt;/strong&gt;. Check out my recent publications and academic activities.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;I am a member the &lt;a href=&#34;http://isw3.naist.jp/Contents/Research/cs-05-en.html&#34;&gt;&lt;strong&gt;@NAIST&lt;/strong&gt;&lt;/a&gt; SE Lab , as an Assistant Professor.
+I research various techniques on software &lt;strong&gt;libraries&lt;/strong&gt;, including &lt;strong&gt;visualizing&lt;/strong&gt; their &lt;strong&gt;ecosystems&lt;/strong&gt;.
+&lt;/p&gt;</description>
     </item>
     
   </channel>

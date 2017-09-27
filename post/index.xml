@@ -6,36 +6,25 @@
     <description>Recent content in Posts on Kula Raula Gaikovina, Dr.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>&amp;copy;2016 Raula Kula</copyright>
-    <lastBuildDate>Sat, 05 Nov 2016 18:25:22 +0530</lastBuildDate>
+    <copyright>&amp;copy;2017 Raula G. Kula</copyright>
+    <lastBuildDate>Wed, 27 Sep 2017 19:50:47 +0530</lastBuildDate>
     
 	<atom:link href="https://raux.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Teaching</title>
-      <link>https://raux.github.io/post/work1/</link>
-      <pubDate>Sat, 05 Nov 2016 18:25:22 +0530</pubDate>
+      <title>Recent Activities</title>
+      <link>https://raux.github.io/post/work2/</link>
+      <pubDate>Wed, 27 Sep 2017 19:50:47 +0530</pubDate>
       
-      <guid>https://raux.github.io/post/work1/</guid>
-      <description>&lt;p&gt;Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life. One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.
+      <guid>https://raux.github.io/post/work2/</guid>
+      <description>&lt;p&gt;I am a member the &lt;a href=&#34;http://isw3.naist.jp/Contents/Research/cs-05-en.html&#34;&gt;&lt;strong&gt;@NAIST&lt;/strong&gt;&lt;/a&gt; SE Lab , as an Assistant Professor.
+I research various techniques on software &lt;strong&gt;libraries&lt;/strong&gt;, including &lt;strong&gt;visualizing&lt;/strong&gt; their &lt;strong&gt;ecosystems&lt;/strong&gt;.
 &lt;/p&gt;</description>
     </item>
     
     <item>
-      <title>News &amp; Activities</title>
-      <link>https://raux.github.io/post/work2/</link>
-      <pubDate>Sun, 24 Sep 2017 19:50:47 +0530</pubDate>
-      
-      <guid>https://raux.github.io/post/work2/</guid>
-      <description>&lt;p&gt;Hi, I am Raula Kula, a member of the SE Lab  &lt;a href=&#34;http://isw3.naist.jp/Contents/Research/cs-05-en.html&#34;&gt;&lt;strong&gt;@NAIST&lt;/strong&gt;&lt;/a&gt;, as an Assistant Professor.
-As an empirical researcher, I use various techniques on &lt;strong&gt;libraries&lt;/strong&gt;, &lt;strong&gt;software visualizations&lt;/strong&gt; and &lt;strong&gt;software ecosystems&lt;/strong&gt;. Check out my recent publications and academic activities.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Publications</title>
+      <title>List of Publications</title>
       <link>https://raux.github.io/post/work3/</link>
       <pubDate>Sat, 24 Sep 2016 19:44:32 +0530</pubDate>
       
@@ -45,12 +34,12 @@ As an empirical researcher, I use various techniques on &lt;strong&gt;libraries&
     </item>
     
     <item>
-      <title>Projects &amp; Collaborations</title>
+      <title>Misc.</title>
       <link>https://raux.github.io/post/work5/</link>
-      <pubDate>Sat, 05 Nov 2016 19:53:42 +0530</pubDate>
+      <pubDate>Tue, 26 Sep 2017 19:53:42 +0530</pubDate>
       
       <guid>https://raux.github.io/post/work5/</guid>
-      <description>&lt;p&gt;Fifth abundantly made Give sixth hath. Cattle creature i be don&amp;rsquo;t them.
+      <description>&lt;p&gt;Random Notes and Stuff.
 &lt;/p&gt;</description>
     </item>
     
