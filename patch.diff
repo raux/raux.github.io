@@ -1,0 +1,1878 @@
+From dfd8bd38c775247d4b65363c5c4c8631bcab9be9 Mon Sep 17 00:00:00 2001
+From: Raula Kula <raula.kilarouge@gmail.com>
+Date: Wed, 27 Sep 2017 22:10:32 +0900
+Subject: [PATCH] Adding Details
+
+Getting the latest version
+---
+ about/index.html                              | 231 ++++++++++++++++++++++++++
+ about/index.xml                               |  26 ---
+ categories/index.xml                          |  15 +-
+ categories/news/index.html                    |  45 +----
+ categories/news/index.xml                     |  15 +-
+ {about/index => categories/papers}/index.html |  98 +++++------
+ categories/papers/index.xml                   |  26 +++
+ categories/publications/index.html            |  74 +--------
+ categories/publications/index.xml             |  20 +--
+ contact/index.xml                             |   2 +-
+ contact/index/index.html                      |  50 +-----
+ index.html                                    |  77 ++-------
+ index.xml                                     |  33 ++--
+ post/index.xml                                |  33 ++--
+ post/work2/index.html                         |  79 ++++-----
+ post/work3/index.html                         |  70 ++------
+ post/work5/index.html                         |  72 ++------
+ sitemap.xml                                   |  23 +--
+ tags/index.xml                                |   2 +-
+ 19 files changed, 449 insertions(+), 542 deletions(-)
+ delete mode 100644 about/index.xml
+ rename {about/index => categories/papers}/index.html (61%)
+ create mode 100644 categories/papers/index.xml
+
+diff --git a/about/index.html b/about/index.html
+index e69de29..5ad8300 100644
+--- a/about/index.html
++++ b/about/index.html
+@@ -0,0 +1,231 @@
++<!DOCTYPE html>
++<html lang="en-us">
++  <head><meta charset="utf-8">
++<meta http-equiv="X-UA-Compatible" content="IE=edge">
++
++ <title>About me</title>
++
++
++
++<meta name="description" content="Describe your website">
++
++
++<meta name="viewport" content="width=device-width, initial-scale=1">
++<meta name="robots" content="all,follow">
++<meta name="googlebot" content="index,follow,snippet,archive">
++
++<link rel="stylesheet" href="https://raux.github.io/css/bootstrap.min.css">
++<link rel="stylesheet" id="ct-tracks-google-fonts-css" href="//fonts.googleapis.com/css?family=Raleway%3A400%2C700&amp;subset=latin%2Clatin-ext&amp;ver=4.7.2" type="text/css" media="all">
++<link rel="stylesheet" href="https://raux.github.io/css/font-awesome.min.css">
++
++<link href="https://raux.github.io/css/style.default.css" rel="stylesheet" id="theme-stylesheet">
++
++<link href="https://raux.github.io/css/custom.css" rel="stylesheet">
++<link rel="shortcut icon" href="https://raux.github.io/img/favicon.png">
++
++
++</head>
++  <body>
++    <div id="root">
++      <div class="container-fluid">
++        <div class="row site-header">
++          <div class="col-md-12">
++            <div class="row">
++              <div class="col-md-12 top-navigation">
++                <div class="row">
++  <div class="col-sm-6">
++    <div class="categories-block">
++      <a href="" class="track-categories">//</a>
++      
++      <a href="/categories/news">news</a>
++      
++      <a href="/categories/papers">papers</a>
++      
++      <a href="/categories/publications">publications</a>
++      
++    </div>
++  </div>
++
++  <div class="col-sm-6">
++    <div class="social-media-block">
++
++      
++      <a href="https://www.facebook.com/home.php" data-animate-hover="pulse" class="external facebook">
++        <i class="fa fa-facebook"></i>
++      </a>
++      
++      
++      
++      <a href="full%20profile%20url%20in%20twitter" data-animate-hover="pulse" class="external twitter">
++        <i class="fa fa-twitter"></i>
++      </a>
++      
++      
++      
++      <a href="mailto:email@example.com" data-animate-hover="pulse" class="email">
++        <i class="fa fa-envelope"></i>
++      </a>
++      
++      
++      
++      
++      <a href="full%20profile%20url%20in%20github" data-animate-hover="pulse">
++        <i class="fa fa-github"></i>
++      </a>
++      
++
++    </div>
++  </div>
++</div>
++
++              </div>
++            </div>
++            <div class="row">
++              <div class="col-md-10 header col-md-offset-1">
++                <div class="row">
++  <div class="col-md-6">
++    <div class="title-info">
++      
++      <a href=""> Kula Raula Gaikovina, Dr. </a>
++      
++    </div>
++  </div>
++  <div class="col-md-6">
++    <div class="menu">
++      <a href="/">Home /</a>
++      
++      
++      <a href="/about">about / </a>
++      
++      
++      
++      <a href="/contact">contact / </a>
++      
++      
++      
++      
++    </div>
++  </div>
++
++</div>
++
++
++              </div>
++            </div>
++          </div>
++        </div>
++        <div class="row">
++          <div class="col-md-10 main-content col-md-offset-1">
++            
++<div class="col-xs-12 col-sm-8 col-md-9 content-column white-background">
++  <div class="small-navbar visible-xs">
++  <button type="button" data-toggle="offcanvas" class="btn btn-ghost pull-left"> <i class="fa fa-align-left"> </i>Menu</button>
++  <h1 class="small-navbar-heading"><a href="/">Kula Raula Gaikovina, Dr.</a></h1>
++</div>
++
++  <div class="row">
++    <div class="col-lg-8">
++      <div class="content-column-content">
++         <h1>About me</h1>
++         
++
++<p>An sincerity so extremity he additions. Her yet <strong>there truth merit</strong>. Mrs all projecting favourable now unpleasing. Son law garden chatty temper. Oh children provided to mr elegance marriage strongly. Off can admiration prosperous now devonshire diminution law.</p>
++
++<p>Received overcame oh sensible so at an. Formed do change merely to county it. <strong>Am separate contempt</strong> domestic to to oh. On relation my so addition branched. Put hearing cottage she norland letters equally prepare too. Replied exposed savings he no viewing as up. Soon body add him hill. No father living really people estate if. Mistake do produce beloved demesne if am pursuit.</p>
++
++<p><img src="/img/about.jpg" alt="This is me" /></p>
++
++<p>The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn&rsquo;t listen. She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
++
++<h4 id="education">Education</h4>
++
++<ul>
++<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
++<li>Aliquam tincidunt mauris eu risus.</li>
++</ul>
++
++<p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then</p>
++
++      </div>
++    </div>
++  </div>
++</div>
++
++          </div>
++        </div>
++        <div class="row site-footer">
++          <div class="col-md-12">
++            <div class="row">
++  <div class="col-md-12 footer-title">
++    <h2>
++      
++      <a href=""> Kula Raula Gaikovina, Dr. </a>
++      
++    </h2>
++  </div>
++</div>
++<div class="row">
++  <div class="col-md-12 footer-menu">
++      <a href="/">Home /</a>
++      
++      
++      <a href="/about">about / </a>
++      
++      
++      
++      <a href="/contact">contact / </a>
++      
++      
++      
++      
++
++  </div>
++</div>
++<div class="row">
++  <div class="col-sm-12">
++    <div class="social-media-block-footer">
++      
++      <a href="https://www.facebook.com/home.php" data-animate-hover="pulse" class="external facebook">
++        <i class="fa fa-facebook"></i>
++      </a>
++      
++      
++      
++      <a href="full%20profile%20url%20in%20twitter" data-animate-hover="pulse" class="external twitter">
++        <i class="fa fa-twitter"></i>
++      </a>
++      
++      
++      
++      <a href="mailto:email@example.com" data-animate-hover="pulse" class="email">
++        <i class="fa fa-envelope"></i>
++      </a>
++      
++      
++      
++      
++      <a href="full%20profile%20url%20in%20github" data-animate-hover="pulse">
++        <i class="fa fa-github"></i>
++      </a>
++      
++
++    </div>
++  </div>
++</div>
++
++          </div>
++        </div>
++      </div>
++    </div>
++    <script src="https://raux.github.io/js/jquery.min.js"></script>
++<script src="https://raux.github.io/js/bootstrap.min.js"></script>
++<script src="https://raux.github.io/js/jquery.cookie.js"> </script>
++<script src="https://raux.github.io/js/ekko-lightbox.js"></script>
++<script src="https://raux.github.io/js/jquery.scrollTo.min.js"></script>
++<script src="https://raux.github.io/js/masonry.pkgd.min.js"></script>
++<script src="https://raux.github.io/js/imagesloaded.pkgd.min.js"></script>
++<script src="https://raux.github.io/js/owl.carousel.min.js"></script>
++<script src="https://raux.github.io/js/front.js"></script>
++
++  </body>
++</html>
+diff --git a/about/index.xml b/about/index.xml
+deleted file mode 100644
+index 6318bdf..0000000
+--- a/about/index.xml
++++ /dev/null
+@@ -1,26 +0,0 @@
+-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+-  <channel>
+-    <title>Abouts on Kula Raula Gaikovina, Dr.</title>
+-    <link>https://raux.github.io/about/</link>
+-    <description>Recent content in Abouts on Kula Raula Gaikovina, Dr.</description>
+-    <generator>Hugo -- gohugo.io</generator>
+-    <language>en-us</language>
+-    <copyright>&amp;copy;2016 Raula Kula</copyright>
+-    <lastBuildDate>Sat, 05 Nov 2016 21:05:33 +0530</lastBuildDate>
+-    
+-	<atom:link href="https://raux.github.io/about/index.xml" rel="self" type="application/rss+xml" />
+-    
+-    
+-    <item>
+-      <title>About me</title>
+-      <link>https://raux.github.io/about/index/</link>
+-      <pubDate>Sat, 05 Nov 2016 21:05:33 +0530</pubDate>
+-      
+-      <guid>https://raux.github.io/about/index/</guid>
+-      <description>An sincerity so extremity he additions. Her yet there truth merit. Mrs all projecting favourable now unpleasing. Son law garden chatty temper. Oh children provided to mr elegance marriage strongly. Off can admiration prosperous now devonshire diminution law.
+-Received overcame oh sensible so at an. Formed do change merely to county it. Am separate contempt domestic to to oh. On relation my so addition branched. Put hearing cottage she norland letters equally prepare too.</description>
+-    </item>
+-    
+-  </channel>
+-</rss>
+\ No newline at end of file
+diff --git a/categories/index.xml b/categories/index.xml
+index b183f6a..f5469d6 100644
+--- a/categories/index.xml
++++ b/categories/index.xml
+@@ -6,7 +6,7 @@
+     <description>Recent content in Categories on Kula Raula Gaikovina, Dr.</description>
+     <generator>Hugo -- gohugo.io</generator>
+     <language>en-us</language>
+-    <copyright>&amp;copy;2016 Raula Kula</copyright>
++    <copyright>&amp;copy;2017 Raula G. Kula</copyright>
+     
+ 	<atom:link href="https://raux.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+     
+@@ -14,16 +14,25 @@
+     <item>
+       <title>News</title>
+       <link>https://raux.github.io/categories/news/</link>
+-      <pubDate>Sun, 24 Sep 2017 19:50:47 +0530</pubDate>
++      <pubDate>Wed, 27 Sep 2017 19:50:47 +0530</pubDate>
+       
+       <guid>https://raux.github.io/categories/news/</guid>
+       <description></description>
+     </item>
+     
++    <item>
++      <title>Papers</title>
++      <link>https://raux.github.io/categories/papers/</link>
++      <pubDate>Sat, 24 Sep 2016 19:44:32 +0530</pubDate>
++      
++      <guid>https://raux.github.io/categories/papers/</guid>
++      <description></description>
++    </item>
++    
+     <item>
+       <title>Publications</title>
+       <link>https://raux.github.io/categories/publications/</link>
+-      <pubDate>Sat, 24 Sep 2016 19:44:32 +0530</pubDate>
++      <pubDate>Tue, 26 Sep 2017 19:53:42 +0530</pubDate>
+       
+       <guid>https://raux.github.io/categories/publications/</guid>
+       <description></description>
+diff --git a/categories/news/index.html b/categories/news/index.html
+index 2f9603c..ff21981 100644
+--- a/categories/news/index.html
++++ b/categories/news/index.html
+@@ -42,6 +42,8 @@
+       
+       <a href="/categories/news">news</a>
+       
++      <a href="/categories/papers">papers</a>
++      
+       <a href="/categories/publications">publications</a>
+       
+     </div>
+@@ -56,34 +58,18 @@
+       </a>
+       
+       
+-      <a href="full%20profile%20url%20in%20googleplus" data-animate-hover="pulse" class="external gplus">
+-        <i class="fa fa-google-plus"></i>
+-      </a>
+-      
+       
+       <a href="full%20profile%20url%20in%20twitter" data-animate-hover="pulse" class="external twitter">
+         <i class="fa fa-twitter"></i>
+       </a>
+       
+       
+-      <a href="full%20profile%20url%20in%20instagram" title="" class="external instagram">
+-        <i class="fa fa-instagram"></i>
+-      </a>
+-      
+       
+       <a href="mailto:email@example.com" data-animate-hover="pulse" class="email">
+         <i class="fa fa-envelope"></i>
+       </a>
+       
+       
+-      <a href="full%20profile%20url%20in%20linkedin" data-animate-hover="pulse">
+-        <i class="fa fa-linkedin"></i>
+-      </a>
+-      
+-      
+-      <a href="full%20profile%20url%20in%20stackoverflow" data-animate-hover="pulse">
+-        <i class="fa fa-stack-overflow"></i>
+-      </a>
+       
+       
+       <a href="full%20profile%20url%20in%20github" data-animate-hover="pulse">
+@@ -154,16 +140,15 @@
+       <div class="row">
+         <div class="col-md-12">
+           <div class="row content-date">
+-            September 24
++            September 27
+           </div>
+           <div class="row content-title">
+-            <h2> <a href="https://raux.github.io/post/work2/ "> News &amp; Activities </a> </h2>
++            <h2> <a href="https://raux.github.io/post/work2/ "> Recent Activities </a> </h2>
+           </div>
+           <div class="row content-summary">
+-            <p> <p>Hi, I am Raula Kula, a member of the SE Lab  <a href="http://isw3.naist.jp/Contents/Research/cs-05-en.html"><strong>@NAIST</strong></a>, as an Assistant Professor.
+-As an empirical researcher, I use various techniques on <strong>libraries</strong>, <strong>software visualizations</strong> and <strong>software ecosystems</strong>. Check out my recent publications and academic activities.</p>
+-
+-<p></p> </p>
++            <p> <p>I am a member the <a href="http://isw3.naist.jp/Contents/Research/cs-05-en.html"><strong>@NAIST</strong></a> SE Lab , as an Assistant Professor.
++I research various techniques on software <strong>libraries</strong>, including <strong>visualizing</strong> their <strong>ecosystems</strong>.
++</p> </p>
+             <a class="more-link" href="https://raux.github.io/post/work2/ "> READ THE POST </a>
+           </div>
+         </div>
+@@ -216,34 +201,18 @@ As an empirical researcher, I use various techniques on <strong>libraries</stron
+       </a>
+       
+       
+-      <a href="full%20profile%20url%20in%20googleplus" data-animate-hover="pulse" class="external gplus">
+-        <i class="fa fa-google-plus"></i>
+-      </a>
+-      
+       
+       <a href="full%20profile%20url%20in%20twitter" data-animate-hover="pulse" class="external twitter">
+         <i class="fa fa-twitter"></i>
+       </a>
+       
+       
+-      <a href="full%20profile%20url%20in%20instagram" title="" class="external instagram">
+-        <i class="fa fa-instagram"></i>
+-      </a>
+-      
+       
+       <a href="mailto:email@example.com" data-animate-hover="pulse" class="email">
+         <i class="fa fa-envelope"></i>
+       </a>
+       
+       
+-      <a href="full%20profile%20url%20in%20linkedin" data-animate-hover="pulse">
+-        <i class="fa fa-linkedin"></i>
+-      </a>
+-      
+-      
+-      <a href="full%20profile%20url%20in%20stackoverflow" data-animate-hover="pulse">
+-        <i class="fa fa-stack-overflow"></i>
+-      </a>
+       
+       
+       <a href="full%20profile%20url%20in%20github" data-animate-hover="pulse">
+diff --git a/categories/news/index.xml b/categories/news/index.xml
+index e323630..ef859ad 100644
+--- a/categories/news/index.xml
++++ b/categories/news/index.xml
+@@ -6,22 +6,21 @@
+     <description>Recent content in News on Kula Raula Gaikovina, Dr.</description>
+     <generator>Hugo -- gohugo.io</generator>
+     <language>en-us</language>
+-    <copyright>&amp;copy;2016 Raula Kula</copyright>
+-    <lastBuildDate>Sun, 24 Sep 2017 19:50:47 +0530</lastBuildDate>
++    <copyright>&amp;copy;2017 Raula G. Kula</copyright>
++    <lastBuildDate>Wed, 27 Sep 2017 19:50:47 +0530</lastBuildDate>
+     
+ 	<atom:link href="https://raux.github.io/categories/news/index.xml" rel="self" type="application/rss+xml" />
+     
+     
+     <item>
+-      <title>News &amp; Activities</title>
++      <title>Recent Activities</title>
+       <link>https://raux.github.io/post/work2/</link>
+-      <pubDate>Sun, 24 Sep 2017 19:50:47 +0530</pubDate>
++      <pubDate>Wed, 27 Sep 2017 19:50:47 +0530</pubDate>
+       
+       <guid>https://raux.github.io/post/work2/</guid>
+-      <description>&lt;p&gt;Hi, I am Raula Kula, a member of the SE Lab  &lt;a href=&#34;http://isw3.naist.jp/Contents/Research/cs-05-en.html&#34;&gt;&lt;strong&gt;@NAIST&lt;/strong&gt;&lt;/a&gt;, as an Assistant Professor.
+-As an empirical researcher, I use various techniques on &lt;strong&gt;libraries&lt;/strong&gt;, &lt;strong&gt;software visualizations&lt;/strong&gt; and &lt;strong&gt;software ecosystems&lt;/strong&gt;. Check out my recent publications and academic activities.&lt;/p&gt;
+-
+-&lt;p&gt;&lt;/p&gt;</description>
++      <description>&lt;p&gt;I am a member the &lt;a href=&#34;http://isw3.naist.jp/Contents/Research/cs-05-en.html&#34;&gt;&lt;strong&gt;@NAIST&lt;/strong&gt;&lt;/a&gt; SE Lab , as an Assistant Professor.
++I research various techniques on software &lt;strong&gt;libraries&lt;/strong&gt;, including &lt;strong&gt;visualizing&lt;/strong&gt; their &lt;strong&gt;ecosystems&lt;/strong&gt;.
++&lt;/p&gt;</description>
+     </item>
+     
+   </channel>
+diff --git a/about/index/index.html b/categories/papers/index.html
+similarity index 61%
+rename from about/index/index.html
+rename to categories/papers/index.html
+index 8622daf..84d3a10 100644
+--- a/about/index/index.html
++++ b/categories/papers/index.html
+@@ -3,7 +3,7 @@
+   <head><meta charset="utf-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ 
+- <title>About me</title>
++ <title>Papers</title>
+ 
+ 
+ 
+@@ -23,6 +23,9 @@
+ <link href="https://raux.github.io/css/custom.css" rel="stylesheet">
+ <link rel="shortcut icon" href="https://raux.github.io/img/favicon.png">
+ 
++<link href="https://raux.github.io/categories/papers/index.xml" rel="alternate" type="application/rss+xml" title="Kula Raula Gaikovina, Dr." />
++<link href="https://raux.github.io/categories/papers/index.xml" rel="feed" type="application/rss+xml" title="Kula Raula Gaikovina, Dr." />
++
+ 
+ </head>
+   <body>
+@@ -39,6 +42,8 @@
+       
+       <a href="/categories/news">news</a>
+       
++      <a href="/categories/papers">papers</a>
++      
+       <a href="/categories/publications">publications</a>
+       
+     </div>
+@@ -53,34 +58,18 @@
+       </a>
+       
+       
+-      <a href="full%20profile%20url%20in%20googleplus" data-animate-hover="pulse" class="external gplus">
+-        <i class="fa fa-google-plus"></i>
+-      </a>
+-      
+       
+       <a href="full%20profile%20url%20in%20twitter" data-animate-hover="pulse" class="external twitter">
+         <i class="fa fa-twitter"></i>
+       </a>
+       
+       
+-      <a href="full%20profile%20url%20in%20instagram" title="" class="external instagram">
+-        <i class="fa fa-instagram"></i>
+-      </a>
+-      
+       
+       <a href="mailto:email@example.com" data-animate-hover="pulse" class="email">
+         <i class="fa fa-envelope"></i>
+       </a>
+       
+       
+-      <a href="full%20profile%20url%20in%20linkedin" data-animate-hover="pulse">
+-        <i class="fa fa-linkedin"></i>
+-      </a>
+-      
+-      
+-      <a href="full%20profile%20url%20in%20stackoverflow" data-animate-hover="pulse">
+-        <i class="fa fa-stack-overflow"></i>
+-      </a>
+       
+       
+       <a href="full%20profile%20url%20in%20github" data-animate-hover="pulse">
+@@ -130,40 +119,47 @@
+         </div>
+         <div class="row">
+           <div class="col-md-10 main-content col-md-offset-1">
+-            
+-<div class="col-xs-12 col-sm-8 col-md-9 content-column white-background">
+-  <div class="small-navbar visible-xs">
+-  <button type="button" data-toggle="offcanvas" class="btn btn-ghost pull-left"> <i class="fa fa-align-left"> </i>Menu</button>
+-  <h1 class="small-navbar-heading"><a href="/">Kula Raula Gaikovina, Dr.</a></h1>
++               <div class="row">
++  <div class="col-md-10 category-header">
++    <a href="">CATEGORY: Papers </a>
++  </div>
+ </div>
+ 
+-  <div class="row">
+-    <div class="col-lg-8">
+-      <div class="content-column-content">
+-         <h1>About me</h1>
+-         
+-
+-<p>An sincerity so extremity he additions. Her yet <strong>there truth merit</strong>. Mrs all projecting favourable now unpleasing. Son law garden chatty temper. Oh children provided to mr elegance marriage strongly. Off can admiration prosperous now devonshire diminution law.</p>
+-
+-<p>Received overcame oh sensible so at an. Formed do change merely to county it. <strong>Am separate contempt</strong> domestic to to oh. On relation my so addition branched. Put hearing cottage she norland letters equally prepare too. Replied exposed savings he no viewing as up. Soon body add him hill. No father living really people estate if. Mistake do produce beloved demesne if am pursuit.</p>
+-
+-<p><img src="/img/about.jpg" alt="This is me" /></p>
+-
+-<p>The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn&rsquo;t listen. She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
+-
+-<h4 id="education">Education</h4>
++<div class="row">
++  <div class="col-md-10 category-description">
++  
++  </div>
++</div>
+ 
+-<ul>
+-<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+-<li>Aliquam tincidunt mauris eu risus.</li>
+-</ul>
+ 
+-<p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then</p>
+ 
++<div class="row content">
++  
++  <div class="col-md-6 content-excerpt">
++    
++      <div class="row">
++        <div class="col-md-12">
++          <div class="row content-date">
++            September 24
++          </div>
++          <div class="row content-title">
++            <h2> <a href="https://raux.github.io/post/work3/ "> List of Publications </a> </h2>
++          </div>
++          <div class="row content-summary">
++            <p> <p>Check out my full list of publications.
++</p> </p>
++            <a class="more-link" href="https://raux.github.io/post/work3/ "> READ THE POST </a>
++          </div>
++        </div>
+       </div>
+     </div>
++    
++    <div class="col-md-6 content-image" style="background-image: url(/img/portfolio/bridge1.jpg)">
++    </div>
++    
+   </div>
+-</div>
++  
++    
+ 
+           </div>
+         </div>
+@@ -204,34 +200,18 @@
+       </a>
+       
+       
+-      <a href="full%20profile%20url%20in%20googleplus" data-animate-hover="pulse" class="external gplus">
+-        <i class="fa fa-google-plus"></i>
+-      </a>
+-      
+       
+       <a href="full%20profile%20url%20in%20twitter" data-animate-hover="pulse" class="external twitter">
+         <i class="fa fa-twitter"></i>
+       </a>
+       
+       
+-      <a href="full%20profile%20url%20in%20instagram" title="" class="external instagram">
+-        <i class="fa fa-instagram"></i>
+-      </a>
+-      
+       
+       <a href="mailto:email@example.com" data-animate-hover="pulse" class="email">
+         <i class="fa fa-envelope"></i>
+       </a>
+       
+       
+-      <a href="full%20profile%20url%20in%20linkedin" data-animate-hover="pulse">
+-        <i class="fa fa-linkedin"></i>
+-      </a>
+-      
+-      
+-      <a href="full%20profile%20url%20in%20stackoverflow" data-animate-hover="pulse">
+-        <i class="fa fa-stack-overflow"></i>
+-      </a>
+       
+       
+       <a href="full%20profile%20url%20in%20github" data-animate-hover="pulse">
+diff --git a/categories/papers/index.xml b/categories/papers/index.xml
+new file mode 100644
+index 0000000..eb89b00
+--- /dev/null
++++ b/categories/papers/index.xml
+@@ -0,0 +1,26 @@
++<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
++<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
++  <channel>
++    <title>Papers on Kula Raula Gaikovina, Dr.</title>
++    <link>https://raux.github.io/categories/papers/</link>
++    <description>Recent content in Papers on Kula Raula Gaikovina, Dr.</description>
++    <generator>Hugo -- gohugo.io</generator>
++    <language>en-us</language>
++    <copyright>&amp;copy;2017 Raula G. Kula</copyright>
++    <lastBuildDate>Sat, 24 Sep 2016 19:44:32 +0530</lastBuildDate>
++    
++	<atom:link href="https://raux.github.io/categories/papers/index.xml" rel="self" type="application/rss+xml" />
++    
++    
++    <item>
++      <title>List of Publications</title>
++      <link>https://raux.github.io/post/work3/</link>
++      <pubDate>Sat, 24 Sep 2016 19:44:32 +0530</pubDate>
++      
++      <guid>https://raux.github.io/post/work3/</guid>
++      <description>&lt;p&gt;Check out my full list of publications.
++&lt;/p&gt;</description>
++    </item>
++    
++  </channel>
++</rss>
+\ No newline at end of file
+diff --git a/categories/publications/index.html b/categories/publications/index.html
+index 8475d28..329fe63 100644
+--- a/categories/publications/index.html
++++ b/categories/publications/index.html
+@@ -42,6 +42,8 @@
+       
+       <a href="/categories/news">news</a>
+       
++      <a href="/categories/papers">papers</a>
++      
+       <a href="/categories/publications">publications</a>
+       
+     </div>
+@@ -56,34 +58,18 @@
+       </a>
+       
+       
+-      <a href="full%20profile%20url%20in%20googleplus" data-animate-hover="pulse" class="external gplus">
+-        <i class="fa fa-google-plus"></i>
+-      </a>
+-      
+       
+       <a href="full%20profile%20url%20in%20twitter" data-animate-hover="pulse" class="external twitter">
+         <i class="fa fa-twitter"></i>
+       </a>
+       
+       
+-      <a href="full%20profile%20url%20in%20instagram" title="" class="external instagram">
+-        <i class="fa fa-instagram"></i>
+-      </a>
+-      
+       
+       <a href="mailto:email@example.com" data-animate-hover="pulse" class="email">
+         <i class="fa fa-envelope"></i>
+       </a>
+       
+       
+-      <a href="full%20profile%20url%20in%20linkedin" data-animate-hover="pulse">
+-        <i class="fa fa-linkedin"></i>
+-      </a>
+-      
+-      
+-      <a href="full%20profile%20url%20in%20stackoverflow" data-animate-hover="pulse">
+-        <i class="fa fa-stack-overflow"></i>
+-      </a>
+       
+       
+       <a href="full%20profile%20url%20in%20github" data-animate-hover="pulse">
+@@ -154,57 +140,27 @@
+       <div class="row">
+         <div class="col-md-12">
+           <div class="row content-date">
+-            September 24
++            September 26
+           </div>
+           <div class="row content-title">
+-            <h2> <a href="https://raux.github.io/post/work3/ "> Publications </a> </h2>
++            <h2> <a href="https://raux.github.io/post/work5/ "> Misc. </a> </h2>
+           </div>
+           <div class="row content-summary">
+-            <p> <p>Check out my full list of publications.
++            <p> <p>Random Notes and Stuff.
+ </p> </p>
+-            <a class="more-link" href="https://raux.github.io/post/work3/ "> READ THE POST </a>
++            <a class="more-link" href="https://raux.github.io/post/work5/ "> READ THE POST </a>
+           </div>
+         </div>
+       </div>
+     </div>
+     
+-    <div class="col-md-6 content-image" style="background-image: url(/img/portfolio/bridge1.jpg)">
++    <div class="col-md-6 content-image" style="background-image: url(/img/portfolio/railroad-forest1.jpg)">
+     </div>
+     
+   </div>
+   
+     
+ 
+-  <div class="row content">
+-    
+-    <div class="col-md-6 content-image" style="background-image: url(/img/portfolio/railroad-forest1.jpg)">
+-    </div>
+-    
+-
+-    
+-    <div class="col-md-6 content-excerpt">
+-      
+-        <div class="row">
+-          <div class="col-md-12">
+-            <div class="content-date">
+-              November 05
+-            </div>
+-            <div class="content-title">
+-              <h2> <a href="https://raux.github.io/post/work5/ "> Projects &amp; Collaborations </a> </h2>
+-            </div>
+-            <div class="content-summary">
+-              <p> <p>Fifth abundantly made Give sixth hath. Cattle creature i be don&rsquo;t them.
+-</p> </p>
+-              <a class="more-link" href="https://raux.github.io/post/work5/ "> READ THE POST </a>
+-            </div>
+-          </div>
+-        </div>
+-      </div>
+-
+-    </div>
+-    
+-    
+-
+           </div>
+         </div>
+         <div class="row site-footer">
+@@ -244,34 +200,18 @@
+       </a>
+       
+       
+-      <a href="full%20profile%20url%20in%20googleplus" data-animate-hover="pulse" class="external gplus">
+-        <i class="fa fa-google-plus"></i>
+-      </a>
+-      
+       
+       <a href="full%20profile%20url%20in%20twitter" data-animate-hover="pulse" class="external twitter">
+         <i class="fa fa-twitter"></i>
+       </a>
+       
+       
+-      <a href="full%20profile%20url%20in%20instagram" title="" class="external instagram">
+-        <i class="fa fa-instagram"></i>
+-      </a>
+-      
+       
+       <a href="mailto:email@example.com" data-animate-hover="pulse" class="email">
+         <i class="fa fa-envelope"></i>
+       </a>
+       
+       
+-      <a href="full%20profile%20url%20in%20linkedin" data-animate-hover="pulse">
+-        <i class="fa fa-linkedin"></i>
+-      </a>
+-      
+-      
+-      <a href="full%20profile%20url%20in%20stackoverflow" data-animate-hover="pulse">
+-        <i class="fa fa-stack-overflow"></i>
+-      </a>
+       
+       
+       <a href="full%20profile%20url%20in%20github" data-animate-hover="pulse">
+diff --git a/categories/publications/index.xml b/categories/publications/index.xml
+index 8087500..fd61fc1 100644
+--- a/categories/publications/index.xml
++++ b/categories/publications/index.xml
+@@ -6,29 +6,19 @@
+     <description>Recent content in Publications on Kula Raula Gaikovina, Dr.</description>
+     <generator>Hugo -- gohugo.io</generator>
+     <language>en-us</language>
+-    <copyright>&amp;copy;2016 Raula Kula</copyright>
+-    <lastBuildDate>Sat, 24 Sep 2016 19:44:32 +0530</lastBuildDate>
++    <copyright>&amp;copy;2017 Raula G. Kula</copyright>
++    <lastBuildDate>Tue, 26 Sep 2017 19:53:42 +0530</lastBuildDate>
+     
+ 	<atom:link href="https://raux.github.io/categories/publications/index.xml" rel="self" type="application/rss+xml" />
+     
+     
+     <item>
+-      <title>Publications</title>
+-      <link>https://raux.github.io/post/work3/</link>
+-      <pubDate>Sat, 24 Sep 2016 19:44:32 +0530</pubDate>
+-      
+-      <guid>https://raux.github.io/post/work3/</guid>
+-      <description>&lt;p&gt;Check out my full list of publications.
+-&lt;/p&gt;</description>
+-    </item>
+-    
+-    <item>
+-      <title>Projects &amp; Collaborations</title>
++      <title>Misc.</title>
+       <link>https://raux.github.io/post/work5/</link>
+-      <pubDate>Sat, 05 Nov 2016 19:53:42 +0530</pubDate>
++      <pubDate>Tue, 26 Sep 2017 19:53:42 +0530</pubDate>
+       
+       <guid>https://raux.github.io/post/work5/</guid>
+-      <description>&lt;p&gt;Fifth abundantly made Give sixth hath. Cattle creature i be don&amp;rsquo;t them.
++      <description>&lt;p&gt;Random Notes and Stuff.
+ &lt;/p&gt;</description>
+     </item>
+     
+diff --git a/contact/index.xml b/contact/index.xml
+index eb3fa53..05f4bf9 100644
+--- a/contact/index.xml
++++ b/contact/index.xml
+@@ -6,7 +6,7 @@
+     <description>Recent content in Contacts on Kula Raula Gaikovina, Dr.</description>
+     <generator>Hugo -- gohugo.io</generator>
+     <language>en-us</language>
+-    <copyright>&amp;copy;2016 Raula Kula</copyright>
++    <copyright>&amp;copy;2017 Raula G. Kula</copyright>
+     <lastBuildDate>Sun, 06 Nov 2016 13:00:25 +0530</lastBuildDate>
+     
+ 	<atom:link href="https://raux.github.io/contact/index.xml" rel="self" type="application/rss+xml" />
+diff --git a/contact/index/index.html b/contact/index/index.html
+index 8559b5b..6509dcc 100644
+--- a/contact/index/index.html
++++ b/contact/index/index.html
+@@ -39,6 +39,8 @@
+       
+       <a href="/categories/news">news</a>
+       
++      <a href="/categories/papers">papers</a>
++      
+       <a href="/categories/publications">publications</a>
+       
+     </div>
+@@ -53,34 +55,18 @@
+       </a>
+       
+       
+-      <a href="full%20profile%20url%20in%20googleplus" data-animate-hover="pulse" class="external gplus">
+-        <i class="fa fa-google-plus"></i>
+-      </a>
+-      
+       
+       <a href="full%20profile%20url%20in%20twitter" data-animate-hover="pulse" class="external twitter">
+         <i class="fa fa-twitter"></i>
+       </a>
+       
+       
+-      <a href="full%20profile%20url%20in%20instagram" title="" class="external instagram">
+-        <i class="fa fa-instagram"></i>
+-      </a>
+-      
+       
+       <a href="mailto:email@example.com" data-animate-hover="pulse" class="email">
+         <i class="fa fa-envelope"></i>
+       </a>
+       
+       
+-      <a href="full%20profile%20url%20in%20linkedin" data-animate-hover="pulse">
+-        <i class="fa fa-linkedin"></i>
+-      </a>
+-      
+-      
+-      <a href="full%20profile%20url%20in%20stackoverflow" data-animate-hover="pulse">
+-        <i class="fa fa-stack-overflow"></i>
+-      </a>
+       
+       
+       <a href="full%20profile%20url%20in%20github" data-animate-hover="pulse">
+@@ -155,34 +141,18 @@
+   </a>
+   
+   
+-  <a href="full%20profile%20url%20in%20googleplus" class="gplus">
+-    <i class="fa fa-google-plus"></i>
+-  </a>
+-  
+   
+   <a href="full%20profile%20url%20in%20twitter" class="twitter">
+     <i class="fa fa-twitter"></i>
+   </a>
+   
+   
+-  <a href="full%20profile%20url%20in%20instagram" title="" class="instagram">
+-    <i class="fa fa-instagram"></i>
+-  </a>
+-  
+   
+   <a href="mailto:email@example.com" class="email">
+     <i class="fa fa-envelope"></i>
+   </a>
+   
+   
+-  <a href="full%20profile%20url%20in%20linkedin">
+-    <i class="fa fa-linkedin"></i>
+-  </a>
+-  
+-  
+-  <a href="full%20profile%20url%20in%20stackoverflow">
+-    <i class="fa fa-stack-overflow"></i>
+-  </a>
+   
+   
+   <a href="full%20profile%20url%20in%20github">
+@@ -257,34 +227,18 @@
+       </a>
+       
+       
+-      <a href="full%20profile%20url%20in%20googleplus" data-animate-hover="pulse" class="external gplus">
+-        <i class="fa fa-google-plus"></i>
+-      </a>
+-      
+       
+       <a href="full%20profile%20url%20in%20twitter" data-animate-hover="pulse" class="external twitter">
+         <i class="fa fa-twitter"></i>
+       </a>
+       
+       
+-      <a href="full%20profile%20url%20in%20instagram" title="" class="external instagram">
+-        <i class="fa fa-instagram"></i>
+-      </a>
+-      
+       
+       <a href="mailto:email@example.com" data-animate-hover="pulse" class="email">
+         <i class="fa fa-envelope"></i>
+       </a>
+       
+       
+-      <a href="full%20profile%20url%20in%20linkedin" data-animate-hover="pulse">
+-        <i class="fa fa-linkedin"></i>
+-      </a>
+-      
+-      
+-      <a href="full%20profile%20url%20in%20stackoverflow" data-animate-hover="pulse">
+-        <i class="fa fa-stack-overflow"></i>
+-      </a>
+       
+       
+       <a href="full%20profile%20url%20in%20github" data-animate-hover="pulse">
+diff --git a/index.html b/index.html
+index 9acafb7..c327286 100644
+--- a/index.html
++++ b/index.html
+@@ -43,6 +43,8 @@
+       
+       <a href="/categories/news">news</a>
+       
++      <a href="/categories/papers">papers</a>
++      
+       <a href="/categories/publications">publications</a>
+       
+     </div>
+@@ -57,34 +59,18 @@
+       </a>
+       
+       
+-      <a href="full%20profile%20url%20in%20googleplus" data-animate-hover="pulse" class="external gplus">
+-        <i class="fa fa-google-plus"></i>
+-      </a>
+-      
+       
+       <a href="full%20profile%20url%20in%20twitter" data-animate-hover="pulse" class="external twitter">
+         <i class="fa fa-twitter"></i>
+       </a>
+       
+       
+-      <a href="full%20profile%20url%20in%20instagram" title="" class="external instagram">
+-        <i class="fa fa-instagram"></i>
+-      </a>
+-      
+       
+       <a href="mailto:email@example.com" data-animate-hover="pulse" class="email">
+         <i class="fa fa-envelope"></i>
+       </a>
+       
+       
+-      <a href="full%20profile%20url%20in%20linkedin" data-animate-hover="pulse">
+-        <i class="fa fa-linkedin"></i>
+-      </a>
+-      
+-      
+-      <a href="full%20profile%20url%20in%20stackoverflow" data-animate-hover="pulse">
+-        <i class="fa fa-stack-overflow"></i>
+-      </a>
+       
+       
+       <a href="full%20profile%20url%20in%20github" data-animate-hover="pulse">
+@@ -156,16 +142,15 @@
+     <div class="row">
+       <div class="col-md-12">
+         <div class="row content-date">
+-          September 24
++          September 27
+         </div>
+         <div class="row content-title">
+-          <h2> <a href="https://raux.github.io/post/work2/ "> News &amp; Activities </a> </h2>
++          <h2> <a href="https://raux.github.io/post/work2/ "> Recent Activities </a> </h2>
+         </div>
+         <div class="row content-summary">
+-          <p>Hi, I am Raula Kula, a member of the SE Lab  <a href="http://isw3.naist.jp/Contents/Research/cs-05-en.html"><strong>@NAIST</strong></a>, as an Assistant Professor.
+-As an empirical researcher, I use various techniques on <strong>libraries</strong>, <strong>software visualizations</strong> and <strong>software ecosystems</strong>. Check out my recent publications and academic activities.</p>
+-
+-<p></p>
++          <p>I am a member the <a href="http://isw3.naist.jp/Contents/Research/cs-05-en.html"><strong>@NAIST</strong></a> SE Lab , as an Assistant Professor.
++I research various techniques on software <strong>libraries</strong>, including <strong>visualizing</strong> their <strong>ecosystems</strong>.
++</p>
+           <a class="more-link" href="https://raux.github.io/post/work2/ ">Read the post</a>
+         </div>
+       </div>
+@@ -185,7 +170,7 @@ As an empirical researcher, I use various techniques on <strong>libraries</stron
+           September 24
+         </div>
+         <div class="row content-title">
+-          <h2> <a href="https://raux.github.io/post/work3/ "> Publications </a> </h2>
++          <h2> <a href="https://raux.github.io/post/work3/ "> List of Publications </a> </h2>
+         </div>
+         <div class="row content-summary">
+           <p>Check out my full list of publications.
+@@ -206,13 +191,13 @@ As an empirical researcher, I use various techniques on <strong>libraries</stron
+     <div class="row">
+       <div class="col-md-12">
+         <div class="row content-date">
+-          November 05
++          September 26
+         </div>
+         <div class="row content-title">
+-          <h2> <a href="https://raux.github.io/post/work5/ "> Projects &amp; Collaborations </a> </h2>
++          <h2> <a href="https://raux.github.io/post/work5/ "> Misc. </a> </h2>
+         </div>
+         <div class="row content-summary">
+-          <p>Fifth abundantly made Give sixth hath. Cattle creature i be don&rsquo;t them.
++          <p>Random Notes and Stuff.
+ </p>
+           <a class="more-link" href="https://raux.github.io/post/work5/ ">Read the post</a>
+         </div>
+@@ -221,30 +206,6 @@ As an empirical researcher, I use various techniques on <strong>libraries</stron
+   </div>
+ </div>
+ 
+-<div class="row content">
+-  
+-  <div class="col-sm-6 content-image" style="background-image: url(img/portfolio/a4-paper.jpg)">
+-  </div>
+-  <div class="col-sm-6 content-excerpt">
+-  
+-    <div class="row">
+-      <div class="col-md-12">
+-        <div class="row content-date">
+-          November 05
+-        </div>
+-        <div class="row content-title">
+-          <h2> <a href="https://raux.github.io/post/work1/ "> Teaching </a> </h2>
+-        </div>
+-        <div class="row content-summary">
+-          <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life. One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.
+-</p>
+-          <a class="more-link" href="https://raux.github.io/post/work1/ ">Read the post</a>
+-        </div>
+-      </div>
+-    </div>
+-  </div>
+-</div>
+-
+ 
+ 
+           </div>
+@@ -286,34 +247,18 @@ As an empirical researcher, I use various techniques on <strong>libraries</stron
+       </a>
+       
+       
+-      <a href="full%20profile%20url%20in%20googleplus" data-animate-hover="pulse" class="external gplus">
+-        <i class="fa fa-google-plus"></i>
+-      </a>
+-      
+       
+       <a href="full%20profile%20url%20in%20twitter" data-animate-hover="pulse" class="external twitter">
+         <i class="fa fa-twitter"></i>
+       </a>
+       
+       
+-      <a href="full%20profile%20url%20in%20instagram" title="" class="external instagram">
+-        <i class="fa fa-instagram"></i>
+-      </a>
+-      
+       
+       <a href="mailto:email@example.com" data-animate-hover="pulse" class="email">
+         <i class="fa fa-envelope"></i>
+       </a>
+       
+       
+-      <a href="full%20profile%20url%20in%20linkedin" data-animate-hover="pulse">
+-        <i class="fa fa-linkedin"></i>
+-      </a>
+-      
+-      
+-      <a href="full%20profile%20url%20in%20stackoverflow" data-animate-hover="pulse">
+-        <i class="fa fa-stack-overflow"></i>
+-      </a>
+       
+       
+       <a href="full%20profile%20url%20in%20github" data-animate-hover="pulse">
+diff --git a/index.xml b/index.xml
+index e590098..d2c3ed3 100644
+--- a/index.xml
++++ b/index.xml
+@@ -6,26 +6,25 @@
+     <description>Recent content on Kula Raula Gaikovina, Dr.</description>
+     <generator>Hugo -- gohugo.io</generator>
+     <language>en-us</language>
+-    <copyright>&amp;copy;2016 Raula Kula</copyright>
+-    <lastBuildDate>Sun, 24 Sep 2017 19:50:47 +0530</lastBuildDate>
++    <copyright>&amp;copy;2017 Raula G. Kula</copyright>
++    <lastBuildDate>Wed, 27 Sep 2017 19:50:47 +0530</lastBuildDate>
+     
+ 	<atom:link href="https://raux.github.io/index.xml" rel="self" type="application/rss+xml" />
+     
+     
+     <item>
+-      <title>News &amp; Activities</title>
++      <title>Recent Activities</title>
+       <link>https://raux.github.io/post/work2/</link>
+-      <pubDate>Sun, 24 Sep 2017 19:50:47 +0530</pubDate>
++      <pubDate>Wed, 27 Sep 2017 19:50:47 +0530</pubDate>
+       
+       <guid>https://raux.github.io/post/work2/</guid>
+-      <description>&lt;p&gt;Hi, I am Raula Kula, a member of the SE Lab  &lt;a href=&#34;http://isw3.naist.jp/Contents/Research/cs-05-en.html&#34;&gt;&lt;strong&gt;@NAIST&lt;/strong&gt;&lt;/a&gt;, as an Assistant Professor.
+-As an empirical researcher, I use various techniques on &lt;strong&gt;libraries&lt;/strong&gt;, &lt;strong&gt;software visualizations&lt;/strong&gt; and &lt;strong&gt;software ecosystems&lt;/strong&gt;. Check out my recent publications and academic activities.&lt;/p&gt;
+-
+-&lt;p&gt;&lt;/p&gt;</description>
++      <description>&lt;p&gt;I am a member the &lt;a href=&#34;http://isw3.naist.jp/Contents/Research/cs-05-en.html&#34;&gt;&lt;strong&gt;@NAIST&lt;/strong&gt;&lt;/a&gt; SE Lab , as an Assistant Professor.
++I research various techniques on software &lt;strong&gt;libraries&lt;/strong&gt;, including &lt;strong&gt;visualizing&lt;/strong&gt; their &lt;strong&gt;ecosystems&lt;/strong&gt;.
++&lt;/p&gt;</description>
+     </item>
+     
+     <item>
+-      <title>Publications</title>
++      <title>List of Publications</title>
+       <link>https://raux.github.io/post/work3/</link>
+       <pubDate>Sat, 24 Sep 2016 19:44:32 +0530</pubDate>
+       
+@@ -35,12 +34,12 @@ As an empirical researcher, I use various techniques on &lt;strong&gt;libraries&
+     </item>
+     
+     <item>
+-      <title>Projects &amp; Collaborations</title>
++      <title>Misc.</title>
+       <link>https://raux.github.io/post/work5/</link>
+-      <pubDate>Sat, 05 Nov 2016 19:53:42 +0530</pubDate>
++      <pubDate>Tue, 26 Sep 2017 19:53:42 +0530</pubDate>
+       
+       <guid>https://raux.github.io/post/work5/</guid>
+-      <description>&lt;p&gt;Fifth abundantly made Give sixth hath. Cattle creature i be don&amp;rsquo;t them.
++      <description>&lt;p&gt;Random Notes and Stuff.
+ &lt;/p&gt;</description>
+     </item>
+     
+@@ -64,15 +63,5 @@ Effects present letters inquiry no an removed or friends. Desire behind latter m
+ Received overcame oh sensible so at an. Formed do change merely to county it. Am separate contempt domestic to to oh. On relation my so addition branched. Put hearing cottage she norland letters equally prepare too.</description>
+     </item>
+     
+-    <item>
+-      <title>Teaching</title>
+-      <link>https://raux.github.io/post/work1/</link>
+-      <pubDate>Sat, 05 Nov 2016 18:25:22 +0530</pubDate>
+-      
+-      <guid>https://raux.github.io/post/work1/</guid>
+-      <description>&lt;p&gt;Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life. One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.
+-&lt;/p&gt;</description>
+-    </item>
+-    
+   </channel>
+ </rss>
+\ No newline at end of file
+diff --git a/post/index.xml b/post/index.xml
+index 0804430..e505a01 100644
+--- a/post/index.xml
++++ b/post/index.xml
+@@ -6,36 +6,25 @@
+     <description>Recent content in Posts on Kula Raula Gaikovina, Dr.</description>
+     <generator>Hugo -- gohugo.io</generator>
+     <language>en-us</language>
+-    <copyright>&amp;copy;2016 Raula Kula</copyright>
+-    <lastBuildDate>Sat, 05 Nov 2016 18:25:22 +0530</lastBuildDate>
++    <copyright>&amp;copy;2017 Raula G. Kula</copyright>
++    <lastBuildDate>Wed, 27 Sep 2017 19:50:47 +0530</lastBuildDate>
+     
+ 	<atom:link href="https://raux.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+     
+     
+     <item>
+-      <title>Teaching</title>
+-      <link>https://raux.github.io/post/work1/</link>
+-      <pubDate>Sat, 05 Nov 2016 18:25:22 +0530</pubDate>
+-      
+-      <guid>https://raux.github.io/post/work1/</guid>
+-      <description>&lt;p&gt;Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life. One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.
+-&lt;/p&gt;</description>
+-    </item>
+-    
+-    <item>
+-      <title>News &amp; Activities</title>
++      <title>Recent Activities</title>
+       <link>https://raux.github.io/post/work2/</link>
+-      <pubDate>Sun, 24 Sep 2017 19:50:47 +0530</pubDate>
++      <pubDate>Wed, 27 Sep 2017 19:50:47 +0530</pubDate>
+       
+       <guid>https://raux.github.io/post/work2/</guid>
+-      <description>&lt;p&gt;Hi, I am Raula Kula, a member of the SE Lab  &lt;a href=&#34;http://isw3.naist.jp/Contents/Research/cs-05-en.html&#34;&gt;&lt;strong&gt;@NAIST&lt;/strong&gt;&lt;/a&gt;, as an Assistant Professor.
+-As an empirical researcher, I use various techniques on &lt;strong&gt;libraries&lt;/strong&gt;, &lt;strong&gt;software visualizations&lt;/strong&gt; and &lt;strong&gt;software ecosystems&lt;/strong&gt;. Check out my recent publications and academic activities.&lt;/p&gt;
+-
+-&lt;p&gt;&lt;/p&gt;</description>
++      <description>&lt;p&gt;I am a member the &lt;a href=&#34;http://isw3.naist.jp/Contents/Research/cs-05-en.html&#34;&gt;&lt;strong&gt;@NAIST&lt;/strong&gt;&lt;/a&gt; SE Lab , as an Assistant Professor.
++I research various techniques on software &lt;strong&gt;libraries&lt;/strong&gt;, including &lt;strong&gt;visualizing&lt;/strong&gt; their &lt;strong&gt;ecosystems&lt;/strong&gt;.
++&lt;/p&gt;</description>
+     </item>
+     
+     <item>
+-      <title>Publications</title>
++      <title>List of Publications</title>
+       <link>https://raux.github.io/post/work3/</link>
+       <pubDate>Sat, 24 Sep 2016 19:44:32 +0530</pubDate>
+       
+@@ -45,12 +34,12 @@ As an empirical researcher, I use various techniques on &lt;strong&gt;libraries&
+     </item>
+     
+     <item>
+-      <title>Projects &amp; Collaborations</title>
++      <title>Misc.</title>
+       <link>https://raux.github.io/post/work5/</link>
+-      <pubDate>Sat, 05 Nov 2016 19:53:42 +0530</pubDate>
++      <pubDate>Tue, 26 Sep 2017 19:53:42 +0530</pubDate>
+       
+       <guid>https://raux.github.io/post/work5/</guid>
+-      <description>&lt;p&gt;Fifth abundantly made Give sixth hath. Cattle creature i be don&amp;rsquo;t them.
++      <description>&lt;p&gt;Random Notes and Stuff.
+ &lt;/p&gt;</description>
+     </item>
+     
+diff --git a/post/work2/index.html b/post/work2/index.html
+index 5756738..e7a6b16 100644
+--- a/post/work2/index.html
++++ b/post/work2/index.html
+@@ -3,7 +3,7 @@
+   <head><meta charset="utf-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ 
+- <title>News &amp; Activities</title>
++ <title>Recent Activities</title>
+ 
+ 
+ 
+@@ -39,6 +39,8 @@
+       
+       <a href="/categories/news">news</a>
+       
++      <a href="/categories/papers">papers</a>
++      
+       <a href="/categories/publications">publications</a>
+       
+     </div>
+@@ -53,34 +55,18 @@
+       </a>
+       
+       
+-      <a href="full%20profile%20url%20in%20googleplus" data-animate-hover="pulse" class="external gplus">
+-        <i class="fa fa-google-plus"></i>
+-      </a>
+-      
+       
+       <a href="full%20profile%20url%20in%20twitter" data-animate-hover="pulse" class="external twitter">
+         <i class="fa fa-twitter"></i>
+       </a>
+       
+       
+-      <a href="full%20profile%20url%20in%20instagram" title="" class="external instagram">
+-        <i class="fa fa-instagram"></i>
+-      </a>
+-      
+       
+       <a href="mailto:email@example.com" data-animate-hover="pulse" class="email">
+         <i class="fa fa-envelope"></i>
+       </a>
+       
+       
+-      <a href="full%20profile%20url%20in%20linkedin" data-animate-hover="pulse">
+-        <i class="fa fa-linkedin"></i>
+-      </a>
+-      
+-      
+-      <a href="full%20profile%20url%20in%20stackoverflow" data-animate-hover="pulse">
+-        <i class="fa fa-stack-overflow"></i>
+-      </a>
+       
+       
+       <a href="full%20profile%20url%20in%20github" data-animate-hover="pulse">
+@@ -136,14 +122,14 @@
+   <div class="row">
+     <div class="col-md-12">
+       <div class="entry-meta">
+-        September 24
++        September 27
+       </div>
+     </div>
+   </div>
+   <div class="row">
+     <div class="col-md-12">
+       <div class="entry-header">
+-       News &amp; Activities
++       Recent Activities
+       </div>
+     </div>
+   </div>
+@@ -156,6 +142,10 @@
+           <a href="/categories/news">news</a>
+         </div>
+         
++        <div class="entry-categories">
++          <a href="/categories/papers">papers</a>
++        </div>
++        
+         <div class="entry-categories">
+           <a href="/categories/publications">publications</a>
+         </div>
+@@ -167,23 +157,42 @@
+     </div>
+     <div class="col-md-10">
+       <div class="entry-content">
+-        <p>Hi, I am Raula Kula, a member of the SE Lab  <a href="http://isw3.naist.jp/Contents/Research/cs-05-en.html"><strong>@NAIST</strong></a>, as an Assistant Professor.
+-As an empirical researcher, I use various techniques on <strong>libraries</strong>, <strong>software visualizations</strong> and <strong>software ecosystems</strong>. Check out my recent publications and academic activities.</p>
+-
+-<p></p>
++        <p>I am a member the <a href="http://isw3.naist.jp/Contents/Research/cs-05-en.html"><strong>@NAIST</strong></a> SE Lab , as an Assistant Professor.
++I research various techniques on software <strong>libraries</strong>, including <strong>visualizing</strong> their <strong>ecosystems</strong>.
++</p>
+ 
+ <h2 id="recent-news-activities">Recent News &amp; Activities</h2>
+ 
+-<p>[Conference] - Our students presented their work @VISSOFT (co-located with ICSME17),</p>
++<p>[Journal Accept] - Information and Software Technology (<strong>IST</strong>) Paper</p>
++
++<blockquote>
++<p>An Empirical Study on the Impact of Refactoring Activities on Evolving Client-Used APIs. <em>Raula et al.</em></p>
++</blockquote>
++
++<p>[Conference] - Accepted Research Paper <strong>@APSEC17</strong></p>
+ 
+ <blockquote>
+-<p>(1) SoL Mantra: Visualizing Update Opportunities Based on Library Coexistence and (2) Using High-Rising Cities to Visualize Performance in Real-Time.</p>
++<p>(1) Extracting Insights from the Topology of the JavaScript Package Ecosystem. <em>Lertwittayatrai et al.</em></p>
+ </blockquote>
+ 
+-<p>[Conference] - Presented our journal-first work @ESEC\FSE17,</p>
++<p>[Conference] - Our students presented their work <strong>@VISSOFT17</strong> (co-located with ICSME17)</p>
+ 
+ <blockquote>
+-<p>(1) SoL Mantra: Visualizing Update Opportunities Based on Library Coexistence and (2) Using High-Rising Cities to Visualize Performance in Real-Time.</p>
++<p>(1) SoL Mantra: Visualizing Update Opportunities Based on Library Coexistence. <em>Todorov et al.</em></p>
++
++<p>(2) Using High-Rising Cities to Visualize Performance in Real-Time. <em>Ogami et al.</em></p>
++</blockquote>
++
++<p>[Conference] - Presented our journal-first work <strong>@ESEC\FSE17</strong></p>
++
++<blockquote>
++<p>Do developers update their library dependencies? An empirical study on the impact of security advisories on library migration. <em>Kula et al.</em></p>
++</blockquote>
++
++<p>[Journal Accept] -  Empirical Software Engineering (<strong>EMSE</strong>) Paper:</p>
++
++<blockquote>
++<p>Do developers update their library dependencies? An empirical study on the impact of security advisories on library migration. <em>Kula et al.</em></p>
+ </blockquote>
+       </div>
+     </div>
+@@ -233,34 +242,18 @@ As an empirical researcher, I use various techniques on <strong>libraries</stron
+       </a>
+       
+       
+-      <a href="full%20profile%20url%20in%20googleplus" data-animate-hover="pulse" class="external gplus">
+-        <i class="fa fa-google-plus"></i>
+-      </a>
+-      
+       
+       <a href="full%20profile%20url%20in%20twitter" data-animate-hover="pulse" class="external twitter">
+         <i class="fa fa-twitter"></i>
+       </a>
+       
+       
+-      <a href="full%20profile%20url%20in%20instagram" title="" class="external instagram">
+-        <i class="fa fa-instagram"></i>
+-      </a>
+-      
+       
+       <a href="mailto:email@example.com" data-animate-hover="pulse" class="email">
+         <i class="fa fa-envelope"></i>
+       </a>
+       
+       
+-      <a href="full%20profile%20url%20in%20linkedin" data-animate-hover="pulse">
+-        <i class="fa fa-linkedin"></i>
+-      </a>
+-      
+-      
+-      <a href="full%20profile%20url%20in%20stackoverflow" data-animate-hover="pulse">
+-        <i class="fa fa-stack-overflow"></i>
+-      </a>
+       
+       
+       <a href="full%20profile%20url%20in%20github" data-animate-hover="pulse">
+diff --git a/post/work3/index.html b/post/work3/index.html
+index 4eff156..542c251 100644
+--- a/post/work3/index.html
++++ b/post/work3/index.html
+@@ -3,7 +3,7 @@
+   <head><meta charset="utf-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ 
+- <title>Publications</title>
++ <title>List of Publications</title>
+ 
+ 
+ 
+@@ -39,6 +39,8 @@
+       
+       <a href="/categories/news">news</a>
+       
++      <a href="/categories/papers">papers</a>
++      
+       <a href="/categories/publications">publications</a>
+       
+     </div>
+@@ -53,34 +55,18 @@
+       </a>
+       
+       
+-      <a href="full%20profile%20url%20in%20googleplus" data-animate-hover="pulse" class="external gplus">
+-        <i class="fa fa-google-plus"></i>
+-      </a>
+-      
+       
+       <a href="full%20profile%20url%20in%20twitter" data-animate-hover="pulse" class="external twitter">
+         <i class="fa fa-twitter"></i>
+       </a>
+       
+       
+-      <a href="full%20profile%20url%20in%20instagram" title="" class="external instagram">
+-        <i class="fa fa-instagram"></i>
+-      </a>
+-      
+       
+       <a href="mailto:email@example.com" data-animate-hover="pulse" class="email">
+         <i class="fa fa-envelope"></i>
+       </a>
+       
+       
+-      <a href="full%20profile%20url%20in%20linkedin" data-animate-hover="pulse">
+-        <i class="fa fa-linkedin"></i>
+-      </a>
+-      
+-      
+-      <a href="full%20profile%20url%20in%20stackoverflow" data-animate-hover="pulse">
+-        <i class="fa fa-stack-overflow"></i>
+-      </a>
+       
+       
+       <a href="full%20profile%20url%20in%20github" data-animate-hover="pulse">
+@@ -143,7 +129,7 @@
+   <div class="row">
+     <div class="col-md-12">
+       <div class="entry-header">
+-       Publications
++       List of Publications
+       </div>
+     </div>
+   </div>
+@@ -156,6 +142,10 @@
+           <a href="/categories/news">news</a>
+         </div>
+         
++        <div class="entry-categories">
++          <a href="/categories/papers">papers</a>
++        </div>
++        
+         <div class="entry-categories">
+           <a href="/categories/publications">publications</a>
+         </div>
+@@ -170,33 +160,25 @@
+         <p>Check out my full list of publications.
+ </p>
+ 
+-<h1 id="list-of-publications">List of Publications</h1>
++<h2 id="2017">2017</h2>
+ 
+-<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
++<h3 id="journals">Journals</h3>
+ 
+-<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
++<p>[IST]</p>
+ 
+-<ol>
+-<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+-<li>Aliquam tincidunt mauris eu risus.</li>
+-</ol>
++<h3 id="conference-proceedings">Conference Proceedings</h3>
+ 
+-<blockquote>
+-<p>The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn&rsquo;t listen. She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
+-</blockquote>
++<h2 id="2016">~ 2016</h2>
+ 
+-<h2 id="header-level-2">Header Level 2</h2>
++<h3 id="journals-1">Journals</h3>
+ 
+-<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
++<h3 id="conference-proceedings-1">Conference Proceedings</h3>
+ 
+-<p>The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn&rsquo;t listen. She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
++<h3 id="workshops">Workshops</h3>
+ 
+-<ul>
+-<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+-<li>Aliquam tincidunt mauris eu risus.</li>
+-</ul>
++<h3 id="technical-reports-arvix">Technical Reports (aRviX)</h3>
+ 
+-<p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then</p>
++<h3 id="thesis">Thesis</h3>
+       </div>
+     </div>
+   </div>
+@@ -245,34 +227,18 @@
+       </a>
+       
+       
+-      <a href="full%20profile%20url%20in%20googleplus" data-animate-hover="pulse" class="external gplus">
+-        <i class="fa fa-google-plus"></i>
+-      </a>
+-      
+       
+       <a href="full%20profile%20url%20in%20twitter" data-animate-hover="pulse" class="external twitter">
+         <i class="fa fa-twitter"></i>
+       </a>
+       
+       
+-      <a href="full%20profile%20url%20in%20instagram" title="" class="external instagram">
+-        <i class="fa fa-instagram"></i>
+-      </a>
+-      
+       
+       <a href="mailto:email@example.com" data-animate-hover="pulse" class="email">
+         <i class="fa fa-envelope"></i>
+       </a>
+       
+       
+-      <a href="full%20profile%20url%20in%20linkedin" data-animate-hover="pulse">
+-        <i class="fa fa-linkedin"></i>
+-      </a>
+-      
+-      
+-      <a href="full%20profile%20url%20in%20stackoverflow" data-animate-hover="pulse">
+-        <i class="fa fa-stack-overflow"></i>
+-      </a>
+       
+       
+       <a href="full%20profile%20url%20in%20github" data-animate-hover="pulse">
+diff --git a/post/work5/index.html b/post/work5/index.html
+index 2d415a0..2d47a98 100644
+--- a/post/work5/index.html
++++ b/post/work5/index.html
+@@ -3,7 +3,7 @@
+   <head><meta charset="utf-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ 
+- <title>Projects &amp; Collaborations</title>
++ <title>Misc.</title>
+ 
+ 
+ 
+@@ -39,6 +39,8 @@
+       
+       <a href="/categories/news">news</a>
+       
++      <a href="/categories/papers">papers</a>
++      
+       <a href="/categories/publications">publications</a>
+       
+     </div>
+@@ -53,34 +55,18 @@
+       </a>
+       
+       
+-      <a href="full%20profile%20url%20in%20googleplus" data-animate-hover="pulse" class="external gplus">
+-        <i class="fa fa-google-plus"></i>
+-      </a>
+-      
+       
+       <a href="full%20profile%20url%20in%20twitter" data-animate-hover="pulse" class="external twitter">
+         <i class="fa fa-twitter"></i>
+       </a>
+       
+       
+-      <a href="full%20profile%20url%20in%20instagram" title="" class="external instagram">
+-        <i class="fa fa-instagram"></i>
+-      </a>
+-      
+       
+       <a href="mailto:email@example.com" data-animate-hover="pulse" class="email">
+         <i class="fa fa-envelope"></i>
+       </a>
+       
+       
+-      <a href="full%20profile%20url%20in%20linkedin" data-animate-hover="pulse">
+-        <i class="fa fa-linkedin"></i>
+-      </a>
+-      
+-      
+-      <a href="full%20profile%20url%20in%20stackoverflow" data-animate-hover="pulse">
+-        <i class="fa fa-stack-overflow"></i>
+-      </a>
+       
+       
+       <a href="full%20profile%20url%20in%20github" data-animate-hover="pulse">
+@@ -136,14 +122,14 @@
+   <div class="row">
+     <div class="col-md-12">
+       <div class="entry-meta">
+-        November 05
++        September 26
+       </div>
+     </div>
+   </div>
+   <div class="row">
+     <div class="col-md-12">
+       <div class="entry-header">
+-       Projects &amp; Collaborations
++       Misc.
+       </div>
+     </div>
+   </div>
+@@ -156,6 +142,10 @@
+           <a href="/categories/news">news</a>
+         </div>
+         
++        <div class="entry-categories">
++          <a href="/categories/papers">papers</a>
++        </div>
++        
+         <div class="entry-categories">
+           <a href="/categories/publications">publications</a>
+         </div>
+@@ -167,34 +157,12 @@
+     </div>
+     <div class="col-md-10">
+       <div class="entry-content">
+-        <p>Fifth abundantly made Give sixth hath. Cattle creature i be don&rsquo;t them.
++        <p>Random Notes and Stuff.
+ </p>
+ 
+-<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+-
+-<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+-
+-<ol>
+-<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+-<li>Aliquam tincidunt mauris eu risus.</li>
+-</ol>
++<h3 id="tools-and-idea">Tools and Idea</h3>
+ 
+-<blockquote>
+-<p>The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn&rsquo;t listen. She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
+-</blockquote>
+-
+-<h2 id="header-level-2">Header Level 2</h2>
+-
+-<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
+-
+-<p>The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn&rsquo;t listen. She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
+-
+-<ul>
+-<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+-<li>Aliquam tincidunt mauris eu risus.</li>
+-</ul>
+-
+-<p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then</p>
++<p>Here I would like to list up some interesting tools and techniques I use in academic life.</p>
+       </div>
+     </div>
+   </div>
+@@ -243,34 +211,18 @@
+       </a>
+       
+       
+-      <a href="full%20profile%20url%20in%20googleplus" data-animate-hover="pulse" class="external gplus">
+-        <i class="fa fa-google-plus"></i>
+-      </a>
+-      
+       
+       <a href="full%20profile%20url%20in%20twitter" data-animate-hover="pulse" class="external twitter">
+         <i class="fa fa-twitter"></i>
+       </a>
+       
+       
+-      <a href="full%20profile%20url%20in%20instagram" title="" class="external instagram">
+-        <i class="fa fa-instagram"></i>
+-      </a>
+-      
+       
+       <a href="mailto:email@example.com" data-animate-hover="pulse" class="email">
+         <i class="fa fa-envelope"></i>
+       </a>
+       
+       
+-      <a href="full%20profile%20url%20in%20linkedin" data-animate-hover="pulse">
+-        <i class="fa fa-linkedin"></i>
+-      </a>
+-      
+-      
+-      <a href="full%20profile%20url%20in%20stackoverflow" data-animate-hover="pulse">
+-        <i class="fa fa-stack-overflow"></i>
+-      </a>
+       
+       
+       <a href="full%20profile%20url%20in%20github" data-animate-hover="pulse">
+diff --git a/sitemap.xml b/sitemap.xml
+index d9c189c..02f1f04 100644
+--- a/sitemap.xml
++++ b/sitemap.xml
+@@ -3,7 +3,7 @@
+   
+   <url>
+     <loc>https://raux.github.io/post/work2/</loc>
+-    <lastmod>2017-09-24T19:50:47+05:30</lastmod>
++    <lastmod>2017-09-27T19:50:47+05:30</lastmod>
+   </url>
+   
+   <url>
+@@ -13,7 +13,7 @@
+   
+   <url>
+     <loc>https://raux.github.io/post/work5/</loc>
+-    <lastmod>2016-11-05T19:53:42+05:30</lastmod>
++    <lastmod>2017-09-26T19:53:42+05:30</lastmod>
+   </url>
+   
+   <url>
+@@ -26,11 +26,6 @@
+     <lastmod>2016-11-05T21:05:33+05:30</lastmod>
+   </url>
+   
+-  <url>
+-    <loc>https://raux.github.io/post/work1/</loc>
+-    <lastmod>2016-11-05T18:25:22+05:30</lastmod>
+-  </url>
+-  
+   <url>
+     <loc>https://raux.github.io/about/</loc>
+     <lastmod>2016-11-05T21:05:33+05:30</lastmod>
+@@ -50,25 +45,31 @@
+   
+   <url>
+     <loc>https://raux.github.io/</loc>
+-    <lastmod>2017-09-24T19:50:47+05:30</lastmod>
++    <lastmod>2017-09-27T19:50:47+05:30</lastmod>
+     <priority>0</priority>
+   </url>
+   
+   <url>
+     <loc>https://raux.github.io/categories/news/</loc>
+-    <lastmod>2017-09-24T19:50:47+05:30</lastmod>
++    <lastmod>2017-09-27T19:50:47+05:30</lastmod>
++    <priority>0</priority>
++  </url>
++  
++  <url>
++    <loc>https://raux.github.io/categories/papers/</loc>
++    <lastmod>2016-09-24T19:44:32+05:30</lastmod>
+     <priority>0</priority>
+   </url>
+   
+   <url>
+     <loc>https://raux.github.io/post/</loc>
+-    <lastmod>2016-11-05T18:25:22+05:30</lastmod>
++    <lastmod>2017-09-27T19:50:47+05:30</lastmod>
+     <priority>0</priority>
+   </url>
+   
+   <url>
+     <loc>https://raux.github.io/categories/publications/</loc>
+-    <lastmod>2016-09-24T19:44:32+05:30</lastmod>
++    <lastmod>2017-09-26T19:53:42+05:30</lastmod>
+     <priority>0</priority>
+   </url>
+   
+diff --git a/tags/index.xml b/tags/index.xml
+index 5392458..c1cbcac 100644
+--- a/tags/index.xml
++++ b/tags/index.xml
+@@ -6,7 +6,7 @@
+     <description>Recent content in Tags on Kula Raula Gaikovina, Dr.</description>
+     <generator>Hugo -- gohugo.io</generator>
+     <language>en-us</language>
+-    <copyright>&amp;copy;2016 Raula Kula</copyright>
++    <copyright>&amp;copy;2017 Raula G. Kula</copyright>
+     
+ 	<atom:link href="https://raux.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+     
+-- 
+2.14.1.windows.1
+
