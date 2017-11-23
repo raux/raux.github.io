@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy;2017 Raula G. Kula</copyright>
-    <lastBuildDate>Sat, 24 Sep 2016 19:44:32 +0530</lastBuildDate>
+    <lastBuildDate>Sat, 26 Nov 2016 19:44:32 +0530</lastBuildDate>
     
 	<atom:link href="https://raux.github.io/categories/papers/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,10 +15,10 @@
     <item>
       <title>List of Publications</title>
       <link>https://raux.github.io/post/work3/</link>
-      <pubDate>Sat, 24 Sep 2016 19:44:32 +0530</pubDate>
+      <pubDate>Sat, 26 Nov 2016 19:44:32 +0530</pubDate>
       
       <guid>https://raux.github.io/post/work3/</guid>
-      <description>&lt;p&gt;Check out my full list of publications.
+      <description>&lt;p&gt;Check out my &lt;code&gt;full list&lt;/code&gt; of publications.
 &lt;/p&gt;</description>
     </item>
     

@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy;2017 Raula G. Kula</copyright>
-    <lastBuildDate>Wed, 27 Sep 2017 19:50:47 +0530</lastBuildDate>
+    <lastBuildDate>Sun, 26 Nov 2017 19:50:47 +0530</lastBuildDate>
     
 	<atom:link href="https://raux.github.io/categories/news/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,11 +15,11 @@
     <item>
       <title>Recent Activities</title>
       <link>https://raux.github.io/post/work2/</link>
-      <pubDate>Wed, 27 Sep 2017 19:50:47 +0530</pubDate>
+      <pubDate>Sun, 26 Nov 2017 19:50:47 +0530</pubDate>
       
       <guid>https://raux.github.io/post/work2/</guid>
-      <description>&lt;p&gt;I am a member the &lt;a href=&#34;http://isw3.naist.jp/Contents/Research/cs-05-en.html&#34;&gt;&lt;strong&gt;@NAIST&lt;/strong&gt;&lt;/a&gt; SE Lab , as an Assistant Professor.
-I research software &lt;strong&gt;libraries&lt;/strong&gt;, including &lt;strong&gt;visualizing&lt;/strong&gt; the &lt;strong&gt;ecosystems&lt;/strong&gt; they reside in.
+      <description>&lt;p&gt;&lt;a href=&#34;http://isw3.naist.jp/Contents/Research/cs-05-en.html&#34;&gt;&lt;strong&gt;@NAIST&lt;/strong&gt;&lt;/a&gt; SE Lab , as an Assistant Professor.
+My 2 topics are &lt;code&gt;code reviews&lt;/code&gt; and software &lt;code&gt;libraries&lt;/code&gt;, including &lt;code&gt;visualizations&lt;/code&gt; of &lt;code&gt;software ecosystems&lt;/code&gt; they reside in.
 &lt;/p&gt;</description>
     </item>
     
