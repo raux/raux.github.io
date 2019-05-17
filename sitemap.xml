@@ -40,12 +40,6 @@
   </url>
   
   <url>
-    <loc>https://raux.github.io/</loc>
-    <lastmod>2018-05-17T19:50:47+05:30</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://raux.github.io/categories/news/</loc>
     <lastmod>2018-05-17T19:50:47+05:30</lastmod>
     <priority>0</priority>
@@ -59,6 +53,12 @@
   
   <url>
     <loc>https://raux.github.io/post/</loc>
+    <lastmod>2018-05-17T19:50:47+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://raux.github.io/</loc>
     <lastmod>2018-05-17T19:50:47+05:30</lastmod>
     <priority>0</priority>
   </url>
