@@ -231,14 +231,14 @@
                 $(function () {
                     $('#search_result_area').css('display', 'none');
                     $('#search_result_list').css('display', 'none');
-                    $('#loading').css('display', 'block');
+                    $('#loading').css('display', 'table');
                 });
 
                 /* ロード終了したらloadingエリアを非表示にして業績リストエリアを表示 */
                 $(window).load(function () {
                     $('#loading').delay(600).fadeOut(600);
-                    $('#search_result_area').css('display', 'block');
-                    $('#search_result_list').css('display', 'block');
+                    $('#search_result_area').css('display', 'table');
+                    $('#search_result_list').css('display', 'table');
                 });
             </script>
             <!-- NAIST研究業績管理システム WebAPI -->
