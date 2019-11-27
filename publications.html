@@ -85,14 +85,14 @@
                 $(function () {
                     $('#search_result_area').css('display', 'none');
                     $('#search_result_list').css('display', 'none');
-                    $('#loading').css('display', 'block');
+                    $('#loading').css('display', 'inline-block');
                 });
 
                 /* ロード終了したらloadingエリアを非表示にして業績リストエリアを表示 */
                 $(window).load(function () {
                     $('#loading').delay(600).fadeOut(600);
-                    $('#search_result_area').css('display', 'block');
-                    $('#search_result_list').css('display', 'block');
+                    $('#search_result_area').css('display', 'inline-block');
+                    $('#search_result_list').css('display', 'inline-block');
                 });
             </script>
 
