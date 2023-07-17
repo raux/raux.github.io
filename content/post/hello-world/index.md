@@ -7,7 +7,7 @@ image: cover.jpg
 categories:
     - Blog
 tags:
-    - Blot
+    - Blogging
 ---
 
 Welcome to my new website theme!
