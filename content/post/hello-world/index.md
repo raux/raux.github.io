@@ -12,6 +12,6 @@ tags:
 
 Welcome to my new website theme and regeneration of the website. 
 
-More to come soon!
+{{< dynalist >}}
 
 > Post by Raula
