@@ -12,6 +12,6 @@ tags:
 
 Full Listing of my publications
 
-{{< naist >}}
+{{< naist2 >}}
 
 > Post by Raula
