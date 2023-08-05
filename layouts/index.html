@@ -1,28 +1,35 @@
 {{ define "main" }}
-<main class="main list" role="main">
-	{{- with .Content }}
-	<div class="content main__content clearfix">
-		{{ . }}
-	</div>
-	{{- end }}
-	{{ $paginator := .Paginate (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
-	{{- range $paginator.Pages }}
-		{{- .Render "summary" }}
-	{{- end }}
-	{{- if and (eq $paginator.TotalNumberOfElements 0) (not $.Content) }}
-		<div class="warning">
-			{{ partial "svg/files.svg" (dict "class" "warning__icon") }}
-			<h3 class="warning__headline">{{ T "noposts_warning_title" | safeHTML }}</h3>
-			<div class="warning__text">
-				<p class="warning__description">{{ T "noposts_warning_description" | safeHTML }}</p>
-				<p class="warning__tip">{{ T "noposts_warning_tip" | safeHTML }}</p>
-			</div>
-		</div>
-	{{ end }}
-</main>
-{{ range .Site.Data.jazz }}
-{{ partial "artist.html" . }}
-{{ end }}
-
-{{ partial "pagination.html" . }}
+{{ $kind := .Kind }}
+{{ partial "widgets/hero.html" . }}
+<div class="zhuti-0">
+    <div class="container">
+        <div class="zhuti">
+            <div class="zhuti-l zhuti-l-home">
+                <div class="zuixin">
+                    <div class="xian-l"></div>
+                    <h3>
+                        {{ i18n "Home_latestPosts" }}
+                    </h3>
+                    <div class="xian-r"></div>
+                </div>
+                <div class="terms-row">
+                    {{ range first .Site.Params.page.maxHomePostCount .Site.RegularPages }}
+                    {{ if and (not .Params.hideFromHomePage) (eq $kind "home") }}
+                    <div class="terms-root">
+                        {{ partial "widgets/post-card.html" . }}
+                    </div>
+                    {{ end }}
+                    {{ end }}
+                </div>
+                <div class="more-posts">
+                    <a href='{{ if and (ne .Site.Language.Weight 1) (and .Site.IsMultiLingual (not .Site.Params.Site.OnlyOneLang)) }}
+                                {{ .Lang | relURL}}/posts
+                            {{ else }} 
+                            {{ "posts" | relURL }}
+                            {{ end }}' class="efct-button">{{ i18n "Home_allPosts" }}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 {{ end }}
