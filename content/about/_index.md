@@ -23,9 +23,13 @@ image: "/images/about.jpg"
 ---
 <!--more-->
 # Bio
-Raula Gaikovina Kula received the PhD degree from NAIST, in 2013, and was a research assistant professor with Osaka University. He is an associate professor with the Nara Institute of Science and Technology (NAIST), Japan. He is
-active in the Software Engineering community, serving the community as a PC member for premium SE venues, some as organising committee, and reviewer for journals. His current research interests include library dependencies and security in the software ecosystem, program analysis
-such as code clones, and human aspects such as code reviews and coding proficiency. 
+Raula Gaikovina Kula received the PhD degree from NAIST, Japan in 2013. Originally from Papua New Guinea, I am a Japanese Software Engineering researcher from Nara. My interests vary from travelling, BBQs, fishing, and some music, sport and leisure along the way!
+
+I was research assistant professor with Osaka University in 2013, then became an Assistant Profesor at NAIST in 2017.
+
+I am now an associate professor with the Nara Institute of Science and Technology (NAIST), Japan at [NAIST-SE](https://naist-se.github.io/.
+
+He is active in the Software Engineering community, serving the community as a PC member for premium SE venues, some as organising committee, and reviewer for journals. Along with my colleagues, we study a wider range of software engineering topics, covering human aspects, documentation, communication, and competency of code by programmers.  
 
 # Contact
 Send me an email at raula-k@is.naist.jp.
