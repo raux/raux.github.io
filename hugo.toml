@@ -60,7 +60,7 @@ hasCJKLanguage = false
         homeTitleFontSize = 40
         # content in home top image, support Markdown
         # 主页内容，支持Markdown语法
-        homeContent = "Allware Matic"
+        homeContent = "Bridging The Divide for Software Ecosystems"
         # font size(px)
         # 主页内容字号（单位：px）
         homeContentFontSize = 20
@@ -131,7 +131,7 @@ hasCJKLanguage = false
         enable = true
         # copyright
         copyRight = true
-        from = 2022
+        from = 2023
         # wheher to enable count of visitor and view
         visitor = true
         # wheher to enable theme information
@@ -175,12 +175,12 @@ hasCJKLanguage = false
     # 作者卡片社交链接，最多6个
     [[menus.social]]
         name = "GitHub"
-        url = "https://github.com/xioyito"
+        url = "https://github.com/raux"
         pre = "<i class='fa fa-github'></i>"
         weight = 1
     [[menus.social]]
         name = "YouTube"
-        url = "https://www.youtube.com"
+        url = "https://www.youtube.com/channel/UCR5uh7dGGp6wRP2O4e7NqJw"
         pre = "<i class='fa fa-youtube'></i>"
         weight = 2
 
@@ -190,10 +190,6 @@ hasCJKLanguage = false
         name = "Wechat"
         url = "/images/sponsor/Wechat.jpeg"
         weight = 1
-    [[menus.sponsor]]
-        name = "Alipay"
-        url = "/images/sponsor/Alipay.jpeg"
-        weight = 2
 
 # related configuration, see more: https://gohugo.io/content-management/related/
 # 相关文章的配置。详情请移步：https://gohugo.io/content-management/related/
