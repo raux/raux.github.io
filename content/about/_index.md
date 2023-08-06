@@ -23,7 +23,7 @@ image: "/images/about.jpg"
 ---
 <!--more-->
 # Bio
-Raula Gaikovina Kula received the PhD degree from NAIST, Japan in 2013. Originally from Papua New Guinea, I am a Japanese Software Engineering researcher from Nara. My interests vary from travelling, BBQs, fishing, and some music, sport and leisure along the way!
+Raula Gaikovina Kula received the PhD degree from NAIST, Japan in 2013. Originally from Papua New Guinea, I am a Software Engineering researcher. My interests vary from travelling, BBQs, fishing, and some music, sport and leisure along the way!
 
 I was research assistant professor with Osaka University in 2013, then became an Assistant Profesor at NAIST in 2017.
 
