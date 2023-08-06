@@ -1,5 +1,5 @@
 ---
-title: "First Post"
+title: "Publications"
 date: 2023-08-06T16:46:16+08:00
 
 # format for string: "xxxx-xx-xx"
@@ -19,11 +19,11 @@ tags: []
 series: ['Notes']
 
 # Top image for the post
-image: "/images/start.jpg"
+image: "/images/example.jpeg"
 ---
 
 
 <!--more-->
 # First Post
-{{< dynalist >}}
+{{< naist3 >}}
 ::: tabs
