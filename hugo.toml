@@ -50,51 +50,37 @@ hasCJKLanguage = false
     [params.page]
 
         # top image in home page, note that the "/" in path is necessary, the same applies below
-        # 主页的顶部图，路径开头”/“是必需的。下同
         homeTopImg = "/images/home.jpg"
         # title in home top image, support Markdown
-        # 主页标题，支持Markdown语法
         homeTitle = "Raula Gaikovina Kula"
         # font size(px)
-        # 主页标题字号（单位：px）
         homeTitleFontSize = 40
         # content in home top image, support Markdown
-        # 主页内容，支持Markdown语法
-        homeContent = "Bridging The Divide for Software Ecosystems, Coding Competency, and Societial Issues"
+        homeContent = "Bridging The Divide for Societies in Software Ecosystems, and Coding Competency"
         # font size(px)
-        # 主页内容字号（单位：px）
         homeContentFontSize = 20
 
         # top image in categories terms page
-        # 分类页面的顶部图
         categoryTopImg = "/images/categories.jpg"
         # description of categories terms page
-        # 子标题
         categoryDes = "description of categories page"
 
         # top image in tags terms page
-        # 标签页面的顶部图
         tagTopImg = "/images/tag.jpg"
         # description of tags terms page
-        # 子标题
         tagDes = "description of tags page"
 
         # top image in allosts page
-        # 所有文章页面的顶部图
         allPostsTopImg = "/images/allPosts.jpg"
         # description of allposts page
-        # 子标题
         allPostsDes = "description of allPosts page"
 
         # top image in about page
-        # 关于页面的顶部图
         aboutTopImg = "/images/about.jpg"
         # description of about page
-        # 子标题
         aboutDes = "description of about page"
 
         # default image for a post without "image" param
-        # 当文章没有设置图片时，将用此图来替代
         defaultPostImg = "/images/default.jpg"
         
         # 主页文章最大显示数量
