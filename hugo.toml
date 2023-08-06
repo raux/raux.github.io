@@ -3,7 +3,7 @@ languageCode = 'en-us'
 
 # website title
 # 网站标题
-title = 'Raula Gaikovina Kula'
+title = 'Associate Professor at Nara Institute of Science and Technology'
 # theme
 # 主题
 theme = "NewBee"
@@ -25,7 +25,7 @@ hasCJKLanguage = false
 
 [author]
     name = "Raula Gaikovina Kula"
-    description = "Bridging The Divide for Software Ecosystems"
+    description = "Software Engineering Researcher"
     # profile photo of author in author card
     # 作者头像
     image = "/images/author.jpeg"
@@ -60,7 +60,7 @@ hasCJKLanguage = false
         homeTitleFontSize = 40
         # content in home top image, support Markdown
         # 主页内容，支持Markdown语法
-        homeContent = "Bridging The Divide for Software Ecosystems"
+        homeContent = "Bridging The Divide for Software Ecosystems, Coding Competency, and Societial Issues"
         # font size(px)
         # 主页内容字号（单位：px）
         homeContentFontSize = 20
