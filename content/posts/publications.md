@@ -24,6 +24,6 @@ image: "/images/example.jpeg"
 
 
 <!--more-->
-# First Post
+# My Full List of Publications
 {{< naist3 >}}
 ::: tabs
