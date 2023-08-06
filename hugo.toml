@@ -56,7 +56,7 @@ hasCJKLanguage = false
         # font size(px)
         homeTitleFontSize = 40
         # content in home top image, support Markdown
-        homeContent = "Bridging The Divide for Societies in Software Ecosystems, and Coding Competency"
+        homeContent = "Bridging The Divide for Software Ecosystems, and their Coding Competencies"
         # font size(px)
         homeContentFontSize = 20
 
