@@ -1,6 +1,6 @@
 ---
-title: "快速开始"
-date: 2022-04-21T16:46:16+08:00
+title: "First Post"
+date: 2023-08-06T16:46:16+08:00
 
 # format for string: "xxxx-xx-xx"
 lastmod: "2023-03-28"
@@ -16,7 +16,7 @@ categories: ['web']
 tags: []
 
 # seires
-series: ['主题文档']
+series: ['Notes']
 
 # Top image for the post
 image: "/images/start.jpg"
@@ -24,8 +24,6 @@ image: "/images/start.jpg"
 
 
 <!--more-->
-
-
 # First Post
-
+{{< dynalist >}}
 ::: tabs
