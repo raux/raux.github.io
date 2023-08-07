@@ -1,5 +1,5 @@
 ---
-title: "News"
+title: "Social Media"
 date: 2023-08-05T16:46:16+08:00
 
 # format for string: "xxxx-xx-xx"
@@ -23,13 +23,13 @@ image: "/images/about.jpg"
 ---
 <!--more-->
 # 2023
-- Accepted Paper at EMSE
-- Submitted Reviews for ICSME2023 NIER Track
-- Submitted Review for EMSE
-- Submitted Review for JSS
-- Submitted Review for IEEE TSE
-- Accepted Paper at EMSE
-- Accepted Paper at FSE 2023
-- Accepted Paper at MSR 2023
-- Accepted Paper at MSR 2023
-- Accepted Paper at MSR 2023
+- Instagram
+- Facebook
+- Twitter
+
+Communication Device
+- Whatsapp
+- Line
+- FB Messenger
+- Slack
+- Discord
