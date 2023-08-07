@@ -1,6 +1,6 @@
 ---
 title: "News"
-date: 2023-08-05T16:46:16+08:00
+date: 2023-08-07T16:46:16+08:00
 
 # format for string: "xxxx-xx-xx"
 lastmod: "2023-03-07"
