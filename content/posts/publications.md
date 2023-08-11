@@ -1,5 +1,5 @@
 ---
-title: "Social Media"
+title: "Full List of Publications"
 date: 2023-08-06T16:46:16+08:00
 
 # format for string: "xxxx-xx-xx"
