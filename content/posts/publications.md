@@ -30,11 +30,6 @@ image: "/images/library.jpg"
 - [DBLP](https://dblp.org/pid/64/7675.html)
 {{< /details >}}
 
-{{< details " My IDs" >}}
-- [ORCID - 0000-0003-2324-0608](https://orcid.org/0000-0003-2324-0608)
-- [Japanese ResearchMap](https://researchmap.jp/raula-k/?lang=english)
-{{< /details >}}
-
 {{< details "Keynotes" >}}
 - Raula Gaikovina Kula, “To Sustain a Smart, Dependent and Social Software Ecosystem (Mini-Keynote),” 2021 Mining Software Repositories Conference, Online, 19 May 2021.
 {{< /details >}}
