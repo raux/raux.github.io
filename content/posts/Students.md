@@ -24,7 +24,7 @@ image: "/images/kipuri.jpg"
 
 
 <!--more-->
-## Student Co-Supervision since 2018 (28 students)
+# Student Co-Supervision since 2018 (28 students)
 
 ### Graduated
 

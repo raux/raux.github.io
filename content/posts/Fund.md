@@ -1,5 +1,5 @@
 ---
-title: "Funding / Projects"
+title: "Funding / Community Service"
 date: 2023-08-18T16:46:16+08:00
 
 # format for string: "xxxx-xx-xx"
@@ -26,11 +26,11 @@ image: "/images/hokkaido.jpg"
 <!--more-->
 ### Community Work
 
-[Major Conferences](https://conf.researchr.org/profile/raulakula)
+[Listing of PC, PC Organizions, Papers from major conferences](https://conf.researchr.org/profile/raulakula)
 
 {{< details "Roles in the SE Community" >}}
-- SIGSOFT Information Director (2018--)
-- Steering Committee for International Conference on Program Comprehension (ICPC 2023--2026)
+- SIGSOFT Information Director (2018--) [Link](https://acmsigsoft.github.io/contact/)
+- Steering Committee for International Conference on Program Comprehension (ICPC 2023--2026) [Link] (https://conf.researchr.org/committee/icpc-2024/icpc-2024-steering-committee)
 - SIGSOFT CARES Committee Member [Link](https://acmsigsoft.github.io/cares/sigsoft_cares/)
 - IEEE TSE Social Media Editorial Board Member (2023--)
 - Springer Empirical Engineering Editoral Board Member (2019 --)
@@ -56,26 +56,3 @@ image: "/images/hokkaido.jpg"
 
 - **Co-PI** Evaluation of Risk and Soundness of Open Source Software: Grant-in-Aid for Scientific Research (A)
 {{< /details >}}
-
-
-{{< details "NAIST Projects" >}}
-- **PBL Programs (2020~)**
-I have been involved in Program Based Learning for master students. We have entered a programming contest, written registered reports and created a curriculum for high school students.
-
-- **High School Internship Program (2021~)**
-We provided an opportunity for high school students to learn advanced research topics in research. The outcome was students learning basic programming in Python and the ability to build algorithms to play the Othello game.
-
-- **Internships Programs with International Universities**
-We have built collaborations with Mahidol University, Kasetsart University, Chiang Mai, which has results in students that have become members of the laboratory.
-Recently have been working with Mahasiswa Universitas Muhammadiyah Surakarta Indonesia, and University of Technology in Papua New Guinea to start-up their internship programs.
-{{< /details >}}
-
-
-#### PNG BRIDGES Workshop
-I have also active in promoting Software Engineering to the emerging countries. In 2019, We organized a workshop for Software Engineering in the Pacific. https://naist-se.github.io/PNG-BRIDGES/
-
-
-#### International Collaborations
-My research is not complete without different perspectives from top researchers.
-University of Melbourne (Australia), University of Waterloo (Canada), Ecole de techologie superieure Montreal (Canada), McGill University (Canada), Universidad Rey Juan Carlos (Spain) to name a few.
-
