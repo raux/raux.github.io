@@ -23,13 +23,7 @@ image: "/images/shonan.jpg"
 ---
 <!--more-->
 # 2023
-- Accepted Paper at EMSE
-- Submitted Reviews for ICSME2023 NIER Track
-- Submitted Review for EMSE
-- Submitted Review for JSS
-- Submitted Review for IEEE TSE
-- Accepted Paper at EMSE
-- Accepted Paper at FSE 2023
-- Accepted Paper at MSR 2023
+- Accepted Paper at FSE 2023. Congrats to Asia for the Vision Paper.
+- Accepted Paper at MSR 2023. Congrats to Asia
 - Accepted Paper at MSR 2023
 - Accepted Paper at MSR 2023
