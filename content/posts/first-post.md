@@ -28,9 +28,9 @@ image: "/images/shonan.jpg"
 {{< dynalist >}}
 
 {{< details "Tweets" >}}
-- {{< tweet id="1665526230777749505" user="Augaiko" >}}
+{{< tweet id="1665526230777749505" user="Augaiko" >}}
 {{< /details >}}
 
 {{< details "BRIDGES2019" >}}
-- {{< youtube id="SsHf0-X4vrI" >}}
+{{< youtube id="SsHf0-X4vrI" >}}
 {{< /details >}}
