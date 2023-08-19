@@ -26,4 +26,8 @@ image: "/images/shonan.jpg"
 
 {{< tweet id="1665526230777749505" user="Augaiko" >}}
 
+{{< tweet id="1658292624971931648" user="icpcconf" >}}
+
+
+
 {{< dynalist >}}
