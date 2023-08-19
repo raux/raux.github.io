@@ -3,7 +3,7 @@ languageCode = 'en-us'
 
 # website title
 # 网站标题
-title = 'Associate Professor at Nara Institute of Science and Technology'
+title = 'Associate Professor at NAIST'
 # theme
 # 主题
 theme = "NewBee"
@@ -84,11 +84,11 @@ hasCJKLanguage = false
         defaultPostImg = "/images/default.jpg"
         
         # 主页文章最大显示数量
-        maxHomePostCount = 5
+        maxHomePostCount = 10
         # 相关文章最大显示数量
-        maxPageRelatedCount = 5
+        maxPageRelatedCount = 10
         # 最新文章最大显示数量
-        maxPageNewestCount = 5
+        maxPageNewestCount = 10
 
     # Valine comment
     # Valine评论（详情请移步：https://valine.js.org/）
