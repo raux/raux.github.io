@@ -27,7 +27,5 @@ image: "/images/shonan.jpg"
 
 {{< dynalist >}}
 
-### Social Media
+### Twitter
 {{< tweet user="aserebrenik" id="1648679175560069121">}}
-
-### At the End
