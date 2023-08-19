@@ -19,19 +19,19 @@ tags: []
 series: ['Notes']
 
 # Top image for the post
-image: "/images/graffiti.jpg"
+image: "/images/kipuri.jpg"
 ---
 
 
 <!--more-->
-# Google Scholar
-https://scholar.google.com.au/citations?hl=ja&user=BxUrdQEAAAAJ
+## Student Co-Supervision since 2018 (28 students)
 
-# DBLP
-https://dblp.org/pid/64/7675.html
+### Graduated
 
-# ORCID
-[ORCID - 0000-0003-2324-0608](https://orcid.org/0000-0003-2324-0608)
+Doctoral course students (10): Saya Onoue (2019), Toshiki Hirao (2020), Shade Ruangwan (2020), Yusuf Sulistyo Nugroho (2020), Bodin Chinthanet (2021), Keitaro Nakasai (2021), Dong Wang (2022), Syful Islam (2022), Yuki Ueda (2022), Pattaraporn Tulathum (2022).
+Master’s course students (14): 2018 (5), 2019 (1), 2020 (4), 2021 (4), 2022 (4)
 
-# My Full List of Publications
-{{< naist3 >}}
+### Current 2023
+
+Current doctoral course students that I co-supervise: Supatsara Wattanakriengkrai, Supavas Sitthithanasakul, Ifraz Rehman, 
+
