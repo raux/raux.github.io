@@ -1,5 +1,5 @@
 ---
-title: "Community Service"
+title: "Service To the SE Community"
 date: 2023-08-05T16:46:16+08:00
 
 # format for string: "xxxx-xx-xx"
@@ -25,3 +25,13 @@ image: "/images/aroma.jpg"
 # Work with Major Conferences.
 
 [Major Conferences](https://conf.researchr.org/profile/raulakula)
+
+# Roles in Community
+
+- SIGSOFT Information Director (2018--)
+- IEEE TSE Social Media Editorial Board Member (2018--)
+- Springer Empirical Engineering Editoral Board Member
+- Journal of Software and Systems Editorial Member
+
+- IEEE Society Member
+- IPSJ Society Member

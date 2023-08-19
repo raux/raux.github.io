@@ -1,5 +1,5 @@
 ---
-title: "News"
+title: "Research Projects"
 date: 2023-08-07T16:46:16+08:00
 
 # format for string: "xxxx-xx-xx"
@@ -19,10 +19,11 @@ tags: [info]
 series: ['Notes']
 
 # Top image for the post
-image: "/images/shonan.jpg"
+image: "/images/house.jpg"
 ---
 <!--more-->
 # NAIST Projects
+
 ## PBL Programs (2020~) 
 I have been involved in Program Based Learning for master students. We have entered a programming contest, written registered reports and created a curriculum for high school students.
 
@@ -33,11 +34,12 @@ We provided an opportunity for high school students to learn advanced research t
 We have built collaborations with Mahidol University, Kasetsart University, Chiang Mai, which has results in students that have become members of the laboratory.
 Recently have been working with Mahasiswa Universitas Muhammadiyah Surakarta Indonesia, and University of Technology in Papua New Guinea to start-up their internship programs.
 
+# External Projects
+
 ## PNG BRIDGES Workshop
 I have also active in promoting Software Engineering to the emerging countries. In 2019, I organized and hosted a workshop for Software Engineering in Papua New Guinea. https://naist-se.github.io/BRIDGES2019/
 
 
 ## International Collaborations
-
 My research is not complete without different perspectives from top researchers.
 University of Melbourne (Australia), University of Waterloo (Canada), Ecole de techologie superieure Montreal (Canada), McGill University (Canada), Universidad Rey Juan Carlos (Spain) to name a few.
