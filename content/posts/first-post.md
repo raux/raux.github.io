@@ -1,6 +1,6 @@
 ---
-title: "News"
-date: 2023-08-18T16:46:16+08:00
+title: "Latest News"
+date: 2023-08-18T19:11:16+08:00
 
 # format for string: "xxxx-xx-xx"
 lastmod: "2023-08-19"
@@ -27,4 +27,5 @@ image: "/images/shonan.jpg"
 
 {{< dynalist >}}
 
+### Social Media
 {{< tweet user="aserebrenik" id="1648679175560069121">}}
