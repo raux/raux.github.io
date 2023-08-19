@@ -1,25 +1,25 @@
 ---
 title: "Full List of Publications"
-date: 2023-08-06T16:46:16+08:00
+date: 2023-08-19T16:46:16+08:00
 
 # format for string: "xxxx-xx-xx"
-lastmod: "2023-03-28"
+lastmod: "2023-08-19"
 
 # set false when you want the post publish
 draft: false
 
 # one category: ["category-1"] 
 # more categories: ["category-1", "category-2", ...]
-categories: ['web']
+categories: ['publications']
 
 # refer to categories
-tags: []
+tags: ['publications']
 
 # seires
 series: ['Notes']
 
 # Top image for the post
-image: "/images/example.jpeg"
+image: "/images/library.jpg"
 ---
 
 

@@ -19,7 +19,7 @@ tags: [info]
 series: ['Notes']
 
 # Top image for the post
-image: "/images/about.jpg"
+image: "/images/aroma.jpg"
 ---
 <!--more-->
 # 2023

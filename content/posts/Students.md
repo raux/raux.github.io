@@ -19,7 +19,7 @@ tags: []
 series: ['Notes']
 
 # Top image for the post
-image: "/images/example.jpeg"
+image: "/images/graffiti.jpg"
 ---
 
 
