@@ -30,11 +30,11 @@ image: "/images/hokkaido.jpg"
 
 {{< details "Roles in the SE Community" >}}
 - SIGSOFT Information Director (2018--) [Link](https://acmsigsoft.github.io/contact/)
-- Steering Committee for International Conference on Program Comprehension (ICPC 2023--2026) [Link] (https://conf.researchr.org/committee/icpc-2024/icpc-2024-steering-committee)
+- Steering Committee for International Conference on Program Comprehension (ICPC 2023--2026) [Link](https://conf.researchr.org/committee/icpc-2024/icpc-2024-steering-committee)
 - SIGSOFT CARES Committee Member [Link](https://acmsigsoft.github.io/cares/sigsoft_cares/)
-- IEEE TSE Social Media Editorial Board Member (2023--)
-- Springer Empirical Engineering Editoral Board Member (2019 --)
-- Journal of Software and Systems Editorial Member (2019)
+- IEEE TSE Social Media Editorial Board Member (2023--) [Link](https://www.computer.org/csdl/journal/ts/about/107385)
+- Springer Empirical Engineering Editoral Board Member (2019 --) [Link](https://www.springer.com/journal/10664/editors)
+- Journal of Software and Systems Editorial Member (2019) [Link](https://www.sciencedirect.com/journal/journal-of-systems-and-software/about/editorial-board)
 - IEEE Society Member
 - IPSJ Society Member
 {{< /details >}}
