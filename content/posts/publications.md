@@ -25,21 +25,21 @@ image: "/images/library.jpg"
 
 <!--more-->
 
-{{< details "Citations" >}}
+{{< details " My Links to Citations" >}}
 - [Google Scholar](https://scholar.google.com.au/citations?hl=ja&user=BxUrdQEAAAAJ)
 - [DBLP](https://dblp.org/pid/64/7675.html)
 {{< /details >}}
 
-#### ORCID
-[ORCID - 0000-0003-2324-0608](https://orcid.org/0000-0003-2324-0608)
+{{< details " My IDs" >}}
+- [ORCID - 0000-0003-2324-0608](https://orcid.org/0000-0003-2324-0608)
+- [Japanese ResearchMap](https://researchmap.jp/raula-k/?lang=english)
+{{< /details >}}
 
-<details open>
-  <summary>Mini Keynotes</summary>
-Raula Gaikovina Kula, “To Sustain a Smart, Dependent and Social Software Ecosystem (Mini-Keynote),” 2021 Mining Software Repositories Conference, Online, 19 May 2021.
-</details>
- 
-<details open>
-  <summary>## Invited International Talks:</summary>
+{{< details "Keynotes" >}}
+- Raula Gaikovina Kula, “To Sustain a Smart, Dependent and Social Software Ecosystem (Mini-Keynote),” 2021 Mining Software Repositories Conference, Online, 19 May 2021.
+{{< /details >}}
+
+{{< details "Invited International Talks" >}}
 1.	Raula Gaikovina Kula, What do we know about Libraries and Their Dependencies? Never Work in Theory, April 25th 2023.
 2.	Raula Gaikovina Kula, Intelligent Software Updates: Leveraging the Software Ecosystem to Support when to update library dependencies,” Polytechnique Montréal, Canada, 13 March 2020.
 3.	Raula Gaikovina Kula, “Intelligent Software Updates: Software Ecosystem Support for library updates,” Queens University, Canada., 10 March 2020.
@@ -51,8 +51,7 @@ Tutorial Talks
 3.	NAIST and Thailand Symposium, “Short-term Internship Projects in Software Engineering: Experience, Outcomes and Perspectives”, Kasetsart University, Thailand, 3rd November 2018.
 4.	The 56th CREST Open Workshop (Code Review and Continuous Inspection/Integration), “The Work Space of a Reviewer in Modern Code Review”, London, England, 2017.
 5.	SES SIGSE2017 - Special International Track on Software Analytics - “On Updating Library Dependencies in OSS Projects”, Tokyo, Japan, 2017
-</details>
-
-# Full List of Publications
+{{< /details >}}
+ 
 {{< naist3 >}}
 
