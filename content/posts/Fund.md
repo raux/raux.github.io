@@ -47,17 +47,15 @@ image: "/images/hokkaido.jpg"
 {{< /details >}}
 
 
-#### Funding (PI)
--  A Social Developer Digital Footprint for Skills Proficiency: Grant-in-Aid for Early-Career Scientists
+{{< details "Funded Projects" >}}
+- **PI** A Social Developer Digital Footprint for Skills Proficiency: Grant-in-Aid for Early-Career Scientists
+- **PI** AI Detection of Protestware: JST - ReNewMAP (Researcher New-mode Mobility Accelerator Program)
+- **Co-PI** Fundamental and Innovative Technologies for Next-Generation Software Ecosystems: Grant-in-Aid for Scientific Research (S)
 
-- AI Detection of Protestware: JST - ReNewMAP (Researcher New-mode Mobility Accelerator Program)
+- **Co-PI** Develping Infrastructure for Software Ecosystem Analysis Using SPDX: Grant-in-Aid for Scientific Research (B)
 
-#### Co-PI
-- Fundamental and Innovative Technologies for Next-Generation Software Ecosystems: Grant-in-Aid for Scientific Research (S)
-
-- Develping Infrastructure for Software Ecosystem Analysis Using SPDX: Grant-in-Aid for Scientific Research (B)
-
-- Evaluation of Risk and Soundness of Open Source Software: Grant-in-Aid for Scientific Research (A)
+- **Co-PI** Evaluation of Risk and Soundness of Open Source Software: Grant-in-Aid for Scientific Research (A)
+{{< /details >}}
 
 
 {{< details "NAIST Projects" >}}
