@@ -26,6 +26,3 @@ image: "/images/shonan.jpg"
 
 
 {{< dynalist >}}
-
-### Twitter
-{{< tweet user="aserebrenik" id="1648679175560069121">}}
