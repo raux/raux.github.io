@@ -1,5 +1,5 @@
 ---
-title: "Funding / Community Service"
+title: "Community Service / Funding "
 date: 2023-08-18T16:46:16+08:00
 
 # format for string: "xxxx-xx-xx"
@@ -46,6 +46,7 @@ image: "/images/hokkaido.jpg"
 - [KAKEN JSPS Researcher 80749094](https://nrid.nii.ac.jp/en/nrid/1000080749094/)
 {{< /details >}}
 
+### Grants
 
 {{< details "Funded Projects" >}}
 - **PI** A Social Developer Digital Footprint for Skills Proficiency: Grant-in-Aid for Early-Career Scientists
