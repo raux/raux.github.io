@@ -24,6 +24,6 @@ image: "/images/shonan.jpg"
 
 <!--more-->
 
-{{< tweet id="1332331305154076678" user="isjwuk" >}}
+{{< tweet id="1665526230777749505" user="Augaiko" >}}
 
 {{< dynalist >}}
