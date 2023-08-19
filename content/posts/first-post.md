@@ -21,11 +21,14 @@ series: ['Notes']
 # Top image for the post
 image: "/images/shonan.jpg"
 ---
+
 <!--more-->
 # 2023
 - Accepted Paper at FSE 2023. Congrats to Asia for the Vision Paper.
+
 - Became a member of IEEE TSE Social Media Editorial Board Member
 - Became a committee member of SIGSOFT CARES program
+
 - Became a steering committee member for ICPC (International Conference on Program Comprehension)
 - Accepted Paper at MSR 2023. Congrats to Supatsara
 - Accepted Paper at MSR 2023. Congrats to Kannae

@@ -19,6 +19,9 @@ tags: [info]
 series: ['Notes']
 
 # Top image for the post
+image: "/images/midnight.jpg"
+---
+
 <!--more-->
 # NAIST Projects
 
