@@ -25,14 +25,10 @@ image: "/images/library.jpg"
 
 <!--more-->
 
-
-<details open>
-  <summary><b>Citations</b></summary>
-  - [Google Scholar](https://scholar.google.com.au/citations?hl=ja&user=BxUrdQEAAAAJ)
+{{< details "Citations" >}}
+- [Google Scholar](https://scholar.google.com.au/citations?hl=ja&user=BxUrdQEAAAAJ)
 - [DBLP](https://dblp.org/pid/64/7675.html)
-</details>
-
-
+{{< /details >}}
 
 #### ORCID
 [ORCID - 0000-0003-2324-0608](https://orcid.org/0000-0003-2324-0608)

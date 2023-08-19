@@ -23,6 +23,8 @@ image: "/images/shonan.jpg"
 ---
 
 <!--more-->
+{{< dynalist >}}
+
 # 2023
 - Accepted Paper at FSE 2023. Congrats to Asia for the Vision Paper.
 
