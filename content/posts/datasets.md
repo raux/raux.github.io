@@ -24,13 +24,14 @@ image: "/images/shonan.jpg"
 
 
 <!--more-->
-### Datasets
+### Published Datasets
 
 To promote Open Science, our research groups try their very best to make the datasets available for researchers to replicate our results. 
 
 Here is a summary of the datasets, and the different publications associated with them. 
 
 2023 
-> 18 million links in commit messages: purpose, evolution, and decay - [Zenodo](https://zenodo.org/record/7536500)
-> Understanding the role of external pull requests in the NPM ecosystem - [Zenodo](https://zenodo.org/record/6366998#.Y9-KTnZBxXU, [GitHub](https://github.com/NAIST-SE/External-PullRequest)
+> - 18 million links in commit messages: purpose, evolution, and decay - [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7536500.svg)](https://doi.org/10.5281/zenodo.7536500)
+
+> - Understanding the role of external pull requests in the NPM ecosystem - [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6366998.svg)](https://doi.org/10.5281/zenodo.6366998), [GitHub repo](https://github.com/NAIST-SE/External-PullRequest)
 > 
