@@ -30,8 +30,16 @@ To promote Open Science, our research group, in collaboration with our partners,
 
 Here is a summary of the datasets, and the different publications associated with them. 
 
-2023 
-> - 18 million links in commit messages: purpose, evolution, and decay - [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7536500.svg)](https://doi.org/10.5281/zenodo.7536500)
+#### 2023 
+> 18 million links in commit messages: purpose, evolution, and decay - [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7536500.svg)](https://doi.org/10.5281/zenodo.7536500)
 
-> - Understanding the role of external pull requests in the NPM ecosystem - [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6366998.svg)](https://doi.org/10.5281/zenodo.6366998), [GitHub repo](https://github.com/NAIST-SE/External-PullRequest)
-> 
+> Understanding the role of external pull requests in the NPM ecosystem - [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6366998.svg)](https://doi.org/10.5281/zenodo.6366998), [GitHub repo](https://github.com/NAIST-SE/External-PullRequest)
+
+> Does the first response matter for future contributions? A study of first contributions [GitHub repo](https://github.com/NAIST-SE/External-PullRequest)
+
+> Understanding the Role of Images on Stack Overflow - [Anon 4 Open Science](https://anonymous.4open.science/r/SOImages/README.md)
+
+> Intertwining Communities: Exploring Libraries that Cross Software Ecosystems - [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7553341.svg)](https://doi.org/10.5281/zenodo.7553341)
+
+> [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7888116.svg)](https://doi.org/10.5281/zenodo.7888116)
+
