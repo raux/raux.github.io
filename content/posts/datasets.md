@@ -31,7 +31,7 @@ To promote Open Science, our research group, in collaboration with our partners,
 Here is a summary of the datasets, and the different publications associated with them. 
 
 #### 2023 
-> 18 million links in commit messages: purpose, evolution, and decay - [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7536500.svg)](https://doi.org/10.5281/zenodo.7536500)
+> 18 million links in commit messages: purpose, evolution, and decay - [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7536500.svg)](https://doi.org/10.5281/zenodo.7536500. The dataset contains 18,201,165 links from commits in 23,110 GitHub repositories. 
 
 > Understanding the role of external pull requests in the NPM ecosystem - [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6366998.svg)](https://doi.org/10.5281/zenodo.6366998), [GitHub repo](https://github.com/NAIST-SE/External-PullRequest)
 
