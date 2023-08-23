@@ -26,7 +26,7 @@ image: "/images/shonan.jpg"
 <!--more-->
 ### Published Datasets
 
-To promote Open Science, our research groups try their very best to make the datasets available for researchers to replicate our results. 
+To promote Open Science, our research group, in collaboration with our partners, consistently strives to make our datasets available. This allows other researchers to replicate our results.
 
 Here is a summary of the datasets, and the different publications associated with them. 
 
