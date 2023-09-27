@@ -19,7 +19,7 @@ tags: ['datasets']
 series: ['posts']
 
 # Top image for the post
-image: "/images/shonan.jpg"
+image: "/images/kipuri.jpg"
 ---
 
 
