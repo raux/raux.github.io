@@ -3,10 +3,7 @@
 
 **Second International Workshop on BRIdging the Divides with Globally Engineered Software (BRIDGES2023)**
 
-
 ## 2023 Theme: 
-
-
 
 ### Four International Talks
 
