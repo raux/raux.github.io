@@ -1,5 +1,5 @@
-# WIRED2024
-12th - 14th Sept. 2023 at Loloata, Port Moresby, Papua New Guinea
+# WIRED
+6th - 8th December 2024 Osaka, Japan
 
 **Second International Workshop on BRIdging the Divides with Globally Engineered Software (BRIDGES2023)**
 
