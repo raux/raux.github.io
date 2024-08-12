@@ -20,9 +20,9 @@ Our goal is to facilitate a discussion for young researchers to build an sustain
   
 - Recognize and Educate how top-class research looks like.
   
-- Estabilish and build Japanese networks that keep up with global research.
+- Estabilish and build Japanese localized networks that link with global research.
   
-- Towards Research and Education at a global standard within Japan. 
+- Towards Research and Education at a global standard that holds Japan culture and environment. 
 
 ## Call for Contributions
 <p style='text-align: justify;'>
@@ -35,7 +35,7 @@ We facilitate two types of contributions
   
 - **Late Breaking Ideas for Feedback**: Submit an abstract that will also be presented but will not be published to keep anonmynity. 
 
-## Organizing Team
+## Meet the Team
 
 ## Venue
 
