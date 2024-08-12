@@ -23,9 +23,8 @@ Our goal is to facilitate a discussion for young researchers to build an sustain
   
 - Estabilish and build Japanese localized networks that link with global research.
   
-- Towards Research & Education at a global standard that holds Japan culture and environment.
-  
-- Provide Feedback on Early Research Ideas.
+- Towards Research & Education at a global standard.
+
 
 ## Call for Contributions
 <p style='text-align: justify;'>
