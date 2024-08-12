@@ -1,13 +1,13 @@
 # WIREDS2024
 
-# The First International Workshop on Intertwining Research and Education on Software (WIREDS2024)
+# The First International Workshop on Intertwining Research & Education on Software (WIREDS2024)
 
 **6th - 8th December 2024 Osaka, Japan**
 
 ## About
 
 <p style='text-align: justify;'>
-Software powers our everyday lives. The First International Workshop on Intertwining Research and Education on Software (WIREDS2024) is a pioneering initiative designed to bridge the gap between research and education within the Japanese software community to bring top class research to the global community. This workshop aims to foster an environment where expert researchers, students, educators, and practitioners can engage in meaningful dialogue about cutting-edge and disruptive innovations in software development and engineering.
+Software powers our everyday lives. The First International Workshop on Intertwining Research & Education on Software (WIREDS2024) is a pioneering initiative designed to bridge the gap between research and education within the Japanese software community to bring top class research to the global community. This workshop aims to foster an environment where expert researchers, students, educators, and practitioners can engage in meaningful dialogue about cutting-edge and disruptive innovations in software development and engineering.
 
 WIREDS2024 seeks to establish a local platform for the next generation of younger researchers in Japan by brining in rising stars from the global. The workshop is committed to cultivating a collaborative atmosphere that encourages the sharing of diverse perspectives, ultimately contributing to the growth and evolution of software research—not only in Japan but in a way that is mutually beneficial for the global community.
 </p>
@@ -17,13 +17,15 @@ WIREDS2024 seeks to establish a local platform for the next generation of younge
 Our goal is to facilitate a discussion for young researchers to build an sustain their networks in research. Topics of discussion include:
 </p>
 
-- Provide Feedback on Early Research Ideas.
+- Exposure to latest trends in Software such as the impact of generative AI and augmentated visualization. 
   
-- Educate and Exposre to how top-class young research looks like.
+- Educate and exposre to how top-class young research looks like.
   
 - Estabilish and build Japanese localized networks that link with global research.
   
-- Towards Research and Education at a global standard that holds Japan culture and environment. 
+- Towards Research & Education at a global standard that holds Japan culture and environment.
+  
+- Provide Feedback on Early Research Ideas.
 
 ## Call for Contributions
 <p style='text-align: justify;'>
