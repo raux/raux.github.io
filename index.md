@@ -17,13 +17,13 @@ WIREDS2024 seeks to establish a local platform for the next generation of younge
 Our goal is to facilitate a discussion for young researchers to build an sustain their networks in research. Topics of discussion include:
 </p>
 
-- Exposure to latest trends in Software such as the impact of generative AI and augmentated visualization. 
+- Exposure to latest trends in Software such as the impact of generative Artifical Intelligence and augmentated computing and visualization. 
   
 - Educate and exposre to how top-class young research looks like.
   
-- Estabilish and build Japanese localized networks that link with global research.
+- Estabilish and build Japanese localized networks that link with global diversity and inclusiveness.
   
-- Towards Research & Education at a global standard.
+- Build Research & Education that is innovative and solves global issues.
 
 
 ## Call for Contributions
@@ -33,7 +33,7 @@ We facilitate two types of contributions
 
 - **Fast Abstracts**: These are lightly-reviewed two page abstracts that will be presented as Posters and will be given a 1 min elevator talk.
 
-- **Panel Discussions for Ask Me Anything**: Submit an abstract on your expertise and what kinds of advice you can provide to our younger generation.
+- **Ask Me Anything Panels**: Submit an abstract on your expertise and what kinds of advice you can provide to our younger generation.
   
 - **Late Breaking Ideas for Feedback**: Submit an abstract that will also be presented but will not be published to keep anonmynity. 
 
