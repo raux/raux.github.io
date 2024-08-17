@@ -56,9 +56,9 @@ hasCJKLanguage = false
         # font size(px)
         homeTitleFontSize = 40
         # content in home top image, support Markdown
-        homeContent = "Collaborating to Bridge all Software Engineers for a Global Society: Empirical Scientist with Software Ecosystems and Coding Proficiency"
+        homeContent = "Bridging all Software Engineers for a Global Society: Empirical Software Engineering Scientist"
         # font size(px)
-        homeContentFontSize = 28
+        homeContentFontSize = 20
 
         # top image in categories terms page
         categoryTopImg = "/images/categories.jpg"
