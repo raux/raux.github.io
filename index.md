@@ -26,17 +26,17 @@ Our goal is to facilitate a discussion for young researchers to build an sustain
 
 ## Call for Contributions
 <p style='text-align: justify;'>
-We facilitate two types of contributions
+We facilitate three types of contributions
 </p>
 
-- **Fast Abstracts**: These are lightly-reviewed two page abstracts that will be presented as Posters and will be given a 1 min elevator talk.
+- **Fast Abstracts as Posters**: These are lightly-reviewed two page abstracts that will be presented as Posters and will be given a 1 min elevator talk.
 
 - **Ask Me Anything Panels**: Submit an abstract on your expertise and what kinds of advice you can provide to our younger generation.
   
-- **Late Breaking Ideas for Feedback**: Submit an abstract that will also be presented but will not be published to keep anonmynity. 
+- **Late Breaking Ideas Abstract only**: Submit an abstract that will also be presented but will not be published to keep anonmynity. 
 
 ## Meet the Team
 
-## Venue
+## Registration and Venue
 
 ## Program
