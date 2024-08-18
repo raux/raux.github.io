@@ -18,11 +18,11 @@ WIREDS2024 seeks to establish a local platform for the next generation of younge
 Our goal is to facilitate a space for contributions, advice and discussions that align with these three activities:
 </p>
 
-- **RESEARCH:** Gain early feedback on your research from experts. Practise presentation skills, and seek potential collaborators.
+- **Research:** Gain early feedback on your research from experts. Practise presentation skills, and seek potential collaborators.
 
-- **EDUCATION:** Learn about the latest trends in Software such as the impact of generative Artifical Intelligence and augmentated computing and visualization. 
+- **Education:** Learn about the latest trends in Software such as the impact of generative Artifical Intelligence and augmentated computing and visualization. 
   
-- **Networking:** Contribute to nuturing the next generation of world-class Young Researchers in the Early Stages of their Careers. We also aim to connect local Japanese researchers with rising scientist from the global community.  
+- **Promotion of Young Researchers:** Contribute to nuturing the next generation of world-class Young Researchers in the Early Stages of their Careers. We also aim to connect local Japanese researchers with rising scientist from the global community.  
 
 ## Call for Contributions
 <p style='text-align: justify;'>
