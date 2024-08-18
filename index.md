@@ -1,6 +1,6 @@
 # WIREDS2024
 
-### The First International Workshop on Intertwining Research & Education on Software (WIREDS2024)
+### The First International Workshop on Intertwining Research & Education on Software
 
 ### **6th - 8th December 2024 Osaka, Japan**
 
