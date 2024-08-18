@@ -26,7 +26,7 @@ Our goal is to facilitate a space for contributions, advice and discussions that
 
 ## Call for Contributions
 <p style='text-align: justify;'>
-We facilitate three types of contributions
+We facilitate two contributions
 </p>
 
 - **Fast Abstracts as Posters**: These are lightly-reviewed two page abstracts that will be presented as Posters and will be given a 1 min elevator talk.
