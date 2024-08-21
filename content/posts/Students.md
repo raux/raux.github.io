@@ -28,11 +28,11 @@ image: "/images/kipuri.jpg"
 
 ### Graduated
 
-**Co-supervisor, on committee for the doctoral course students (10)**: Saya Onoue (2019), Toshiki Hirao (2020), Shade Ruangwan (2020), Yusuf Sulistyo Nugroho (2020), Bodin Chinthanet (2021), Keitaro Nakasai (2021), Dong Wang (2022), Syful Islam (2022), Yuki Ueda (2022), Pattaraporn Tulathum (2022), Supavas Sitthithanasakul (2023)
+**Co-supervisor, on committee for the doctoral course students (10)**: Saya Onoue (2019), Toshiki Hirao (2020), Shade Ruangwan (2020), Yusuf Sulistyo Nugroho (2020), Bodin Chinthanet (2021), Keitaro Nakasai (2021), Dong Wang (2022), Syful Islam (2022), Yuki Ueda (2022), Pattaraporn Tulathum (2022), Supavas Sitthithanasakul (2023), Supatsara Wattanakriengkrai (2024), Ifraz Rehman (2024)
 
-### Current 2023
+### Current 2024
 
-Current doctoral course students that I co-supervise: Supatsara Wattanakriengkrai, Ifraz Rehman, Fan Youmei, Ani Hovhannisiyan
+Current doctoral course students that I co-supervise: Fan Youmei, Ani Hovhannisiyan, Ruksit Rojpaisarnkit
 
 # Teaching
 
