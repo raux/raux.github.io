@@ -27,9 +27,9 @@ Raula Gaikovina Kula received the PhD degree from NAIST, Japan in 2013. Original
 
 I was research assistant professor with Osaka University in 2013, then became an Assistant Profesor at NAIST in 2017.
 
-I am now an associate professor with the Nara Institute of Science and Technology (NAIST), Japan at [NAIST-SE](https://naist-se.github.io/).
+I am now a full professor with Osaka University , Japan at [Higo Lab](https://sel.ist.osaka-u.ac.jp/index.html).
 
-He is active in the Software Engineering community, serving the community as a PC member for premium SE venues, some as organising committee, and reviewer for journals. Along with my colleagues, we study a wider range of software engineering topics, covering human aspects, documentation, communication, and competency of code by programmers.  
+Raula is active in the Software Engineering community, serving the community as a PC member for premium SE venues, some as organising committee, and reviewer for journals. Along with my colleagues, we study a wider range of software engineering topics, covering human aspects, documentation, communication, and competency of code by programmers.  
 
 # Contact
-Send me an email at raula-k@is.naist.jp.
+Send me an email at raula-k@ist.osaka-u.ac.jp.
