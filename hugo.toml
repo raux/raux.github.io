@@ -56,7 +56,7 @@ hasCJKLanguage = false
         # font size(px)
         homeTitleFontSize = 40
         # content in home top image, support Markdown
-        homeContent = "Bridging Software Engineering across the Global Society"
+        homeContent = "Bridging Software Engineering across Global Societies"
         # font size(px)
         homeContentFontSize = 20
 
