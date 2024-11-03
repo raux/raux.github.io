@@ -23,13 +23,9 @@ image: "/images/about.jpg"
 ---
 <!--more-->
 # Bio
-Raula Gaikovina Kula received the PhD degree from NAIST, Japan in 2013. Originally from Papua New Guinea, I am a Software Engineering researcher. My interests vary from travelling, BBQs, fishing, and some music, sport and leisure along the way!
-
-I was research assistant professor with Osaka University in 2013, then became an Assistant Profesor at NAIST in 2017.
+Raula Gaikovina Kula received his Ph.D. from Nara Institute of Science and Technology (NAIST) in 2013, later joining as a Specially-Apppointed Assistant Professor from (2013-2016) at Osaka University. He then continued as a Specially-Appointed Assistant Professor from (2017), later becoming an Assistant Professor (2017-2023), and a Associate Professor (2023-2024) at NAIST. Kula has published over 150 publications in top Software Engineering venues, collaborating with several researchers from across the globe, and is a member of both Editorial and Steering Committees.
 
 I am now a full professor with Osaka University , Japan at [Higo Lab](https://sel.ist.osaka-u.ac.jp/index.html).
-
-Raula is active in the Software Engineering community, serving the community as a PC member for premium SE venues, some as organising committee, and reviewer for journals. Along with my colleagues, we study a wider range of software engineering topics, covering human aspects, documentation, communication, and competency of code by programmers.  
 
 # Contact
 Send me an email at raula-k@ist.osaka-u.ac.jp.
