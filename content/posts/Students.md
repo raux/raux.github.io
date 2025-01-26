@@ -1,9 +1,9 @@
 ---
-title: "Students/Teaching"
-date: 2023-08-18T16:46:16+08:00
+title: "Students and Teaching"
+date: 2025-01-25T16:46:16+08:00
 
 # format for string: "xxxx-xx-xx"
-lastmod: "2023-08-19"
+lastmod: "2025-01-25"
 
 # set false when you want the post publish
 draft: false
@@ -26,13 +26,13 @@ image: "/images/kipuri.jpg"
 <!--more-->
 # Student Co-Supervision since 2018
 
-### Graduated
+### Graduated (14)
 
-**Co-supervisor, on committee for the doctoral course students (10)**: Saya Onoue (2019), Toshiki Hirao (2020), Shade Ruangwan (2020), Yusuf Sulistyo Nugroho (2020), Bodin Chinthanet (2021), Keitaro Nakasai (2021), Dong Wang (2022), Syful Islam (2022), Yuki Ueda (2022), Pattaraporn Tulathum (2022), Supavas Sitthithanasakul (2023), Supatsara Wattanakriengkrai (2024), Ifraz Rehman (2024)
+**Co-supervisor, on committee for the doctoral course students (10)**: Saya Onoue (2019), Toshiki Hirao (2020), Shade Ruangwan (2020), Yusuf Sulistyo Nugroho (2020), Bodin Chinthanet (2021), Keitaro Nakasai (2021), Dong Wang (2022), Syful Islam (2022), Yuki Ueda (2022), Pattaraporn Tulathum (2022), Supavas Sitthithanasakul (2023), Supatsara Wattanakriengkrai (2024), Ifraz Rehman (2024), Tao Xiao (2024)
 
-### Current 2024
+### Current 2025 (5)
 
-Current doctoral course students that I co-supervise: Fan Youmei, Ani Hovhannisiyan, Ruksit Rojpaisarnkit
+Current doctoral course students that I co-supervise: Fan Youmei, Ani Hovhannisiyan, Ruksit Rojpaisarnkit, Jaisri Pongchai, Lenz Neritz
 
 # Teaching
 
