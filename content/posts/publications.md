@@ -25,6 +25,12 @@ image: "/images/library.jpg"
 
 <!--more-->
 
+### Profiles
+
+- [ORCID - 0000-0003-2324-0608](https://orcid.org/0000-0003-2324-0608)
+- [Japanese Profile on ResearchMap](https://researchmap.jp/raula-k/?lang=english)
+- [KAKEN JSPS Researcher Profile 80749094](https://nrid.nii.ac.jp/en/nrid/1000080749094/)
+- 
 ### Publications
 
 You can see my full publication lists at Google Scholar, DBLP, and researchmap
