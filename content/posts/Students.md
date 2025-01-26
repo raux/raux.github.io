@@ -1,5 +1,5 @@
 ---
-title: "Students and Teaching"
+title: "Service, Grants, Students and Teaching"
 date: 2025-01-25T16:46:16+08:00
 
 # format for string: "xxxx-xx-xx"
@@ -25,7 +25,7 @@ image: "/images/kipuri.jpg"
 
 <!--more-->
 
-### Community Service
+# My Community Service
 
 - SIGSOFT Information Director (2018--2024) [Link](https://acmsigsoft.github.io/contact/)
 - Steering Committee for International Conference on Program Comprehension (ICPC 2023--2026) [Link](https://conf.researchr.org/committee/icpc-2024/icpc-2024-steering-committee)
@@ -37,7 +37,7 @@ image: "/images/kipuri.jpg"
 - ACM Member
 - IPSJ Society Member
 
-### Grants
+# My Grants
 
 - **PI** A Social Developer Digital Footprint for Skills Proficiency: Grant-in-Aid for Early-Career Scientists
 - **PI** AI Detection of Protestware: JST - ReNewMAP (Researcher New-mode Mobility Accelerator Program)
@@ -47,7 +47,7 @@ image: "/images/kipuri.jpg"
 
 - **Co-PI** Evaluation of Risk and Soundness of Open Source Software: Grant-in-Aid for Scientific Research (A)
 - 
-# Student Co-Supervision since 2018
+# My Student Co-Supervision since 2018
 
 ### Graduated (14)
 
