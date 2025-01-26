@@ -24,8 +24,7 @@ image: "/images/shonan.jpg"
 
 <!--more-->
 
-## 2025
+# 2025
 
 - Program Co-Chairs for VISSOFT2025 https://vissoft.io/2025/
 - Doctoral Symposium Co-Chair for ICSME2025 https://conf.researchr.org/track/icsme-2025/icsme-2025-doctoral-symposium
-- 
