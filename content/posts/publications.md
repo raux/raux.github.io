@@ -1,5 +1,5 @@
 ---
-title: "Full List of Publications"
+title: "Profiles, Publications and everything in between"
 date: 2025-01-19T16:46:16+08:00
 
 # format for string: "xxxx-xx-xx"
@@ -41,7 +41,6 @@ You can see my full publication lists at Google Scholar, DBLP, and researchmap
 ### Keynotes
 
 - Kula, R. G. (2024, July). The Ever-Evolving Promises of Data in Software Ecosystems: Models, AI, and Analytics (Keynote). In Proceedings of the 20th International Conference on Predictive Models and Data Analytics in Software Engineering (pp. 1-1).
-- 
 - Raula Gaikovina Kula, “To Sustain a Smart, Dependent and Social Software Ecosystem (Mini-Keynote),” 2021 Mining Software Repositories Conference, Online, 19 May 2021.
 
 #### Invited International Talks
