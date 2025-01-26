@@ -1,19 +1,19 @@
 ---
 title: "Research Projects"
-date: 2023-08-18T16:46:16+08:00
+date: 2025-01-26T16:46:16+08:00
 
 # format for string: "xxxx-xx-xx"
-lastmod: "2023-08-19"
+lastmod: "2025-01-26"
 
 # set false when you want the post publish
 draft: false
 
 # one category: ["category-1"] 
 # more categories: ["category-1", "category-2", ...]
-categories: ['info']
+categories: ['info', 'research projects']
 
 # refer to categories
-tags: [info]
+tags: [research projects]
 
 # seires
 series: ['Notes']
@@ -23,14 +23,14 @@ image: "/images/midnight.jpg"
 ---
 
 <!--more-->
-### WIREDS
+### International Workshop on Intertwining Research & Education on Software
 Software powers our everyday lives. The First International Workshop on Intertwining Research & Education on Software (WIREDS2024) is a pioneering initiative designed to bridge the gap between research and education within the Japanese software community to bring top class research to the global community. This workshop aims to foster an environment where expert researchers, students, educators, and practitioners can engage in meaningful dialogue about cutting-edge and disruptive innovations in software development and engineering.
 
 WIREDS2024 seeks to establish a local platform for the next generation of younger researchers in Japan by brining in rising stars from the global. The workshop is committed to cultivating a collaborative atmosphere that encourages the sharing of diverse perspectives, ultimately contributing to the growth and evolution of software research—not only in Japan but in a way that is mutually beneficial for the global community.
 
 https://wireds2024.github.io/
 
-### Shonan Meeting
+### Shonan Meetings
 I have been hosting some Shonan Meetings
 
 https://shonan.nii.ac.jp/seminars/207/
