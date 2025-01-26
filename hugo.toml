@@ -3,7 +3,7 @@ languageCode = 'en-us'
 
 # website title
 # 网站标题
-title = 'Professor@Osaka University'
+title = 'Professor @ The University of Osaka'
 # theme
 # 主题
 theme = "NewBee"
@@ -56,7 +56,7 @@ hasCJKLanguage = false
         # font size(px)
         homeTitleFontSize = 40
         # content in home top image, support Markdown
-        homeContent = "Bridging Software Engineering across Generations and Societies"
+        homeContent = "Empirical Scientist interested in Software Engineering Impact to Society"
         # font size(px)
         homeContentFontSize = 20
 
