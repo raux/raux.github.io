@@ -1,5 +1,5 @@
 ---
-title: "Latest News"
+title: "News"
 date: 2025-01-26T19:11:16+08:00
 
 # format for string: "xxxx-xx-xx"
