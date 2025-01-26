@@ -25,9 +25,9 @@ image: "/images/shonan.jpg"
 <!--more-->
 # Latest Community Service from researchr
 
-- [Listings](https://conf.researchr.org/profile/raulakula)
+- [My Listings](https://conf.researchr.org/profile/raulakula)
 
-# 2025
+# 2025 news
 
 - Program Co-Chairs for VISSOFT2025 https://vissoft.io/2025/
 - Doctoral Symposium Co-Chair for ICSME2025 https://conf.researchr.org/track/icsme-2025/icsme-2025-doctoral-symposium
