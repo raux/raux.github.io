@@ -23,6 +23,9 @@ image: "/images/shonan.jpg"
 ---
 
 <!--more-->
+# Latest Community Service from researchr
+
+- [Listings](https://conf.researchr.org/profile/raulakula)
 
 # 2025
 
