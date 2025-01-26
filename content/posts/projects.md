@@ -1,5 +1,5 @@
 ---
-title: "Research Projects"
+title: "Research"
 date: 2025-01-26T16:46:16+08:00
 
 # format for string: "xxxx-xx-xx"
