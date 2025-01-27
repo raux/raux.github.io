@@ -23,7 +23,7 @@ image: "/images/about.jpg"
 ---
 <!--more-->
 # Bio
-Raula Gaikovina Kula is a professor at the Graduate School of Information Science and Technology, Osaka University. He is also a designated professor at the Osaka University Institute for Advanced Co-Creation Studies. He received his Ph.D. from Nara Institute of Science and Technology (NAIST) in 2013, later joining as a Specially-Appointed Assistant Professor from (2013-2016) at Osaka University. He then continued as a Specially-Appointed Assistant Professor from (2017), later becoming an Assistant Professor (2017-2023), and an Associate Professor (2023-2024) at NAIST. Kula has published over 150 publications in top Software Engineering venues, collaborating with several researchers from across the globe, and is a member of both Editorial and Steering Committees in Software Engineering.
+Raula Gaikovina Kula is a professor at the Graduate School of Information Science and Technology, and a designated professor at the Institute for Advanced Co-Creation Studies, Osaka University (OU) now known as The University of Osaka. He received his Ph.D. from Nara Institute of Science and Technology (NAIST) in 2013, later joining as a Specially-Appointed Assistant Professor from (2013-2016) at Osaka University. He then continued as a Specially-Appointed Assistant Professor from (2017), later becoming an Assistant Professor (2017-2023), and an Associate Professor (2023-2024) at NAIST. Kula has published over 150 publications in top Software Engineering venues, collaborating with several researchers from across the globe, and is a member of both Editorial and Steering Committees in Software Engineering.
 
 # Email
 
