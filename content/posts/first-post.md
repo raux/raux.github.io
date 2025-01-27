@@ -31,7 +31,7 @@ For more social stuff, you can check my [X](https://x.com/Augaiko), [LinkedIn](h
 
 Here I list up all my reviewing, paper publications, and committee work from the Core SE Conferences
 
-- [ Profile in SE Core Conferences](https://conf.researchr.org/profile/raulakula)
+- [SE Core Conferences](https://conf.researchr.org/profile/raulakula)
 
 # 2025 so far
 
