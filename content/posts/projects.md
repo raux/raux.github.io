@@ -24,6 +24,28 @@ image: "/images/midnight.jpg"
 
 <!--more-->
 
+My research intersect these different fields in Software Engineering
+
+# AI for Software Engineering
+## Biases in AI 4 SE Communication and Documentation
+
+# Analytics
+## Software Ecosystem Sustainability
+
+# Dependability and Security
+## Software Ecosystem
+
+# Evolution
+## Software Reuse
+## Software Maintainance
+## Software Quality
+
+# Human and Social Aspects
+## Documentation
+## Communication and Knowledge Management
+
+# Education
+## Code Proficiency
 
 
 

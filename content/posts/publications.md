@@ -1,5 +1,5 @@
 ---
-title: "Profiles, Publications and everything in between"
+title: "Profiles, Publications and Everything in Between"
 date: 2025-01-19T16:46:16+08:00
 
 # format for string: "xxxx-xx-xx"
