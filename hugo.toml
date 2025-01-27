@@ -56,7 +56,7 @@ hasCJKLanguage = false
         # font size(px)
         homeTitleFontSize = 40
         # content in home top image, support Markdown
-        homeContent = "Empirical Scientist interested in Software Engineering Impact to Society"
+        homeContent = "Empirical Scientist analysing Software Engineering Impact to Societies"
         # font size(px)
         homeContentFontSize = 20
 
