@@ -35,23 +35,23 @@ Here I list up all my reviewing, paper publications, and committee work from the
 
 # 2025 so far
 
-- Program Co-Chairs for VISSOFT2025 https://vissoft.io/2025/
+- Program Co-Chairs for VISSOFT2025 [Link](https://vissoft.io/2025/)
 
-- Doctoral Symposium Co-Chair for ICSME2025 https://conf.researchr.org/track/icsme-2025/icsme-2025-doctoral-symposium
+- Doctoral Symposium Co-Chair for ICSME2025 [Link](https://conf.researchr.org/track/icsme-2025/icsme-2025-doctoral-symposium)
 
-- Congrats **Youmei et al.** on EMSE paper! Fan, Y., Wang, D., Wattanakriengkrai, S., Damrongsiri, H., Treude, C., Hata, H., & Kula, R. G. (2025). Developer Reactions to Protestware in Open Source Software: The cases of color. js and es5. ext. Empirical Software Engineering, 30(2), 1-25. https://link.springer.com/article/10.1007/s10664-024-10599-6
+- Congrats **Youmei et al.** on EMSE paper! Developer Reactions to Protestware in Open Source Software: The cases of color. js and es5. ext. Empirical Software Engineering [Link](https://link.springer.com/article/10.1007/s10664-024-10599-6)
 
-- Congrats **Yoshioka et al.** on MSR Mining Challenge Paper https://2025.msrconf.org/track/msr-2025-mining-challenge
+- Congrats **Yoshioka et al.** on MSR Mining Challenge Paper [Link](https://2025.msrconf.org/track/msr-2025-mining-challenge)
 
-- Congrats **Tanaka et al.** on MSR Mining Challenge 2025 paper! https://2025.msrconf.org/track/msr-2025-mining-challenge
+- Congrats **Tanaka et al.** on MSR Mining Challenge 2025 paper! [Link](https://2025.msrconf.org/track/msr-2025-mining-challenge)
 
 
 # 2024 
 
-- Awarded the Most Influential Paper with co-authors, Visualizing the evolution of systems and their library dependencies, IEEE 12th International Workshop on Visualizing Software for Understanding and Analysis (VISSOFT2024) https://sel.ist.osaka-u.ac.jp/topics/award_VISSOFT2024_raula/index.html.en 
+- Awarded the **Most Influential Paper** with co-authors, Visualizing the evolution of systems and their library dependencies, IEEE 12th International Workshop on Visualizing Software for Understanding and Analysis (VISSOFT2024) [Link](https://sel.ist.osaka-u.ac.jp/topics/award_VISSOFT2024_raula/index.html.en) 
 
-- Done and Dusted!  WIREDS24 https://wireds2024.github.io/
+- Done and Dusted!  WIREDS24 [Link](https://wireds2024.github.io/)
 
-- Done and Dusted Shonan 207 https://shonan.nii.ac.jp/seminars/207/
+- Done and Dusted Shonan 207 [Link](https://shonan.nii.ac.jp/seminars/207/)
 
 - Started working at The University of Osaka! joined Higo Lab https://sel.ist.osaka-u.ac.jp/
