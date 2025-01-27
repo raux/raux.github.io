@@ -54,4 +54,4 @@ Here I list up all my reviewing, paper publications, and committee work from the
 
 - Done and Dusted! Shonan 207 [Link](https://shonan.nii.ac.jp/seminars/207/)
 
-- Started working at The University of Osaka! joined Higo Lab https://sel.ist.osaka-u.ac.jp/
+- Started working at The University of Osaka! joined Higo Lab [Link](https://sel.ist.osaka-u.ac.jp/)
