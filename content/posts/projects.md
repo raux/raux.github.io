@@ -23,15 +23,16 @@ image: "/images/midnight.jpg"
 ---
 
 <!--more-->
+My work now fits into these three buckets, but depending on the collaboration, it can be more or less.
 
-# Theme 1: Software as an Ecosystem
+# Theme 1: Software as an Ecosystem 
 My research interests span the themes of the holistic concept of software through Software Ecosystems and its broader impact on society. With the rise of library package ecosystems, I conduct empirical analysis of software ecosystems such as Maven for Java, NPM for JavaScript, and PyPI for Python. 
 
 # Theme 2: Developer Proficiency as Code
 I am particularly interested in the role of developer proficiency through understanding how they code. Concretely we would like to measure developers skill based on the code, how the code can also be used as a signalling device for collaborators and also how AI plays a role in this in the future. 
 
 # Theme 3: Bridging Developers Across Societies
-I originate from Papua New Guinea and reside in Japan. I believe that software development is a global activity and that developers from all parts of the world should be able to collaborate effectively. So I host international workshops and internships with a global perspective.
+I originate from Papua New Guinea and reside in Japan. I believe that software development is a global activity. So I host international workshops and internships with a global perspective.
 
 # Research Areas in Software Engineering 
 As an empirical scientist, my team investigates hypotheses related to mining software repositories. 
@@ -43,14 +44,14 @@ This research looks into how communication and human interactions shape software
 - Developer Skills and Education
 - Software Ecosystem Sustainability and collaboration
 
-## Ecosystem Evolution
+## Evolution
 We examine the evolution of software ecosystems and how these changes impact software maintenance activities. T
 his includes research on code reviews, software documentation practices, and communication dynamics among developers as ecosystems evolve.
 Code proficiency is a central factor in how software evolves, as highly proficient developers tend to drive improvements in code quality and maintainability.
 - Software Ecosystem-level Maintenance
 - Maintenance and Code Proficiency
 
-## Ecosystem Security
+## Security
 In the realm of security, we analyze various aspects of software ecosystems to assess their vulnerability to both external and internal threats. 
 This research is increasingly connected to ethical concerns and societal issues, as we explore the implications of security within software supply chains and the broader ecosystem. 
 Code proficiency plays a critical role in identifying potential vulnerabilities, as more skilled developers are better equipped to implement secure coding practices.
