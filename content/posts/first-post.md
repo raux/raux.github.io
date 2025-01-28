@@ -23,12 +23,10 @@ image: "/images/shonan.jpg"
 ---
 
 <!--more-->
-
 On this page, I will be updating my latest news, events, and activities.
 For more social stuff, you can check my [X](https://x.com/Augaiko), [LinkedIn](https://www.linkedin.com/in/raula-gaikovina-kula-70b75545/), and [GitHub](https://github.com/raux).
 
 # What have I been up to ...
-
 Here I list up all my reviewing, paper publications, and committee work from the Core Software Engineering Conferences
 
 - [Core Conferences](https://conf.researchr.org/profile/raulakula)
@@ -54,4 +52,4 @@ Here I list up all my reviewing, paper publications, and committee work from the
 
 - Done and Dusted! **Shonan 207** [Link](https://shonan.nii.ac.jp/seminars/207/)
 
-- Joined **The University of Osaka**! joined Higo Lab [Link](https://sel.ist.osaka-u.ac.jp/)
+- Joined **The University of Osaka** joined Higo Lab [Link](https://sel.ist.osaka-u.ac.jp/)
