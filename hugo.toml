@@ -56,7 +56,7 @@ hasCJKLanguage = false
         # font size(px)
         homeTitleFontSize = 40
         # content in home top image, support Markdown
-        homeContent = "Software Engineering Researcher - raula-k@ist.osaka-u.ac.jp"
+        homeContent = "Software Engineering Researcher - [raula-k@ist.osaka-u.ac.jp]"
         # font size(px)
         homeContentFontSize = 20
 
