@@ -22,7 +22,7 @@ image: "/images/midnight.jpg"
 ---
 
 <!--more-->
-My work now fits into these three buckets and depending on the collaboration, it can be more or less.
+My work now fits into these three buckets and depending on the collaboration, it can be more or less. 
 
 # Theme I: Software as Ecosystems
 Nowadays software is not built in isolation, we rely on many third-party library dependencies and frameworks to use functionality. Problems arise when developers struggle to manage these dependencies. 
@@ -43,13 +43,14 @@ This research looks into how communication and human interactions shape software
 - How can code proficiency be utlized for developer skills?
 - How can a software ecosystem sustain itself?
 
+
 ## Evolution
-We examine the evolution of software ecosystems and how these changes impact software maintenance activities. 
+We examine the evolution of software ecosystems and how these changes impact software maintenance activities.
 - How does software ecosystem maintain themselves?
 - Does proficient code signal maintainable software?
 
 ## Security
-In the realm of security, we analyze various aspects of software ecosystems to assess their vulnerability to both external and internal threats. 
+In the realm of security, we analyze various aspects of software ecosystems to assess their vulnerability to both external and internal threats.
 - How can we make ecosystems more secure?
 - How safe is proficient code?
 

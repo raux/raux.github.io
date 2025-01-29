@@ -56,7 +56,7 @@ hasCJKLanguage = false
         # font size(px)
         homeTitleFontSize = 40
         # content in home top image, support Markdown
-        homeContent = "Software Ecosystems, Code Proficiencies in the Era of AI"
+        homeContent = "Software Engineering Researcher"
         # font size(px)
         homeContentFontSize = 20
 
