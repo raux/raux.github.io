@@ -28,14 +28,16 @@ Raula Gaikovina Kula is a professor at the Graduate School of Information Scienc
 # Email
 
 Raula Gaikovina Kula
-Professor,
-Osaka University Institute for Advanced Co-Creation Studies.
-Graduate School of Information Science and Technology.
-The University of Osaka
 
-https://iacs.osaka-u.ac.jp/en/professor/
+Professor, Osaka University Institute for Advanced Co-Creation Studies.
 
-https://raux.github.io/
+Professor, Graduate School of Information Science and Technology.
+- The University of Osaka
+- https://iacs.osaka-u.ac.jp/en/professor/
+- https://www.ist.osaka-u.ac.jp/english/researcher/detail.php?id=187
+
+Affliate Professor, Nara Institute of Science and Technology
+- https://raux.github.io/
 
 # Contact
 Send me an email at raula-k@ist.osaka-u.ac.jp.
