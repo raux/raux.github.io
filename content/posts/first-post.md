@@ -43,6 +43,7 @@ Here I list up all my reviewing, paper publications, and committee work from the
 
 - Congrats **Tanaka et al.** on MSR Mining Challenge 2025 paper! [Link](https://2025.msrconf.org/track/msr-2025-mining-challenge)
 
+- Congrats **Kancharoendee et al.** on SANER 2025 paper! [Link](https://conf.researchr.org/track/saner-2025/saner-2025-early-research-achievement-era--track)
 
 # 2024 
 
