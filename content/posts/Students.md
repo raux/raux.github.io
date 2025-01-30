@@ -27,20 +27,16 @@ image: "/images/kipuri.jpg"
 
 # Shonan Meetings
 
-Attended:[70](https://shonan.nii.ac.jp/seminars/070/), [99](https://shonan.nii.ac.jp/seminars/099/), [191](https://shonan.nii.ac.jp/seminars/191/), [194](https://shonan.nii.ac.jp/seminars/194/), [192](https://shonan.nii.ac.jp/seminars/192/), [176](https://shonan.nii.ac.jp/seminars/176/), 
+Attended Shonan meetings #:[70](https://shonan.nii.ac.jp/seminars/070/), [99](https://shonan.nii.ac.jp/seminars/099/), [191](https://shonan.nii.ac.jp/seminars/191/), [194](https://shonan.nii.ac.jp/seminars/194/), [192](https://shonan.nii.ac.jp/seminars/192/), [176](https://shonan.nii.ac.jp/seminars/176/), 
 
-I have been hosting some Shonan Meetings.
+I have been hosting some Shonan Meetings #: [207](https://shonan.nii.ac.jp/seminars/207/), [222](https://shonan.nii.ac.jp/seminars/222/)
 
-[207](https://shonan.nii.ac.jp/seminars/207/), [222](https://shonan.nii.ac.jp/seminars/222/)
-
-# International Workshop on Intertwining Research & Education on Software
+# International Workshop on Intertwining Research & Education on Software (WIREDS)
 Software powers our everyday lives. The First International Workshop on Intertwining Research & Education on Software (WIREDS2024) is a pioneering initiative designed to bridge the gap between research and education within the Japanese software community to bring top class research to the global community.
 
 https://wireds2024.github.io/
 
-
-
-#  International Workshop on BRIdging the Divides with Globally Engineered Software
+#  International Workshop on BRIdging the Divides with Globally Engineered Software (BRIDGES)
 I have also active in promoting Software Engineering to the emerging countries. In 2019, We organized a workshop for Software Engineering in the Pacific.
 
  https://naist-se.github.io/PNG-BRIDGES/
