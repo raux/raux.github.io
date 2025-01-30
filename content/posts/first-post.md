@@ -31,7 +31,7 @@ Here I list up all my reviewing, paper publications, and committee work from the
 
 - [Core Conferences](https://conf.researchr.org/profile/raulakula)
 
-[Google Scholar] (https://scholar.google.com.au/citations?hl=en&user=BxUrdQEAAAAJ&view_op=list_works&sortby=pubdate) constantly updates my publications.
+[Google Scholar](https://scholar.google.com.au/citations?hl=en&user=BxUrdQEAAAAJ&view_op=list_works&sortby=pubdate) constantly updates my publications.
 
 # 2025 so far
 
