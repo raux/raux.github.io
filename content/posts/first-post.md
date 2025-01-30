@@ -39,7 +39,7 @@ Here I list up all my reviewing, paper publications, and committee work from the
 
 - Doctoral Symposium Co-Chair for **ICSME2025** [Link](https://conf.researchr.org/track/icsme-2025/icsme-2025-doctoral-symposium)
 
-- Congrats **Fan et al.** on EMSE paper! Developer Reactions to Protestware in Open Source Software: The cases of color.js and es5.ext. Empirical Software Engineering [Link](https://link.springer.com/article/10.1007/s10664-024-10599-6)
+- Congrats **Fan et al.** on EMSE journal [Link](https://link.springer.com/article/10.1007/s10664-024-10599-6)
 
 - Congrats **Yoshioka et al.** on MSR Mining Challenge 2025 Paper [Link](https://2025.msrconf.org/track/msr-2025-mining-challenge)
 
@@ -56,7 +56,9 @@ Here I list up all my reviewing, paper publications, and committee work from the
 - Done and Dusted!  **WIREDS24** [Link](https://wireds2024.github.io/)
 
 - Done and Dusted! **Shonan 207** Anti-patterns and Defects: Synergies, Challenges, and Opportunities [Link](https://shonan.nii.ac.jp/seminars/207/)
-  
+
+- Congrats **Fan et al.** on IEEE Software journal [Link](https://ieeexplore.ieee.org/document/10767746)
+- 
 - Congrats **Nakano et al.** on ICSME 2024 short paper paper! [Link](https://arxiv.org/pdf/2409.12544)
   
 - Congrats **Ragkhitwetsagul et al.** on ICSME tool 2024 paper! [Link](https://arxiv.org/pdf/2408.16452)
