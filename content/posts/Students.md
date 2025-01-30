@@ -26,9 +26,12 @@ image: "/images/kipuri.jpg"
 <!--more-->
 
 # Shonan Meetings
+
+Attended:[70](https://shonan.nii.ac.jp/seminars/070/), [99](https://shonan.nii.ac.jp/seminars/099/), [191](https://shonan.nii.ac.jp/seminars/191/), [194](https://shonan.nii.ac.jp/seminars/194/), [192](https://shonan.nii.ac.jp/seminars/192/), [176](https://shonan.nii.ac.jp/seminars/176/), 
+
 I have been hosting some Shonan Meetings.
 
-https://shonan.nii.ac.jp/seminars/207/
+[207](https://shonan.nii.ac.jp/seminars/207/), [222](https://shonan.nii.ac.jp/seminars/222/)
 
 # International Workshop on Intertwining Research & Education on Software
 Software powers our everyday lives. The First International Workshop on Intertwining Research & Education on Software (WIREDS2024) is a pioneering initiative designed to bridge the gap between research and education within the Japanese software community to bring top class research to the global community.
