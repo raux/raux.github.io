@@ -15,7 +15,7 @@ categories: ['latest news']
 # refer to categories
 tags: [news]
 
-# seires
+# seires is this the best way to 
 series: ['news']
 
 # Top image for the post
@@ -34,10 +34,14 @@ Here I list up all my reviewing, paper publications, and committee work from the
 
 [Google Scholar](https://scholar.google.com.au/citations?hl=en&user=BxUrdQEAAAAJ&view_op=list_works&sortby=pubdate) constantly updates my publication list.
 
-# 2025 so far ... (I have decided to take a pass on ICSE, ASE reviewing this year)
+# 2025 so far
+
+All Year activities
 - Program Co-Chairs for **VISSOFT2025** [Link](https://vissoft.io/2025/)
 - Doctoral Symposium Co-Chair for **ICSME2025** [Link](https://conf.researchr.org/track/icsme-2025/icsme-2025-doctoral-symposium)
+- Will be part of the Organizing Committee for the Japanese SES to be held in August.
 
+News and Research Activities
 - Gave a Talk at Singapore Management University. Thanks Christoph and David for hosting me. Lovely talk with the team there!
 - Congrats **Fan et al.** on EMSE journal [Link](https://link.springer.com/article/10.1007/s10664-024-10599-6)
 - Congrats **Yoshioka et al.** on MSR Mining Challenge 2025 Paper [Link](https://2025.msrconf.org/track/msr-2025-mining-challenge)
