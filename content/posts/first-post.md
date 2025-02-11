@@ -26,6 +26,7 @@ image: "/images/shonan.jpg"
 On this page, I will be updating my latest news, events, and activities.
 For more social stuff, you can check my [X](https://x.com/Augaiko), [LinkedIn](https://www.linkedin.com/in/raula-gaikovina-kula-70b75545/), and [GitHub](https://github.com/raux).
 
+
 # What have I been up to ...
 Here I list up all my reviewing, paper publications, and committee work from the Core Software Engineering Conferences
 
@@ -33,9 +34,11 @@ Here I list up all my reviewing, paper publications, and committee work from the
 
 [Google Scholar](https://scholar.google.com.au/citations?hl=en&user=BxUrdQEAAAAJ&view_op=list_works&sortby=pubdate) constantly updates my publication list.
 
-# 2025 so far
+# 2025 so far ... (I have decided to take a pass on ICSE, ASE reviewing this year)
 - Program Co-Chairs for **VISSOFT2025** [Link](https://vissoft.io/2025/)
 - Doctoral Symposium Co-Chair for **ICSME2025** [Link](https://conf.researchr.org/track/icsme-2025/icsme-2025-doctoral-symposium)
+
+- Gave a Talk at Singapore Management University. Thanks Christoph and David for hosting me. Lovely talk with the team there!
 - Congrats **Fan et al.** on EMSE journal [Link](https://link.springer.com/article/10.1007/s10664-024-10599-6)
 - Congrats **Yoshioka et al.** on MSR Mining Challenge 2025 Paper [Link](https://2025.msrconf.org/track/msr-2025-mining-challenge)
 - Congrats **Tanaka et al.** on MSR Mining Challenge 2025 paper! [Link](https://2025.msrconf.org/track/msr-2025-mining-challenge)
