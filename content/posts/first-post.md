@@ -23,14 +23,14 @@ image: "/images/shonan.jpg"
 ---
 
 <!--more-->
-On this page, I will be updating my latest news, events, and activities.
+On this page, I will be updating my latest news, events, and activities. 
 For more social stuff, you can check my [X](https://x.com/Augaiko), [LinkedIn](https://www.linkedin.com/in/raula-gaikovina-kula-70b75545/), and [GitHub](https://github.com/raux).
 
 
 # What have I been up to ...
-Here I list up all my reviewing, paper publications, and committee work from the Core Software Engineering Conferences
+Here I list up all my reviewing, paper publications, and committee work from the Core Software Engineering Conferences.
 
-- [Core Conferences](https://conf.researchr.org/profile/raulakula)
+- [Core Conferences](https://conf.researchr.org/profile/raulakula).
 
 [Google Scholar](https://scholar.google.com.au/citations?hl=en&user=BxUrdQEAAAAJ&view_op=list_works&sortby=pubdate) constantly updates my publication list.
 
