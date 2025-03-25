@@ -93,11 +93,11 @@ Recently have been working with Mahasiswa Universitas Muhammadiyah Surakarta Ind
 
 ### Graduated (14)
 
-**Co-supervisor, on committee for the doctoral course students (10)**: Saya Onoue (2019), Toshiki Hirao (2020), Shade Ruangwan (2020), Yusuf Sulistyo Nugroho (2020), Bodin Chinthanet (2021), Keitaro Nakasai (2021), Dong Wang (2022), Syful Islam (2022), Yuki Ueda (2022), Pattaraporn Tulathum (2022), Supavas Sitthithanasakul (2023), Supatsara Wattanakriengkrai (2024), Ifraz Rehman (2024), Tao Xiao (2024)
+**Co-supervisor, on committee for the doctoral course students (10)**: Saya Onoue (2019), Toshiki Hirao (2020), Shade Ruangwan (2020), Yusuf Sulistyo Nugroho (2020), Bodin Chinthanet (2021), Keitaro Nakasai (2021), Dong Wang (2022), Syful Islam (2022), Yuki Ueda (2022), Pattaraporn Tulathum (2022), Supavas Sitthithanasakul (2023), Supatsara Wattanakriengkrai (2024), Ifraz Rehman (2024), Tao Xiao (2024), Fan Youmei (2025)
 
 ### Current 2025 (5)
 
-Current doctoral course students that I co-supervise: Fan Youmei, Ani Hovhannisiyan, Ruksit Rojpaisarnkit, Jaisri Pongchai, Lenz Neritz
+Current doctoral course students that I co-supervise: Ani Hovhannisiyan, Ruksit Rojpaisarnkit, Jaisri Pongchai, Lenz Neritz
 
 # Teaching
 
