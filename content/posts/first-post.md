@@ -60,7 +60,7 @@ Here I list up all my reviewing, paper publications, and committee work from the
 
 - Congrats **Youmei et al.** on EMSE paper! Developer Reactions to Protestware in Open Source Software: The cases of color. js and es5. ext. Empirical Software Engineering [Link](https://link.springer.com/article/10.1007/s10664-024-10599-6)
 
-- Congrats **Yoshioka et al.** on MSR Mining Challenge Paper [Link](https://2025.msrconf.org/track/msr-2025-mining-challenge)
+- Congrats **Yoshioka et al.** on MSR Mining Challenge 2025 Paper [Link](https://2025.msrconf.org/track/msr-2025-mining-challenge)
 
 - Congrats **Tanaka et al.** on MSR Mining Challenge 2025 paper! [Link](https://2025.msrconf.org/track/msr-2025-mining-challenge)
 
