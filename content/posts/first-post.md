@@ -56,7 +56,7 @@ Here I list up all my reviewing, paper publications, and committee work from the
 
 # Publishing and Awards 2025 so far
 
-- Congrats **Thongtanunam et al.** on the MIP award for SANER2025!Who should review my code? SANER2015 [Link](https://x.com/SANERconf/status/1897663586635247676)
+- Awarded and Congrats to **Thongtanunam et al.** on the  **Most Influential Paper** award for SANER2025!Who should review my code? SANER2015 [Link](https://x.com/SANERconf/status/1897663586635247676)
 
 - Congrats **Youmei et al.** on EMSE paper! Developer Reactions to Protestware in Open Source Software: The cases of color. js and es5. ext. Empirical Software Engineering [Link](https://link.springer.com/article/10.1007/s10664-024-10599-6)
 
