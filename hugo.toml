@@ -50,7 +50,7 @@ hasCJKLanguage = false
     [params.page]
 
         # top image in home page, note that the "/" in path is necessary, the same applies below
-        homeTopImg = "/images/home.jpg"
+        homeTopImg = "/images/homePS.jpg"
         # title in home top image, support Markdown
         homeTitle = "Raula Gaikovina Kula"
         # font size(px)
