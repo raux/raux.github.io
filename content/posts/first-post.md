@@ -27,14 +27,14 @@ image: "/images/shonan.jpg"
 On this page, I will be updating my latest news, events, and activities.
 For more social stuff, you can check my [X](https://x.com/Augaiko), [LinkedIn](https://www.linkedin.com/in/raula-gaikovina-kula-70b75545/), and [GitHub](https://github.com/raux).
 
-# What have I been up to ...
+# Activities...
 
 Here I list up all my reviewing, paper publications, and committee work from the Core SE Conferences
 
 - [SE Core Conferences](https://conf.researchr.org/profile/raulakula)
 - Shonan Workshop [The Future of Development Environments with AI Foundation Models](https://shonan.nii.ac.jp/seminars/222/)
 
-# Organizing Committee Work 2025 so far
+# Organizing Work
 
 - Program Co-Chairs for VISSOFT2025 [Link](https://vissoft.io/2025/)
 
@@ -44,7 +44,7 @@ Here I list up all my reviewing, paper publications, and committee work from the
 
 - Japanese SES Committee
 
-# Invited Talks in 2025
+# Invited Talks
 
 - Invited Keynote for 第6回次世代ソフトウェアエコシステムワークショップ - *What are Developer Coding Skills? Past, Present, Future*, NAIST, Japan
 
@@ -54,7 +54,15 @@ Here I list up all my reviewing, paper publications, and committee work from the
 - Invited Paper for the SEBot Workshop with ICSE - *Reducing Alert Fatigue via AI-Assisted Negotiation: A Case for Dependabot* [Link](https://sebot.github.io/)
 
 
-# Publishing and Awards 2025 so far
+# Papers and Awards 
+
+- Accepted Vision Paper to the 2030 Software Engineering Workshop 'The Shift from Writing to Pruning Software: A Bonsai-Inspired IDE for Reshaping AI Generated Code'   [Link](https://arxiv.org/abs/2503.02833)
+
+- Accepted Vision Paper to the 2030 Software Engineering Workshop 'Interacting with AI Reasoning Models: Harnessing "Thoughts" for AI-Driven Software Engineering'   [Link](https://arxiv.org/abs/2503.00483)
+
+- Accepted Vision Paper to the 2030 Software Engineering Workshop 'Rethinking Reuse in Dependency Supply Chains: Initial Analysis of NPM packages at the End of the Chain'   [Link](https://arxiv.org/abs/2503.02804)
+
+- Accepted Vision Paper to the 2030 Software Engineering Workshop 'Open Source at a Crossroads: The Future of Licensing Driven by Monetization'   [Link](https://arxiv.org/abs/2503.02817)
 
 - Awarded and Congrats to **Thongtanunam et al.** on the  **Most Influential Paper** award for SANER2025!Who should review my code? SANER2015 [Link](https://x.com/SANERconf/status/1897663586635247676)
 
