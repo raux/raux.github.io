@@ -27,12 +27,12 @@ image: "/images/shonan.jpg"
 On this page, I will be updating my latest news, events, and activities.
 You can check my [X](https://x.com/Augaiko), [LinkedIn](https://www.linkedin.com/in/raula-gaikovina-kula-70b75545/), and [GitHub](https://github.com/raux).
 
-# Activities...
+# Activities 2025...
 
 Here I list up all my reviewing, paper publications, and committee work from the Core SE Conferences
 
 - [SE Core Conferences](https://conf.researchr.org/profile/raulakula)
-- Shonan Workshop [The Future of Development Environments with AI Foundation Models](https://shonan.nii.ac.jp/seminars/222/)
+- [The Future of Development Environments with AI Foundation Models](https://shonan.nii.ac.jp/seminars/222/)
 
 # Organizing Work
 
@@ -43,6 +43,8 @@ Here I list up all my reviewing, paper publications, and committee work from the
 - Publicity Co-Chair for CoopIS2025 [Link](https://coopis.scitevents.org/)
 
 - Japanese SES Committee  [Link](https://ses.sigse.jp/2025/)
+  
+- BRIDGES Summer School 2026 
 
 # Invited Talks
 
