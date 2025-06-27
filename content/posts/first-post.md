@@ -44,7 +44,7 @@ Here I list up all my reviewing, paper publications, and committee work from the
 
 - Japanese SES Committee  [Link](https://ses.sigse.jp/2025/)
   
-- BRIDGES Summer School 2026 
+- BRIDGES Summer School 2026 - Being awarded a grant from SIGSOFT to run the BRIDGES-PNG Summer School. 
 
 # Invited Talks
 
