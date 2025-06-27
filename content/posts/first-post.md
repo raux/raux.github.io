@@ -70,9 +70,11 @@ Here I list up all my reviewing, paper publications, and committee work from the
 
 - Congrats to **Farah et al** for her work being published at https://siml.ums.ac.id/2025/, titled "Uncovering Intention through LLM-Driven Code Snippet Description Generation" [Link](https://x.com/Augaiko/status/1937821246470643909)
 
+- [Best Paper] Congrats to **Fedra et al**  work being published at https://siml.ums.ac.id/2025/, titled "Using LLMs for Security Advisory Investigation: How far are we", [Link](https://x.com/Augaiko/status/1937820441940218002)
+
 - Congrats to **Fedra et al** for his work being published at https://siml.ums.ac.id/2025/, titled "Using LLMs for Security Advisory Investigation: How far are we", [Link](https://x.com/Augaiko/status/1937820441940218002)
 
-- Awarded and Congrats to **Thongtanunam et al.** on the  **Most Influential Paper** award for SANER2025!Who should review my code? SANER2015 [Link](https://x.com/SANERconf/status/1897663586635247676)
+- [MIP award] Congrats to **Thongtanunam et al.** on the  **Most Influential Paper** award for SANER2025!Who should review my code? SANER2015 [Link](https://x.com/SANERconf/status/1897663586635247676)
 
 - Congrats **Youmei et al.** on EMSE paper! Developer Reactions to Protestware in Open Source Software: The cases of color. js and es5. ext. Empirical Software Engineering [Link](https://link.springer.com/article/10.1007/s10664-024-10599-6)
 
@@ -86,7 +88,7 @@ Vulnerability Reporting Mechanisms on GitHub [Link](https://arxiv.org/abs/2502.0
 
 # 2024 
 
-- Awarded the **Most Influential Paper** with co-authors, Visualizing the evolution of systems and their library dependencies, IEEE 12th International Workshop on Visualizing Software for Understanding and Analysis (VISSOFT2024) [Link](https://sel.ist.osaka-u.ac.jp/topics/award_VISSOFT2024_raula/index.html.en) 
+- [MIP award] Awarded the **Most Influential Paper** with co-authors, Visualizing the evolution of systems and their library dependencies, IEEE 12th International Workshop on Visualizing Software for Understanding and Analysis (VISSOFT2024) [Link](https://sel.ist.osaka-u.ac.jp/topics/award_VISSOFT2024_raula/index.html.en) 
 
 - Done and Dusted!  WIREDS24 [Link](https://wireds2024.github.io/)
 
