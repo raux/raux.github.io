@@ -25,7 +25,7 @@ image: "/images/shonan.jpg"
 <!--more-->
 
 On this page, I will be updating my latest news, events, and activities.
-For more social stuff, you can check my [X](https://x.com/Augaiko), [LinkedIn](https://www.linkedin.com/in/raula-gaikovina-kula-70b75545/), and [GitHub](https://github.com/raux).
+You can check my [X](https://x.com/Augaiko), [LinkedIn](https://www.linkedin.com/in/raula-gaikovina-kula-70b75545/), and [GitHub](https://github.com/raux).
 
 # Activities...
 
@@ -42,27 +42,33 @@ Here I list up all my reviewing, paper publications, and committee work from the
 
 - Publicity Co-Chair for CoopIS2025 [Link](https://coopis.scitevents.org/)
 
-- Japanese SES Committee
+- Japanese SES Committee  [Link](https://ses.sigse.jp/2025/)
 
 # Invited Talks
 
-- Invited Keynote for 第6回次世代ソフトウェアエコシステムワークショップ - *What are Developer Coding Skills? Past, Present, Future*, NAIST, Japan
+- Invited Keynote for 第6回次世代ソフトウェアエコシステムワークショップ - **What are Developer Coding Skills? Past, Present, Future**, NAIST, Japan
 
-- Invited Talk for the ICSE 2025 New Faculty Symposium - *Collaborations Result in Diverse Thinking, Novelty and Different Perspectives*, [Link](https://conf.researchr.org/track/icse-2025/icse-2025-new-faculty-symposium#program)
+- Invited Talk for the ICSE 2025 New Faculty Symposium - **Collaborations Result in Diverse Thinking, Novelty and Different Perspectives**, [Link](https://conf.researchr.org/track/icse-2025/icse-2025-new-faculty-symposium#program)
 
-
-- Invited Paper for the SEBot Workshop with ICSE - *Reducing Alert Fatigue via AI-Assisted Negotiation: A Case for Dependabot* [Link](https://sebot.github.io/)
-
+- Invited Paper for the SEBot Workshop with ICSE - **Reducing Alert Fatigue via AI-Assisted Negotiation: A Case for Dependabot** [Link](https://sebot.github.io/)
 
 # Papers and Awards 
 
-- Accepted Vision Paper to the 2030 Software Engineering Workshop 'The Shift from Writing to Pruning Software: A Bonsai-Inspired IDE for Reshaping AI Generated Code'   [Link](https://arxiv.org/abs/2503.02833)
+- Accepted paper at ESEM2025 **What About Our Bug? A Study on the Responsiveness of NPM Package Maintainers** by  Saeidi et al. Collab with Univ. British Columbia.
+  
+- Accepted paper at ICSE2025 **Social Media Reactions to Open Source Promotions:\\ AI-Powered GitHub Projects on Hacker News** by Meakpaiboonwattana et al. Collab with Mahidol Univ. 
 
-- Accepted Vision Paper to the 2030 Software Engineering Workshop 'Interacting with AI Reasoning Models: Harnessing "Thoughts" for AI-Driven Software Engineering'   [Link](https://arxiv.org/abs/2503.00483)
+- Accepted Vision Paper to the 2030 Software Engineering Workshop **The Shift from Writing to Pruning Software: A Bonsai-Inspired IDE for Reshaping AI Generated Code**   [Link](https://arxiv.org/abs/2503.02833)
 
-- Accepted Vision Paper to the 2030 Software Engineering Workshop 'Rethinking Reuse in Dependency Supply Chains: Initial Analysis of NPM packages at the End of the Chain'   [Link](https://arxiv.org/abs/2503.02804)
+- Accepted Vision Paper to the 2030 Software Engineering Workshop **Interacting with AI Reasoning Models: Harnessing "Thoughts" for AI-Driven Software Engineering**   [Link](https://arxiv.org/abs/2503.00483)
 
-- Accepted Vision Paper to the 2030 Software Engineering Workshop 'Open Source at a Crossroads: The Future of Licensing Driven by Monetization'   [Link](https://arxiv.org/abs/2503.02817)
+- Accepted Vision Paper to the 2030 Software Engineering Workshop **Rethinking Reuse in Dependency Supply Chains: Initial Analysis of NPM packages at the End of the Chain**   [Link](https://arxiv.org/abs/2503.02804)
+
+- Accepted Vision Paper to the 2030 Software Engineering Workshop **Open Source at a Crossroads: The Future of Licensing Driven by Monetization**   [Link](https://arxiv.org/abs/2503.02817)
+
+- Congrats to **Farah et al** for her work being published at https://siml.ums.ac.id/2025/, titled "Uncovering Intention through LLM-Driven Code Snippet Description Generation" [Link](https://x.com/Augaiko/status/1937821246470643909)
+
+- Congrats to **Fedra et al** for his work being published at https://siml.ums.ac.id/2025/, titled "Using LLMs for Security Advisory Investigation: How far are we", [Link](https://x.com/Augaiko/status/1937820441940218002)
 
 - Awarded and Congrats to **Thongtanunam et al.** on the  **Most Influential Paper** award for SANER2025!Who should review my code? SANER2015 [Link](https://x.com/SANERconf/status/1897663586635247676)
 
