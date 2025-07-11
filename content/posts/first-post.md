@@ -23,16 +23,16 @@ image: "/images/shonan.jpg"
 ---
 
 <!--more-->
-For more social stuff, you can check my [X](https://x.com/Augaiko), [LinkedIn](https://www.linkedin.com/in/raula-gaikovina-kula-70b75545/), and [GitHub](https://github.com/raux).
+Check out my [X social media](https://x.com/Augaiko), [LinkedIn](https://www.linkedin.com/in/raula-gaikovina-kula-70b75545/), and [GitHub profile](https://github.com/raux).
 
 # Activities...
 
-Here I list up all my reviewing, paper publications, and committee work from the Core SE Conferences
+List up community activities:
 
-- [SE Core Conferences](https://conf.researchr.org/profile/raulakula)
-- Shonan Workshop [The Future of Development Environments with AI Foundation Models](https://shonan.nii.ac.jp/seminars/222/)
+- Software Engineering [SE Core Conferences](https://conf.researchr.org/profile/raulakula)
+- Shonan [The Future of Development Environments with AI Foundation Models](https://shonan.nii.ac.jp/seminars/222/)
 
-# Organizing Work
+# Organizing
 
 - Program Co-Chairs for VISSOFT2025 [Link](https://vissoft.io/2025/)
 
@@ -40,11 +40,11 @@ Here I list up all my reviewing, paper publications, and committee work from the
 
 - Publicity Co-Chair for CoopIS2025 [Link](https://coopis.scitevents.org/)
 
-- Japanese SES Committee
+- Japanese SES Committee [Link](https://ses.sigse.jp/2025/)
 
 # Invited Talks
 
-- Invited Keynote for 第6回次世代ソフトウェアエコシステムワークショップ - *What are Developer Coding Skills? Past, Present, Future*, NAIST, Japan
+- Invited Keynote for 第6回次世代ソフトウェアエコシステムワークショップ - *What are Developer Coding Skills? Past, Present, Future*, NAIST, Japan [Slides](https://docs.google.com/presentation/d/1kwHWV4yT0CaGoOYaGSvw_2kJvx65_oXnKoRqMXjN1aE/edit?usp=sharing)
 
 - Invited Talk for the ICSE 2025 New Faculty Symposium - *Collaborations Result in Diverse Thinking, Novelty and Different Perspectives*, [Link](https://conf.researchr.org/track/icse-2025/icse-2025-new-faculty-symposium#program)
 
