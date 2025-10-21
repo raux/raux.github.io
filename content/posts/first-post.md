@@ -25,34 +25,49 @@ image: "/images/shonan.jpg"
 <!--more-->
 Check out my [X social media](https://x.com/Augaiko), [LinkedIn](https://www.linkedin.com/in/raula-gaikovina-kula-70b75545/), and [GitHub profile](https://github.com/raux).
 
-# Activities...
+# Ongoing Activities...
 
 List up community activities:
 
 - Software Engineering [SE Core Conferences](https://conf.researchr.org/profile/raulakula)
-- Shonan [The Future of Development Environments with AI Foundation Models](https://shonan.nii.ac.jp/seminars/222/)
+# 2026 Organizing
 
-# Organizing
+- Shonan [Envisioning the Future of (eXtended Reality) Software Engineering](https://shonan.nii.ac.jp/seminars/228)
+
+- BRIDGES 2026 Summer School in Papua New Guinea.  
+
+- Program Co-Chairs for VISSOFT2025
+
+- Program Co-Chair for SERA2026 
+
+- Program Co-Chair for IPSJ Taikai2026 
+
+# 2026 Invited Talks
+
+
+# 2025 Organizing and Attending
 
 - Program Co-Chairs for VISSOFT2025 [Link](https://vissoft.io/2025/)
 
 - Doctoral Symposium Co-Chair for ICSME2025 [Link](https://conf.researchr.org/track/icsme-2025/icsme-2025-doctoral-symposium)
-
 - Publicity Co-Chair for CoopIS2025 [Link](https://coopis.scitevents.org/)
 
 - Japanese SES Committee [Link](https://ses.sigse.jp/2025/)
 
-# Invited Talks
+- Shonan [The Future of Development Environments with AI Foundation Models](https://shonan.nii.ac.jp/seminars/222/)
+# 2025 Invited Talks
 
+- Invited Talk for WSSE2026  
+
+- Invited Talk for the ICSE2025 New Faculty Symposium - *Collaborations Result in Diverse Thinking, Novelty and Different Perspectives*, [Link](https://conf.researchr.org/track/icse-2025/icse-2025-new-faculty-symposium#program)
 - Invited Keynote for 第6回次世代ソフトウェアエコシステムワークショップ - *What are Developer Coding Skills? Past, Present, Future*, NAIST, Japan [Slides](https://docs.google.com/presentation/d/1kwHWV4yT0CaGoOYaGSvw_2kJvx65_oXnKoRqMXjN1aE/edit?usp=sharing)
-
-- Invited Talk for the ICSE 2025 New Faculty Symposium - *Collaborations Result in Diverse Thinking, Novelty and Different Perspectives*, [Link](https://conf.researchr.org/track/icse-2025/icse-2025-new-faculty-symposium#program)
-
-
 - Invited Paper for the SEBot Workshop with ICSE - *Reducing Alert Fatigue via AI-Assisted Negotiation: A Case for Dependabot* [Link](https://sebot.github.io/)
 
+- Invited Talk for the ICSE2025 New Faculty Symposium - *Collaborations Result in Diverse Thinking, Novelty and Different Perspectives*, [Link](https://conf.researchr.org/track/icse-2025/icse-2025-new-faculty-symposium#program)
 
-# Papers and Awards 
+- Invited Talk for Singapore Management University - Software Ecosystems. 
+
+# 2025 Papers and Awards 
 
 - Accepted Vision Paper to the 2030 Software Engineering Workshop *'Interacting with AI Reasoning Models: Harnessing "Thoughts" for AI-Driven Software Engineering'* [Link](https://arxiv.org/abs/2503.00483)
 
