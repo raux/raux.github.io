@@ -44,9 +44,7 @@ List up community activities:
 
 # 2026 Invited Talks
 
-- Keynote 
-
-- 
+- Keynote  
 
 # 2025 Organizing and Attending
 
@@ -62,6 +60,8 @@ List up community activities:
 # 2025 Invited Talks
 
 - Invited Talk for WSSE2025 Invited Talk - Software Ecosystems: Where Do We Go From Here? [Link](https://wsse.org/speakers.html)
+
+- Invited Talk for Invited Talk at 1st African Winter School on Software Engineering & AI - Collaborations Result in Diverse Thinking, Novelty and Different Perspectives [Link](https://africaseai.github.io/ASEAI2025/)
 
 - Invited Talk for the ICSE2025 New Faculty Symposium - *Collaborations Result in Diverse Thinking, Novelty and Different Perspectives*, [Link](https://conf.researchr.org/track/icse-2025/icse-2025-new-faculty-symposium#program)
 - Invited Keynote for 第6回次世代ソフトウェアエコシステムワークショップ - *What are Developer Coding Skills? Past, Present, Future*, NAIST, Japan [Slides](https://docs.google.com/presentation/d/1kwHWV4yT0CaGoOYaGSvw_2kJvx65_oXnKoRqMXjN1aE/edit?usp=sharing)
