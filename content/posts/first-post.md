@@ -38,13 +38,13 @@ List up community activities:
 
 - Program Co-Chairs for VISSOFT2026 
 
-- Program Co-Chair for SERA2026 
+- Program Co-Chair for SNPD2026 
 
 - Program Co-Chair for IPSJ Taikai2026 
 
 # 2026 Invited Talks
 
-- Keynote  
+- 
 
 # 2025 Organizing and Attending
 
