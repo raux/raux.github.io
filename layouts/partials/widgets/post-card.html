@@ -1,5 +1,5 @@
 {{ $langNow := .Lang }}
-{{ $isMultiLingual := and (ne .Site.Language.Weight 1) (and .Site.IsMultiLingual (not .Site.Params.Site.OnlyOneLang)) }}
+{{ $isMultiLingual := and (ne .Site.Language.Weight 1) (and hugo.IsMultilingual (not .Site.Params.Site.OnlyOneLang)) }}
 {{ $includedIn := "newnewnew" }}
 
 <div class="card-large">
