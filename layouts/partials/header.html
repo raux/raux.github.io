@@ -19,7 +19,7 @@
             <div class="navbar-burger">
                 <div class="burger-btn"><span><i class="fa fa-navicon"></i></span></div>
             </div>
-            {{ if and .Site.IsMultiLingual (not .Site.Params.Site.OnlyOneLang) }}
+            {{ if and hugo.IsMultilingual (not .Site.Params.Site.OnlyOneLang) }}
                 {{ partial "widgets/selectLang.html" . }}
             {{ end }}
             

@@ -22,7 +22,7 @@
                     {{ end }}
                 </div>
                 <div class="more-posts">
-                    <a href='{{ if and (ne .Site.Language.Weight 1) (and .Site.IsMultiLingual (not .Site.Params.Site.OnlyOneLang)) }}
+                    <a href='{{ if and (ne .Site.Language.Weight 1) (and hugo.IsMultilingual (not .Site.Params.Site.OnlyOneLang)) }}
                                 {{ .Lang | relURL}}/posts
                             {{ else }} 
                             {{ "posts" | relURL }}

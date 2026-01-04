@@ -10,7 +10,7 @@
                 {{ end }}
                 {{ if .Site.Params.footer.copyRight }}
                     <div class="footer-item">
-                        © {{ .Site.Params.footer.from }}-{{ now.Format "2006" }} <a href="{{ .Site.Author.link }}">{{ .Site.Author.name }}</a>
+                        © {{ .Site.Params.footer.from }}-{{ now.Format "2006" }} <a href="{{ .Site.Params.author.link }}">{{ .Site.Params.author.name }}</a>
                     </div>
                 {{ end }}
                 {{ if .Site.Params.footer.themeInfo }}

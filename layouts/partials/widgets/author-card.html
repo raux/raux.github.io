@@ -1,16 +1,16 @@
 {{ $langNow := .Lang }}
-{{ $isMultiLingual := and (ne .Site.Language.Weight 1) (and .Site.IsMultiLingual (not .Site.Params.Site.OnlyOneLang)) }}
+{{ $isMultiLingual := and (ne .Site.Language.Weight 1) (and hugo.IsMultilingual (not .Site.Params.Site.OnlyOneLang)) }}
 <div class="about-zuozhe">
     <div class="zuozhe">
-        {{ with .Site.Author.image }}
+        {{ with .Site.Params.author.image }}
             <div class="datou">
                 <img class="lazyload" src="/images/thumbnail.gif" data-src="{{ . }}" alt="">
             </div>
         {{ end }}
         <div class="name-jianjie">
-            <div class="name">{{ .Site.Author.name }}</div>
+            <div class="name">{{ .Site.Params.author.name }}</div>
             <div class="jianjie">
-                {{ .Site.Author.description }}
+                {{ .Site.Params.author.description }}
             </div>
         </div>
     </div>
@@ -42,7 +42,7 @@
         </a>
     </div>
 
-    <a href="{{ .Site.Author.link }}">
+    <a href="{{ .Site.Params.author.link }}">
         <div class="follow">Follow Me</div>
     </a>
     <div class="link">

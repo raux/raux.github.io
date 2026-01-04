@@ -1,7 +1,7 @@
 {{ $class1 := "" }}
 {{ $isPage := or (eq .Kind "page") (eq .Section "about") }}
 {{ $langNow := .Lang }}
-{{ $isMultiLingual := and (ne .Site.Language.Weight 1) (and .Site.IsMultiLingual (not .Site.Params.Site.OnlyOneLang)) }}
+{{ $isMultiLingual := and (ne .Site.Language.Weight 1) (and hugo.IsMultilingual (not .Site.Params.Site.OnlyOneLang)) }}
 {{ if $isPage }}
     {{ $class1 = "content-root" }}
 {{ else if eq .Kind "taxonomy" }}
