@@ -54,10 +54,12 @@ The README provides incorrect usage examples for custom shortcodes that won't wo
 ```
 
 **Recommended Fix:**
+
+Replace the incorrect examples with:
+
 ```markdown
 ### Usage Examples
 
-```markdown
 {{< naist >}}
 {{< dynalist >}}  <!-- Note: Uses hardcoded list ID -->
 {{< GHStar url="https://example.com/students.json" >}}
@@ -67,7 +69,6 @@ Content here
 ```
 
 **Note:** `GHStar` and `dynalist` are custom shortcodes specific to this site. `GHStar` requires a JSON endpoint with student thesis data, and `dynalist` uses a hardcoded list ID.
-```
 
 ---
 
@@ -201,15 +202,15 @@ The PR description confirms successful build:
 
 ## Files Changed Summary
 
-| File | Change Type | Assessment |
-|------|-------------|------------|
-| `.gitignore` | Modified | ✅ Improved |
-| `CHNAGELOG.md` → `CHANGELOG.md` | Renamed | ✅ Typo fixed |
-| `README.md` | Enhanced | ⚠️ Minor corrections needed |
-| `config.toml` | Deleted | ✅ Safe (superseded) |
-| `config-example/hugo.toml` | Deleted | ✅ Safe (example) |
-| `config-example/hugo-advanced.toml` | Deleted | ✅ Safe (example) |
-| `i18n/en.toml` | Deleted | ✅ Safe (duplicate) |
-| `i18n/zh.toml` | Deleted | ✅ Safe (duplicate) |
-| `content-example/` | Deleted | ✅ Safe (example) |
-| `static/posts/example.md` | Deleted | ✅ Safe (example) |
+| File                                 | Change Type | Assessment                    |
+|--------------------------------------|-------------|-------------------------------|
+| `.gitignore`                         | Modified    | ✅ Improved                   |
+| `CHNAGELOG.md` → `CHANGELOG.md`      | Renamed     | ✅ Typo fixed                 |
+| `README.md`                          | Enhanced    | ⚠️ Minor corrections needed   |
+| `config.toml`                        | Deleted     | ✅ Safe (superseded)          |
+| `config-example/hugo.toml`           | Deleted     | ✅ Safe (example)             |
+| `config-example/hugo-advanced.toml`  | Deleted     | ✅ Safe (example)             |
+| `i18n/en.toml`                       | Deleted     | ✅ Safe (duplicate)           |
+| `i18n/zh.toml`                       | Deleted     | ✅ Safe (duplicate)           |
+| `content-example/`                   | Deleted     | ✅ Safe (example)             |
+| `static/posts/example.md`            | Deleted     | ✅ Safe (example)             |
