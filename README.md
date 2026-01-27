@@ -1,6 +1,6 @@
 # Raula Gaikovina Kula - Academic Website
 
-This is the personal academic and research website for Professor Raula Gaikovina Kula at the University of Osaka.
+This is the personal academic and research website for Professor Raula Gaikovina Kula.
 
 ## About
 
