@@ -1,2 +1,17 @@
-public
-resources
+# Hugo build output
+public/
+resources/
+
+# Hugo build lock file
+.hugo_build.lock
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
