@@ -34,7 +34,7 @@ List up community activities:
 
 - Shonan [Envisioning the Future of (eXtended Reality) Software Engineering](https://shonan.nii.ac.jp/seminars/228)
 
-- BRIDGES 2026 Summer School in Papua New Guinea.  
+- AI Summer School in Papua New Guinea [BRIDGES2026](https://bridges-png.github.io/)  
 
 - Program Co-Chairs for VISSOFT2026 
 
@@ -43,8 +43,13 @@ List up community activities:
 - Program Co-Chair for IPSJ Taikai2026 
 
 # 2026 Invited Talks
+- Speinshart Scientific Center for AI and SuperTech Workshop [AI in a Fragmented World: Navigating Trade-offs Across Disciplines and Cultures](https://speinshart.ai/pulse/e/ai-in-a-fragmented-world-navigating-trade-offs-across-disciplines-and-cultures/)
 
-- 
+# 2026 Papers and Awards 
+
+- Accepted EMSE Paper! "Security by documentation? characterizing GitHub SECURITY.md policy and their adoption in Python libraries" [Link](https://link.springer.com/article/10.1007/s10664-025-10794-z)
+
+- Accepted TOSEM Paper! "BonsAIDE: An Extended Vision for Human-AI Interaction in IDEs" [Link](https://dl.acm.org/doi/10.1145/3793681)
 
 # 2025 Organizing and Attending
 
