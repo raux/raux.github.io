@@ -47,7 +47,7 @@ List up community activities:
  
 - Shonan 228 [Envisioning the Future of (eXtended Reality) Software Engineering](https://shonan.nii.ac.jp/seminars/228)
 
-- Shonan 257 [Envisioning the Future of (eXtended Reality) Software Engineering](https://shonan.nii.ac.jp/seminars/257)
+- Shonan 257 [Crafting the Future of Developer Experience](https://shonan.nii.ac.jp/seminars/257)
 
 # 2026 Papers and Awards 
 
@@ -58,6 +58,10 @@ List up community activities:
 - Accepted Workshop Paper! "Forecasting Developer Environments with GenAI: A Research Perspective" [Link](https://arxiv.org/pdf/2602.07412)
 
 - Accepted MSR2026 Full Paper! "An Empirical Study of Policy as Code: Adoption, Purpose, and Maintenance" [Link](https://akondrahman.github.io/files/papers/msr26.pdf)
+
+- Accepted MSR2026 Challenge Paper! "Humans Integrate, Agents Fix: How Agent-Authored Pull Requests Are Referenced in Practice"
+
+- Accepted MSR2026 Challenge Paper! "When is Generated Code Difficult to Comprehend? Assessing AI Agent Python Code Proficiency in the Wild"
 
 # 2025 Organizing and Attending
 
