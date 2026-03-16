@@ -36,9 +36,9 @@ List up community activities:
 
 - AI Summer School in Papua New Guinea [BRIDGES2026](https://bridges-png.github.io/)  
 
-- Program Co-Chairs for VISSOFT2026 
+- Program Co-Chairs for [VISSOFT2026](https://vissoft.io/2026/)
 
-- Program Co-Chair for SNPD2026 
+- Program Co-Chair for [SNPD2026](https://acisinternational.org/conferences/snpd-2026-i/) 
 
 - Program Co-Chair for IPSJ Taikai2026 
 
