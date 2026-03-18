@@ -42,7 +42,9 @@ List up community activities:
 
 - Program Co-Chair for IPSJ Taikai2026 
 
-# 2026 Invited Talks
+# 2026 Invited Talks, Retreats and Workshops
+- The University of Osaka, IST Retreat. 
+
 - Speinshart Scientific Center for AI and SuperTech Workshop [AI in a Fragmented World: Navigating Trade-offs Across Disciplines and Cultures](https://speinshart.ai/pulse/e/ai-in-a-fragmented-world-navigating-trade-offs-across-disciplines-and-cultures/)
  
 - Shonan 228 [Envisioning the Future of (eXtended Reality) Software Engineering](https://shonan.nii.ac.jp/seminars/228)
