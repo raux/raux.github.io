@@ -53,6 +53,8 @@ List up community activities:
 
 # 2026 Papers and Awards 
 
+- Published TSE Paper! "Self-admitted GenAI usage in open-source software" [Link](https://ieeexplore.ieee.org/abstract/document/11477161)
+
 - Accepted EMSE Paper! "Security by documentation? characterizing GitHub SECURITY.md policy and their adoption in Python libraries" [Link](https://link.springer.com/article/10.1007/s10664-025-10794-z)
 
 - Accepted TOSEM Paper! "BonsAIDE: An Extended Vision for Human-AI Interaction in IDEs" [Link](https://dl.acm.org/doi/10.1145/3793681)
