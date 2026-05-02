@@ -25,6 +25,17 @@ image: "/images/shonan.jpg"
 <!--more-->
 Check out my [X social media](https://x.com/Augaiko), [LinkedIn](https://www.linkedin.com/in/raula-gaikovina-kula-70b75545/), and [GitHub profile](https://github.com/raux).
 
+# Recent News
+
+- Published TSE Paper! "Self-admitted GenAI usage in open-source software" [Link](https://ieeexplore.ieee.org/abstract/document/11477161)
+- Accepted EMSE Paper! "Security by documentation? characterizing GitHub SECURITY.md policy and their adoption in Python libraries" [Link](https://link.springer.com/article/10.1007/s10664-025-10794-z)
+- Accepted TOSEM Paper! "BonsAIDE: An Extended Vision for Human-AI Interaction in IDEs" [Link](https://dl.acm.org/doi/10.1145/3793681)
+- Accepted MSR2026 Full Paper! "An Empirical Study of Policy as Code: Adoption, Purpose, and Maintenance" [Link](https://akondrahman.github.io/files/papers/msr26.pdf)
+- Program Co-Chair for [VISSOFT2026](https://vissoft.io/2026/)
+
+<details>
+<summary>Click to expand older news</summary>
+
 # Ongoing Activities...
 
 List up community activities:
@@ -52,12 +63,6 @@ List up community activities:
 - Shonan 257 [Crafting the Future of Developer Experience](https://shonan.nii.ac.jp/seminars/257)
 
 # 2026 Papers and Awards 
-
-- Published TSE Paper! "Self-admitted GenAI usage in open-source software" [Link](https://ieeexplore.ieee.org/abstract/document/11477161)
-
-- Accepted EMSE Paper! "Security by documentation? characterizing GitHub SECURITY.md policy and their adoption in Python libraries" [Link](https://link.springer.com/article/10.1007/s10664-025-10794-z)
-
-- Accepted TOSEM Paper! "BonsAIDE: An Extended Vision for Human-AI Interaction in IDEs" [Link](https://dl.acm.org/doi/10.1145/3793681)
 
 - Accepted Workshop Paper! "Forecasting Developer Environments with GenAI: A Research Perspective" [Link](https://arxiv.org/pdf/2602.07412)
 
@@ -123,3 +128,5 @@ Vulnerability Reporting Mechanisms on GitHub [Link](https://arxiv.org/abs/2502.0
 - Done and Dusted! Shonan 207 [Link](https://shonan.nii.ac.jp/seminars/207/)
 
 - Started working at The University of Osaka! joined Higo Lab [Link](https://sel.ist.osaka-u.ac.jp/)
+
+</details>
