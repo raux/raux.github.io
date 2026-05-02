@@ -1,9 +1,9 @@
 ---
 title: "News"
-date: 2026-05-03T19:11:16+08:00
+date: 2025-10-26T19:11:16+08:00
 
 # format for string: "xxxx-xx-xx"
-lastmod: "2026-05-03"
+lastmod: "2025-10-11"
 
 # set false when you want the post publish
 draft: false
