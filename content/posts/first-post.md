@@ -23,47 +23,47 @@ image: "/images/shonan.jpg"
 ---
 
 <!--more-->
-Check out my X social media [Link](https://x.com/Augaiko), LinkedIn [Link](https://www.linkedin.com/in/raula-gaikovina-kula-70b75545/), and GitHub profile [Link](https://github.com/raux).
+Check out my [Link](https://x.com/Augaiko) X social media, [Link](https://www.linkedin.com/in/raula-gaikovina-kula-70b75545/) LinkedIn, and [Link](https://github.com/raux) GitHub profile.
 
 # Ongoing Activities...
 
 List up community activities:
 
-- Software Engineering SE Core Conferences [Link](https://conf.researchr.org/profile/raulakula)
+- [Link](https://conf.researchr.org/profile/raulakula) Software Engineering SE Core Conferences
 # 2026 Organizing
 
-- Shonan: Envisioning the Future of (eXtended Reality) Software Engineering [Link](https://shonan.nii.ac.jp/seminars/228)
+- [Link](https://shonan.nii.ac.jp/seminars/228) Shonan: Envisioning the Future of (eXtended Reality) Software Engineering
 
-- AI Summer School in Papua New Guinea: BRIDGES2026 [Link](https://bridges-png.github.io/)  
+- [Link](https://bridges-png.github.io/) AI Summer School in Papua New Guinea: BRIDGES2026
 
-- Program Co-Chairs for VISSOFT2026 [Link](https://vissoft.io/2026/)
+- [Link](https://vissoft.io/2026/) Program Co-Chairs for VISSOFT2026
 
-- Program Co-Chair for SNPD2026 [Link](https://acisinternational.org/conferences/snpd-2026-i/) 
+- [Link](https://acisinternational.org/conferences/snpd-2026-i/) Program Co-Chair for SNPD2026
 
 - Program Co-Chair for IPSJ Taikai2026 
 
 # 2026 Invited Talks, Retreats and Workshops
-- Invited Keynote Speaker for SIML 2026 [Link](https://siml.ums.ac.id/2026/)
+- [Link](https://siml.ums.ac.id/2026/) Invited Keynote Speaker for SIML 2026
 
 - The University of Osaka, IST Retreat. 
 
-- Speinshart Scientific Center for AI and SuperTech Workshop: AI in a Fragmented World: Navigating Trade-offs Across Disciplines and Cultures [Link](https://speinshart.ai/pulse/e/ai-in-a-fragmented-world-navigating-trade-offs-across-disciplines-and-cultures/)
+- [Link](https://speinshart.ai/pulse/e/ai-in-a-fragmented-world-navigating-trade-offs-across-disciplines-and-cultures/) Speinshart Scientific Center for AI and SuperTech Workshop: AI in a Fragmented World: Navigating Trade-offs Across Disciplines and Cultures
  
-- Shonan 228: Envisioning the Future of (eXtended Reality) Software Engineering [Link](https://shonan.nii.ac.jp/seminars/228)
+- [Link](https://shonan.nii.ac.jp/seminars/228) Shonan 228: Envisioning the Future of (eXtended Reality) Software Engineering
 
-- Shonan 257: Crafting the Future of Developer Experience [Link](https://shonan.nii.ac.jp/seminars/257)
+- [Link](https://shonan.nii.ac.jp/seminars/257) Shonan 257: Crafting the Future of Developer Experience
 
 # 2026 Papers and Awards 
 
-- Published TSE Paper! "Self-admitted GenAI usage in open-source software" [Link](https://ieeexplore.ieee.org/abstract/document/11477161)
+- [Link](https://ieeexplore.ieee.org/abstract/document/11477161) Published TSE Paper! "Self-admitted GenAI usage in open-source software"
 
-- Accepted EMSE Paper! "Security by documentation? characterizing GitHub SECURITY.md policy and their adoption in Python libraries" [Link](https://link.springer.com/article/10.1007/s10664-025-10794-z)
+- [Link](https://link.springer.com/article/10.1007/s10664-025-10794-z) Accepted EMSE Paper! "Security by documentation? characterizing GitHub SECURITY.md policy and their adoption in Python libraries"
 
-- Accepted TOSEM Paper! "BonsAIDE: An Extended Vision for Human-AI Interaction in IDEs" [Link](https://dl.acm.org/doi/10.1145/3793681)
+- [Link](https://dl.acm.org/doi/10.1145/3793681) Accepted TOSEM Paper! "BonsAIDE: An Extended Vision for Human-AI Interaction in IDEs"
 
-- Accepted Workshop Paper! "Forecasting Developer Environments with GenAI: A Research Perspective" [Link](https://arxiv.org/pdf/2602.07412)
+- [Link](https://arxiv.org/pdf/2602.07412) Accepted Workshop Paper! "Forecasting Developer Environments with GenAI: A Research Perspective"
 
-- Accepted MSR2026 Full Paper! "An Empirical Study of Policy as Code: Adoption, Purpose, and Maintenance" [Link](https://akondrahman.github.io/files/papers/msr26.pdf)
+- [Link](https://akondrahman.github.io/files/papers/msr26.pdf) Accepted MSR2026 Full Paper! "An Empirical Study of Policy as Code: Adoption, Purpose, and Maintenance"
 
 - Accepted MSR2026 Challenge Paper! "Humans Integrate, Agents Fix: How Agent-Authored Pull Requests Are Referenced in Practice"
 
@@ -71,57 +71,56 @@ List up community activities:
 
 # 2025 Organizing and Attending
 
-- Done and Dusted! Program Co-Chairs for VISSOFT2025 [Link](https://vissoft.io/2025/)
+- [Link](https://vissoft.io/2025/) Done and Dusted! Program Co-Chairs for VISSOFT2025
 
-- Done and Dusted! Doctoral Symposium Co-Chair for ICSME2025 [Link](https://conf.researchr.org/track/icsme-2025/icsme-2025-doctoral-symposium)
-- Done and Dusted! Publicity Co-Chair for CoopIS2025 [Link](https://coopis.scitevents.org/)
+- [Link](https://conf.researchr.org/track/icsme-2025/icsme-2025-doctoral-symposium) Done and Dusted! Doctoral Symposium Co-Chair for ICSME2025
+- [Link](https://coopis.scitevents.org/) Done and Dusted! Publicity Co-Chair for CoopIS2025
 
-- Done and Dusted! Japanese SES Committee [Link](https://ses.sigse.jp/2025/)
+- [Link](https://ses.sigse.jp/2025/) Done and Dusted! Japanese SES Committee
 
-- Done and Dusted! Shonan: The Future of Development Environments with AI Foundation Models [Link](https://shonan.nii.ac.jp/seminars/222/)
+- [Link](https://shonan.nii.ac.jp/seminars/222/) Done and Dusted! Shonan: The Future of Development Environments with AI Foundation Models
 
 # 2025 Invited Talks
 
-- Invited Talk for WSSE2025 Invited Talk - Software Ecosystems: Where Do We Go From Here? [Link](https://wsse.org/speakers.html)
+- [Link](https://wsse.org/speakers.html) Invited Talk for WSSE2025 Invited Talk - Software Ecosystems: Where Do We Go From Here?
 
-- Invited Talk for Invited Talk at 1st African Winter School on Software Engineering & AI - Collaborations Result in Diverse Thinking, Novelty and Different Perspectives [Link](https://africaseai.github.io/ASEAI2025/)
+- [Link](https://africaseai.github.io/ASEAI2025/) Invited Talk for Invited Talk at 1st African Winter School on Software Engineering & AI - Collaborations Result in Diverse Thinking, Novelty and Different Perspectives
 
-- Invited Talk for the ICSE2025 New Faculty Symposium - *Collaborations Result in Diverse Thinking, Novelty and Different Perspectives*, [Link](https://conf.researchr.org/track/icse-2025/icse-2025-new-faculty-symposium#program)
-- Invited Keynote for 第6回次世代ソフトウェアエコシステムワークショップ - *What are Developer Coding Skills? Past, Present, Future*, NAIST, Japan [Slides](https://docs.google.com/presentation/d/1kwHWV4yT0CaGoOYaGSvw_2kJvx65_oXnKoRqMXjN1aE/edit?usp=sharing)
-- Invited Paper for the SEBot Workshop with ICSE - *Reducing Alert Fatigue via AI-Assisted Negotiation: A Case for Dependabot* [Link](https://sebot.github.io/)
+- [Link](https://conf.researchr.org/track/icse-2025/icse-2025-new-faculty-symposium#program) Invited Talk for the ICSE2025 New Faculty Symposium - *Collaborations Result in Diverse Thinking, Novelty and Different Perspectives*,
+- [Slides](https://docs.google.com/presentation/d/1kwHWV4yT0CaGoOYaGSvw_2kJvx65_oXnKoRqMXjN1aE/edit?usp=sharing) Invited Keynote for 第6回次世代ソフトウェアエコシステムワークショップ - *What are Developer Coding Skills? Past, Present, Future*, NAIST, Japan
+- [Link](https://sebot.github.io/) Invited Paper for the SEBot Workshop with ICSE - *Reducing Alert Fatigue via AI-Assisted Negotiation: A Case for Dependabot*
 
-- Invited Talk for the ICSE2025 New Faculty Symposium - *Collaborations Result in Diverse Thinking, Novelty and Different Perspectives*, [Link](https://conf.researchr.org/track/icse-2025/icse-2025-new-faculty-symposium#program)
+- [Link](https://conf.researchr.org/track/icse-2025/icse-2025-new-faculty-symposium#program) Invited Talk for the ICSE2025 New Faculty Symposium - *Collaborations Result in Diverse Thinking, Novelty and Different Perspectives*,
 
 - Invited Talk for Singapore Management University - Software Ecosystems. 
 
 # 2025 Papers and Awards 
 
-- Accepted Vision Paper to the 2030 Software Engineering Workshop *'Interacting with AI Reasoning Models: Harnessing "Thoughts" for AI-Driven Software Engineering'* [Link](https://arxiv.org/abs/2503.00483)
+- [Link](https://arxiv.org/abs/2503.00483) Accepted Vision Paper to the 2030 Software Engineering Workshop *'Interacting with AI Reasoning Models: Harnessing "Thoughts" for AI-Driven Software Engineering'*
 
-- Accepted Vision Paper to the 2030 Software Engineering Workshop *'Rethinking Reuse in Dependency Supply Chains: Initial Analysis of NPM packages at the End of the Chain'* [Link](https://arxiv.org/abs/2503.02804)
+- [Link](https://arxiv.org/abs/2503.02804) Accepted Vision Paper to the 2030 Software Engineering Workshop *'Rethinking Reuse in Dependency Supply Chains: Initial Analysis of NPM packages at the End of the Chain'*
 
-- Accepted Vision Paper to the 2030 Software Engineering Workshop *'Open Source at a Crossroads: The Future of Licensing Driven by Monetization'* [Link](https://arxiv.org/abs/2503.02817)
+- [Link](https://arxiv.org/abs/2503.02817) Accepted Vision Paper to the 2030 Software Engineering Workshop *'Open Source at a Crossroads: The Future of Licensing Driven by Monetization'*
 
-- Accepted Vision Paper to the 2030 Software Engineering Workshop *'The Shift from Writing to Pruning Software: A Bonsai-Inspired IDE for Reshaping AI Generated Code'* [Link](https://arxiv.org/abs/2503.02833)
+- [Link](https://arxiv.org/abs/2503.02833) Accepted Vision Paper to the 2030 Software Engineering Workshop *'The Shift from Writing to Pruning Software: A Bonsai-Inspired IDE for Reshaping AI Generated Code'*
 
-- Awarded and Congrats to **Thongtanunam et al.** on the  **Most Influential Paper** award for SANER2025!Who should review my code? SANER2015 [Link](https://x.com/SANERconf/status/1897663586635247676)
+- [Link](https://x.com/SANERconf/status/1897663586635247676) Awarded and Congrats to **Thongtanunam et al.** on the  **Most Influential Paper** award for SANER2025!Who should review my code? SANER2015
 
-- Congrats **Youmei et al.** on EMSE paper! Developer Reactions to Protestware in Open Source Software: The cases of color. js and es5. ext. Empirical Software Engineering [Link](https://link.springer.com/article/10.1007/s10664-024-10599-6)
+- [Link](https://link.springer.com/article/10.1007/s10664-024-10599-6) Congrats **Youmei et al.** on EMSE paper! Developer Reactions to Protestware in Open Source Software: The cases of color. js and es5. ext. Empirical Software Engineering
 
-- Congrats **Yoshioka et al.** on MSR Mining Challenge 2025 Paper [Link](https://2025.msrconf.org/track/msr-2025-mining-challenge)
+- [Link](https://2025.msrconf.org/track/msr-2025-mining-challenge) Congrats **Yoshioka et al.** on MSR Mining Challenge 2025 Paper
 
-- Congrats **Tanaka et al.** on MSR Mining Challenge 2025 paper! [Link](https://2025.msrconf.org/track/msr-2025-mining-challenge)
+- [Link](https://2025.msrconf.org/track/msr-2025-mining-challenge) Congrats **Tanaka et al.** on MSR Mining Challenge 2025 paper!
 
-- Congrats **Kancharoendee et al.** on SANER Short paper! On Categorizing Open Source Software Security
-Vulnerability Reporting Mechanisms on GitHub [Link](https://arxiv.org/abs/2502.07395)
+- [Link](https://arxiv.org/abs/2502.07395) Congrats **Kancharoendee et al.** on SANER Short paper! On Categorizing Open Source Software Security Vulnerability Reporting Mechanisms on GitHub
 
 
 # 2024 
 
-- Awarded the **Most Influential Paper** with co-authors, Visualizing the evolution of systems and their library dependencies, IEEE 12th International Workshop on Visualizing Software for Understanding and Analysis (VISSOFT2024) [Link](https://sel.ist.osaka-u.ac.jp/topics/award_VISSOFT2024_raula/index.html.en) 
+- [Link](https://sel.ist.osaka-u.ac.jp/topics/award_VISSOFT2024_raula/index.html.en) Awarded the **Most Influential Paper** with co-authors, Visualizing the evolution of systems and their library dependencies, IEEE 12th International Workshop on Visualizing Software for Understanding and Analysis (VISSOFT2024)
 
-- Done and Dusted!  WIREDS24 [Link](https://wireds2024.github.io/)
+- [Link](https://wireds2024.github.io/) Done and Dusted!  WIREDS24
 
-- Done and Dusted! Shonan 207 [Link](https://shonan.nii.ac.jp/seminars/207/)
+- [Link](https://shonan.nii.ac.jp/seminars/207/) Done and Dusted! Shonan 207
 
-- Started working at The University of Osaka! joined Higo Lab [Link](https://sel.ist.osaka-u.ac.jp/)
+- [Link](https://sel.ist.osaka-u.ac.jp/) Started working at The University of Osaka! joined Higo Lab
