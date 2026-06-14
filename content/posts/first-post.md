@@ -23,33 +23,35 @@ image: "/images/shonan.jpg"
 ---
 
 <!--more-->
-Check out my [X social media](https://x.com/Augaiko), [LinkedIn](https://www.linkedin.com/in/raula-gaikovina-kula-70b75545/), and [GitHub profile](https://github.com/raux).
+Check out my X social media [Link](https://x.com/Augaiko), LinkedIn [Link](https://www.linkedin.com/in/raula-gaikovina-kula-70b75545/), and GitHub profile [Link](https://github.com/raux).
 
 # Ongoing Activities...
 
 List up community activities:
 
-- Software Engineering [SE Core Conferences](https://conf.researchr.org/profile/raulakula)
+- Software Engineering SE Core Conferences [Link](https://conf.researchr.org/profile/raulakula)
 # 2026 Organizing
 
-- Shonan [Envisioning the Future of (eXtended Reality) Software Engineering](https://shonan.nii.ac.jp/seminars/228)
+- Shonan: Envisioning the Future of (eXtended Reality) Software Engineering [Link](https://shonan.nii.ac.jp/seminars/228)
 
-- AI Summer School in Papua New Guinea [BRIDGES2026](https://bridges-png.github.io/)  
+- AI Summer School in Papua New Guinea: BRIDGES2026 [Link](https://bridges-png.github.io/)  
 
-- Program Co-Chairs for [VISSOFT2026](https://vissoft.io/2026/)
+- Program Co-Chairs for VISSOFT2026 [Link](https://vissoft.io/2026/)
 
-- Program Co-Chair for [SNPD2026](https://acisinternational.org/conferences/snpd-2026-i/) 
+- Program Co-Chair for SNPD2026 [Link](https://acisinternational.org/conferences/snpd-2026-i/) 
 
 - Program Co-Chair for IPSJ Taikai2026 
 
 # 2026 Invited Talks, Retreats and Workshops
+- Invited Keynote Speaker for SIML 2026 [Link](https://siml.ums.ac.id/2026/)
+
 - The University of Osaka, IST Retreat. 
 
-- Speinshart Scientific Center for AI and SuperTech Workshop [AI in a Fragmented World: Navigating Trade-offs Across Disciplines and Cultures](https://speinshart.ai/pulse/e/ai-in-a-fragmented-world-navigating-trade-offs-across-disciplines-and-cultures/)
+- Speinshart Scientific Center for AI and SuperTech Workshop: AI in a Fragmented World: Navigating Trade-offs Across Disciplines and Cultures [Link](https://speinshart.ai/pulse/e/ai-in-a-fragmented-world-navigating-trade-offs-across-disciplines-and-cultures/)
  
-- Shonan 228 [Envisioning the Future of (eXtended Reality) Software Engineering](https://shonan.nii.ac.jp/seminars/228)
+- Shonan 228: Envisioning the Future of (eXtended Reality) Software Engineering [Link](https://shonan.nii.ac.jp/seminars/228)
 
-- Shonan 257 [Crafting the Future of Developer Experience](https://shonan.nii.ac.jp/seminars/257)
+- Shonan 257: Crafting the Future of Developer Experience [Link](https://shonan.nii.ac.jp/seminars/257)
 
 # 2026 Papers and Awards 
 
@@ -76,7 +78,7 @@ List up community activities:
 
 - Done and Dusted! Japanese SES Committee [Link](https://ses.sigse.jp/2025/)
 
-- Done and Dusted! Shonan [The Future of Development Environments with AI Foundation Models](https://shonan.nii.ac.jp/seminars/222/)
+- Done and Dusted! Shonan: The Future of Development Environments with AI Foundation Models [Link](https://shonan.nii.ac.jp/seminars/222/)
 
 # 2025 Invited Talks
 
