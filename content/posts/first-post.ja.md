@@ -1,7 +1,7 @@
 ---
 title: "ニュース"
 date: 2025-10-26T19:11:16+08:00
-lastmod: "2025-10-11"
+lastmod: 2026-07-15T00:00:00+09:00
 draft: false
 categories: ['最新情報']
 tags: ['ニュース']

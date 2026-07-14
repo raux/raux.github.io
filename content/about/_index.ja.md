@@ -1,7 +1,7 @@
 ---
 title: "プロフィール"
 date: 2025-01-25T16:46:16+08:00
-lastmod: "2025-01-26"
+lastmod: 2026-07-15T00:00:00+09:00
 draft: false
 categories: ['プロフィール']
 tags: ['プロフィール']
