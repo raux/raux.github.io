@@ -203,21 +203,6 @@ $(document).ready(function () {
     });
 
     $('.wait-lang-box').css('left', ($('.lang-now').width() - $('.wait-lang-box').width()) / 2);
-    $('.lang').click(function() {
-        var pathName = (function() {
-            originPath = window.location.pathname.substring(1);
-            var newPath;
-            if (nowIsDefaultLang) {
-                newPath = originPath;
-            } else {
-                theStrPosition = originPath.indexOf('/');
-                newPath = originPath.substring(theStrPosition + 1);
-            }
-            return newPath;
-        }());
-        var toTransHref = $(this)['context']['attributes'][0].value + pathName;
-        window.location.href = toTransHref;
-    })
     $(".tosides-1").click(function () {
         $('.tosides-1').hide();
         $('.tosides-2').show();

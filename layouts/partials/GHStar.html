@@ -29,7 +29,9 @@
 
   <ul class="GHStar">
     {{ $url := .Get "url" }}
-    {{ range getJSON $url }}
+    {{ $remote := resources.GetRemote $url }}
+    {{ $people := $remote | transform.Unmarshal }}
+    {{ range $people }}
       {{ $p := . }}
       <li>
         <a href="{{ $p.webpage}}" target="_blank">{{$p.first}} {{ $p.last }}</a>,

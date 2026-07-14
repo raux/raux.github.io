@@ -1,5 +1,5 @@
 {{ $langNow := .Lang }}
-{{ $isMultiLingual := and (ne .Site.Language.Weight 1) (and .Site.IsMultiLingual (not .Site.Params.Site.OnlyOneLang)) }}
+{{ $isMultiLingual := and (ne .Site.Language.Weight 1) (and (gt (len .Site.Languages) 1) (not .Site.Params.Site.OnlyOneLang)) }}
 <div class="about-zuozhe">
     <div class="zuozhe">
         {{ with .Site.Params.author.image }}
@@ -43,7 +43,7 @@
     </div>
 
     <a href="{{ .Site.Params.author.link }}">
-        <div class="follow">Follow Me</div>
+        <div class="follow">{{ i18n "sidebar_followMe" }}</div>
     </a>
     <div class="link">
         {{ range .Site.Menus.social }}

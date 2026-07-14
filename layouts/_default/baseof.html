@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="{{ .Site.Language.LanguageCode }}">
     {{- partial "head.html" . -}}
     <body style="font-family: {{ .Site.Params.page.font }}{{ if ne .Site.Params.page.font "" }},{{ end }}'Helvetica Neue', Helvetica, Arial, 'PingFang SC', 'Hiragino Sans GB', 'Heiti SC', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif;">
         <div class="loading">

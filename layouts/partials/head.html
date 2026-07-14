@@ -5,6 +5,12 @@
     <title>{{ .Site.Title }}{{ if not .IsHome }}{{ with .Title }} | {{ . }}{{ end }}{{ end }}</title>
     <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ with .Summary }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}{{ end }} ">
     <link rel="canonical" href="{{ .Permalink }}" />
+    {{ range .AllTranslations }}
+        <link rel="alternate" hreflang="{{ .Language.LanguageCode }}" href="{{ .Permalink }}" />
+    {{ end }}
+    {{ range where .AllTranslations "Lang" "en" }}
+        <link rel="alternate" hreflang="x-default" href="{{ .Permalink }}" />
+    {{ end }}
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     {{ template "_internal/opengraph.html" . }}
     {{ template "_internal/twitter_cards.html" . }}

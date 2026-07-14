@@ -10,6 +10,8 @@ theme = "NewBee"
 # default content of website
 # 网站默认语言
 defaultContentLanguage = "en"
+# Keep the default English site at / and publish Japanese under /ja/.
+defaultContentLanguageInSubdir = false
 # whether to use robots.txt
 # 是否使用 robots.txt
 enableRobotsTXT = true
@@ -21,7 +23,65 @@ summaryLength = 50
 # If true, auto-detect Chinese/Japanese/Korean Languages in the content.
 # This will make .Summary and .WordCount behave correctly for CJK languages.
 # 中日韩语言请改为 true
-hasCJKLanguage = false
+hasCJKLanguage = true
+
+# Multilingual configuration
+[languages]
+    [languages.en]
+        languageCode = "en-US"
+        languageName = "English"
+        weight = 1
+
+    [languages.ja]
+        languageCode = "ja-JP"
+        languageName = "日本語"
+        title = "大阪大学 教授"
+        weight = 2
+
+        [languages.ja.params.page]
+            homeTitle = "Raula Gaikovina Kula"
+            homeContent = "ソフトウェア工学研究者 - [raula-k@ist.osaka-u.ac.jp]"
+            categoryDes = "カテゴリー別の記事"
+            tagDes = "タグ別の記事"
+            allPostsDes = "すべての記事"
+            aboutDes = "プロフィール"
+
+        [[languages.ja.menus.main]]
+            name = "ホーム"
+            url = "/ja/"
+            weight = 1
+            pre = "<i class='fa fa-home'></i>"
+        [[languages.ja.menus.main]]
+            name = "記事"
+            url = "/ja/posts/"
+            weight = 2
+            pre = "<i class='fa fa-book'></i>"
+        [[languages.ja.menus.main]]
+            name = "カテゴリー"
+            url = "/ja/categories/"
+            weight = 3
+            pre = "<i class='fa fa-folder-open'></i>"
+        [[languages.ja.menus.main]]
+            name = "タグ"
+            url = "/ja/tags/"
+            weight = 5
+            pre = "<i class='fa fa-tags'></i>"
+        [[languages.ja.menus.main]]
+            name = "プロフィール"
+            url = "/ja/about/"
+            weight = 6
+            pre = "<i class='fa fa-info-circle'></i>"
+
+        [[languages.ja.menus.social]]
+            name = "GitHub"
+            url = "https://github.com/raux"
+            pre = "<i class='fa fa-github'></i>"
+            weight = 1
+        [[languages.ja.menus.social]]
+            name = "YouTube"
+            url = "https://www.youtube.com/channel/UCR5uh7dGGp6wRP2O4e7NqJw"
+            pre = "<i class='fa fa-youtube'></i>"
+            weight = 2
 
 [author]
     name = "Raula Gaikovina Kula"

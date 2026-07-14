@@ -1,0 +1,104 @@
+# ホーム
+[Home_latestPosts]
+    other = '最新の記事'
+[Home_allPosts]
+    other = 'すべての記事'
+
+# 記事
+[Posts_allPosts]
+    other = 'すべての記事'
+
+# カテゴリー
+[Categories_categories]
+    other = 'カテゴリー'
+[Categories_postUnit]
+    one = '件の記事'
+    other = '件の記事'
+[CategoriesTerms_category]
+    other = 'カテゴリー'
+
+# タグ
+[Tags_tags]
+    other = 'タグ'
+[TagsTerms_tag]
+    other = 'タグ'
+
+# シリーズ
+[Series_series]
+    other = 'シリーズ'
+[SeriesTerms_series]
+    other = 'シリーズ'
+
+# プロフィール
+[About_about]
+    other = 'プロフィール'
+
+# サイドバー
+[sidebar_content]
+    other = '目次'
+[sidebar_comment]
+    other = 'コメント'
+[sidebar_posts]
+    other = '記事'
+[sidebar_categories]
+    other = 'カテゴリー'
+[sidebar_tags]
+    other = 'タグ'
+[sidebar_followMe]
+    other = 'リンク'
+[sidebar_tableOfContent]
+    other = '目次'
+[sidebar_latestPosts]
+    other = '最新の記事'
+[sidebar_relatedPosts]
+    other = '関連記事'
+
+# スポンサー
+[sponsor_sponsor]
+    other = 'スポンサー'
+[sponsor_cancel]
+    other = 'キャンセル'
+
+# 記事情報
+[postInfo_postedOn]
+    other = '公開日'
+[postInfo_updatedOn]
+    other = '更新日'
+[postInfo_includedIn]
+    other = 'カテゴリー'
+[postInfo_notIncluded]
+    other = 'カテゴリーなし'
+[postInfo_wordsCount]
+    other = '文字数'
+[postInfo_readingTime]
+    other = '読了時間'
+[postInfo_minute]
+    one = '分'
+    other = '分'
+[postInfo_viewers]
+    other = '閲覧数'
+
+# 検索
+[search_search]
+    other = '検索'
+[search_enterAKeyWord]
+    other = 'キーワードを入力'
+[search_found]
+    other = '見つかりました'
+[search_result]
+    other = '件'
+[search_results]
+    other = '件'
+[search_theEnd]
+    other = '以上です'
+[search_nothing]
+    other = '該当する記事がありません'
+
+# 404
+[_404_sorry]
+    other = '申し訳ありません。ページが見つかりません。'
+[_404_backToHome]
+    other = 'ホームに戻る'
+
+[imageLoadingFailed]
+    other = '画像を読み込めませんでした'
