@@ -1,9 +1,9 @@
 ---
 title: "Hobbies and Projects"
-date: 2026-08-03T18:10:12+09:00
+date: 2026-08-03T18:26:06+09:00
 
 # Set to false when you want to publish the post
-draft: true
+draft: false
 
 categories: ['personal']
 tags: ['hobbies', 'projects']
