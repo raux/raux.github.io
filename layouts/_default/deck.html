@@ -150,9 +150,33 @@
     transition:all .15s;
   }
   .chip:hover{color:var(--text);border-color:var(--dim)}
-  .chip[aria-pressed="true"]{background:var(--text);color:#0A0D13;border-color:var(--text);font-weight:700}
-  .filters .sep{width:1px;height:20px;background:var(--line);margin:0 4px}
-  .count{margin-left:auto;font-size:12px;color:var(--dim)}
+  .chip[data-state="inc"]{
+    background:var(--text);color:#0A0D13;border-color:var(--text);font-weight:700;
+  }
+  .chip[data-state="exc"]{
+    background:rgba(226,59,59,.14);border-color:rgba(226,59,59,.55);
+    color:#FFB4B4;text-decoration:line-through;text-decoration-thickness:1px;
+  }
+  .chip .mk{
+    display:inline-block;width:8px;margin-right:5px;text-align:center;
+    font-weight:700;opacity:.75;text-decoration:none;
+  }
+  .chip[data-state="off"] .mk{opacity:0}
+
+  .filters{align-items:flex-start;row-gap:8px}
+  .facet{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+  .facet-label{
+    font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--dim);font-weight:700;margin-right:2px;
+  }
+  .filters .sep{width:1px;height:20px;background:var(--line);margin:0 6px;align-self:center}
+  .hint{font-size:11px;color:var(--dim);align-self:center}
+  .reset{
+    font-size:11px;color:var(--accent-hi);background:none;border:0;
+    padding:6px 2px;text-decoration:underline;text-underline-offset:3px;
+  }
+  .reset[hidden]{display:none}
+  .count{margin-left:auto;font-size:12px;color:var(--dim);align-self:center}
 
   /* ───────── rows ───────── */
   .rows{padding:8px 0 80px}
@@ -431,17 +455,8 @@
   </div>
 </section>
 
-<div class="filters" role="group" aria-label="Filter catalogue">
-  <button class="chip" data-kind="all" aria-pressed="true">Everything</button>
-  <button class="chip" data-kind="journal" aria-pressed="false">Journal</button>
-  <button class="chip" data-kind="conf" aria-pressed="false">Conference</button>
-  <button class="chip" data-kind="preprint" aria-pressed="false">Preprint</button>
-  <span class="sep"></span>
-  <button class="chip" data-era="all" aria-pressed="true">All years</button>
-  <button class="chip" data-era="2025" aria-pressed="false">2025 →</button>
-  <button class="chip" data-era="2023" aria-pressed="false">2023 – 2024</button>
-  <button class="chip" data-era="2019" aria-pressed="false">2019 – 2022</button>
-  <button class="chip" data-era="early" aria-pressed="false">2009 – 2018</button>
+<div class="filters" id="filters" role="group" aria-label="Filter the catalogue">
+  <span class="hint">Click to include &middot; again to exclude</span>
   <span class="count" id="count"></span>
 </div>
 
@@ -681,16 +696,44 @@
      f:function(p){return p.k==="journal";}}
   ];
 
-  var state={kind:"all",era:"all",q:""};
+  var FACETS = [
+    {id:"kind", label:"Type", opts:[["journal","Journal"],["conf","Conference"],["preprint","Preprint"]],
+     test:function(p,v){ return p.k === v; }},
+    {id:"era",  label:"Years",
+     opts:[["2025","2025 \u2192"],["2023","2023 \u2013 2024"],["2019","2019 \u2013 2022"],["early","2009 \u2013 2018"]],
+     test:function(p,v){
+       if(v==="2025")  return p.y >= 2025;
+       if(v==="2023")  return p.y >= 2023 && p.y <= 2024;
+       if(v==="2019")  return p.y >= 2019 && p.y <= 2022;
+       if(v==="early") return p.y <= 2018;
+       return false;
+     }},
+    {id:"theme", label:"Theme",
+     opts:Object.keys(THEMES).map(function(k){ return [k, THEMES[k].label]; }),
+     test:function(p,v){ return (p.th||[]).indexOf(v) > -1; }}
+  ];
+  var CYCLE = {off:"inc", inc:"exc", exc:"off"};
+  var MARK  = {off:"\u00b7", inc:"+", exc:"\u2212"};
+  var SAYS  = {off:"not filtered", inc:"included", exc:"excluded"};
+
+  var state={f:{kind:{},era:{},theme:{}},q:""};
   var rowsEl=document.getElementById("rows");
   var countEl=document.getElementById("count");
 
   function matches(p){
-    if(state.kind!=="all"&&p.k!==state.kind) return false;
-    if(state.era==="2025"&&p.y<2025) return false;
-    if(state.era==="2023"&&(p.y<2023||p.y>2024)) return false;
-    if(state.era==="2019"&&(p.y>2022||p.y<2019)) return false;
-    if(state.era==="early"&&p.y>2018) return false;
+    /* Within a facet: any included value is enough, any excluded value is fatal.
+       Across facets: all must pass. No inclusions in a facet means "anything
+       except what is excluded". */
+    for(var fi=0; fi<FACETS.length; fi++){
+      var f = FACETS[fi], sel = state.f[f.id] || {}, anyInc = false, hitInc = false;
+      for(var v in sel){
+        if(!Object.prototype.hasOwnProperty.call(sel, v)) continue;
+        var hit = f.test(p, v);
+        if(sel[v] === "exc" && hit) return false;
+        if(sel[v] === "inc"){ anyInc = true; if(hit) hitInc = true; }
+      }
+      if(anyInc && !hitInc) return false;
+    }
     if(state.q){
       var hay=(p.t+" "+p.v+" "+p.y+" "+p.d+" "+p.th.join(" ")+" "+
               (p.authors||[]).join(" ")+" "+
@@ -858,17 +901,77 @@
   });
 
   /* ── controls ─────────────────────────────────────────── */
-  Array.prototype.forEach.call(document.querySelectorAll(".chip"),function(c){
-    c.addEventListener("click",function(){
-      var group=c.dataset.kind?"kind":"era";
-      var sel=c.dataset.kind?"[data-kind]":"[data-era]";
-      Array.prototype.forEach.call(document.querySelectorAll(".chip"+sel),function(o){
-        o.setAttribute("aria-pressed",String(o===c));
+  var filtersEl = document.getElementById("filters");
+  var resetBtn;
+
+  function chipState(btn, st){
+    btn.dataset.state = st;
+    btn.querySelector(".mk").textContent = MARK[st];
+    btn.setAttribute("aria-label", btn.dataset.label + " \u2014 " + SAYS[st]);
+    btn.setAttribute("aria-pressed", String(st === "inc"));
+  }
+
+  function anyActive(){
+    for(var k in state.f)
+      for(var v in state.f[k])
+        if(state.f[k][v] !== "off") return true;
+    return false;
+  }
+
+  function buildFilters(){
+    var hint = filtersEl.querySelector(".hint");
+    var count = filtersEl.querySelector(".count");
+    filtersEl.textContent = "";
+    FACETS.forEach(function(f, i){
+      if(i) filtersEl.appendChild(Object.assign(document.createElement("span"), {className:"sep"}));
+      var g = document.createElement("span");
+      g.className = "facet";
+      var lab = document.createElement("span");
+      lab.className = "facet-label";
+      lab.textContent = f.label;
+      g.appendChild(lab);
+      f.opts.forEach(function(o){
+        var b = document.createElement("button");
+        b.type = "button";
+        b.className = "chip";
+        b.dataset.facet = f.id;
+        b.dataset.value = o[0];
+        b.dataset.label = o[1];
+        b.innerHTML = '<span class="mk"></span>';
+        b.appendChild(document.createTextNode(o[1]));
+        chipState(b, state.f[f.id][o[0]] || "off");
+        b.addEventListener("click", function(){
+          var next = CYCLE[b.dataset.state];
+          if(next === "off") delete state.f[f.id][o[0]];
+          else state.f[f.id][o[0]] = next;
+          chipState(b, next);
+          resetBtn.hidden = !anyActive();
+          render();
+        });
+        g.appendChild(b);
       });
-      state[group]=c.dataset.kind||c.dataset.era;
+      filtersEl.appendChild(g);
+    });
+
+    resetBtn = document.createElement("button");
+    resetBtn.type = "button";
+    resetBtn.className = "reset";
+    resetBtn.textContent = "Clear filters";
+    resetBtn.hidden = true;
+    resetBtn.addEventListener("click", function(){
+      state.f = {kind:{},era:{},theme:{}};
+      Array.prototype.forEach.call(filtersEl.querySelectorAll(".chip"), function(b){
+        chipState(b, "off");
+      });
+      resetBtn.hidden = true;
       render();
     });
-  });
+    filtersEl.appendChild(resetBtn);
+    filtersEl.appendChild(hint);
+    filtersEl.appendChild(count);
+  }
+  buildFilters();
+
   var qEl=document.getElementById("q"),tmr;
   qEl.addEventListener("input",function(){
     clearTimeout(tmr);
