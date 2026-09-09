@@ -358,7 +358,7 @@ def emit_venues(papers, reg, log):
     return "\n".join(L) + "\n"
 
 
-def emit(papers, featured, sources):
+def emit(papers, featured, sources, spotlight=None):
     L = [
         "# GENERATED FILE — do not edit by hand.",
         "# Regenerate with:  python scripts/bib2papers.py",
@@ -370,8 +370,13 @@ def emit(papers, featured, sources):
         "",
         "featured: " + q(featured),
         "",
-        "papers:",
     ]
+    if spotlight:
+        L.append("spotlight:")
+        for t in spotlight:
+            L.append("  - " + q(t))
+        L.append("")
+    L.append("papers:")
     for p in papers:
         L += [
             "  - title: " + q(p["title"]),
@@ -519,7 +524,16 @@ def build(log):
     for p in papers:
         if not p["authors"]:
             log("  no authors in the .bib for: " + p["title"][:56], warn=True)
-    return (emit(papers, featured, [os.path.basename(b) for b in bibs]),
+    titles = {norm(p["title"]): p["title"] for p in papers}
+    spotlight = []
+    for t in (ov.get("spotlight") or []):
+        real = titles.get(norm(t))
+        if real:
+            spotlight.append(real)
+        else:
+            log("  spotlight entry matches no paper: " + str(t)[:56], warn=True)
+
+    return (emit(papers, featured, [os.path.basename(b) for b in bibs], spotlight),
             emit_venues(papers, reg, log), inst_text, papers)
 
 

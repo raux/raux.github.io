@@ -393,12 +393,14 @@
 <body>
 <script id="papers-data" type="application/json" data-featured="{{ $data.featured }}">{{ $data.papers | jsonify | safeJS }}</script>
 <script id="venues-data" type="application/json" data-logos="{{ "/venues/" | relURL }}">{{ $venues | jsonify | safeJS }}</script>
+<script id="spot-data" type="application/json">{{ $data.spotlight | jsonify | safeJS }}</script>
 <script id="insts-data" type="application/json" data-logos="{{ "/institutions/" | relURL }}">{{ $insts | jsonify | safeJS }}</script>
 
 
 <header class="bar">
   <div class="brand">RAUX<span>·DECK</span></div>
   <nav>
+    <a href="#row-spot">Spotlight</a>
     <a href="#row-new">New</a>
     <a href="#row-eco">Ecosystems</a>
     <a href="#row-prof">Proficiency</a>
@@ -484,6 +486,18 @@
               authors:(p.authors||[]), insts:(p.insts||[]), self:(p.self||[])};
     });
   })();
+
+  /* ── spotlight: a rotating hand-off from scripts/feature.py ─ */
+  var SPOT = (function(){
+    var el = document.getElementById("spot-data"), v = [];
+    try{
+      v = JSON.parse(el.textContent);
+      if(typeof v === "string") v = JSON.parse(v);
+    }catch(e){ v = []; }
+    return Array.isArray(v) ? v : [];
+  })();
+  var SPOT_SET = {};
+  SPOT.forEach(function(t, i){ SPOT_SET[t] = i; });
 
   /* ── institutions ─────────────────────────────────────── */
   var IDATA = document.getElementById("insts-data");
@@ -648,6 +662,9 @@
 
   /* ── rows ─────────────────────────────────────────────── */
   var ROWS=[
+    {id:"spot",  h:"Spotlight",                        sub:"A rotating pick",
+     f:function(p){return p.t in SPOT_SET;},
+     order:function(a,b){return SPOT_SET[a.t]-SPOT_SET[b.t];}},
     {id:"new",   h:"New Releases",                    sub:"2025 \u2013 2026",
      f:function(p){return p.y>=2025;}},
     {id:"eco",   h:"Theme I · Software as Ecosystems", sub:"npm, PyPI, Maven — dependency networks as living systems",
@@ -715,7 +732,7 @@
     }
 
     ROWS.forEach(function(row){
-      var items=pool.filter(row.f).sort(function(a,b){return b.y-a.y;});
+      var items=pool.filter(row.f).sort(row.order||function(a,b){return b.y-a.y;});
       if(!items.length) return;
       shown++;
       var sec=document.createElement("section");

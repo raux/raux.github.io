@@ -73,6 +73,25 @@ upgrade a wordmark to a real mark, drop the file into `static/venues/` and add `
 each publisher's brand guidelines. A venue missing from the registry gets a plain slate plate
 and a warning naming it.
 
+## Choosing what the deck puts forward
+
+`scripts/feature.py` picks the billboard paper and the Spotlight row, writing `featured:` and
+`spotlight:` into `bib/deck-overrides.yaml` and leaving the rest of that file alone. Run
+`scripts/bib2papers.py` afterwards to rebuild.
+
+```bash
+python scripts/feature.py                    # a fresh random pick
+python scripts/feature.py --count 10         # longer Spotlight row (0 to skip it)
+python scripts/feature.py --seed 2026-09-09  # reproducible — CI can pass the date
+python scripts/feature.py --pin "Open Source at a Crossroads"   # choose the hero yourself
+python scripts/feature.py --dry-run          # print the pick, write nothing
+```
+
+The draw is weighted rather than uniform: recent work and papers where you are first author come
+up more often, and a paper whose logline is still the `Venue, year.` fallback is heavily
+discounted, since it makes a poor billboard. Heroes used recently are recorded in
+`bib/feature-history.yaml` and skipped, so the billboard does not repeat.
+
 ## Authors and institutions
 
 Author names and their order come from the `.bib`, so keeping the export current keeps the

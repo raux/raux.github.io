@@ -6,7 +6,15 @@
 #
 # Last generated 2026-09-09 · 127 papers
 
-featured: "The Life and Death of Software Ecosystems"
+featured: "WhoReview: A Multi-objective Search-based Approach for Code Reviewers Recommendation"
+
+spotlight:
+  - "Open Source at a Crossroads: The Future of Licensing Driven by Monetization"
+  - "18 Million Links in Commit Messages: Purpose, Evolution, and Decay"
+  - "The Life and Death of Software Ecosystems"
+  - "Analyzing First Contributions on GitHub: What Do Newcomers Do?"
+  - "Contributing Back to the Ecosystem: A User Survey of NPM Developers"
+  - "Ethical Considerations Toward Protestware"
 
 papers:
   - title: "A Longitudinal Analysis of Good First Issue Practices and Newcomer Pull Requests in Popular OSS Projects"
