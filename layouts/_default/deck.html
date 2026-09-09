@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.Language.LanguageCode }}">
 {{ $data := .Site.Data.papers }}
+{{ $venues := .Site.Data.venues }}
 {{ $featured := index (where $data.papers "title" $data.featured) 0 }}
 {{ if not $featured }}{{ $featured = index $data.papers 0 }}{{ end }}
 <head>
@@ -206,6 +207,42 @@
   }
   .art{position:relative;aspect-ratio:16/11;background:var(--ink-2);overflow:hidden}
   .art svg{width:100%;height:100%;display:block}
+  .plate{
+    position:relative;width:100%;height:100%;overflow:hidden;
+    background-color:var(--ink-2);background-repeat:no-repeat;background-size:cover;
+    display:flex;flex-direction:column;justify-content:flex-start;
+    padding:32px 13px 12px;
+  }
+  .plate .rule{position:absolute;left:0;top:0;bottom:0;width:3px;z-index:2}
+  .plate svg.tex{position:absolute;inset:0;width:100%;height:100%;opacity:.5;z-index:0}
+  .plate .abbr{
+    position:relative;z-index:2;
+    font-variation-settings:"wdth" 72;font-weight:900;font-size:36px;
+    line-height:.82;letter-spacing:.005em;
+  }
+  .plate .abbr.long{font-size:26px}
+  .plate .full{
+    position:relative;z-index:2;
+    font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:#9FB2C9;
+    margin-top:7px;max-width:122px;line-height:1.34;
+  }
+  .plate .pub{
+    position:absolute;right:11px;bottom:9px;z-index:2;height:15px;
+    opacity:.8;filter:brightness(0) invert(1);
+  }
+  .plate .pub-t{
+    position:absolute;right:11px;bottom:8px;z-index:2;
+    font-size:8.5px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--muted);font-weight:600;
+  }
+  .plate.big{padding:40px 28px 24px}
+  .plate.big .abbr{font-size:62px}
+  .plate.big .abbr.long{font-size:46px}
+  .plate.big .full{font-size:11px;max-width:360px;margin-top:11px}
+  .plate.big .pub{height:24px;right:24px;bottom:20px}
+  .plate.big .pub-t{font-size:11px;right:24px;bottom:20px}
+  .plate.big .rule{width:5px}
+
   .art .yr{
     position:absolute;left:9px;bottom:7px;
     font-size:11px;font-weight:600;color:#D3DAE8;letter-spacing:.06em;
@@ -307,6 +344,7 @@
 </head>
 <body>
 <script id="papers-data" type="application/json" data-featured="{{ $data.featured }}">{{ $data.papers | jsonify | safeJS }}</script>
+<script id="venues-data" type="application/json" data-logos="{{ "/venues/" | relURL }}">{{ $venues | jsonify | safeJS }}</script>
 
 
 <header class="bar">
@@ -358,7 +396,7 @@
 
 <footer>
   <b>{{ len $data.papers }} papers</b> &middot; generated from <span class="mono">data/publications.bib</span> and <span class="mono">data/deck-overrides.yaml</span>; the rows rebuild themselves when the bibliography changes.
-  Each poster is generated from the paper's own title &mdash; a deterministic hash lays out the node-link figure, so every paper keeps a stable, unique cover and there are no images to maintain.
+  Each card carries its venue's plate &mdash; abbreviation, publisher and brand colour from <span class="mono">bib/venues.yaml</span> &mdash; over a node-link texture seeded from the paper's own title, so no two cards in a row are identical.
   arXiv entries link to the abstract page; everything else links to a DBLP title search.
   <a href="{{ "/posts/publications/" | relLangURL }}" style="color:var(--muted)">Full profiles and datasets &rarr;</a>
 </footer>
@@ -395,7 +433,50 @@
     });
   })();
 
-  /* ── deterministic poster art ─────────────────────────── */
+  /* ── venue plates ─────────────────────────────────────── */
+  var VDATA = document.getElementById("venues-data");
+  var LOGOS = (VDATA && VDATA.getAttribute("data-logos")) || "/venues/";
+  var VENUES = (function(){
+    var v = {};
+    try{
+      v = JSON.parse(VDATA.textContent);
+      if(typeof v === "string") v = JSON.parse(v);
+    }catch(e){ v = {}; }
+    return v && typeof v === "object" ? v : {};
+  })();
+  function venueOf(name){
+    return VENUES[name] || {abbr:name, full:"", pub:"", color:"#5C6580", logo:""};
+  }
+  function esc(s){
+    return String(s).replace(/[&<>"]/g, function(c){
+      return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];
+    });
+  }
+  function rgba(hex, a){
+    var h = String(hex||"").replace("#","");
+    if(h.length === 3) h = h[0]+h[0]+h[1]+h[1]+h[2]+h[2];
+    var n = parseInt(h, 16);
+    if(isNaN(n)) return "rgba(92,101,128," + a + ")";
+    return "rgba(" + ((n>>16)&255) + "," + ((n>>8)&255) + "," + (n&255) + "," + a + ")";
+  }
+  function plate(p, big){
+    var v = venueOf(p.v), c = v.color || "#5C6580";
+    var mark = v.logo
+      ? '<img class="pub" src="' + LOGOS + encodeURIComponent(v.logo) +
+        '" alt="' + esc(v.pub) + '" loading="lazy">'
+      : (v.pub ? '<span class="pub-t">' + esc(v.pub) + '</span>' : "");
+    var abbr = v.abbr || p.v;
+    return '<div class="plate' + (big ? " big" : "") + '" style="background-image:radial-gradient(' +
+             '120% 130% at 22% 12%, ' + rgba(c, .42) + ', rgba(16,20,29,0) 62%)">' +
+             '<span class="rule" style="background:' + esc(c) + '"></span>' +
+             poster(p.t, c, big ? 840 : 320, big ? 320 : 220, big ? 2.6 : 1) +
+             '<span class="abbr' + (abbr.length > 6 ? " long" : "") + '">' + esc(abbr) + '</span>' +
+             (v.full ? '<span class="full">' + esc(v.full) + '</span>' : "") +
+             mark +
+           '</div>';
+  }
+
+  /* ── per-paper texture behind the plate ───────────────── */
   function hashStr(s){
     var h=2166136261,i;
     for(i=0;i<s.length;i++){h^=s.charCodeAt(i);h=Math.imul(h,16777619);}
@@ -434,13 +515,12 @@
       var deg=1+(r()>0.55?1:0);
       for(j=0;j<deg&&j<best.length;j++) edges.push([i,best[j][1]]);
     }
-    var s='<svg viewBox="0 0 '+w+' '+h+'" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">';
+    var s='<svg class="tex" viewBox="0 0 '+w+' '+h+'" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">';
     var gid='g'+hashStr(seedText).toString(36);
     s+='<defs><radialGradient id="'+gid+'" cx="'+(28+r()*44)+'%" cy="'+(24+r()*40)+'%" r="78%">'
       +'<stop offset="0%" stop-color="'+tint+'" stop-opacity="0.30"/>'
       +'<stop offset="62%" stop-color="'+tint+'" stop-opacity="0.06"/>'
       +'<stop offset="100%" stop-color="#0A0D13" stop-opacity="0"/></radialGradient></defs>';
-    s+='<rect width="'+w+'" height="'+h+'" fill="#10141d"/>';
     s+='<rect width="'+w+'" height="'+h+'" fill="url(#'+gid+')"/>';
     for(i=0;i<edges.length;i++){
       var a=pts[edges[i][0]],b=pts[edges[i][1]];
@@ -501,7 +581,7 @@
     b.type="button";
     b.setAttribute("aria-label",p.t+", "+p.v+", "+p.y);
     b.innerHTML=
-      '<div class="art">'+poster(p.t,tintOf(p),320,220,1)+
+      '<div class="art">'+plate(p,false)+
         '<span class="kind k-'+p.k+'">'+KIND[p.k]+'</span>'+
         '<span class="yr mono">'+p.y+'</span>'+
       '</div>'+
@@ -575,7 +655,7 @@
     }).sort(function(a,b){return b.y-a.y;}).slice(0,5);
 
     sheet.innerHTML=
-      '<div class="sheet-art">'+poster(p.t,tintOf(p),840,320,1.9)+
+      '<div class="sheet-art">'+plate(p,true)+
         '<button class="close" type="button" aria-label="Close">'+
         '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M6 6l12 12M18 6L6 18"/></svg></button>'+
       '</div>'+
@@ -660,7 +740,8 @@
   /* ── hero ─────────────────────────────────────────────── */
   var ft=DATA.getAttribute("data-featured")||"";
   var featured=PAPERS.filter(function(p){return p.t===ft;})[0]||PAPERS[0];
-  document.getElementById("heroArt").innerHTML=poster(featured.t,"#E23B3B",1400,620,5.2);
+  var hv=venueOf(featured.v);
+  document.getElementById("heroArt").innerHTML=poster(featured.t,hv.color||"#E23B3B",1400,620,5.2);
   document.getElementById("heroInfo").addEventListener("click",function(){openSheet(featured);});
 
   render();

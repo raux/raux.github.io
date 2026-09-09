@@ -6,7 +6,9 @@ The deck at [`/papers/`](https://raux.github.io/papers/) is generated. Three fil
 |---|---|---|
 | `bib/*.bib` | your reference manager | title, year, venue, DOI/URL |
 | `bib/deck-overrides.yaml` | you, by hand | themes, loglines, featured paper, hidden entries |
+| `bib/venues.yaml` | you, by hand | card art: abbreviation, publisher, brand colour per venue |
 | `data/papers.yaml` | **generated — do not edit** | what the site reads |
+| `data/venues.yaml` | **generated — do not edit** | the plate for each venue in use |
 
 ## Adding papers
 
@@ -43,6 +45,31 @@ entries:
 Nothing in this file is ever overwritten. A paper with no logline still appears, falling
 back to `Venue, year` — and the run warns about it, so gaps stay visible instead of
 quietly shipping.
+
+## Card art
+
+Each card shows its venue's plate: the abbreviation set large, the full name beneath, and the
+publisher's mark over a wash of their brand colour — with a faint node-link texture seeded from
+the paper's own title, so no two cards in a row look identical.
+
+Venues are described in `bib/venues.yaml`:
+
+```yaml
+publishers:
+  ieee: { name: "IEEE", color: "#00629B", logo: "ieee-cs.webp" }   # logo lives in static/venues/
+  elsevier: { name: "Elsevier", color: "#D8642B" }                 # no logo file -> wordmark in type
+
+venues:
+  "MSR":
+    abbr: MSR                              # what fills the card, set at 38px
+    full: Mining Software Repositories
+    publisher: ieee
+```
+
+A publisher with a `logo` renders that image; one without renders its name as a wordmark. To
+upgrade a wordmark to a real mark, drop the file into `static/venues/` and add `logo:` — mind
+each publisher's brand guidelines. A venue missing from the registry gets a plain slate plate
+and a warning naming it.
 
 ## What the generator does on its own
 

@@ -1,0 +1,99 @@
+# GENERATED FILE — do not edit by hand.
+# Edit bib/venues.yaml instead, then run scripts/bib2papers.py
+
+"ASE":
+  abbr: "ASE"
+  full: "Automated Software Engineering"
+  pub: "IEEE"
+  color: "#00629B"
+  logo: "ieee-cs.webp"
+"Applied Soft Computing":
+  abbr: "ASOC"
+  full: "Applied Soft Computing"
+  pub: "Elsevier"
+  color: "#D8642B"
+  logo: ""
+"ESEC/FSE":
+  abbr: "FSE"
+  full: "Foundations of Software Engineering"
+  pub: "ACM SIGSOFT"
+  color: "#0F6E8C"
+  logo: "sigsoft.webp"
+"Empirical Software Engineering":
+  abbr: "EMSE"
+  full: "Empirical Software Engineering"
+  pub: "Springer"
+  color: "#B33A2B"
+  logo: ""
+"ICSE Companion":
+  abbr: "ICSE"
+  full: "ICSE Companion"
+  pub: "IEEE"
+  color: "#00629B"
+  logo: "ieee-cs.webp"
+"IEEE Software":
+  abbr: "IEEE SW"
+  full: "IEEE Software"
+  pub: "IEEE"
+  color: "#00629B"
+  logo: "ieee-cs.webp"
+"IEEE TSE":
+  abbr: "TSE"
+  full: "Transactions on Software Engineering"
+  pub: "IEEE"
+  color: "#00629B"
+  logo: "ieee-cs.webp"
+"IEICE Transactions":
+  abbr: "IEICE"
+  full: "Transactions on Information and Systems"
+  pub: "IEICE"
+  color: "#1F6F5C"
+  logo: ""
+"Information and Software Technology":
+  abbr: "IST"
+  full: "Information and Software Technology"
+  pub: "Elsevier"
+  color: "#D8642B"
+  logo: ""
+"Journal of Information Processing":
+  abbr: "JIP"
+  full: "Journal of Information Processing"
+  pub: "IPSJ"
+  color: "#2E5E9E"
+  logo: ""
+"Journal of Systems and Software":
+  abbr: "JSS"
+  full: "Journal of Systems and Software"
+  pub: "Elsevier"
+  color: "#D8642B"
+  logo: ""
+"MSR":
+  abbr: "MSR"
+  full: "Mining Software Repositories"
+  pub: "IEEE"
+  color: "#00629B"
+  logo: "ieee-cs.webp"
+"PROMISE — Keynote":
+  abbr: "PROMISE"
+  full: "Keynote"
+  pub: "ACM SIGSOFT"
+  color: "#0F6E8C"
+  logo: "sigsoft.webp"
+"Science of Computer Programming":
+  abbr: "SCP"
+  full: "Science of Computer Programming"
+  pub: "Elsevier"
+  color: "#D8642B"
+  logo: ""
+"arXiv":
+  abbr: "arXiv"
+  full: "Preprint"
+  pub: "arXiv"
+  color: "#A6272C"
+  logo: ""
+"arXiv — book chapter":
+  abbr: "arXiv"
+  full: "Book chapter"
+  pub: "arXiv"
+  color: "#A6272C"
+  logo: ""
