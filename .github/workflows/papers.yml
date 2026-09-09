@@ -1,0 +1,95 @@
+# Rebuilds the research deck catalogue whenever the publication list changes.
+#
+#   bib/*.bib   +  bib/deck-overrides.yaml  ->  data/papers.yaml  ->  /papers/
+#
+# Drop a new BibTeX export into bib/, push, and the deck updates itself.
+name: Rebuild paper deck
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - "bib/**.bib"
+      - "bib/deck-overrides.yaml"
+      - "scripts/bib2papers.py"
+  pull_request:
+    branches: [master]
+    paths:
+      - "bib/**.bib"
+      - "bib/deck-overrides.yaml"
+      - "data/papers.yaml"
+      - "scripts/bib2papers.py"
+  workflow_dispatch:
+
+permissions:
+  contents: write # commit the regenerated catalogue
+  actions: write # re-trigger the site deploy afterwards
+
+concurrency:
+  group: paper-deck
+  cancel-in-progress: true
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  deck:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install --quiet pyyaml
+
+      # On a pull request, only report. Nothing is written or committed.
+      - name: Check the catalogue is current
+        if: github.event_name == 'pull_request'
+        run: |
+          set -o pipefail
+          {
+            echo '### Paper deck — check'
+            echo '```'
+            python scripts/bib2papers.py --check 2>&1
+            echo '```'
+          } | tee -a "$GITHUB_STEP_SUMMARY"
+
+      - name: Regenerate data/papers.yaml
+        if: github.event_name != 'pull_request'
+        run: |
+          set -o pipefail
+          {
+            echo '### Paper deck — regenerated'
+            echo '```'
+            python scripts/bib2papers.py 2>&1
+            echo '```'
+          } | tee -a "$GITHUB_STEP_SUMMARY"
+
+      - name: Commit the catalogue
+        if: github.event_name != 'pull_request'
+        id: commit
+        run: |
+          if git diff --quiet -- data/papers.yaml; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "Catalogue unchanged — nothing to commit."
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/papers.yaml
+          git commit -m "chore(deck): regenerate papers.yaml from BibTeX [skip ci]"
+          git push
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      # A push made with GITHUB_TOKEN does not start other workflows, so the
+      # site deploy has to be asked for explicitly.
+      - name: Redeploy the site
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh workflow run hugo.yml   --ref master || echo "hugo.yml not dispatchable"
+          gh workflow run deploy.yml --ref master || echo "deploy.yml not dispatchable"

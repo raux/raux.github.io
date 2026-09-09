@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.LanguageCode }}">
+{{ $data := .Site.Data.papers }}
+{{ $featured := index (where $data.papers "title" $data.featured) 0 }}
+{{ if not $featured }}{{ $featured = index $data.papers 0 }}{{ end }}
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="A browsable deck of the research papers of {{ with .Site.Params.author }}{{ .name }}{{ else }}Raula Gaikovina Kula{{ end }}.">
+<meta name="robots" content="index, follow">
+<title>Research Deck · Raula Gaikovina Kula</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=JetBrains+Mono:wght@400;600&family=Newsreader:opsz,wght@6..72,300;400&display=swap">
+<style>
+  :root{
+    /* Committed single-theme "screening room" palette.
+       Ground is an ink-blue black, not neutral grey; accents are the
+       red + gold of the Papua New Guinean flag, which Theme III is about. */
+    --ink:        #0A0D13;
+    --ink-2:      #10141d;
+    --raise:      #171d29;
+    --raise-2:    #1f2735;
+    --line:       #2a3344;
+    --text:       #ECEFF6;
+    --muted:      #8D97AE;   /* blue-biased grey */
+    --dim:        #5C6580;
+    --accent:     #E23B3B;
+    --accent-hi:  #FF5C5C;
+    --gold:       #F0B429;
+    --net-line:   #3a4560;
+    --net-node:   #6F7DA0;
+
+    --maxw: 1500px;
+    --pad: clamp(18px, 4vw, 56px);
+    --card-w: 208px;
+    --radius: 6px;
+  }
+
+  *{box-sizing:border-box}
+  img{max-width:100%}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0;
+    background:var(--ink);
+    color:var(--text);
+    font-family:"Archivo","Helvetica Neue",Arial,sans-serif;
+    font-variation-settings:"wdth" 100;
+    font-size:15px;
+    line-height:1.5;
+    overflow-x:hidden;
+  }
+  a{color:inherit}
+  button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+  :focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:3px}
+
+  .mono{font-family:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace}
+
+  /* ───────── top bar ───────── */
+  .bar{
+    position:sticky;top:0;z-index:40;
+    display:flex;align-items:center;gap:clamp(12px,2vw,28px);
+    padding:14px var(--pad);
+    background:linear-gradient(180deg,var(--ink) 55%,rgba(10,13,19,.75) 85%,rgba(10,13,19,0));
+    backdrop-filter:blur(6px);
+  }
+  .brand{
+    font-variation-settings:"wdth" 78;
+    font-weight:900;font-size:22px;letter-spacing:.02em;
+    color:var(--accent);text-transform:uppercase;white-space:nowrap;
+  }
+  .brand span{color:var(--text)}
+  .bar nav{display:flex;gap:18px;flex:1;flex-wrap:wrap}
+  .bar nav a{
+    font-size:13px;color:var(--muted);text-decoration:none;
+    padding:4px 0;border-bottom:2px solid transparent;transition:color .15s,border-color .15s;
+  }
+  .bar nav a:hover{color:var(--text);border-color:var(--accent)}
+  .search{
+    display:flex;align-items:center;gap:8px;
+    background:var(--raise);border:1px solid var(--line);border-radius:999px;
+    padding:7px 14px;min-width:min(280px,42vw);
+  }
+  .search input{
+    background:none;border:0;color:var(--text);font:inherit;font-size:13px;width:100%;
+  }
+  .search input::placeholder{color:var(--dim)}
+  .search svg{flex:none;stroke:var(--muted)}
+
+  /* ───────── billboard ───────── */
+  .hero{
+    position:relative;
+    min-height:min(560px,74vh);
+    display:flex;align-items:flex-end;
+    padding:0 var(--pad) clamp(28px,5vw,56px);
+    margin-top:-72px;
+    isolation:isolate;
+  }
+  .hero-art{position:absolute;inset:0;z-index:-2;overflow:hidden}
+  .hero-art svg{width:100%;height:100%;display:block}
+  .hero::after{
+    content:"";position:absolute;inset:0;z-index:-1;
+    background:
+      linear-gradient(90deg,var(--ink) 8%,rgba(10,13,19,.86) 44%,rgba(10,13,19,.25) 78%),
+      linear-gradient(0deg,var(--ink) 2%,rgba(10,13,19,0) 46%);
+  }
+  .hero-inner{max-width:640px;padding-top:120px}
+  .eyebrow{
+    display:flex;align-items:center;gap:10px;flex-wrap:wrap;
+    font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);
+    margin-bottom:14px;
+  }
+  .eyebrow b{color:var(--accent);font-weight:700}
+  h1{
+    margin:0 0 16px;
+    font-variation-settings:"wdth" 74;
+    font-weight:900;
+    font-size:clamp(36px,5.2vw,62px);
+    line-height:.94;
+    letter-spacing:-.01em;
+    text-wrap:balance;
+    text-transform:uppercase;
+  }
+  .hero p{
+    font-family:"Newsreader",Georgia,serif;
+    font-size:clamp(16px,1.5vw,19px);
+    line-height:1.55;color:#C7CEDD;max-width:56ch;margin:0 0 24px;
+  }
+  .hero-cta{display:flex;gap:12px;flex-wrap:wrap}
+  .btn{
+    display:inline-flex;align-items:center;gap:9px;
+    padding:11px 24px;border-radius:4px;font-weight:700;font-size:14px;
+    text-decoration:none;transition:transform .12s,background .15s;
+  }
+  .btn:active{transform:scale(.97)}
+  .btn-primary{background:var(--text);color:#0A0D13}
+  .btn-primary:hover{background:#fff}
+  .btn-ghost{background:rgba(120,132,160,.28);color:var(--text)}
+  .btn-ghost:hover{background:rgba(120,132,160,.42)}
+
+  /* ───────── filters ───────── */
+  .filters{
+    display:flex;align-items:center;gap:10px;flex-wrap:wrap;
+    padding:6px var(--pad) 4px;
+  }
+  .chip{
+    padding:6px 14px;border-radius:999px;border:1px solid var(--line);
+    font-size:12px;color:var(--muted);letter-spacing:.03em;
+    transition:all .15s;
+  }
+  .chip:hover{color:var(--text);border-color:var(--dim)}
+  .chip[aria-pressed="true"]{background:var(--text);color:#0A0D13;border-color:var(--text);font-weight:700}
+  .filters .sep{width:1px;height:20px;background:var(--line);margin:0 4px}
+  .count{margin-left:auto;font-size:12px;color:var(--dim)}
+
+  /* ───────── rows ───────── */
+  .rows{padding:8px 0 80px}
+  .row{margin:34px 0;position:relative;scroll-margin-top:86px}
+  .row-head{
+    display:flex;align-items:baseline;gap:14px;
+    padding:0 var(--pad);margin-bottom:12px;
+  }
+  .row-head h2{
+    margin:0;font-size:17px;font-weight:800;letter-spacing:.01em;
+    font-variation-settings:"wdth" 88;
+  }
+  .row-head .sub{font-size:12px;color:var(--dim)}
+  .track-wrap{position:relative}
+  .track{
+    display:flex;gap:12px;
+    padding:26px var(--pad) 34px;   /* room for hover lift */
+    margin:-26px 0 -34px;
+    overflow-x:auto;overflow-y:hidden;
+    scroll-snap-type:x proximity;
+    scrollbar-width:none;
+  }
+  .track::-webkit-scrollbar{display:none}
+  .arrow{
+    position:absolute;top:0;bottom:0;width:52px;z-index:5;
+    display:flex;align-items:center;justify-content:center;
+    background:linear-gradient(90deg,rgba(10,13,19,.92),rgba(10,13,19,0));
+    opacity:0;transition:opacity .18s;
+  }
+  .arrow.right{right:0;background:linear-gradient(270deg,rgba(10,13,19,.92),rgba(10,13,19,0))}
+  .arrow.left{left:0}
+  .track-wrap:hover .arrow, .arrow:focus-visible{opacity:1}
+  .arrow svg{stroke:var(--text)}
+  .arrow[hidden]{display:none}
+
+  /* ───────── card ───────── */
+  .card{
+    flex:0 0 var(--card-w);width:var(--card-w);
+    scroll-snap-align:start;
+    background:var(--raise);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    overflow:hidden;
+    text-align:left;
+    transition:transform .18s cubic-bezier(.2,.7,.3,1), border-color .18s, box-shadow .18s;
+    display:flex;flex-direction:column;
+  }
+  .card:hover,.card:focus-visible{
+    transform:translateY(-6px) scale(1.045);
+    border-color:var(--dim);
+    box-shadow:0 18px 40px -12px rgba(0,0,0,.85);
+    z-index:6;
+  }
+  .art{position:relative;aspect-ratio:16/11;background:var(--ink-2);overflow:hidden}
+  .art svg{width:100%;height:100%;display:block}
+  .art .yr{
+    position:absolute;left:9px;bottom:7px;
+    font-size:11px;font-weight:600;color:#D3DAE8;letter-spacing:.06em;
+    text-shadow:0 1px 4px rgba(6,9,14,.9);
+  }
+  .art .kind{
+    position:absolute;right:9px;top:8px;
+    font-size:9px;letter-spacing:.12em;text-transform:uppercase;
+    padding:3px 7px;border-radius:3px;font-weight:600;
+  }
+  .k-journal{background:rgba(240,180,41,.16);color:var(--gold)}
+  .k-conf{background:rgba(226,59,59,.18);color:var(--accent-hi)}
+  .k-preprint{background:rgba(141,151,174,.18);color:#A9B3C8}
+  .card-body{padding:11px 12px 13px;display:flex;flex-direction:column;gap:7px;flex:1}
+  .card-body h3{
+    margin:0;font-size:13.5px;line-height:1.28;font-weight:700;
+    display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;
+  }
+  .venue{font-size:10.5px;color:var(--muted);letter-spacing:.05em;margin-top:auto}
+
+  .back{
+    font-size:12px;color:var(--muted);text-decoration:none;white-space:nowrap;
+    border:1px solid var(--line);border-radius:999px;padding:6px 13px;transition:all .15s;
+  }
+  .back:hover{color:var(--text);border-color:var(--dim)}
+  .empty{padding:60px var(--pad);color:var(--dim);font-size:14px}
+
+  /* ───────── modal ───────── */
+  .scrim{
+    position:fixed;inset:0;z-index:60;background:rgba(4,6,10,.78);
+    display:flex;align-items:flex-start;justify-content:center;
+    padding:6vh 20px;overflow-y:auto;
+  }
+  .scrim[hidden]{display:none}
+  .sheet{
+    width:min(760px,100%);background:var(--ink-2);
+    border:1px solid var(--line);border-radius:8px;overflow:hidden;
+    box-shadow:0 40px 90px -20px rgba(0,0,0,.9);
+    animation:rise .22s cubic-bezier(.2,.7,.3,1);
+  }
+  @keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+  .sheet-art{position:relative;aspect-ratio:21/8;background:var(--ink)}
+  .sheet-art svg{width:100%;height:100%;display:block}
+  .sheet-art::after{
+    content:"";position:absolute;inset:0;
+    background:linear-gradient(0deg,var(--ink-2) 3%,rgba(16,20,29,.1) 70%);
+  }
+  .close{
+    position:absolute;right:12px;top:12px;z-index:2;
+    width:34px;height:34px;border-radius:999px;background:rgba(10,13,19,.8);
+    display:grid;place-items:center;border:1px solid var(--line);
+  }
+  .close:hover{background:var(--raise-2)}
+  .sheet-body{padding:4px clamp(20px,4vw,36px) 30px;position:relative;z-index:1;margin-top:-52px}
+  .sheet-body h2{
+    margin:0 0 14px;font-size:clamp(24px,3.4vw,34px);line-height:1.06;
+    font-variation-settings:"wdth" 80;font-weight:900;text-transform:uppercase;text-wrap:balance;
+  }
+  .meta{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:18px;font-size:12px;color:var(--muted)}
+  .meta .dot{width:3px;height:3px;border-radius:99px;background:var(--dim)}
+  .meta .badge{color:var(--gold);font-weight:600;letter-spacing:.05em}
+  .sheet-body p.abs{
+    font-family:"Newsreader",Georgia,serif;font-size:17px;line-height:1.62;
+    color:#CBD2E1;max-width:62ch;margin:0 0 22px;
+  }
+  .tags{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px}
+  .tag{
+    font-size:11px;letter-spacing:.05em;padding:5px 11px;border-radius:999px;
+    border:1px solid var(--line);color:var(--muted);
+  }
+  .tag:hover{color:var(--text);border-color:var(--dim)}
+  .related{border-top:1px solid var(--line);padding-top:18px}
+  .related h4{margin:0 0 12px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--dim)}
+  .related ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
+  .related li button{
+    width:100%;text-align:left;padding:9px 10px;border-radius:4px;
+    display:flex;gap:12px;align-items:baseline;font-size:13.5px;transition:background .14s;
+  }
+  .related li button:hover{background:var(--raise)}
+  .related .ry{font-size:11px;color:var(--dim);flex:none;width:34px}
+
+  footer{
+    border-top:1px solid var(--line);padding:28px var(--pad) 48px;
+    color:var(--dim);font-size:12px;line-height:1.7;
+  }
+  footer b{color:var(--muted);font-weight:600}
+
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:.01ms !important;transition-duration:.01ms !important}
+    .card:hover{transform:none}
+  }
+  @media (max-width:640px){
+    :root{--card-w:158px}
+    .hero{min-height:0;padding-top:96px;margin-top:-72px}
+    .hero-inner{padding-top:40px}
+    .bar nav{display:none}
+  }
+</style>
+</head>
+<body>
+<script id="papers-data" type="application/json" data-featured="{{ $data.featured }}">{{ $data.papers | jsonify | safeJS }}</script>
+
+
+<header class="bar">
+  <div class="brand">RAUX<span>·DECK</span></div>
+  <nav>
+    <a href="#row-new">New</a>
+    <a href="#row-eco">Ecosystems</a>
+    <a href="#row-prof">Proficiency</a>
+    <a href="#row-soc">Society</a>
+    <a href="#row-review">Code Review</a>
+  </nav>
+  <a class="back" href="{{ "/" | relLangURL }}">&#8592; raux.github.io</a>
+  <label class="search">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke-width="2.4"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+    <input id="q" type="search" placeholder="Search titles, venues, topics" autocomplete="off">
+  </label>
+</header>
+
+<section class="hero">
+  <div class="hero-art" id="heroArt" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <div class="eyebrow"><b>Featured</b> · Raula Gaikovina Kula · The University of Osaka</div>
+    <h1 id="heroTitle">{{ $featured.title }}</h1>
+    <p id="heroBlurb">{{ $featured.logline }}</p>
+    <div class="hero-cta">
+      <a class="btn btn-primary" id="heroLink" href="{{ $featured.url }}" target="_blank" rel="noopener">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>Read paper
+      </a>
+      <button class="btn btn-ghost" id="heroInfo">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 7.6v.6"/></svg>More info
+      </button>
+    </div>
+  </div>
+</section>
+
+<div class="filters" role="group" aria-label="Filter catalogue">
+  <button class="chip" data-kind="all" aria-pressed="true">Everything</button>
+  <button class="chip" data-kind="journal" aria-pressed="false">Journal</button>
+  <button class="chip" data-kind="conf" aria-pressed="false">Conference</button>
+  <button class="chip" data-kind="preprint" aria-pressed="false">Preprint</button>
+  <span class="sep"></span>
+  <button class="chip" data-era="all" aria-pressed="true">All years</button>
+  <button class="chip" data-era="2023" aria-pressed="false">2023 →</button>
+  <button class="chip" data-era="2019" aria-pressed="false">2019 – 2022</button>
+  <span class="count" id="count"></span>
+</div>
+
+<main class="rows" id="rows"></main>
+
+<footer>
+  <b>{{ len $data.papers }} papers</b> &middot; generated from <span class="mono">data/publications.bib</span> and <span class="mono">data/deck-overrides.yaml</span>; the rows rebuild themselves when the bibliography changes.
+  Each poster is generated from the paper's own title &mdash; a deterministic hash lays out the node-link figure, so every paper keeps a stable, unique cover and there are no images to maintain.
+  arXiv entries link to the abstract page; everything else links to a DBLP title search.
+  <a href="{{ "/posts/publications/" | relLangURL }}" style="color:var(--muted)">Full profiles and datasets &rarr;</a>
+</footer>
+
+<div class="scrim" id="scrim" hidden role="dialog" aria-modal="true" aria-labelledby="sheetTitle">
+  <div class="sheet" id="sheet"></div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ── themes ───────────────────────────────────────────── */
+  var THEMES = {
+    eco:    {label:"Software as Ecosystems",           tint:"#E2703B"},
+    sec:    {label:"Vulnerability & Response",         tint:"#E23B3B"},
+    prof:   {label:"Proficiency as Code",              tint:"#F0B429"},
+    soc:    {label:"Developers & Society",             tint:"#4FA3C7"},
+    review: {label:"Code Review & Collaboration",      tint:"#8E7BD6"}
+  };
+
+  /* ── catalogue: injected by Hugo from data/papers.yaml ── */
+  var DATA = document.getElementById("papers-data");
+  var PAPERS = (function(){
+    var raw=[];
+    try{
+      raw = JSON.parse(DATA.textContent);
+      if(typeof raw === "string") raw = JSON.parse(raw); /* some Hugo versions escape it twice */
+      if(!Array.isArray(raw)) raw = [];
+    }catch(e){ raw = []; }
+    return raw.map(function(p){
+      return {t:p.title, y:+p.year, v:p.venue, k:p.kind,
+              th:(p.themes||["eco"]), d:(p.logline||""), u:(p.url||"#")};
+    });
+  })();
+
+  /* ── deterministic poster art ─────────────────────────── */
+  function hashStr(s){
+    var h=2166136261,i;
+    for(i=0;i<s.length;i++){h^=s.charCodeAt(i);h=Math.imul(h,16777619);}
+    return h>>>0;
+  }
+  function mulberry(a){
+    return function(){
+      a=a+0x6D2B79F5|0;
+      var t=Math.imul(a^a>>>15,1|a);
+      t=t+Math.imul(t^t>>>7,61|t)^t;
+      return ((t^t>>>14)>>>0)/4294967296;
+    };
+  }
+  /* A small dependency graph, seeded by the paper's own title. */
+  function poster(seedText,tint,w,h,density){
+    var r=mulberry(hashStr(seedText)),i,j;
+    var n=Math.round((density||1)*(11+Math.floor(r()*9)));
+    var pts=[],pad=0.08;
+    for(i=0;i<n;i++){
+      pts.push({
+        x:(pad+r()*(1-2*pad))*w,
+        y:(pad+r()*(1-2*pad))*h,
+        r:1.6+r()*3.4,
+        hub:r()>0.82
+      });
+    }
+    var edges=[];
+    for(i=0;i<n;i++){
+      var best=[],d;
+      for(j=0;j<n;j++){
+        if(i===j)continue;
+        d=(pts[i].x-pts[j].x)*(pts[i].x-pts[j].x)+(pts[i].y-pts[j].y)*(pts[i].y-pts[j].y);
+        best.push([d,j]);
+      }
+      best.sort(function(a,b){return a[0]-b[0];});
+      var deg=1+(r()>0.55?1:0);
+      for(j=0;j<deg&&j<best.length;j++) edges.push([i,best[j][1]]);
+    }
+    var s='<svg viewBox="0 0 '+w+' '+h+'" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">';
+    var gid='g'+hashStr(seedText).toString(36);
+    s+='<defs><radialGradient id="'+gid+'" cx="'+(28+r()*44)+'%" cy="'+(24+r()*40)+'%" r="78%">'
+      +'<stop offset="0%" stop-color="'+tint+'" stop-opacity="0.30"/>'
+      +'<stop offset="62%" stop-color="'+tint+'" stop-opacity="0.06"/>'
+      +'<stop offset="100%" stop-color="#0A0D13" stop-opacity="0"/></radialGradient></defs>';
+    s+='<rect width="'+w+'" height="'+h+'" fill="#10141d"/>';
+    s+='<rect width="'+w+'" height="'+h+'" fill="url(#'+gid+')"/>';
+    for(i=0;i<edges.length;i++){
+      var a=pts[edges[i][0]],b=pts[edges[i][1]];
+      s+='<line x1="'+a.x.toFixed(1)+'" y1="'+a.y.toFixed(1)+'" x2="'+b.x.toFixed(1)+'" y2="'+b.y.toFixed(1)
+        +'" stroke="#3a4560" stroke-width="0.9" stroke-opacity="0.75"/>';
+    }
+    for(i=0;i<n;i++){
+      var p=pts[i];
+      s+='<circle cx="'+p.x.toFixed(1)+'" cy="'+p.y.toFixed(1)+'" r="'+(p.hub?p.r*1.7:p.r).toFixed(1)
+        +'" fill="'+(p.hub?tint:'#6F7DA0')+'" fill-opacity="'+(p.hub?0.95:0.6)+'"/>';
+      if(p.hub){
+        s+='<circle cx="'+p.x.toFixed(1)+'" cy="'+p.y.toFixed(1)+'" r="'+(p.r*3.4).toFixed(1)
+          +'" fill="none" stroke="'+tint+'" stroke-opacity="0.28" stroke-width="0.9"/>';
+      }
+    }
+    return s+'</svg>';
+  }
+  function tintOf(p){ return THEMES[p.th[0]] ? THEMES[p.th[0]].tint : "#6F7DA0"; }
+  var KIND={journal:"Journal",conf:"Conference",preprint:"Preprint"};
+
+  /* ── rows ─────────────────────────────────────────────── */
+  var ROWS=[
+    {id:"new",   h:"New Releases",                    sub:"2024",
+     f:function(p){return p.y>=2024;}},
+    {id:"eco",   h:"Theme I · Software as Ecosystems", sub:"npm, PyPI, Maven — dependency networks as living systems",
+     f:function(p){return p.th.indexOf("eco")>-1;}},
+    {id:"prof",  h:"Theme II · Proficiency as Code",   sub:"How developers write, and what the writing signals",
+     f:function(p){return p.th.indexOf("prof")>-1;}},
+    {id:"soc",   h:"Theme III · Developers & Society", sub:"Newcomers, emerging nations, protest and participation",
+     f:function(p){return p.th.indexOf("soc")>-1;}},
+    {id:"sec",   h:"Vulnerability & Response",         sub:"Log4Shell, npm fix lag, unsafe updates",
+     f:function(p){return p.th.indexOf("sec")>-1;}},
+    {id:"review",h:"Code Review & Collaboration",      sub:"OpenStack, patch linkage, reviewer recommendation",
+     f:function(p){return p.th.indexOf("review")>-1;}},
+    {id:"long",  h:"Long Reads",                       sub:"Journal articles",
+     f:function(p){return p.k==="journal";}}
+  ];
+
+  var state={kind:"all",era:"all",q:""};
+  var rowsEl=document.getElementById("rows");
+  var countEl=document.getElementById("count");
+
+  function matches(p){
+    if(state.kind!=="all"&&p.k!==state.kind) return false;
+    if(state.era==="2023"&&p.y<2023) return false;
+    if(state.era==="2019"&&(p.y>2022||p.y<2019)) return false;
+    if(state.q){
+      var hay=(p.t+" "+p.v+" "+p.y+" "+p.d+" "+p.th.join(" ")).toLowerCase();
+      var terms=state.q.toLowerCase().split(/\s+/).filter(Boolean),i;
+      for(i=0;i<terms.length;i++) if(hay.indexOf(terms[i])<0) return false;
+    }
+    return true;
+  }
+
+  function cardEl(p){
+    var b=document.createElement("button");
+    b.className="card";
+    b.type="button";
+    b.setAttribute("aria-label",p.t+", "+p.v+", "+p.y);
+    b.innerHTML=
+      '<div class="art">'+poster(p.t,tintOf(p),320,220,1)+
+        '<span class="kind k-'+p.k+'">'+KIND[p.k]+'</span>'+
+        '<span class="yr mono">'+p.y+'</span>'+
+      '</div>'+
+      '<div class="card-body"><h3></h3><div class="venue mono"></div></div>';
+    b.querySelector("h3").textContent=p.t;
+    b.querySelector(".venue").textContent=p.v;
+    b.addEventListener("click",function(){openSheet(p);});
+    return b;
+  }
+
+  function render(){
+    rowsEl.textContent="";
+    var pool=PAPERS.filter(matches),shown=0;
+    countEl.textContent=pool.length+" of "+PAPERS.length+" papers";
+
+    if(!pool.length){
+      var e=document.createElement("div");
+      e.className="empty";
+      e.textContent="Nothing in the catalogue matches that. Try a broader search.";
+      rowsEl.appendChild(e);
+      return;
+    }
+
+    ROWS.forEach(function(row){
+      var items=pool.filter(row.f).sort(function(a,b){return b.y-a.y;});
+      if(!items.length) return;
+      shown++;
+      var sec=document.createElement("section");
+      sec.className="row";
+      sec.id="row-"+row.id;
+      var head=document.createElement("div");
+      head.className="row-head";
+      head.innerHTML='<h2></h2><span class="sub"></span>';
+      head.querySelector("h2").textContent=row.h;
+      head.querySelector(".sub").textContent=row.sub+" · "+items.length;
+      sec.appendChild(head);
+
+      var wrap=document.createElement("div");
+      wrap.className="track-wrap";
+      var track=document.createElement("div");
+      track.className="track";
+      items.forEach(function(p){track.appendChild(cardEl(p));});
+      wrap.appendChild(track);
+
+      ["left","right"].forEach(function(dir){
+        var a=document.createElement("button");
+        a.className="arrow "+dir;
+        a.type="button";
+        a.setAttribute("aria-label","Scroll "+dir);
+        a.innerHTML='<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2.2">'+
+          (dir==="left"?'<path d="M15 5l-7 7 7 7"/>':'<path d="M9 5l7 7-7 7"/>')+'</svg>';
+        a.addEventListener("click",function(){
+          track.scrollBy({left:(dir==="left"?-1:1)*track.clientWidth*0.82,behavior:"smooth"});
+        });
+        wrap.appendChild(a);
+      });
+      sec.appendChild(wrap);
+      rowsEl.appendChild(sec);
+    });
+  }
+
+  /* ── detail sheet ─────────────────────────────────────── */
+  var scrim=document.getElementById("scrim");
+  var sheet=document.getElementById("sheet");
+  var lastFocus=null;
+
+  function openSheet(p){
+    lastFocus=document.activeElement;
+    var related=PAPERS.filter(function(o){
+      return o!==p && o.th.some(function(t){return p.th.indexOf(t)>-1;});
+    }).sort(function(a,b){return b.y-a.y;}).slice(0,5);
+
+    sheet.innerHTML=
+      '<div class="sheet-art">'+poster(p.t,tintOf(p),840,320,1.9)+
+        '<button class="close" type="button" aria-label="Close">'+
+        '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M6 6l12 12M18 6L6 18"/></svg></button>'+
+      '</div>'+
+      '<div class="sheet-body">'+
+        '<h2 id="sheetTitle"></h2>'+
+        '<div class="meta"><span class="badge mono"></span><span class="dot"></span>'+
+          '<span class="mono yr"></span><span class="dot"></span><span class="kd"></span></div>'+
+        '<p class="abs"></p>'+
+        '<div class="tags"></div>'+
+        '<div class="hero-cta" style="margin-bottom:26px"><a class="btn btn-primary" target="_blank" rel="noopener">Open paper</a></div>'+
+        '<div class="related"><h4>More in these themes</h4><ul></ul></div>'+
+      '</div>';
+
+    sheet.querySelector("h2").textContent=p.t;
+    sheet.querySelector(".badge").textContent=p.v;
+    sheet.querySelector(".meta .yr").textContent=p.y;
+    sheet.querySelector(".kd").textContent=KIND[p.k];
+    sheet.querySelector(".abs").textContent=p.d;
+    var a=sheet.querySelector("a.btn");
+    a.href=p.u;
+    a.textContent=(p.u.indexOf("arxiv")>-1?"Read on arXiv":"Find on DBLP");
+
+    var tags=sheet.querySelector(".tags");
+    p.th.forEach(function(t){
+      var b=document.createElement("button");
+      b.className="tag";b.type="button";b.textContent=THEMES[t].label;
+      b.addEventListener("click",function(){
+        closeSheet();
+        document.getElementById("q").value="";
+        state.q="";render();
+        var el=document.getElementById("row-"+t);
+        if(el) el.scrollIntoView({behavior:"smooth",block:"start"});
+      });
+      tags.appendChild(b);
+    });
+
+    var ul=sheet.querySelector(".related ul");
+    related.forEach(function(o){
+      var li=document.createElement("li");
+      var b=document.createElement("button");
+      b.type="button";
+      b.innerHTML='<span class="ry mono"></span><span class="rt"></span>';
+      b.querySelector(".ry").textContent=o.y;
+      b.querySelector(".rt").textContent=o.t;
+      b.addEventListener("click",function(){openSheet(o);});
+      li.appendChild(b);ul.appendChild(li);
+    });
+
+    sheet.querySelector(".close").addEventListener("click",closeSheet);
+    scrim.hidden=false;
+    document.body.style.overflow="hidden";
+    sheet.querySelector(".close").focus();
+  }
+  function closeSheet(){
+    scrim.hidden=true;
+    document.body.style.overflow="";
+    if(lastFocus&&lastFocus.focus) lastFocus.focus();
+  }
+  scrim.addEventListener("click",function(e){if(e.target===scrim) closeSheet();});
+  document.addEventListener("keydown",function(e){
+    if(e.key==="Escape"&&!scrim.hidden) closeSheet();
+  });
+
+  /* ── controls ─────────────────────────────────────────── */
+  Array.prototype.forEach.call(document.querySelectorAll(".chip"),function(c){
+    c.addEventListener("click",function(){
+      var group=c.dataset.kind?"kind":"era";
+      var sel=c.dataset.kind?"[data-kind]":"[data-era]";
+      Array.prototype.forEach.call(document.querySelectorAll(".chip"+sel),function(o){
+        o.setAttribute("aria-pressed",String(o===c));
+      });
+      state[group]=c.dataset.kind||c.dataset.era;
+      render();
+    });
+  });
+  var qEl=document.getElementById("q"),tmr;
+  qEl.addEventListener("input",function(){
+    clearTimeout(tmr);
+    tmr=setTimeout(function(){state.q=qEl.value.trim();render();},140);
+  });
+
+  /* ── hero ─────────────────────────────────────────────── */
+  var ft=DATA.getAttribute("data-featured")||"";
+  var featured=PAPERS.filter(function(p){return p.t===ft;})[0]||PAPERS[0];
+  document.getElementById("heroArt").innerHTML=poster(featured.t,"#E23B3B",1400,620,5.2);
+  document.getElementById("heroInfo").addEventListener("click",function(){openSheet(featured);});
+
+  render();
+})();
+</script>
+
+</body>
+</html>

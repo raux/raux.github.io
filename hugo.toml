@@ -62,6 +62,11 @@ hasCJKLanguage = true
             weight = 3
             pre = "<i class='fa fa-folder-open'></i>"
         [[languages.ja.menus.main]]
+            name = "研究デッキ"
+            url = "/ja/papers/"
+            weight = 4
+            pre = "<i class='fa fa-film'></i>"
+        [[languages.ja.menus.main]]
             name = "タグ"
             url = "/ja/tags/"
             weight = 5
@@ -206,6 +211,11 @@ hasCJKLanguage = true
         url = "/categories"
         weight = 3
         pre = "<i class='fa fa-folder-open'></i>"
+    [[menus.main]]
+        name = "Papers"
+        url = "/papers/"
+        weight = 4
+        pre = "<i class='fa fa-film'></i>"
     [[menus.main]]
         name = "Tags"
         url = "/tags"

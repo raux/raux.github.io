@@ -1,0 +1,312 @@
+# GENERATED FILE — do not edit by hand.
+# Regenerate with:  python scripts/bib2papers.py
+#
+#   facts     <- bib/publications.bib
+#   curation  <- bib/deck-overrides.yaml  (themes, loglines, featured)
+#
+# Last generated 2026-09-09 · 43 papers
+
+featured: "The Life and Death of Software Ecosystems"
+
+papers:
+  - title: "A Preliminary Study on Self-Contained Libraries in the NPM Ecosystem"
+    year: 2024
+    venue: "arXiv"
+    kind: preprint
+    themes: [eco]
+    logline: "The npm packages that depend on nobody — how many there are, and what they trade away for independence."
+    url: "https://arxiv.org/abs/2406.11363"
+  - title: "Characterising Contributions that Coincide with Vulnerability Mitigation in NPM Libraries"
+    year: 2024
+    venue: "arXiv"
+    kind: preprint
+    themes: [sec, eco]
+    logline: "What the commits around a vulnerability fix look like, and who is making them."
+    url: "https://arxiv.org/abs/2406.11362"
+  - title: "Contributing Back to the Ecosystem: A User Survey of NPM Developers"
+    year: 2024
+    venue: "arXiv"
+    kind: preprint
+    themes: [eco, soc]
+    logline: "A survey asking npm developers directly what makes them give back to the libraries they consume."
+    url: "https://arxiv.org/abs/2407.00862"
+  - title: "Drop it All or Pick it Up? How Developers Responded to the Log4JShell Vulnerability"
+    year: 2024
+    venue: "arXiv"
+    kind: preprint
+    themes: [sec]
+    logline: "One of the loudest vulnerabilities in years, and the very uneven ways projects reacted to it."
+    url: "https://arxiv.org/abs/2407.04263"
+  - title: "Ethical Considerations Toward Protestware"
+    year: 2024
+    venue: "IEEE Software"
+    kind: journal
+    themes: [soc, eco]
+    logline: "Maintainers who turn their own packages into a protest put every downstream user in the blast radius. Where the ethical line sits, and who gets to draw it."
+    url: "https://dblp.org/search?q=Ethical%20Considerations%20Toward%20Protestware"
+  - title: "Going Viral: Case Studies on the Impact of Protestware"
+    year: 2024
+    venue: "ICSE Companion"
+    kind: conf
+    themes: [soc, sec]
+    logline: "Case studies tracing what actually happened downstream when protestware shipped through a package registry."
+    url: "https://arxiv.org/abs/2401.16715"
+  - title: "See to Believe: Using Visualization To Motivate Updating Third-party Dependencies"
+    year: 2024
+    venue: "arXiv"
+    kind: preprint
+    themes: [eco, sec]
+    logline: "Developers know they should update. Whether seeing the dependency picture makes them actually do it is the question."
+    url: "https://arxiv.org/abs/2405.09074"
+  - title: "The Ever-Evolving Promises of Data in Software Ecosystems"
+    year: 2024
+    venue: "PROMISE — Keynote"
+    kind: conf
+    themes: [eco]
+    logline: "A keynote on what a decade of mining package ecosystems has and has not delivered, and what models and analytics change next."
+    url: "https://dblp.org/search?q=The%20Ever-Evolving%20Promises%20of%20Data%20in%20Software%20Ecosystems"
+  - title: "The Impact of Sanctions on GitHub Developers and Activities"
+    year: 2024
+    venue: "arXiv"
+    kind: preprint
+    themes: [soc]
+    logline: "When geopolitics reaches the platform layer, developer accounts and their activity are what absorb it."
+    url: "https://arxiv.org/abs/2404.05489"
+  - title: "The Role of Code Proficiency in the Era of Generative AI"
+    year: 2024
+    venue: "arXiv"
+    kind: preprint
+    themes: [prof]
+    logline: "If a model can produce working code, what is left for human proficiency to signal — and how should we measure it?"
+    url: "https://arxiv.org/abs/2405.01565"
+  - title: "18 Million Links in Commit Messages: Purpose, Evolution, and Decay"
+    year: 2023
+    venue: "Empirical Software Engineering"
+    kind: journal
+    themes: [eco]
+    logline: "Eighteen million URLs pasted into commit messages — what they were for, and how many have already rotted."
+    url: "https://arxiv.org/abs/2305.16591"
+  - title: "An Empirical Study of Package Management Issues via Stack Overflow"
+    year: 2023
+    venue: "IEICE Transactions"
+    kind: journal
+    themes: [eco]
+    logline: "What developers actually get stuck on when a package manager fights back."
+    url: "https://dblp.org/search?q=An%20Empirical%20Study%20of%20Package%20Management%20Issues%20via%20Stack%20Overflow"
+  - title: "An Exploration of Cross-Patch Collaborations via Patch Linkage in OpenStack"
+    year: 2023
+    venue: "IEICE Transactions"
+    kind: journal
+    themes: [review]
+    logline: "Patches that reference other patches, and the informal collaboration structure that reveals."
+    url: "https://dblp.org/search?q=An%20Exploration%20of%20Cross-Patch%20Collaborations%20via%20Patch%20Linkage%20in%20OpenStack"
+  - title: "Do Developers Present Proficient Code Snippets in Their README Files? An Analysis of PyPI Libraries in GitHub"
+    year: 2023
+    venue: "Journal of Information Processing"
+    kind: journal
+    themes: [prof]
+    logline: "The README is a library's shop window. Whether the Python in it is code you would want copied is another matter."
+    url: "https://dblp.org/search?q=Do%20Developers%20Present%20Proficient%20Code%20Snippets%20in%20Their%20README%20Files"
+  - title: "Does the First Response Matter for Future Contributions? A Study of First Contributions"
+    year: 2023
+    venue: "Empirical Software Engineering"
+    kind: journal
+    themes: [soc]
+    logline: "The first reply a newcomer gets, and whether it predicts a second contribution."
+    url: "https://dblp.org/search?q=Does%20the%20first%20response%20matter%20for%20future%20contributions"
+  - title: "Giving Back: Contributions Congruent to Library Dependency Changes in a Software Ecosystem"
+    year: 2023
+    venue: "IEEE TSE"
+    kind: journal
+    themes: [eco, soc]
+    logline: "Do the projects that take the most from an ecosystem also give back to it? Congruence between what you depend on and what you contribute to."
+    url: "https://dblp.org/search?q=Giving%20Back%3A%20Contributions%20Congruent%20to%20Library%20Dependency%20Changes"
+  - title: "Intertwining Communities: Exploring Libraries that Cross Software Ecosystems"
+    year: 2023
+    venue: "MSR"
+    kind: conf
+    themes: [eco]
+    logline: "The libraries that live in more than one package ecosystem at once, and the communities they stitch together."
+    url: "https://arxiv.org/abs/2303.09177"
+  - title: "Lessons from the Long Tail: Analysing Unsafe Dependency Updates across Software Ecosystems"
+    year: 2023
+    venue: "ESEC/FSE"
+    kind: conf
+    themes: [sec, eco]
+    logline: "Most unsafe updates are not in the famous packages. They are in the long tail."
+    url: "https://arxiv.org/abs/2309.04197"
+  - title: "Meta-Maintenance for Dockerfiles: Are We There Yet?"
+    year: 2023
+    venue: "arXiv"
+    kind: preprint
+    themes: [eco]
+    logline: "Fixing the same Dockerfile mistake across thousands of repositories, from one place."
+    url: "https://arxiv.org/abs/2305.03251"
+  - title: "More Than React: Investigating the Role of Emoji Reaction in GitHub Pull Requests"
+    year: 2023
+    venue: "Empirical Software Engineering"
+    kind: journal
+    themes: [soc, review]
+    logline: "A thumbs-up is cheap to give. It also turns out to carry signal in review threads."
+    url: "https://arxiv.org/abs/2307.07111"
+  - title: "Promises and Perils of Mining Software Package Ecosystem Data"
+    year: 2023
+    venue: "arXiv — book chapter"
+    kind: preprint
+    themes: [eco]
+    logline: "Ecosystem data is abundant and deeply misleading if you take it at face value. A guide to both halves."
+    url: "https://arxiv.org/abs/2306.10021"
+  - title: "Repeated Builds During Code Review: An Empirical Study of the OpenStack Community"
+    year: 2023
+    venue: "ASE"
+    kind: conf
+    themes: [review]
+    logline: "Rebuilding the same patch again and again during review: how often, how costly, and why."
+    url: "https://arxiv.org/abs/2308.10078"
+  - title: "The Life and Death of Software Ecosystems"
+    year: 2023
+    venue: "arXiv — book chapter"
+    kind: preprint
+    themes: [eco]
+    logline: "Package ecosystems are born, they thrive, and some of them die. A reflection on the forces that decide which of those three a community is living through."
+    url: "https://arxiv.org/abs/2306.10020"
+  - title: "Understanding the Role of External Pull Requests in the NPM Ecosystem"
+    year: 2023
+    venue: "Empirical Software Engineering"
+    kind: journal
+    themes: [eco]
+    logline: "Pull requests that arrive from outside the project team, and what they mean for a package's health."
+    url: "https://dblp.org/search?q=Understanding%20the%20role%20of%20external%20pull%20requests%20in%20the%20NPM%20ecosystem"
+  - title: "Understanding the Role of Images on Stack Overflow"
+    year: 2023
+    venue: "MSR"
+    kind: conf
+    themes: [prof]
+    logline: "Screenshots and diagrams in questions and answers — what they carry that prose does not."
+    url: "https://arxiv.org/abs/2303.15684"
+  - title: "We Live in a Society: Motivators for Contributions in an OSS Ecosystem"
+    year: 2023
+    venue: "arXiv"
+    kind: preprint
+    themes: [soc]
+    logline: "Why people contribute when nobody is paying them to."
+    url: "https://arxiv.org/abs/2304.05766"
+  - title: "When Conversations Turn Into Work: A Taxonomy of Converted Discussions and Issues in GitHub"
+    year: 2023
+    venue: "Empirical Software Engineering"
+    kind: journal
+    themes: [soc, review]
+    logline: "The moment a discussion thread becomes tracked work — and a taxonomy of why that conversion happens."
+    url: "https://arxiv.org/abs/2307.07117"
+  - title: "An Exploration of npm Package Co-Usage Examples from Stack Overflow"
+    year: 2022
+    venue: "IEICE Transactions"
+    kind: journal
+    themes: [eco, prof]
+    logline: "Which npm packages get used together in the wild, learned from the answers people post."
+    url: "https://dblp.org/search?q=An%20Exploration%20of%20npm%20Package%20Co-Usage%20Examples%20from%20Stack%20Overflow"
+  - title: "Analyzing First Contributions on GitHub: What Do Newcomers Do?"
+    year: 2022
+    venue: "IEEE Software"
+    kind: journal
+    themes: [soc]
+    logline: "The shape of a first pull request, across a large sample of people making one."
+    url: "https://dblp.org/search?q=Analyzing%20First%20Contributions%20on%20GitHub%3A%20What%20Do%20Newcomers%20Do"
+  - title: "Challenges for Inclusion in Software Engineering: The Case of the Emerging Papua New Guinean Society"
+    year: 2022
+    venue: "IEEE Software"
+    kind: journal
+    themes: [soc]
+    logline: "What software engineering looks like from a society the field rarely designs for, and what inclusion would actually require."
+    url: "https://dblp.org/search?q=Challenges%20for%20Inclusion%20in%20Software%20Engineering%20Papua%20New%20Guinean%20Society"
+  - title: "Characterizing and Mitigating Self-Admitted Technical Debt in Build Systems"
+    year: 2022
+    venue: "IEEE TSE"
+    kind: journal
+    themes: [review]
+    logline: "The TODOs and FIXMEs developers leave in build files — admitted, catalogued, and in some cases removable."
+    url: "https://dblp.org/search?q=Characterizing%20and%20Mitigating%20Self-Admitted%20Technical%20Debt%20in%20Build%20Systems"
+  - title: "GitHub Repositories with Links to Academic Papers: Public Access, Traceability, and Evolution"
+    year: 2022
+    venue: "Journal of Systems and Software"
+    kind: journal
+    themes: [eco]
+    logline: "The thin thread between a paper and the code behind it, and how often it snaps."
+    url: "https://dblp.org/search?q=GitHub%20repositories%20with%20links%20to%20academic%20papers"
+  - title: "Special Issue on Software Health of Software Ecosystems"
+    year: 2022
+    venue: "Science of Computer Programming"
+    kind: journal
+    themes: [eco]
+    logline: "Guest-edited collection on what it means for an ecosystem to be healthy — and how you would know."
+    url: "https://dblp.org/search?q=Special%20Issue%20on%20Software%20Health%20of%20Software%20Ecosystems"
+  - title: "Automatic Patch Linkage Detection in Code Review Using Textual Content and File Location Features"
+    year: 2021
+    venue: "Information and Software Technology"
+    kind: journal
+    themes: [review]
+    logline: "Detecting that two patches under review are really about the same thing."
+    url: "https://dblp.org/search?q=Automatic%20patch%20linkage%20detection%20in%20code%20review"
+  - title: "Can We Benchmark Code Review Studies? A Systematic Mapping Study of Methodology, Dataset, and Metric"
+    year: 2021
+    venue: "Journal of Systems and Software"
+    kind: journal
+    themes: [review]
+    logline: "A field's worth of code review studies, and the uncomfortable question of whether any two are comparable."
+    url: "https://dblp.org/search?q=Can%20we%20benchmark%20Code%20Review%20studies%20systematic%20mapping%20study"
+  - title: "How Are Project-Specific Forums Utilized? Participation, Content, and Sentiment in the Eclipse Ecosystem"
+    year: 2021
+    venue: "Empirical Software Engineering"
+    kind: journal
+    themes: [soc]
+    logline: "Before Discord and Discourse, there were project forums — and Eclipse's are a long record of how a community talks."
+    url: "https://dblp.org/search?q=How%20are%20project-specific%20forums%20utilized%20Eclipse%20ecosystem"
+  - title: "Lags in the Release, Adoption, and Propagation of npm Vulnerability Fixes"
+    year: 2021
+    venue: "Empirical Software Engineering"
+    kind: journal
+    themes: [sec, eco]
+    logline: "A fix exists. Getting it released, adopted, and propagated down the tree is three separate delays."
+    url: "https://dblp.org/search?q=Lags%20in%20the%20release%2C%20adoption%2C%20and%20propagation%20of%20npm%20vulnerability%20fixes"
+  - title: "Understanding Shared Links and Their Intentions to Meet Information Needs in Modern Code Review"
+    year: 2021
+    venue: "Empirical Software Engineering"
+    kind: journal
+    themes: [review]
+    logline: "Reviewers paste links for a reason. Classifying that reason says what review is missing."
+    url: "https://dblp.org/search?q=Understanding%20shared%20links%20and%20their%20intentions%20to%20meet%20information%20needs%20in%20modern%20code%20review"
+  - title: "WhoReview: A Multi-objective Search-based Approach for Code Reviewers Recommendation"
+    year: 2021
+    venue: "Applied Soft Computing"
+    kind: journal
+    themes: [review]
+    logline: "Picking reviewers is a trade-off between expertise, load, and availability. Search-based optimisation over all three."
+    url: "https://dblp.org/search?q=WhoReview%20multi-objective%20search-based%20code%20reviewers%20recommendation"
+  - title: "A Topological Analysis of Communication Channels for Knowledge Sharing in Contemporary GitHub Projects"
+    year: 2019
+    venue: "Journal of Systems and Software"
+    kind: journal
+    themes: [soc]
+    logline: "Issues, pull requests, commits and chat as one connected structure rather than four separate feeds."
+    url: "https://dblp.org/search?q=A%20topological%20analysis%20of%20communication%20channels%20for%20knowledge%20sharing%20GitHub"
+  - title: "An Empirical Study of README Contents for JavaScript Packages"
+    year: 2019
+    venue: "IEICE Transactions"
+    kind: journal
+    themes: [prof, eco]
+    logline: "What maintainers choose to put in a README, across the JavaScript registry."
+    url: "https://dblp.org/search?q=An%20Empirical%20Study%20of%20README%20contents%20for%20JavaScript%20Packages"
+  - title: "Understanding Developer Commenting in Code Reviews"
+    year: 2019
+    venue: "IEICE Transactions"
+    kind: journal
+    themes: [review]
+    logline: "The comment is the unit of code review. What reviewers write, and what it is for."
+    url: "https://dblp.org/search?q=Understanding%20Developer%20Commenting%20in%20Code%20Reviews"
+  - title: "Web Service API Recommendation for Automated Mashup Creation Using Multi-objective Evolutionary Search"
+    year: 2019
+    venue: "Applied Soft Computing"
+    kind: journal
+    themes: [prof]
+    logline: "Assembling a mashup from third-party APIs, treated as a multi-objective search problem."
+    url: "https://dblp.org/search?q=Web%20service%20API%20recommendation%20for%20automated%20mashup%20creation"
