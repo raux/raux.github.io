@@ -121,6 +121,13 @@ def main():
     hist = load_yaml(HISTORY, {"recent": []})
     recent = list(hist.get("recent") or [])
 
+    # A re-run with the same seed must reproduce the same pick. The previous run
+    # left its hero at the end of the history, which would otherwise block it and
+    # send the draw somewhere else — so ignore that entry when it is still the
+    # paper currently on the billboard.
+    current = (load_yaml(OVERRIDES, {}) or {}).get("featured")
+    prior = recent[:-1] if (recent and current and recent[-1] == current) else recent
+
     if a.pin:
         want = re.sub(r"[^a-z0-9]", "", a.pin.lower())
         match = [p for p in papers if re.sub(r"[^a-z0-9]", "", p["title"].lower()) == want]
@@ -130,7 +137,7 @@ def main():
             sys.exit("error: no paper matches %r" % a.pin)
         hero = match[0]
     else:
-        hero = pick(papers, 1, rng, newest, owner, set(recent[-AVOID_LAST:]))[0]
+        hero = pick(papers, 1, rng, newest, owner, set(prior[-AVOID_LAST:]))[0]
 
     spot = pick(papers, a.count, rng, newest, owner, {hero["title"]}) if a.count > 0 else []
 
@@ -147,7 +154,9 @@ def main():
         text = write_key(text, "spotlight", [p["title"] for p in spot])
     open(OVERRIDES, "w", encoding="utf-8").write(text)
 
-    recent.append(hero["title"])
+    # A same-day re-run picks the same hero; don't grow the history (or the diff).
+    if not recent or recent[-1] != hero["title"]:
+        recent.append(hero["title"])
     with open(HISTORY, "w", encoding="utf-8") as fh:
         fh.write("# Heroes already used, so the billboard does not repeat itself.\n")
         fh.write("# scripts/feature.py appends here; trim it freely.\n\nrecent:\n")

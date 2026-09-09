@@ -87,6 +87,15 @@ python scripts/feature.py --pin "Open Source at a Crossroads"   # choose the her
 python scripts/feature.py --dry-run          # print the pick, write nothing
 ```
 
+It **rotates on its own**: the *Rebuild paper deck* workflow runs every Monday, reshuffles with
+`--seed $(date -u +%F)`, commits the result and asks the site to redeploy. Only the schedule and
+an explicit "Run workflow" (with *rotate* ticked) reshuffle — a content push never moves the
+billboard out from under whatever you just wrote. To make it daily, change the cron in
+`.github/workflows/papers.yml` from `0 0 * * 1` to `0 0 * * *`.
+
+Because the seed is the date, a re-run on the same day reproduces exactly the same pick and
+commits nothing.
+
 The draw is weighted rather than uniform: recent work and papers where you are first author come
 up more often, and a paper whose logline is still the `Venue, year.` fallback is heavily
 discounted, since it makes a poor billboard. Heroes used recently are recorded in
