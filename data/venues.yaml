@@ -7,6 +7,18 @@
   pub: "ACM"
   color: "#1B7AC4"
   logo: "acm.webp"
+"APSEC":
+  abbr: "APSEC"
+  full: "Asia-Pacific Software Engineering Conference"
+  pub: "IEEE"
+  color: "#00629B"
+  logo: "ieee-cs.webp"
+"APSECW":
+  abbr: "APSECW"
+  full: "APSEC Workshops"
+  pub: "IEEE"
+  color: "#00629B"
+  logo: "ieee-cs.webp"
 "ASE":
   abbr: "ASE"
   full: "Automated Software Engineering"
@@ -25,12 +37,24 @@
   pub: "Elsevier"
   color: "#D8642B"
   logo: ""
+"BCD":
+  abbr: "BCD"
+  full: "Big Data, Cloud Computing and Data Science"
+  pub: "IEEE"
+  color: "#00629B"
+  logo: "ieee-cs.webp"
 "BRIDGES":
   abbr: "BRIDGES"
   full: "Bridging the Divides with Globally Engineered Software"
   pub: "ACM SIGSOFT"
   color: "#0F6E8C"
   logo: "sigsoft.webp"
+"CHASE":
+  abbr: "CHASE"
+  full: "Cooperative and Human Aspects of Software Engineering"
+  pub: "ACM"
+  color: "#1B7AC4"
+  logo: "acm.webp"
 "ESEC/FSE":
   abbr: "FSE"
   full: "Foundations of Software Engineering"
@@ -49,6 +73,18 @@
   pub: "Springer"
   color: "#B33A2B"
   logo: ""
+"GECCO":
+  abbr: "GECCO"
+  full: "Genetic and Evolutionary Computation"
+  pub: "ACM"
+  color: "#1B7AC4"
+  logo: "acm.webp"
+"ICPC":
+  abbr: "ICPC"
+  full: "International Conference on Program Comprehension"
+  pub: "IEEE"
+  color: "#00629B"
+  logo: "ieee-cs.webp"
 "ICSE Companion":
   abbr: "ICSE"
   full: "ICSE Companion"
@@ -85,9 +121,33 @@
   pub: "IEICE"
   color: "#1F6F5C"
   logo: ""
+"ISSRE":
+  abbr: "ISSRE"
+  full: "Software Reliability Engineering"
+  pub: "IEEE"
+  color: "#00629B"
+  logo: "ieee-cs.webp"
+"IWESEP":
+  abbr: "IWESEP"
+  full: "Empirical Software Engineering in Practice"
+  pub: ""
+  color: "#5C6580"
+  logo: ""
+"IWSC":
+  abbr: "IWSC"
+  full: "International Workshop on Software Clones"
+  pub: "IEEE"
+  color: "#00629B"
+  logo: "ieee-cs.webp"
 "Information and Software Technology":
   abbr: "IST"
   full: "Information and Software Technology"
+  pub: "Elsevier"
+  color: "#D8642B"
+  logo: ""
+"JSEP":
+  abbr: "JSEP"
+  full: "Journal of Software: Evolution and Process"
   pub: "Elsevier"
   color: "#D8642B"
   logo: ""
@@ -109,6 +169,18 @@
   pub: "IEEE"
   color: "#00629B"
   logo: "ieee-cs.webp"
+"NAIST":
+  abbr: "NAIST"
+  full: "Nara Institute of Science and Technology — thesis"
+  pub: ""
+  color: "#5C6580"
+  logo: ""
+"OSS":
+  abbr: "OSS"
+  full: "IFIP Open Source Systems"
+  pub: "Springer"
+  color: "#B33A2B"
+  logo: ""
 "PROFES":
   abbr: "PROFES"
   full: "Product-Focused Software Process Improvement"
@@ -121,9 +193,21 @@
   pub: "ACM SIGSOFT"
   color: "#0F6E8C"
   logo: "sigsoft.webp"
+"RSS":
+  abbr: "RSS"
+  full: "The Review of Socionetwork Strategies"
+  pub: "Springer"
+  color: "#B33A2B"
+  logo: ""
 "SANER":
   abbr: "SANER"
   full: "Software Analysis, Evolution and Reengineering"
+  pub: "IEEE"
+  color: "#00629B"
+  logo: "ieee-cs.webp"
+"SCAM":
+  abbr: "SCAM"
+  full: "Source Code Analysis and Manipulation"
   pub: "IEEE"
   color: "#00629B"
   logo: "ieee-cs.webp"
@@ -132,6 +216,12 @@
   full: "Software Engineering and Management — book chapter"
   pub: "Springer"
   color: "#B33A2B"
+  logo: ""
+"SES":
+  abbr: "SES"
+  full: "Software Engineering Symposium"
+  pub: ""
+  color: "#5C6580"
   logo: ""
 "SEiGS":
   abbr: "SEiGS"
@@ -151,6 +241,18 @@
   pub: "Elsevier"
   color: "#D8642B"
   logo: ""
+"SoHeal":
+  abbr: "SoHeal"
+  full: "International Workshop on Software Health"
+  pub: "ACM"
+  color: "#1B7AC4"
+  logo: "acm.webp"
+"VISSOFT":
+  abbr: "VISSOFT"
+  full: "Working Conference on Software Visualization"
+  pub: "IEEE"
+  color: "#00629B"
+  logo: "ieee-cs.webp"
 "arXiv":
   abbr: "arXiv"
   full: "Preprint"

@@ -262,3 +262,149 @@ entries:
   dependabotfatigue2025:
     themes: [sec, eco]
     logline: "Dependabot files the alerts; nobody reads them all. A case for the bot negotiating instead of notifying."
+
+  # ── pre-2019 ──
+  updatedeps2018:
+    themes: [eco, sec]
+    logline: "The question the field kept citing: when a security advisory lands, do the projects downstream actually move?"
+  refactoringapis2018:
+    themes: [eco]
+    logline: "Refactoring is supposed to be invisible from outside. For an API with clients, it is not."
+  usagepatterns2018:
+    themes: [eco]
+    logline: "Libraries get used in recurring shapes. Mining those shapes makes the next reuse easier."
+  libmigration2018:
+    themes: [sec, eco]
+    logline: "A vulnerable dependency is only dangerous if you call the vulnerable function. Migration at that resolution."
+  libpopularity2018:
+    themes: [eco]
+    logline: "One model for three questions people keep asking separately: who uses a library, who adopts it, how it spreads."
+  similarpatches2018:
+    themes: [review]
+    logline: "Reviewers keep seeing the same change twice. Finding those pairs automatically."
+  popularitygrowth2018:
+    themes: [eco]
+    logline: "Why one npm package takes off and its neighbour does not."
+  categoryrecs2018:
+    themes: [eco]
+    logline: "Grouping libraries by what they are for, so a maintainer can see the alternatives to what they depend on."
+  humancapital2018:
+    themes: [soc]
+    logline: "Treating developers as capital the field invests in, and mapping the studies that already do."
+  searchlibrec2017:
+    themes: [eco]
+    logline: "Recommending a library is a trade-off between fit, popularity and cost. Optimise over all three."
+  libaging2017:
+    themes: [eco]
+    logline: "Libraries do not die, they age — measured by the clients that quietly stop keeping up."
+  releasecycle2017:
+    themes: [eco]
+    logline: "Ship often and clients upgrade sooner — or so the folklore goes. Tested."
+  jsecosystemtopology2017:
+    themes: [eco]
+    logline: "npm drawn as a shape, and what the shape tells you that a package list cannot."
+  libraryrollbacks2017:
+    themes: [eco]
+    logline: "Sometimes the upgrade gets undone. What makes a project roll a library back."
+  solmantra2017:
+    themes: [eco]
+    logline: "Libraries that travel together suggest when it is safe to move. A visualisation of that signal."
+  highrisingcities2017:
+    themes: [prof]
+    logline: "A running system drawn as a skyline that rises and falls as it works."
+  reviewusefulness2017:
+    themes: [review]
+    logline: "Some review comments change the code and some are noise. Predicting which from the text and who wrote it."
+  adoptlibrary2017:
+    themes: [eco]
+    logline: "Adoption has a moment. Finding it across the Apache project population."
+  micropackages2017:
+    themes: [eco]
+    logline: "Packages too small to be worth a dependency, and the weight they add anyway."
+  modeldeps2017:
+    themes: [eco]
+    logline: "A model of the whole dependency universe rather than one project's slice of it."
+  healthwealth2017:
+    themes: [soc, eco]
+    logline: "Two different things people mean by a healthy project, measured side by side."
+  sesupdating2017:
+    themes: [eco]
+    logline: "A symposium talk drawing the dependency-update work together."
+  peerreviewnetwork2016:
+    themes: [review, soc]
+    logline: "Who reviews whom, drawn as a social graph rather than a queue."
+  softwareingredients2016:
+    themes: [eco]
+    logline: "Reading a shipped jar like an ingredients label, to find the third-party code baked in."
+  mcrdataset2016:
+    themes: [review]
+    logline: "A dataset built so code-review studies could stop each building their own."
+  peerreviewerrec2016:
+    themes: [review]
+    logline: "Choosing reviewers as a search problem — the first version of what later became WhoReview."
+  usagepatterninference2016:
+    themes: [eco]
+    logline: "Learning how a library is meant to be called by watching how it is called."
+  trustinglibrary2015:
+    themes: [eco]
+    logline: "The gap between a release existing and anyone trusting it enough to depend on it."
+  whoreviewmycode2015:
+    themes: [review]
+    logline: "Where a file lives turns out to predict who is qualified to review it."
+  verxcombo2015:
+    themes: [eco]
+    logline: "Which library versions people actually run together, made browsable."
+  quicktrigger2015:
+    themes: [soc, prof]
+    logline: "Points and badges change how fast people answer, and not always for the better."
+  codeclonequestions2015:
+    themes: [prof]
+    logline: "Clone detection research versus what practitioners are actually confused about."
+  webserviceantipatterns2015:
+    themes: [prof]
+    logline: "Evolving detectors for the shapes a badly designed web service tends to take."
+  visualizingdeps2014:
+    themes: [eco]
+    logline: "A system and its dependencies drawn over time, so drift becomes something you can see."
+  lcsreuse2014:
+    themes: [eco]
+    logline: "Finding the same code in two repositories that never mention each other."
+  reviewerrecs2014:
+    themes: [review]
+    logline: "The earliest of the reviewer-recommendation line, and the argument for why it matters."
+  reda2014:
+    themes: [review]
+    logline: "A tool for looking at review data without writing a script first."
+  microprocess2013:
+    themes: [prof]
+    logline: "Maintenance effort measured not by tickets closed but by how the code was actually cut."
+  gamificationexpertise2013:
+    themes: [soc, prof]
+    logline: "Badges as a record of expertise, read backwards to find who actually knows the subject."
+  whodoeswhat2013:
+    themes: [review]
+    logline: "The roles inside a review, and the datasets that let anyone else study them."
+  phdthesis2013:
+    themes: [prof]
+    logline: "The doctoral thesis: measuring maintenance at the level of individual changes."
+  slicingmetrics2012:
+    themes: [prof]
+    logline: "Program slicing turned into a yardstick for how much work a maintenance change really was."
+  personroles2012:
+    themes: [review, soc]
+    logline: "The roles people fall into when reviewing, read off the network they form."
+  profilingmetrics2012:
+    themes: [review]
+    logline: "Not all reviews are the same act. Sorting Android's into types by how they behave."
+  bugfixslicing2010:
+    themes: [prof]
+    logline: "Where the slicing-metrics line begins: what a bug fix looks like when you measure the cut."
+  codechangeprocesses2010:
+    themes: [prof]
+    logline: "The same yardstick turned on change in general rather than bug fixes alone."
+  mastersthesis2010:
+    themes: [prof]
+    logline: "The master's thesis that started the measurement work."
+  clonegraph2009:
+    themes: [prof]
+    logline: "Clones that have drifted apart far enough that ordinary detectors miss them."

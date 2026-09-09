@@ -4,7 +4,7 @@
 #   facts     <- bib/publications.bib
 #   curation  <- bib/deck-overrides.yaml  (themes, loglines, featured)
 #
-# Last generated 2026-09-09 · 79 papers
+# Last generated 2026-09-09 · 127 papers
 
 featured: "The Life and Death of Software Ecosystems"
 
@@ -798,4 +798,484 @@ papers:
     url: "https://dblp.org/search?q=Web%20service%20API%20recommendation%20for%20automated%20mashup%20creation"
     authors: ["Nuri Almarimi", "Ali Ouni", "Salah Bouktif", "Mohamed Wiem Mkaouer", "Raula Gaikovina Kula", "Mohamed Aymen Saied"]
     insts: [ets, umflint, osaka]
+    self: ["Raula Gaikovina Kula"]
+  - title: "A Generalized Model for Visualizing Library Popularity, Adoption, and Diffusion Within a Software Ecosystem"
+    year: 2018
+    venue: "SANER"
+    kind: conf
+    themes: [eco]
+    logline: "One model for three questions people keep asking separately: who uses a library, who adopts it, how it spreads."
+    url: "https://dblp.org/search?q=A%20Generalized%20Model%20for%20Visualizing%20Library%20Popularity%2C%20Adoption%2C%20and%20Diffusion%20Within%20a%20Software%20Ecosystem"
+    authors: ["Raula Gaikovina Kula", "Coen De Roover", "Daniel M. German", "Takashi Ishio", "Katsuro Inoue"]
+    insts: [osaka, fun, ritsumeikan]
+    self: ["Raula Gaikovina Kula"]
+  - title: "An Empirical Study on the Impact of Refactoring Activities on Evolving Client-Used APIs"
+    year: 2018
+    venue: "Information and Software Technology"
+    kind: journal
+    themes: [eco]
+    logline: "Refactoring is supposed to be invisible from outside. For an API with clients, it is not."
+    url: "https://dblp.org/search?q=An%20Empirical%20Study%20on%20the%20Impact%20of%20Refactoring%20Activities%20on%20Evolving%20Client-Used%20APIs"
+    authors: ["Raula Gaikovina Kula", "Ali Ouni", "Daniel M. German", "Katsuro Inoue"]
+    insts: [osaka, ets, ritsumeikan]
+    self: ["Raula Gaikovina Kula"]
+  - title: "An Exploratory Study to Identify Similar Patches: A Case Study in Modern Code Review"
+    year: 2018
+    venue: "APSEC"
+    kind: conf
+    themes: [review]
+    logline: "Reviewers keep seeing the same change twice. Finding those pairs automatically."
+    url: "https://dblp.org/search?q=An%20Exploratory%20Study%20to%20Identify%20Similar%20Patches%3A%20A%20Case%20Study%20in%20Modern%20Code%20Review"
+    authors: ["Dong Wang", "Raula Gaikovina Kula", "Kenichi Matsumoto"]
+    insts: [tianjin, osaka, naist]
+    self: ["Raula Gaikovina Kula"]
+  - title: "Do Developers Update Their Library Dependencies? An Empirical Study on the Impact of Security Advisories on Library Migration"
+    year: 2018
+    venue: "Empirical Software Engineering"
+    kind: journal
+    themes: [eco, sec]
+    logline: "The question the field kept citing: when a security advisory lands, do the projects downstream actually move?"
+    url: "https://dblp.org/search?q=Do%20Developers%20Update%20Their%20Library%20Dependencies%3F%20An%20Empirical%20Study%20on%20the%20Impact%20of%20Security%20Advisories%20on%20Library%20Migration"
+    authors: ["Raula Gaikovina Kula", "Daniel M. German", "Ali Ouni", "Takashi Ishio", "Katsuro Inoue"]
+    insts: [osaka, ets, fun, ritsumeikan]
+    self: ["Raula Gaikovina Kula"]
+  - title: "Human Capital in Software Engineering: A Systematic Mapping of Reconceptualized Human Aspect Studies"
+    year: 2018
+    venue: "arXiv"
+    kind: preprint
+    themes: [soc]
+    logline: "Treating developers as capital the field invests in, and mapping the studies that already do."
+    url: "https://arxiv.org/abs/1805.03844"
+    authors: ["Saya Onoue", "Hideaki Hata", "Raula Gaikovina Kula", "Kenichi Matsumoto"]
+    insts: [shinshu, osaka, naist]
+    self: ["Raula Gaikovina Kula"]
+  - title: "Improving Reusability of Software Libraries Through Usage Pattern Mining"
+    year: 2018
+    venue: "Journal of Systems and Software"
+    kind: journal
+    themes: [eco]
+    logline: "Libraries get used in recurring shapes. Mining those shapes makes the next reuse easier."
+    url: "https://dblp.org/search?q=Improving%20Reusability%20of%20Software%20Libraries%20Through%20Usage%20Pattern%20Mining"
+    authors: ["Mohamed Aymen Saied", "Ali Ouni", "Houari Sahraoui", "Raula Gaikovina Kula", "Katsuro Inoue", "David Lo"]
+    insts: [ets, osaka, ritsumeikan]
+    self: ["Raula Gaikovina Kula"]
+  - title: "Maintaining Third-Party Libraries Through Domain-Specific Category Recommendations"
+    year: 2018
+    venue: "SoHeal"
+    kind: conf
+    themes: [eco]
+    logline: "Grouping libraries by what they are for, so a maintainer can see the alternatives to what they depend on."
+    url: "https://dblp.org/search?q=Maintaining%20Third-Party%20Libraries%20Through%20Domain-Specific%20Category%20Recommendations"
+    authors: ["Daiki Katsuragawa", "Akinori Ihara", "Raula Gaikovina Kula", "Kenichi Matsumoto"]
+    insts: [osaka, naist]
+    self: ["Raula Gaikovina Kula"]
+  - title: "Towards Smoother Library Migrations: A Look at Vulnerable Dependency Migrations at Function Level for npm JavaScript Packages"
+    year: 2018
+    venue: "ICSME"
+    kind: conf
+    themes: [sec, eco]
+    logline: "A vulnerable dependency is only dangerous if you call the vulnerable function. Migration at that resolution."
+    url: "https://dblp.org/search?q=Towards%20Smoother%20Library%20Migrations%3A%20A%20Look%20at%20Vulnerable%20Dependency%20Migrations%20at%20Function%20Level%20for%20npm%20JavaScript%20Packages"
+    authors: ["Rodrigo Elizalde Zapata", "Raula Gaikovina Kula", "Bodin Chinthanet", "Takashi Ishio", "Kenichi Matsumoto", "Akinori Ihara"]
+    insts: [osaka, fun, naist]
+    self: ["Raula Gaikovina Kula"]
+  - title: "Understanding Popularity Growth of Packages in the JavaScript Package Ecosystem"
+    year: 2018
+    venue: "BCD"
+    kind: conf
+    themes: [eco]
+    logline: "Why one npm package takes off and its neighbour does not."
+    url: "https://dblp.org/search?q=Understanding%20Popularity%20Growth%20of%20Packages%20in%20the%20JavaScript%20Package%20Ecosystem"
+    authors: ["Shi Qiu", "Raula Gaikovina Kula", "Katsuro Inoue"]
+    insts: [osaka, ritsumeikan]
+    self: ["Raula Gaikovina Kula"]
+  - title: "An Analysis of Library Rollbacks: A Case Study of Java Libraries"
+    year: 2017
+    venue: "APSECW"
+    kind: conf
+    themes: [eco]
+    logline: "Sometimes the upgrade gets undone. What makes a project roll a library back."
+    url: "https://dblp.org/search?q=An%20Analysis%20of%20Library%20Rollbacks%3A%20A%20Case%20Study%20of%20Java%20Libraries"
+    authors: ["Hirohiko Suwa", "Akinori Ihara", "Raula Gaikovina Kula", "Daiki Fujibayashi", "Kenichi Matsumoto"]
+    insts: [osaka, naist]
+    self: ["Raula Gaikovina Kula"]
+  - title: "An Exploratory Study on Library Aging by Monitoring Client Usage in a Software Ecosystem"
+    year: 2017
+    venue: "SANER"
+    kind: conf
+    themes: [eco]
+    logline: "Libraries do not die, they age — measured by the clients that quietly stop keeping up."
+    url: "https://dblp.org/search?q=An%20Exploratory%20Study%20on%20Library%20Aging%20by%20Monitoring%20Client%20Usage%20in%20a%20Software%20Ecosystem"
+    authors: ["Raula Gaikovina Kula", "Daniel M. German", "Takashi Ishio", "Ali Ouni", "Katsuro Inoue"]
+    insts: [osaka, fun, ets, ritsumeikan]
+    self: ["Raula Gaikovina Kula"]
+  - title: "Does the Release Cycle of a Library Project Influence When It Is Adopted by a Client Project?"
+    year: 2017
+    venue: "SANER"
+    kind: conf
+    themes: [eco]
+    logline: "Ship often and clients upgrade sooner — or so the folklore goes. Tested."
+    url: "https://dblp.org/search?q=Does%20the%20Release%20Cycle%20of%20a%20Library%20Project%20Influence%20When%20It%20Is%20Adopted%20by%20a%20Client%20Project%3F"
+    authors: ["Daiki Fujibayashi", "Akinori Ihara", "Hirohiko Suwa", "Raula Gaikovina Kula", "Kenichi Matsumoto"]
+    insts: [osaka, naist]
+    self: ["Raula Gaikovina Kula"]
+  - title: "Extracting Insights from the Topology of the JavaScript Package Ecosystem"
+    year: 2017
+    venue: "APSEC"
+    kind: conf
+    themes: [eco]
+    logline: "npm drawn as a shape, and what the shape tells you that a package list cannot."
+    url: "https://dblp.org/search?q=Extracting%20Insights%20from%20the%20Topology%20of%20the%20JavaScript%20Package%20Ecosystem"
+    authors: ["Nuttapon Lertwittayatrai", "Raula Gaikovina Kula", "Saya Onoue", "Hideaki Hata", "Arnon Rungsawang", "Pattara Leelaprute", "Kenichi Matsumoto"]
+    insts: [osaka, shinshu, naist]
+    self: ["Raula Gaikovina Kula"]
+  - title: "Modeling Library Dependencies and Updates in Large Software Repository Universes"
+    year: 2017
+    venue: "arXiv"
+    kind: preprint
+    themes: [eco]
+    logline: "A model of the whole dependency universe rather than one project's slice of it."
+    url: "https://arxiv.org/abs/1709.04626"
+    authors: ["Raula Gaikovina Kula", "Coen De Roover", "Daniel M. German", "Takashi Ishio", "Katsuro Inoue"]
+    insts: [osaka, fun, ritsumeikan]
+    self: ["Raula Gaikovina Kula"]
+  - title: "On the Impact of Micro-Packages: An Empirical Study of the npm JavaScript Ecosystem"
+    year: 2017
+    venue: "arXiv"
+    kind: preprint
+    themes: [eco]
+    logline: "Packages too small to be worth a dependency, and the weight they add anyway."
+    url: "https://arxiv.org/abs/1709.04638"
+    authors: ["Raula Gaikovina Kula", "Ali Ouni", "Daniel M. German", "Katsuro Inoue"]
+    insts: [osaka, ets, ritsumeikan]
+    self: ["Raula Gaikovina Kula"]
+  - title: "On Updating Library Dependencies in OSS Projects"
+    year: 2017
+    venue: "SES"
+    kind: conf
+    themes: [eco]
+    logline: "A symposium talk drawing the dependency-update work together."
+    url: "https://dblp.org/search?q=On%20Updating%20Library%20Dependencies%20in%20OSS%20Projects"
+    authors: ["Raula Gaikovina Kula"]
+    insts: [osaka]
+    self: ["Raula Gaikovina Kula"]
+  - title: "Predicting Usefulness of Code Review Comments Using Textual Features and Developer Experience"
+    year: 2017
+    venue: "MSR"
+    kind: conf
+    themes: [review]
+    logline: "Some review comments change the code and some are noise. Predicting which from the text and who wrote it."
+    url: "https://dblp.org/search?q=Predicting%20Usefulness%20of%20Code%20Review%20Comments%20Using%20Textual%20Features%20and%20Developer%20Experience"
+    authors: ["Mohammad Masudur Rahman", "Chanchal K. Roy", "Raula Gaikovina Kula"]
+    insts: [osaka]
+    self: ["Raula Gaikovina Kula"]
+  - title: "Search-Based Software Library Recommendation Using Multi-Objective Optimization"
+    year: 2017
+    venue: "Information and Software Technology"
+    kind: journal
+    themes: [eco]
+    logline: "Recommending a library is a trade-off between fit, popularity and cost. Optimise over all three."
+    url: "https://dblp.org/search?q=Search-Based%20Software%20Library%20Recommendation%20Using%20Multi-Objective%20Optimization"
+    authors: ["Ali Ouni", "Raula Gaikovina Kula", "Marouane Kessentini", "Takashi Ishio", "Daniel M. German", "Katsuro Inoue"]
+    insts: [ets, osaka, fun, ritsumeikan]
+    self: ["Raula Gaikovina Kula"]
+  - title: "SoL Mantra: Visualizing Update Opportunities Based on Library Coexistence"
+    year: 2017
+    venue: "VISSOFT"
+    kind: conf
+    themes: [eco]
+    logline: "Libraries that travel together suggest when it is safe to move. A visualisation of that signal."
+    url: "https://dblp.org/search?q=SoL%20Mantra%3A%20Visualizing%20Update%20Opportunities%20Based%20on%20Library%20Coexistence"
+    authors: ["Boris Todorov", "Raula Gaikovina Kula", "Takashi Ishio", "Katsuro Inoue"]
+    insts: [osaka, fun, ritsumeikan]
+    self: ["Raula Gaikovina Kula"]
+  - title: "The Health and Wealth of OSS Projects: Evidence from Community Activities and Product Evolution"
+    year: 2017
+    venue: "arXiv"
+    kind: preprint
+    themes: [soc, eco]
+    logline: "Two different things people mean by a healthy project, measured side by side."
+    url: "https://arxiv.org/abs/1709.10324"
+    authors: ["Saya Onoue", "Raula Gaikovina Kula", "Hideaki Hata", "Kenichi Matsumoto"]
+    insts: [osaka, shinshu, naist]
+    self: ["Raula Gaikovina Kula"]
+  - title: "Understanding When to Adopt a Library: A Case Study on ASF Projects"
+    year: 2017
+    venue: "OSS"
+    kind: conf
+    themes: [eco]
+    logline: "Adoption has a moment. Finding it across the Apache project population."
+    url: "https://dblp.org/search?q=Understanding%20When%20to%20Adopt%20a%20Library%3A%20A%20Case%20Study%20on%20ASF%20Projects"
+    authors: ["Akinori Ihara", "Daiki Fujibayashi", "Hirohiko Suwa", "Raula Gaikovina Kula", "Kenichi Matsumoto"]
+    insts: [osaka, naist]
+    self: ["Raula Gaikovina Kula"]
+  - title: "Using High-Rising Cities to Visualize Performance in Real-Time"
+    year: 2017
+    venue: "VISSOFT"
+    kind: conf
+    themes: [prof]
+    logline: "A running system drawn as a skyline that rises and falls as it works."
+    url: "https://dblp.org/search?q=Using%20High-Rising%20Cities%20to%20Visualize%20Performance%20in%20Real-Time"
+    authors: ["Katsuya Ogami", "Raula Gaikovina Kula", "Hideaki Hata", "Takashi Ishio", "Kenichi Matsumoto"]
+    insts: [osaka, shinshu, fun, naist]
+    self: ["Raula Gaikovina Kula"]
+  - title: "Automated Inference of Software Library Usage Patterns"
+    year: 2016
+    venue: "arXiv"
+    kind: preprint
+    themes: [eco]
+    logline: "Learning how a library is meant to be called by watching how it is called."
+    url: "https://arxiv.org/abs/1612.01626"
+    authors: ["Mohamed Aymen Saied", "Ali Ouni", "Houari Sahraoui", "Raula Gaikovina Kula", "Katsuro Inoue", "David Lo"]
+    insts: [ets, osaka, ritsumeikan]
+    self: ["Raula Gaikovina Kula"]
+  - title: "Mining the Modern Code Review Repositories: A Dataset of People, Process and Product"
+    year: 2016
+    venue: "MSR"
+    kind: conf
+    themes: [review]
+    logline: "A dataset built so code-review studies could stop each building their own."
+    url: "https://dblp.org/search?q=Mining%20the%20Modern%20Code%20Review%20Repositories%3A%20A%20Dataset%20of%20People%2C%20Process%20and%20Product"
+    authors: ["Xin Yang", "Raula Gaikovina Kula", "Norihiro Yoshida", "Hajimu Iida"]
+    insts: [osaka]
+    self: ["Raula Gaikovina Kula"]
+  - title: "Peer Review Social Network (PeRSoN) in Open Source Projects"
+    year: 2016
+    venue: "IEICE Transactions"
+    kind: journal
+    themes: [review, soc]
+    logline: "Who reviews whom, drawn as a social graph rather than a queue."
+    url: "https://dblp.org/search?q=Peer%20Review%20Social%20Network%20%28PeRSoN%29%20in%20Open%20Source%20Projects"
+    authors: ["Xin Yang", "Norihiro Yoshida", "Raula Gaikovina Kula", "Hajimu Iida"]
+    insts: [osaka]
+    self: ["Raula Gaikovina Kula"]
+  - title: "Search-Based Peer Reviewers Recommendation in Modern Code Review"
+    year: 2016
+    venue: "ICSME"
+    kind: conf
+    themes: [review]
+    logline: "Choosing reviewers as a search problem — the first version of what later became WhoReview."
+    url: "https://dblp.org/search?q=Search-Based%20Peer%20Reviewers%20Recommendation%20in%20Modern%20Code%20Review"
+    authors: ["Ali Ouni", "Raula Gaikovina Kula", "Katsuro Inoue"]
+    insts: [ets, osaka, ritsumeikan]
+    self: ["Raula Gaikovina Kula"]
+  - title: "Software Ingredients: Detection of Third-Party Component Reuse in Java Software Release"
+    year: 2016
+    venue: "MSR"
+    kind: conf
+    themes: [eco]
+    logline: "Reading a shipped jar like an ingredients label, to find the third-party code baked in."
+    url: "https://dblp.org/search?q=Software%20Ingredients%3A%20Detection%20of%20Third-Party%20Component%20Reuse%20in%20Java%20Software%20Release"
+    authors: ["Takashi Ishio", "Raula Gaikovina Kula", "Tetsuya Kanda", "Daniel M. German", "Katsuro Inoue"]
+    insts: [fun, osaka, ritsumeikan]
+    self: ["Raula Gaikovina Kula"]
+  - title: "Quick Trigger on Stack Overflow: A Study of Gamification-Influenced Member Tendencies"
+    year: 2015
+    venue: "MSR"
+    kind: conf
+    themes: [soc, prof]
+    logline: "Points and badges change how fast people answer, and not always for the better."
+    url: "https://dblp.org/search?q=Quick%20Trigger%20on%20Stack%20Overflow%3A%20A%20Study%20of%20Gamification-Influenced%20Member%20Tendencies"
+    authors: ["Yong Jin", "Xin Yang", "Raula Gaikovina Kula", "Eunjong Choi", "Katsuro Inoue", "Hajimu Iida"]
+    insts: [osaka, ritsumeikan]
+    self: ["Raula Gaikovina Kula"]
+  - title: "Trusting a Library: A Study of the Latency to Adopt the Latest Maven Release"
+    year: 2015
+    venue: "SANER"
+    kind: conf
+    themes: [eco]
+    logline: "The gap between a release existing and anyone trusting it enough to depend on it."
+    url: "https://dblp.org/search?q=Trusting%20a%20Library%3A%20A%20Study%20of%20the%20Latency%20to%20Adopt%20the%20Latest%20Maven%20Release"
+    authors: ["Raula Gaikovina Kula", "Daniel M. German", "Takashi Ishio", "Katsuro Inoue"]
+    insts: [osaka, fun, ritsumeikan]
+    self: ["Raula Gaikovina Kula"]
+  - title: "VerXCombo: An Interactive Data Visualization of Popular Library Version Combinations"
+    year: 2015
+    venue: "ICPC"
+    kind: conf
+    themes: [eco]
+    logline: "Which library versions people actually run together, made browsable."
+    url: "https://dblp.org/search?q=VerXCombo%3A%20An%20Interactive%20Data%20Visualization%20of%20Popular%20Library%20Version%20Combinations"
+    authors: ["Yuki Yano", "Raula Gaikovina Kula", "Takashi Ishio", "Katsuro Inoue"]
+    insts: [osaka, fun, ritsumeikan]
+    self: ["Raula Gaikovina Kula"]
+  - title: "Web Service Antipatterns Detection Using Genetic Programming"
+    year: 2015
+    venue: "GECCO"
+    kind: conf
+    themes: [prof]
+    logline: "Evolving detectors for the shapes a badly designed web service tends to take."
+    url: "https://dblp.org/search?q=Web%20Service%20Antipatterns%20Detection%20Using%20Genetic%20Programming"
+    authors: ["Ali Ouni", "Raula Gaikovina Kula", "Marouane Kessentini", "Katsuro Inoue"]
+    insts: [ets, osaka, ritsumeikan]
+    self: ["Raula Gaikovina Kula"]
+  - title: "What Do Practitioners Ask About Code Clone? A Preliminary Investigation of Stack Overflow"
+    year: 2015
+    venue: "IWSC"
+    kind: conf
+    themes: [prof]
+    logline: "Clone detection research versus what practitioners are actually confused about."
+    url: "https://dblp.org/search?q=What%20Do%20Practitioners%20Ask%20About%20Code%20Clone%3F%20A%20Preliminary%20Investigation%20of%20Stack%20Overflow"
+    authors: ["Eunjong Choi", "Norihiro Yoshida", "Raula Gaikovina Kula", "Katsuro Inoue"]
+    insts: [osaka, ritsumeikan]
+    self: ["Raula Gaikovina Kula"]
+  - title: "Who Should Review My Code? A File Location-Based Code-Reviewer Recommendation Approach for Modern Code Review"
+    year: 2015
+    venue: "SANER"
+    kind: conf
+    themes: [review]
+    logline: "Where a file lives turns out to predict who is qualified to review it."
+    url: "https://dblp.org/search?q=Who%20Should%20Review%20My%20Code%3F%20A%20File%20Location-Based%20Code-Reviewer%20Recommendation%20Approach%20for%20Modern%20Code%20Review"
+    authors: ["Patanamon Thongtanunam", "Chakkrit Tantithamthavorn", "Raula Gaikovina Kula", "Norihiro Yoshida", "Hajimu Iida", "Kenichi Matsumoto"]
+    insts: [melbourne, osaka, naist]
+    self: ["Raula Gaikovina Kula"]
+  - title: "Identifying Source Code Reuse Across Repositories Using LCS-Based Source Code Similarity"
+    year: 2014
+    venue: "SCAM"
+    kind: conf
+    themes: [eco]
+    logline: "Finding the same code in two repositories that never mention each other."
+    url: "https://dblp.org/search?q=Identifying%20Source%20Code%20Reuse%20Across%20Repositories%20Using%20LCS-Based%20Source%20Code%20Similarity"
+    authors: ["Naohiro Kawamitsu", "Takashi Ishio", "Tetsuya Kanda", "Raula Gaikovina Kula", "Coen De Roover", "Katsuro Inoue"]
+    insts: [fun, osaka, ritsumeikan]
+    self: ["Raula Gaikovina Kula"]
+  - title: "Improving Code Review Effectiveness Through Reviewer Recommendations"
+    year: 2014
+    venue: "CHASE"
+    kind: conf
+    themes: [review]
+    logline: "The earliest of the reviewer-recommendation line, and the argument for why it matters."
+    url: "https://dblp.org/search?q=Improving%20Code%20Review%20Effectiveness%20Through%20Reviewer%20Recommendations"
+    authors: ["Patanamon Thongtanunam", "Raula Gaikovina Kula", "Ana Erika Camargo Cruz", "Norihiro Yoshida", "Hajimu Iida"]
+    insts: [melbourne, osaka]
+    self: ["Raula Gaikovina Kula"]
+  - title: "REDA: A Web-Based Visualization Tool for Analyzing Modern Code Review Dataset"
+    year: 2014
+    venue: "ICSME"
+    kind: conf
+    themes: [review]
+    logline: "A tool for looking at review data without writing a script first."
+    url: "https://dblp.org/search?q=REDA%3A%20A%20Web-Based%20Visualization%20Tool%20for%20Analyzing%20Modern%20Code%20Review%20Dataset"
+    authors: ["Patanamon Thongtanunam", "Xin Yang", "Norihiro Yoshida", "Raula Gaikovina Kula", "Ana Erika Camargo Cruz", "Kenji Fujiwara", "Hajimu Iida"]
+    insts: [melbourne, osaka]
+    self: ["Raula Gaikovina Kula"]
+  - title: "Visualizing the Evolution of Systems and Their Library Dependencies"
+    year: 2014
+    venue: "VISSOFT"
+    kind: conf
+    themes: [eco]
+    logline: "A system and its dependencies drawn over time, so drift becomes something you can see."
+    url: "https://dblp.org/search?q=Visualizing%20the%20Evolution%20of%20Systems%20and%20Their%20Library%20Dependencies"
+    authors: ["Raula Gaikovina Kula", "Coen De Roover", "Daniel M. German", "Takashi Ishio", "Katsuro Inoue"]
+    insts: [osaka, fun, ritsumeikan]
+    self: ["Raula Gaikovina Kula"]
+  - title: "Micro Process Analysis of Maintenance Effort: An Open Source Software Case Study Using Metrics Based on Program Slicing"
+    year: 2013
+    venue: "JSEP"
+    kind: journal
+    themes: [prof]
+    logline: "Maintenance effort measured not by tickets closed but by how the code was actually cut."
+    url: "https://dblp.org/search?q=Micro%20Process%20Analysis%20of%20Maintenance%20Effort%3A%20An%20Open%20Source%20Software%20Case%20Study%20Using%20Metrics%20Based%20on%20Program%20Slicing"
+    authors: ["Raula Gaikovina Kula", "Kyohei Fushida", "Norihiro Yoshida", "Hajimu Iida"]
+    insts: [osaka]
+    self: ["Raula Gaikovina Kula"]
+  - title: "Mining History of Gamification Towards Finding Expertise in Question and Answering Communities: Experience and Practice with Stack Exchange"
+    year: 2013
+    venue: "RSS"
+    kind: journal
+    themes: [soc, prof]
+    logline: "Badges as a record of expertise, read backwards to find who actually knows the subject."
+    url: "https://dblp.org/search?q=Mining%20History%20of%20Gamification%20Towards%20Finding%20Expertise%20in%20Question%20and%20Answering%20Communities%3A%20Experience%20and%20Practice%20with%20Stack%20Exchange"
+    authors: ["Patanamon Thongtanunam", "Raula Gaikovina Kula", "Ana Erika Camargo Cruz", "Norihiro Yoshida", "Kohei Ichikawa", "Hajimu Iida"]
+    insts: [melbourne, osaka]
+    self: ["Raula Gaikovina Kula"]
+  - title: "Quantitative Analysis of Maintenance Processes at the Micro Level"
+    year: 2013
+    venue: "NAIST"
+    kind: journal
+    themes: [prof]
+    logline: "The doctoral thesis: measuring maintenance at the level of individual changes."
+    url: "https://dblp.org/search?q=Quantitative%20Analysis%20of%20Maintenance%20Processes%20at%20the%20Micro%20Level"
+    authors: ["Raula Gaikovina Kula"]
+    insts: [osaka]
+    self: ["Raula Gaikovina Kula"]
+  - title: "Who Does What During a Code Review? Datasets of OSS Peer Review Repositories"
+    year: 2013
+    venue: "MSR"
+    kind: conf
+    themes: [review]
+    logline: "The roles inside a review, and the datasets that let anyone else study them."
+    url: "https://dblp.org/search?q=Who%20Does%20What%20During%20a%20Code%20Review%3F%20Datasets%20of%20OSS%20Peer%20Review%20Repositories"
+    authors: ["Kazuki Hamasaki", "Raula Gaikovina Kula", "Norihiro Yoshida", "Ana Erika Camargo Cruz", "Kenji Fujiwara", "Hajimu Iida"]
+    insts: [osaka]
+    self: ["Raula Gaikovina Kula"]
+  - title: "Experimental Study of Quantitative Analysis of Maintenance Effort Using Program Slicing-Based Metrics"
+    year: 2012
+    venue: "APSEC"
+    kind: conf
+    themes: [prof]
+    logline: "Program slicing turned into a yardstick for how much work a maintenance change really was."
+    url: "https://dblp.org/search?q=Experimental%20Study%20of%20Quantitative%20Analysis%20of%20Maintenance%20Effort%20Using%20Program%20Slicing-Based%20Metrics"
+    authors: ["Raula Gaikovina Kula", "Kyohei Fushida", "Norihiro Yoshida", "Hajimu Iida"]
+    insts: [osaka]
+    self: ["Raula Gaikovina Kula"]
+  - title: "Understanding OSS Peer Review Roles in Peer Review Social Network (PeRSoN)"
+    year: 2012
+    venue: "APSEC"
+    kind: conf
+    themes: [review, soc]
+    logline: "The roles people fall into when reviewing, read off the network they form."
+    url: "https://dblp.org/search?q=Understanding%20OSS%20Peer%20Review%20Roles%20in%20Peer%20Review%20Social%20Network%20%28PeRSoN%29"
+    authors: ["Xin Yang", "Raula Gaikovina Kula", "Ana Erika Camargo Cruz", "Norihiro Yoshida", "Kazuki Hamasaki", "Kenji Fujiwara", "Hajimu Iida"]
+    insts: [osaka]
+    self: ["Raula Gaikovina Kula"]
+  - title: "Using Profiling Metrics to Categorise Peer Review Types in the Android Project"
+    year: 2012
+    venue: "ISSRE"
+    kind: conf
+    themes: [review]
+    logline: "Not all reviews are the same act. Sorting Android's into types by how they behave."
+    url: "https://dblp.org/search?q=Using%20Profiling%20Metrics%20to%20Categorise%20Peer%20Review%20Types%20in%20the%20Android%20Project"
+    authors: ["Raula Gaikovina Kula", "Ana Erika Camargo Cruz", "Norihiro Yoshida", "Kazuki Hamasaki", "Kenji Fujiwara", "Xin Yang", "Hajimu Iida"]
+    insts: [osaka]
+    self: ["Raula Gaikovina Kula"]
+  - title: "Analysis of Bug Fixing Processes Using Program Slicing Metrics"
+    year: 2010
+    venue: "PROFES"
+    kind: conf
+    themes: [prof]
+    logline: "Where the slicing-metrics line begins: what a bug fix looks like when you measure the cut."
+    url: "https://dblp.org/search?q=Analysis%20of%20Bug%20Fixing%20Processes%20Using%20Program%20Slicing%20Metrics"
+    authors: ["Raula Gaikovina Kula", "Kyohei Fushida", "Shinji Kawaguchi", "Hajimu Iida"]
+    insts: [osaka]
+    self: ["Raula Gaikovina Kula"]
+  - title: "Using Program Slicing Metrics for the Analysis of Bug Fixing Processes"
+    year: 2010
+    venue: "NAIST"
+    kind: journal
+    themes: [prof]
+    logline: "The master's thesis that started the measurement work."
+    url: "https://dblp.org/search?q=Using%20Program%20Slicing%20Metrics%20for%20the%20Analysis%20of%20Bug%20Fixing%20Processes"
+    authors: ["Raula Gaikovina Kula"]
+    insts: [osaka]
+    self: ["Raula Gaikovina Kula"]
+  - title: "Using Program Slicing Metrics for the Analysis of Code Change Processes"
+    year: 2010
+    venue: "IWESEP"
+    kind: conf
+    themes: [prof]
+    logline: "The same yardstick turned on change in general rather than bug fixes alone."
+    url: "https://dblp.org/search?q=Using%20Program%20Slicing%20Metrics%20for%20the%20Analysis%20of%20Code%20Change%20Processes"
+    authors: ["Raula Gaikovina Kula", "Kyohei Fushida", "Norihiro Yoshida", "Hajimu Iida"]
+    insts: [osaka]
+    self: ["Raula Gaikovina Kula"]
+  - title: "Code Clone Graph Metrics for Detecting Diffused Code Clones"
+    year: 2009
+    venue: "APSEC"
+    kind: conf
+    themes: [prof]
+    logline: "Clones that have drifted apart far enough that ordinary detectors miss them."
+    url: "https://dblp.org/search?q=Code%20Clone%20Graph%20Metrics%20for%20Detecting%20Diffused%20Code%20Clones"
+    authors: ["Yoshihiko Fukushima", "Raula Gaikovina Kula", "Shinji Kawaguchi", "Kyohei Fushida", "Masataka Nagura", "Hajimu Iida"]
+    insts: [osaka]
     self: ["Raula Gaikovina Kula"]

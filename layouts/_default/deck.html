@@ -439,6 +439,7 @@
   <button class="chip" data-era="2025" aria-pressed="false">2025 →</button>
   <button class="chip" data-era="2023" aria-pressed="false">2023 – 2024</button>
   <button class="chip" data-era="2019" aria-pressed="false">2019 – 2022</button>
+  <button class="chip" data-era="early" aria-pressed="false">2009 – 2018</button>
   <span class="count" id="count"></span>
 </div>
 
@@ -672,6 +673,7 @@
     if(state.era==="2025"&&p.y<2025) return false;
     if(state.era==="2023"&&(p.y<2023||p.y>2024)) return false;
     if(state.era==="2019"&&(p.y>2022||p.y<2019)) return false;
+    if(state.era==="early"&&p.y>2018) return false;
     if(state.q){
       var hay=(p.t+" "+p.v+" "+p.y+" "+p.d+" "+p.th.join(" ")+" "+
               (p.authors||[]).join(" ")+" "+
