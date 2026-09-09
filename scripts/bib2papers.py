@@ -51,6 +51,8 @@ VENUE_MAP = [
     # longest-first: "…software engineering and methodology" must beat "…software engineering"
     (r"transactions on software engineering and methodology", "ACM TOSEM"),
     (r"transactions on software engineering",            "IEEE TSE"),
+    # IWESEP contains "empirical software engineering"; it must beat both ESEM and EMSE
+    (r"empirical software engineering in practice|\biwesep\b", "IWESEP"),
     # ESEM (the conference) must beat EMSE (the journal); ASEW must beat ASE
     (r"empirical software engineering and measurement|\besem\b", "ESEM"),
     (r"empirical software engineering",                  "Empirical Software Engineering"),
@@ -62,6 +64,21 @@ VENUE_MAP = [
     (r"ieice transactions",                              "IEICE Transactions"),
     (r"journal of information processing",               "Journal of Information Processing"),
     (r"automated software engineering workshops|\basew\b", "ASEW"),
+    (r"asia-pacific software engineering conference workshops|\bapsecw\b", "APSECW"),
+    (r"asia-pacific software engineering|\bapsec\b", "APSEC"),
+    (r"working conference on software visualization|\bvissoft\b", "VISSOFT"),
+    (r"source code analysis and manipulation|\bscam\b", "SCAM"),
+    (r"workshop on software clones|\biwsc\b",           "IWSC"),
+    (r"genetic and evolutionary computation|\bgecco\b",  "GECCO"),
+    (r"cooperative and human aspects|\bchase\b",         "CHASE"),
+    (r"software reliability engineering|\bissre\b",      "ISSRE"),
+    (r"workshop on software health",                     "SoHeal"),
+    (r"big data, cloud computing",                       "BCD"),
+    (r"open source systems",                             "OSS"),
+    (r"journal of software: evolution and process",      "JSEP"),
+    (r"review of socionetwork strategies",               "RSS"),
+    (r"software engineering symposium",                  "SES"),
+    (r"nara institute of science and technology",        "NAIST"),
     (r"automated software engineering|(\b|/)ase(\b|/)",  "ASE"),
     (r"smart computing, iot and machine learning|\bsiml\b", "SIML"),
     (r"software engineering in the global south|\bseigs\b", "SEiGS"),
@@ -341,7 +358,7 @@ def emit_venues(papers, reg, log):
     return "\n".join(L) + "\n"
 
 
-def emit(papers, featured, sources):
+def emit(papers, featured, sources, spotlight=None):
     L = [
         "# GENERATED FILE — do not edit by hand.",
         "# Regenerate with:  python scripts/bib2papers.py",
@@ -353,8 +370,13 @@ def emit(papers, featured, sources):
         "",
         "featured: " + q(featured),
         "",
-        "papers:",
     ]
+    if spotlight:
+        L.append("spotlight:")
+        for t in spotlight:
+            L.append("  - " + q(t))
+        L.append("")
+    L.append("papers:")
     for p in papers:
         L += [
             "  - title: " + q(p["title"]),
@@ -502,7 +524,16 @@ def build(log):
     for p in papers:
         if not p["authors"]:
             log("  no authors in the .bib for: " + p["title"][:56], warn=True)
-    return (emit(papers, featured, [os.path.basename(b) for b in bibs]),
+    titles = {norm(p["title"]): p["title"] for p in papers}
+    spotlight = []
+    for t in (ov.get("spotlight") or []):
+        real = titles.get(norm(t))
+        if real:
+            spotlight.append(real)
+        else:
+            log("  spotlight entry matches no paper: " + str(t)[:56], warn=True)
+
+    return (emit(papers, featured, [os.path.basename(b) for b in bibs], spotlight),
             emit_venues(papers, reg, log), inst_text, papers)
 
 

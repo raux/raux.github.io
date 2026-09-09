@@ -147,3 +147,71 @@ venues:
     abbr: SE&M
     full: Software Engineering and Management — book chapter
     publisher: springer
+  "APSEC":
+    abbr: APSEC
+    full: Asia-Pacific Software Engineering Conference
+    publisher: ieee
+  "APSECW":
+    abbr: APSECW
+    full: APSEC Workshops
+    publisher: ieee
+  "VISSOFT":
+    abbr: VISSOFT
+    full: Working Conference on Software Visualization
+    publisher: ieee
+  "SCAM":
+    abbr: SCAM
+    full: Source Code Analysis and Manipulation
+    publisher: ieee
+  "IWSC":
+    abbr: IWSC
+    full: International Workshop on Software Clones
+    publisher: ieee
+  "GECCO":
+    abbr: GECCO
+    full: Genetic and Evolutionary Computation
+    publisher: acm
+  "CHASE":
+    abbr: CHASE
+    full: Cooperative and Human Aspects of Software Engineering
+    publisher: acm
+  "ISSRE":
+    abbr: ISSRE
+    full: Software Reliability Engineering
+    publisher: ieee
+  "SoHeal":
+    abbr: SoHeal
+    full: International Workshop on Software Health
+    publisher: acm
+  "BCD":
+    abbr: BCD
+    full: Big Data, Cloud Computing and Data Science
+    publisher: ieee
+  "OSS":
+    abbr: OSS
+    full: IFIP Open Source Systems
+    publisher: springer
+  "JSEP":
+    abbr: JSEP
+    full: "Journal of Software: Evolution and Process"
+    publisher: elsevier
+  "RSS":
+    abbr: RSS
+    full: The Review of Socionetwork Strategies
+    publisher: springer
+  "SES":
+    abbr: SES
+    full: Software Engineering Symposium
+    publisher: none
+  "ICPC":
+    abbr: ICPC
+    full: International Conference on Program Comprehension
+    publisher: ieee
+  "NAIST":
+    abbr: NAIST
+    full: Nara Institute of Science and Technology — thesis
+    publisher: none
+  "IWESEP":
+    abbr: IWESEP
+    full: Empirical Software Engineering in Practice
+    publisher: none

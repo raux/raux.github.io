@@ -1,8 +1,9 @@
-# Rebuilds the research deck catalogue whenever the publication list changes.
+# Rebuilds the research deck catalogue, and rotates what it puts forward.
 #
 #   bib/*.bib   +  bib/deck-overrides.yaml  ->  data/papers.yaml  ->  /papers/
 #
 # Drop a new BibTeX export into bib/, push, and the deck updates itself.
+# On a schedule it also reshuffles the billboard and the Spotlight row.
 name: Rebuild paper deck
 
 on:
@@ -11,15 +12,24 @@ on:
     paths:
       - "bib/**.bib"
       - "bib/deck-overrides.yaml"
+      - "bib/people.yaml"
+      - "bib/venues.yaml"
       - "scripts/bib2papers.py"
   pull_request:
     branches: [master]
     paths:
-      - "bib/**.bib"
-      - "bib/deck-overrides.yaml"
+      - "bib/**"
       - "data/papers.yaml"
       - "scripts/bib2papers.py"
+  # Monday 09:00 JST. For a daily billboard use "0 0 * * *" instead.
+  schedule:
+    - cron: "0 0 * * 1"
   workflow_dispatch:
+    inputs:
+      rotate:
+        description: "Also reshuffle the billboard and Spotlight row"
+        type: boolean
+        default: false
 
 permissions:
   contents: write # commit the regenerated catalogue
@@ -45,6 +55,19 @@ jobs:
 
       - run: pip install --quiet pyyaml
 
+      # Only the schedule and an explicit dispatch reshuffle. A content push
+      # must not move the billboard out from under whatever you just wrote.
+      - name: Rotate the billboard
+        if: github.event_name == 'schedule' || github.event.inputs.rotate == 'true'
+        run: |
+          set -o pipefail
+          {
+            echo '### Paper deck — rotated'
+            echo '```'
+            python scripts/feature.py --seed "$(date -u +%F)" --count 8 2>&1
+            echo '```'
+          } | tee -a "$GITHUB_STEP_SUMMARY"
+
       # On a pull request, only report. Nothing is written or committed.
       - name: Check the catalogue is current
         if: github.event_name == 'pull_request'
@@ -57,7 +80,7 @@ jobs:
             echo '```'
           } | tee -a "$GITHUB_STEP_SUMMARY"
 
-      - name: Regenerate data/papers.yaml
+      - name: Regenerate the catalogue
         if: github.event_name != 'pull_request'
         run: |
           set -o pipefail
@@ -68,19 +91,25 @@ jobs:
             echo '```'
           } | tee -a "$GITHUB_STEP_SUMMARY"
 
-      - name: Commit the catalogue
+      - name: Commit
         if: github.event_name != 'pull_request'
         id: commit
         run: |
-          if git diff --quiet -- data/papers.yaml; then
+          git add data/papers.yaml data/venues.yaml data/institutions.yaml \
+                  bib/deck-overrides.yaml bib/feature-history.yaml
+          if git diff --cached --quiet; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
-            echo "Catalogue unchanged — nothing to commit."
+            echo "Nothing changed."
             exit 0
+          fi
+          if [ "${{ github.event_name }}" = "schedule" ] || [ "${{ github.event.inputs.rotate }}" = "true" ]; then
+            MSG="chore(deck): rotate the billboard [skip ci]"
+          else
+            MSG="chore(deck): regenerate papers.yaml from BibTeX [skip ci]"
           fi
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/papers.yaml
-          git commit -m "chore(deck): regenerate papers.yaml from BibTeX [skip ci]"
+          git commit -m "$MSG"
           git push
           echo "changed=true" >> "$GITHUB_OUTPUT"
 
