@@ -1,0 +1,78 @@
+# GENERATED FILE — do not edit by hand.
+# Edit bib/people.yaml instead, then run scripts/bib2papers.py
+
+"ets":
+  name: "École de technologie supérieure"
+  short: "ÉTS Montréal"
+  color: "#C0392B"
+  logo: ""
+"fun":
+  name: "Future University Hakodate"
+  short: "FUN Hakodate"
+  color: "#2E7D8F"
+  logo: ""
+"heidelberg":
+  name: "Heidelberg University"
+  short: "Heidelberg"
+  color: "#8E1F2F"
+  logo: ""
+"kyushu":
+  name: "Kyushu University"
+  short: "Kyushu"
+  color: "#7B3D8E"
+  logo: ""
+"mahidol":
+  name: "Mahidol University"
+  short: "Mahidol"
+  color: "#23478C"
+  logo: ""
+"melbourne":
+  name: "University of Melbourne"
+  short: "Melbourne"
+  color: "#123A6D"
+  logo: ""
+"naist":
+  name: "Nara Institute of Science and Technology"
+  short: "NAIST"
+  color: "#1F5FA8"
+  logo: ""
+"osaka":
+  name: "The University of Osaka"
+  short: "Osaka"
+  color: "#0F3B7C"
+  logo: ""
+"ritsumeikan":
+  name: "Ritsumeikan University"
+  short: "Ritsumeikan"
+  color: "#8E1C2B"
+  logo: ""
+"shinshu":
+  name: "Shinshu University"
+  short: "Shinshu"
+  color: "#5E8C3A"
+  logo: ""
+"smu":
+  name: "Singapore Management University"
+  short: "SMU"
+  color: "#125C4B"
+  logo: ""
+"tianjin":
+  name: "Tianjin University"
+  short: "Tianjin"
+  color: "#9B2335"
+  logo: ""
+"umflint":
+  name: "University of Michigan–Flint"
+  short: "UM–Flint"
+  color: "#00274C"
+  logo: ""
+"urjc":
+  name: "Universidad Rey Juan Carlos"
+  short: "URJC"
+  color: "#A62B30"
+  logo: ""
+"waterloo":
+  name: "University of Waterloo"
+  short: "Waterloo"
+  color: "#9A7B1F"
+  logo: ""

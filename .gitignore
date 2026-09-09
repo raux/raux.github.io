@@ -5,3 +5,6 @@ resources
 # Local Pi agent state and generated working artifacts
 .pi/
 artifacts/
+
+# local snapshot of /papers/ produced for review; not part of the site
+papers-preview.html

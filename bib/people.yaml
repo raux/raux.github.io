@@ -1,0 +1,145 @@
+# Who wrote what, and where they are now.
+#
+# The .bib gives author names and order; it has no field for affiliation, so the
+# institution each person belongs to lives here. Cards show the first author
+# prominently and a chip for every distinct institution on the paper.
+#
+# These are CURRENT affiliations, reused across all of a person's papers — so an
+# older paper shows where its authors are today, not where the work was done.
+#
+# A person with no institution simply contributes no chip, and the generator warns
+# so the gaps stay visible. Fill them in as you go; nothing here is overwritten.
+#
+# `self: true` marks the site owner, shown in the accent colour throughout.
+
+institutions:
+  osaka:       { name: "The University of Osaka", short: "Osaka", color: "#0F3B7C" }
+  naist:       { name: "Nara Institute of Science and Technology", short: "NAIST", color: "#1F5FA8" }
+  smu:         { name: "Singapore Management University", short: "SMU", color: "#125C4B" }
+  shinshu:     { name: "Shinshu University", short: "Shinshu", color: "#5E8C3A" }
+  fun:         { name: "Future University Hakodate", short: "FUN Hakodate", color: "#2E7D8F" }
+  tianjin:     { name: "Tianjin University", short: "Tianjin", color: "#9B2335" }
+  kyushu:      { name: "Kyushu University", short: "Kyushu", color: "#7B3D8E" }
+  waterloo:    { name: "University of Waterloo", short: "Waterloo", color: "#9A7B1F" }
+  ets:         { name: "École de technologie supérieure", short: "ÉTS Montréal", color: "#C0392B" }
+  melbourne:   { name: "University of Melbourne", short: "Melbourne", color: "#123A6D" }
+  urjc:        { name: "Universidad Rey Juan Carlos", short: "URJC", color: "#A62B30" }
+  mahidol:     { name: "Mahidol University", short: "Mahidol", color: "#23478C" }
+  ritsumeikan: { name: "Ritsumeikan University", short: "Ritsumeikan", color: "#8E1C2B" }
+  umflint:     { name: "University of Michigan–Flint", short: "UM–Flint", color: "#00274C" }
+  heidelberg:  { name: "Heidelberg University", short: "Heidelberg", color: "#8E1F2F" }
+
+# logo: "osaka.svg"  — add to an institution above and drop the file in
+# static/institutions/ to replace its wordmark chip with a real mark.
+
+people:
+  # ── verified against the person's own page or lab listing, 2025-2026 ──
+  "Raula Gaikovina Kula":
+    institution: osaka
+    self: true
+    # 43 papers
+  "Kenichi Matsumoto":
+    institution: naist
+    # 23 papers
+  "Christoph Treude":
+    institution: smu
+    # 16 papers
+  "Dong Wang":
+    institution: tianjin
+    # 12 papers  ·  conference profiles still say Kyushu; his homepage says Tianjin since 2024
+  "Hideaki Hata":
+    institution: shinshu
+    # 10 papers
+  "Takashi Ishio":
+    institution: fun
+    # 10 papers
+  "Supatsara Wattanakriengkrai":
+    institution: naist
+    # 9 papers  ·  lower confidence — from her researchr profile; not on the NAIST faculty list
+  "Tao Xiao":
+    institution: kyushu
+    # 5 papers
+  "Ali Ouni":
+    institution: ets
+    # 4 papers
+  "Patanamon Thongtanunam":
+    institution: melbourne
+    # 4 papers
+  "Yasutaka Kamei":
+    institution: kyushu
+    # 4 papers
+  "Shane McIntosh":
+    institution: waterloo
+    # 3 papers
+  "Gregorio Robles":
+    institution: urjc
+    # 2 papers
+  "Katsuro Inoue":
+    institution: ritsumeikan
+    # 2 papers  ·  moved from Osaka; older sources still say Nanzan
+  "Meiyappan Nagappan":
+    institution: waterloo
+    # 2 papers
+  "Mohamed Wiem Mkaouer":
+    institution: umflint
+    # 2 papers
+  "Sebastian Baltes":
+    institution: heidelberg
+    # 2 papers  ·  Adelaide's page is stale; Heidelberg is current, Adelaide adjunct
+  "Chaiyong Ragkhitwetsagul":
+    institution: mahidol
+    # 1 paper
+  "Morakot Choetkiertikul":
+    institution: mahidol
+    # 1 paper
+
+  # ── TODO: affiliation not yet verified; these contribute no chip ──
+  # Bodin Chinthanet has left academia (industry), so he may want no institution at all.
+  "Bodin Chinthanet": { institution: "" }   # 5 papers
+  "Akinori Ihara": { institution: "" }   # 3 papers
+  "Syful Islam": { institution: "" }   # 3 papers
+  "Arnon Rungsawang": { institution: "" }   # 2 papers
+  "Hathaichanok Damrongsiri": { institution: "" }   # 2 papers
+  "Ifraz Rehman": { institution: "" }   # 2 papers
+  "Pattara Leelaprute": { institution: "" }   # 2 papers
+  "Vittunyuta Maeprasart": { institution: "" }   # 2 papers
+  "Youmei Fan": { institution: "" }   # 2 papers
+  "Yusuf Sulistyo Nugroho": { institution: "" }   # 2 papers
+  "Ani Hovhannisyan": { institution: "" }   # 1 paper
+  "Brittany Reid": { institution: "" }   # 1 paper
+  "Bundit Manaskasemsak": { institution: "" }   # 1 paper
+  "Dario Di Nucci": { institution: "" }   # 1 paper
+  "Eleni Constantinou": { institution: "" }   # 1 paper
+  "Henrique Rocha": { institution: "" }   # 1 paper
+  "Igor Steinmacher": { institution: "" }   # 1 paper
+  "Jesus M. Gonzalez-Barahona": { institution: "" }   # 1 paper
+  "Jin Guo": { institution: "" }   # 1 paper
+  "Jirateep Tantisuwankul": { institution: "" }   # 1 paper
+  "Kanchanok Kannee": { institution: "" }   # 1 paper
+  "Keitaro Nakasai": { institution: "" }   # 1 paper
+  "Klinton Chhun": { institution: "" }   # 1 paper
+  "Marc Cheong": { institution: "" }   # 1 paper
+  "Marco Aurelio Gerosa": { institution: "" }   # 1 paper
+  "Masanari Kondo": { institution: "" }   # 1 paper
+  "Moataz Chouchen": { institution: "" }   # 1 paper
+  "Mohamed Aymen Saied": { institution: "" }   # 1 paper
+  "Naomichi Shimada": { institution: "" }   # 1 paper
+  "Naoyasu Ubayashi": { institution: "" }   # 1 paper
+  "Natthakit Netsiwawichian": { institution: "" }   # 1 paper
+  "Noppadol Assavakamhaenghan": { institution: "" }   # 1 paper
+  "Nuri Almarimi": { institution: "" }   # 1 paper
+  "Pongchai Jaisri": { institution: "" }   # 1 paper
+  "Ruksit Rojpaisarnkit": { institution: "" }   # 1 paper
+  "Rungroj Maipradit": { institution: "" }   # 1 paper
+  "Salah Bouktif": { institution: "" }   # 1 paper
+  "Shohei Ikeda": { institution: "" }   # 1 paper
+  "Supavas Sitthithanasakul": { institution: "" }   # 1 paper
+  "Takeru Tanaka": { institution: "" }   # 1 paper
+  "Teyon Son": { institution: "" }   # 1 paper
+  "Thanwadee Sunetnanta": { institution: "" }   # 1 paper
+  "Toshiki Hirao": { institution: "" }   # 1 paper
+  "Vikram N. Subramanian": { institution: "" }   # 1 paper
+  "Vipawan Jarukitpipat": { institution: "" }   # 1 paper
+  "Wachirayana Wanprasert": { institution: "" }   # 1 paper
+  "Winifred Kula Amini": { institution: "" }   # 1 paper
+  "Yuki Ueda": { institution: "" }   # 1 paper
