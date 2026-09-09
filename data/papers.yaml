@@ -4,11 +4,371 @@
 #   facts     <- bib/publications.bib
 #   curation  <- bib/deck-overrides.yaml  (themes, loglines, featured)
 #
-# Last generated 2026-09-09 · 43 papers
+# Last generated 2026-09-09 · 79 papers
 
 featured: "The Life and Death of Software Ecosystems"
 
 papers:
+  - title: "A Longitudinal Analysis of Good First Issue Practices and Newcomer Pull Requests in Popular OSS Projects"
+    year: 2026
+    venue: "arXiv"
+    kind: preprint
+    themes: [soc]
+    logline: "The 'good first issue' label as a promise to newcomers, tracked over time against whether they actually arrive."
+    url: "https://arxiv.org/abs/2604.27532"
+    authors: ["Hirotatsu Hoshikawa", "Hidetake Tanaka", "Kazumasa Shimari", "Raula Gaikovina Kula", "Kenichi Matsumoto"]
+    insts: [osaka, naist]
+    self: ["Raula Gaikovina Kula"]
+  - title: "An Empirical Study of Policy as Code: Adoption, Purpose, and Maintenance"
+    year: 2026
+    venue: "MSR"
+    kind: conf
+    themes: [eco, review]
+    logline: "Policy written as code and checked like code: who adopts it, what they use it for, and who keeps it running."
+    url: "https://dblp.org/search?q=An%20Empirical%20Study%20of%20Policy%20as%20Code%3A%20Adoption%2C%20Purpose%2C%20and%20Maintenance"
+    authors: ["Ruben Opdebeeck", "Mahmoud Alfadel", "Akond Rahman", "Yutaro Kashiwa", "João F. Ferreira", "Raula Gaikovina Kula", "Coen De Roover"]
+    insts: [osaka]
+    self: ["Raula Gaikovina Kula"]
+  - title: "BonsAIDE: An Extended Vision for Human-AI Interaction in IDEs"
+    year: 2026
+    venue: "ACM TOSEM"
+    kind: journal
+    themes: [prof]
+    logline: "A vision for the IDE as a place where a person and a model shape code together, rather than take turns."
+    url: "https://dblp.org/search?q=BonsAIDE%3A%20An%20Extended%20Vision%20for%20Human-AI%20Interaction%20in%20IDEs"
+    authors: ["David Moreno-Lumbreras", "Raula Gaikovina Kula", "Christoph Treude"]
+    insts: [osaka, smu]
+    self: ["Raula Gaikovina Kula"]
+  - title: "Determining Code Proficiency Levels from Python Textbooks"
+    year: 2026
+    venue: "ACM TOSEM"
+    kind: journal
+    themes: [prof]
+    logline: "Textbooks teach Python in a deliberate order. That order becomes a scale for how advanced a piece of real code is."
+    url: "https://dblp.org/search?q=Determining%20Code%20Proficiency%20Levels%20from%20Python%20Textbooks"
+    authors: ["Ruksit Rojpaisarnkit", "Gregorio Robles", "Jesús M. González-Barahona", "Kenichi Matsumoto", "Raula Gaikovina Kula"]
+    insts: [urjc, naist, osaka]
+    self: ["Raula Gaikovina Kula"]
+  - title: "Forecasting Developer Environments with GenAI: A Research Perspective"
+    year: 2026
+    venue: "IDE Workshop"
+    kind: conf
+    themes: [prof]
+    logline: "Thirty-one researchers on where the developer's working environment goes once generative models live inside it."
+    url: "https://dblp.org/search?q=Forecasting%20Developer%20Environments%20with%20GenAI%3A%20A%20Research%20Perspective"
+    authors: ["Raula Gaikovina Kula", "Christoph Treude", "Xing Hu", "Sebastian Baltes", "Earl T. Barr", "Kelly Blincoe", "Fabio Calefato", "Junjie Chen", "Marc Cheong", "Youmei Fan", "Daniel M. German", "Marco Gerosa", "Jin L.C. Guo", "Shinpei Hayashi", "Robert Hirschfeld", "Reid Holmes", "Yintong Huo", "Takashi Kobayashi", "Michele Lanza", "Zhongxin Liu", "Olivier Nourry", "Nicole Novielli", "Denys Poshyvanyk", "Shinobu Saito", "Kazumasa Shimari", "Igor Steinmacher", "Mairieli Wessel", "Markus Wagner", "Annie Vella", "Laurie Williams", "Xin Xia"]
+    insts: [osaka, smu, heidelberg]
+    self: ["Raula Gaikovina Kula"]
+  - title: "Humans Integrate, Agents Fix: How Agent-Authored Pull Requests Are Referenced in Practice"
+    year: 2026
+    venue: "MSR"
+    kind: conf
+    themes: [review, prof]
+    logline: "Pull requests opened by agents, and how the humans around them cite, fold in and clean up after that work."
+    url: "https://arxiv.org/abs/2604.04059"
+    authors: ["Islem Khemissi", "Moataz Chouchen", "Dong Wang", "Raula Gaikovina Kula"]
+    insts: [tianjin, osaka]
+    self: ["Raula Gaikovina Kula"]
+  - title: "Maintenance Signals in AI-Assisted GitHub Repositories: Evidence from GenAI Adopters"
+    year: 2026
+    venue: "arXiv"
+    kind: preprint
+    themes: [prof, eco]
+    logline: "Repositories that have taken up generative tooling, and whether their maintenance rhythm changes with it."
+    url: "https://arxiv.org/abs/2607.21079"
+    authors: ["Rikuto Tsuchida", "Youmei Fan", "Kazumasa Shimari", "Raula Gaikovina Kula", "Gema Rodríguez-Pérez", "Kenichi Matsumoto"]
+    insts: [osaka, naist]
+    self: ["Raula Gaikovina Kula"]
+  - title: "Not Only for Developers: Exploring Plugin Maintenance for Knowledge-Centric Communities"
+    year: 2026
+    venue: "SANER"
+    kind: conf
+    themes: [eco, soc]
+    logline: "Plugin ecosystems whose users are not programmers, and what maintenance looks like when that is true."
+    url: "https://dblp.org/search?q=Not%20Only%20for%20Developers%3A%20Exploring%20Plugin%20Maintenance%20for%20Knowledge-Centric%20Communities"
+    authors: ["Giovanni Rosa", "David Moreno-Lumbreras", "Raula Gaikovina Kula"]
+    insts: [osaka]
+    self: ["Raula Gaikovina Kula"]
+  - title: "On the Usage of Emojis to Signal Activism in GitHub Repositories"
+    year: 2026
+    venue: "SIML"
+    kind: conf
+    themes: [soc]
+    logline: "A flag in a repository name is a political act compressed into one character."
+    url: "https://dblp.org/search?q=On%20the%20Usage%20of%20Emojis%20to%20Signal%20Activism%20in%20GitHub%20Repositories"
+    authors: ["Amri Zadi Hudaya", "Youmei Fan", "Raula Gaikovina Kula", "Yusuf Sulistyo Nugroho", "Kenichi Matsumoto"]
+    insts: [osaka, naist]
+    self: ["Raula Gaikovina Kula"]
+  - title: "Report on BRIdging the Divides with Globally Engineered Software (BRIDGES) 2026"
+    year: 2026
+    venue: "BRIDGES"
+    kind: conf
+    themes: [soc]
+    logline: "A report from the workshop on building software engineering capacity across the places the field usually skips."
+    url: "https://dblp.org/search?q=Report%20on%20BRIdging%20the%20Divides%20with%20Globally%20Engineered%20Software%20%28BRIDGES%29%202026"
+    authors: ["Raula Gaikovina Kula", "Youmei Fan", "Benson Mirou", "Winifred Kula"]
+    insts: [osaka]
+    self: ["Raula Gaikovina Kula"]
+  - title: "Security by Documentation? Characterizing GitHub SECURITY.md Policy and Their Adoption in Python Libraries"
+    year: 2026
+    venue: "Empirical Software Engineering"
+    kind: journal
+    themes: [sec, soc]
+    logline: "Nearly every repository is nudged to publish a security policy. What the resulting SECURITY.md files actually say."
+    url: "https://dblp.org/search?q=Security%20by%20Documentation%3F%20Characterizing%20GitHub%20SECURITY.md%20Policy%20and%20Their%20Adoption%20in%20Python%20Libraries"
+    authors: ["Morakot Choetkiertikul", "Sushawapak Kancharoendee", "Chanikarn Jongyingyos", "Thanat Phichitphanphong", "Chaiyong Ragkhitwetsagul", "Brittany Reid", "Raula Gaikovina Kula", "Thanwadee Sunetnanta"]
+    insts: [mahidol, osaka]
+    self: ["Raula Gaikovina Kula"]
+  - title: "Self-Admitted GenAI Usage in Open-Source Software"
+    year: 2026
+    venue: "IEEE TSE"
+    kind: journal
+    themes: [prof, soc]
+    logline: "Developers who say out loud, in the code, that a model wrote this part — and what those admissions reveal."
+    url: "https://dblp.org/search?q=Self-Admitted%20GenAI%20Usage%20in%20Open-Source%20Software"
+    authors: ["Tao Xiao", "Youmei Fan", "Fabio Calefato", "Christoph Treude", "Raula Gaikovina Kula", "Hideaki Hata", "Sebastian Baltes"]
+    insts: [kyushu, smu, osaka, shinshu, heidelberg]
+    self: ["Raula Gaikovina Kula"]
+  - title: "SmartPatchLinker: An Open-Source Tool to Linked Changes Detection for Code Review"
+    year: 2026
+    venue: "ESEC/FSE"
+    kind: conf
+    themes: [review]
+    logline: "A tool that spots when two changes under review are really about the same thing."
+    url: "https://arxiv.org/abs/2604.04045"
+    authors: ["Islem Khemissi", "Moataz Chouchen", "Dong Wang", "Raula Gaikovina Kula"]
+    insts: [tianjin, osaka]
+    self: ["Raula Gaikovina Kula"]
+  - title: "When is Generated Code Difficult to Comprehend? Assessing AI Agent Python Code Proficiency in the Wild"
+    year: 2026
+    venue: "MSR"
+    kind: conf
+    themes: [prof]
+    logline: "Agent-written Python in real repositories, measured against what matters downstream: can a person read it?"
+    url: "https://dblp.org/search?q=When%20is%20Generated%20Code%20Difficult%20to%20Comprehend%3F%20Assessing%20AI%20Agent%20Python%20Code%20Proficiency%20in%20the%20Wild"
+    authors: ["Nanthit Temkulkiat", "Chaiyong Ragkhitwetsagul", "Morakot Choetkiertikul", "Ruksit Rojpaisarnkit", "Raula Gaikovina Kula"]
+    insts: [mahidol, osaka]
+    self: ["Raula Gaikovina Kula"]
+  - title: "An Empirical Study of Security-Policy Related Issues in Open Source Projects"
+    year: 2025
+    venue: "PROFES"
+    kind: conf
+    themes: [sec, soc]
+    logline: "What people actually argue about in issues that touch a project's security policy."
+    url: "https://dblp.org/search?q=An%20Empirical%20Study%20of%20Security-Policy%20Related%20Issues%20in%20Open%20Source%20Projects"
+    authors: ["Rintaro Kanaji", "Brittany Reid", "Yutaro Kashiwa", "Raula Gaikovina Kula", "Hajimu Iida"]
+    insts: [osaka]
+    self: ["Raula Gaikovina Kula"]
+  - title: "Automated Code Review Assignments: An Alternative Perspective of Code Ownership on GitHub"
+    year: 2025
+    venue: "arXiv"
+    kind: preprint
+    themes: [review]
+    logline: "Who gets asked to review says something about who is presumed to own the code."
+    url: "https://arxiv.org/abs/2512.05551"
+    authors: ["Jai Lal Lulla", "Raula Gaikovina Kula", "Christoph Treude"]
+    insts: [osaka, smu]
+    self: ["Raula Gaikovina Kula"]
+  - title: "Building Bridges Across Papua New Guinea's Digital Divide in Growing the ICT Industry"
+    year: 2025
+    venue: "SEiGS"
+    kind: conf
+    themes: [soc]
+    logline: "What it takes to grow a software industry where the infrastructure the field assumes is not yet there."
+    url: "https://dblp.org/search?q=Building%20Bridges%20Across%20Papua%20New%20Guinea%27s%20Digital%20Divide%20in%20Growing%20the%20ICT%20Industry"
+    authors: ["Marc Cheong", "Sankwi Abuzo", "Hideaki Hata", "Priscilla Kevin", "Winifred Kula", "Benson Mirou", "Christoph Treude", "Dong Wang", "Raula Gaikovina Kula"]
+    insts: [shinshu, smu, tianjin, osaka]
+    self: ["Raula Gaikovina Kula"]
+  - title: "Developer Reactions to Protestware in Open Source Software: The Cases of color.js and es5.ext"
+    year: 2025
+    venue: "Empirical Software Engineering"
+    kind: journal
+    themes: [soc, sec]
+    logline: "Two packages their own maintainers turned into protests, and the downstream reaction traced in detail."
+    url: "https://dblp.org/search?q=Developer%20Reactions%20to%20Protestware%20in%20Open%20Source%20Software%3A%20The%20Cases%20of%20color.js%20and%20es5.ext"
+    authors: ["Youmei Fan", "Dong Wang", "Supatsara Wattanakriengkrai", "Hathaichanok Damrongsiri", "Christoph Treude", "Hideaki Hata", "Raula Gaikovina Kula"]
+    insts: [tianjin, naist, smu, shinshu, osaka]
+    self: ["Raula Gaikovina Kula"]
+  - title: "Do Developers Depend on Deprecated Library Versions? A Mining Study of Log4j"
+    year: 2025
+    venue: "MSR"
+    kind: conf
+    themes: [sec, eco]
+    logline: "Deprecated is a label, not a lock. Who is still depending on versions that were retired."
+    url: "https://dblp.org/search?q=Do%20Developers%20Depend%20on%20Deprecated%20Library%20Versions%3F%20A%20Mining%20Study%20of%20Log4j"
+    authors: ["Haruhiko Yoshioka", "Sila Lertbanjongngam", "Masayuki Inaba", "Youmei Fan", "Takashi Nakano", "Kazumasa Shimari", "Raula Gaikovina Kula", "Kenichi Matsumoto"]
+    insts: [osaka, naist]
+    self: ["Raula Gaikovina Kula"]
+  - title: "Exploring the SECURITY.md in the Dependency Chain: Preliminary Analysis of the PyPI Ecosystem"
+    year: 2025
+    venue: "ASEW"
+    kind: conf
+    themes: [sec, eco]
+    logline: "A security policy protects one package. Whether it protects anything further down the chain is another question."
+    url: "https://dblp.org/search?q=Exploring%20the%20SECURITY.md%20in%20the%20Dependency%20Chain%3A%20Preliminary%20Analysis%20of%20the%20PyPI%20Ecosystem"
+    authors: ["Chayanid Termphaiboon", "Raula Gaikovina Kula", "Youmei Fan", "Morakot Choetkiertikul", "Chaiyong Ragkhitwetsagul", "Thanwadee Sunetnanta", "Kenichi Matsumoto"]
+    insts: [osaka, mahidol, naist]
+    self: ["Raula Gaikovina Kula"]
+  - title: "Extracting Educational Code Examples from Python Textbooks"
+    year: 2025
+    venue: "SE&M"
+    kind: journal
+    themes: [prof]
+    logline: "Mining textbooks for the small, deliberate examples that were written to teach one idea at a time."
+    url: "https://dblp.org/search?q=Extracting%20Educational%20Code%20Examples%20from%20Python%20Textbooks"
+    authors: ["Hathaichanok Damrongsiri", "Ruksit Rojpaisarnkit", "Indira Febriyanti", "Dong Wang", "Christoph Treude", "Raula Gaikovina Kula"]
+    insts: [tianjin, smu, osaka]
+    self: ["Raula Gaikovina Kula"]
+  - title: "How Natural Language Proficiency Shapes GenAI Code for Software Engineering Tasks"
+    year: 2025
+    venue: "IEEE Software"
+    kind: journal
+    themes: [prof]
+    logline: "The prompt is written in a human language, and how well it is written changes the code that comes back."
+    url: "https://dblp.org/search?q=How%20Natural%20Language%20Proficiency%20Shapes%20GenAI%20Code%20for%20Software%20Engineering%20Tasks"
+    authors: ["Ruksit Rojpaisarnkit", "Youmei Fan", "Kenichi Matsumoto", "Raula Gaikovina Kula"]
+    insts: [naist, osaka]
+    self: ["Raula Gaikovina Kula"]
+  - title: "Human to Document, AI to Code: Three Case Studies of Comparing GenAI for Notebook Competitions"
+    year: 2025
+    venue: "arXiv"
+    kind: preprint
+    themes: [prof]
+    logline: "In competition notebooks the humans write the prose and the model writes the code. Three cases of that split."
+    url: "https://dblp.org/search?q=Human%20to%20Document%2C%20AI%20to%20Code%3A%20Three%20Case%20Studies%20of%20Comparing%20GenAI%20for%20Notebook%20Competitions"
+    authors: ["Tasha Settewong", "Youmei Fan", "Raula Gaikovina Kula", "Kenichi Matsumoto"]
+    insts: [osaka, naist]
+    self: ["Raula Gaikovina Kula"]
+  - title: "Interacting with AI Reasoning Models: Harnessing \"Thoughts\" for AI-Driven Software Engineering"
+    year: 2025
+    venue: "arXiv"
+    kind: preprint
+    themes: [prof]
+    logline: "A vision paper on what changes when the model shows its reasoning and the developer can argue with it."
+    url: "https://arxiv.org/abs/2503.00483"
+    authors: ["Christoph Treude", "Raula Gaikovina Kula"]
+    insts: [smu, osaka]
+    self: ["Raula Gaikovina Kula"]
+  - title: "Mining for Lags in Updating Critical Security Threats: A Case Study of Log4j Library"
+    year: 2025
+    venue: "MSR"
+    kind: conf
+    themes: [sec, eco]
+    logline: "The most urgent patch in recent memory, and the delay between it existing and it arriving."
+    url: "https://dblp.org/search?q=Mining%20for%20Lags%20in%20Updating%20Critical%20Security%20Threats%3A%20A%20Case%20Study%20of%20Log4j%20Library"
+    authors: ["Hidetake Tanaka", "Kazuma Yamasaki", "Momoka Hirose", "Takashi Nakano", "Youmei Fan", "Kazumasa Shimari", "Raula Gaikovina Kula", "Kenichi Matsumoto"]
+    insts: [osaka, naist]
+    self: ["Raula Gaikovina Kula"]
+  - title: "On Categorizing Open Source Software Security Vulnerability Reporting Mechanisms on GitHub"
+    year: 2025
+    venue: "SANER"
+    kind: conf
+    themes: [sec, soc]
+    logline: "Every project invents its own front door for reporting a vulnerability. A taxonomy of the doors."
+    url: "https://dblp.org/search?q=On%20Categorizing%20Open%20Source%20Software%20Security%20Vulnerability%20Reporting%20Mechanisms%20on%20GitHub"
+    authors: ["Sushawapak Kancharoendee", "Thanat Phichitphanphong", "Chanikarn Jongyingyos", "Brittany Reid", "Raula Gaikovina Kula", "Morakot Choetkiertikul", "Chaiyong Ragkhitwetsagul", "Thanwadee Sunetnanta"]
+    insts: [osaka, mahidol]
+    self: ["Raula Gaikovina Kula"]
+  - title: "Open Source at a Crossroads: The Future of Licensing Driven by Monetization"
+    year: 2025
+    venue: "arXiv"
+    kind: preprint
+    themes: [soc, eco]
+    logline: "A vision paper on what happens to open source licensing when the pressure to monetise arrives."
+    url: "https://arxiv.org/abs/2503.02817"
+    authors: ["Raula Gaikovina Kula", "Brittany Reid", "Christoph Treude"]
+    insts: [osaka, smu]
+    self: ["Raula Gaikovina Kula"]
+  - title: "PyGress: Tool for Analyzing the Progression of Code Proficiency in Python OSS Projects"
+    year: 2025
+    venue: "ASE"
+    kind: conf
+    themes: [prof]
+    logline: "A tool that watches a Python project's code grow more advanced, or fail to, over its lifetime."
+    url: "https://dblp.org/search?q=PyGress%3A%20Tool%20for%20Analyzing%20the%20Progression%20of%20Code%20Proficiency%20in%20Python%20OSS%20Projects"
+    authors: ["Rujiphart Charatvaraphan", "Bunradar Chatchaiyadech", "Thitirat Sukijprasert", "Chaiyong Ragkhitwetsagul", "Morakot Choetkiertikul", "Raula Gaikovina Kula", "Thanwadee Sunetnanta", "Kenichi Matsumoto"]
+    insts: [mahidol, osaka, naist]
+    self: ["Raula Gaikovina Kula"]
+  - title: "Reducing Alert Fatigue via AI-Assisted Negotiation: A Case for Dependabot"
+    year: 2025
+    venue: "arXiv"
+    kind: preprint
+    themes: [sec, eco]
+    logline: "Dependabot files the alerts; nobody reads them all. A case for the bot negotiating instead of notifying."
+    url: "https://arxiv.org/abs/2502.06175"
+    authors: ["Raula Gaikovina Kula"]
+    insts: [osaka]
+    self: ["Raula Gaikovina Kula"]
+  - title: "Rethinking Reuse in Dependency Supply Chains: Initial Analysis of NPM Packages at the End of the Chain"
+    year: 2025
+    venue: "arXiv"
+    kind: preprint
+    themes: [eco, sec]
+    logline: "A vision paper on the packages at the very end of the dependency chain, and what reuse should mean there."
+    url: "https://arxiv.org/abs/2503.02804"
+    authors: ["Brittany Reid", "Raula Gaikovina Kula"]
+    insts: [osaka]
+    self: ["Raula Gaikovina Kula"]
+  - title: "Social Media Reactions to Open Source Promotions: AI-Powered GitHub Projects on Hacker News"
+    year: 2025
+    venue: "ICSME"
+    kind: conf
+    themes: [soc, eco]
+    logline: "What happens to an AI-powered project the day it reaches the front page."
+    url: "https://dblp.org/search?q=Social%20Media%20Reactions%20to%20Open%20Source%20Promotions%3A%20AI-Powered%20GitHub%20Projects%20on%20Hacker%20News"
+    authors: ["Prachnachai Meakpaiboonwattana", "Warittha Tarntong", "Thai Mekratanavorakul", "Chaiyong Ragkhitwetsagul", "Pattaraporn Sangaroonsilp", "Raula Gaikovina Kula", "Morakot Choetkiertikul", "Kenichi Matsumoto", "Thanwadee Sunetnanta"]
+    insts: [mahidol, osaka, naist]
+    self: ["Raula Gaikovina Kula"]
+  - title: "The Future of Development Environments with AI Foundation Models: NII Shonan Meeting 222 Report"
+    year: 2025
+    venue: "arXiv"
+    kind: preprint
+    themes: [prof]
+    logline: "A meeting report on what the development environment becomes when a foundation model sits inside it."
+    url: "https://arxiv.org/abs/2511.16092"
+    authors: ["Xing Hu", "Raula Gaikovina Kula", "Christoph Treude"]
+    insts: [osaka, smu]
+    self: ["Raula Gaikovina Kula"]
+  - title: "The Shift from Writing to Pruning Software: A Bonsai-Inspired IDE for Reshaping AI Generated Code"
+    year: 2025
+    venue: "arXiv"
+    kind: preprint
+    themes: [prof, eco]
+    logline: "A vision paper on a craft where the scarce skill becomes deciding what to cut, not what to add."
+    url: "https://arxiv.org/abs/2503.02833"
+    authors: ["Raula Gaikovina Kula", "Christoph Treude"]
+    insts: [osaka, smu]
+    self: ["Raula Gaikovina Kula"]
+  - title: "Uncovering Intention Through LLM-Driven Code Snippet Description Generation"
+    year: 2025
+    venue: "SIML"
+    kind: conf
+    themes: [prof]
+    logline: "A snippet says what it does. Getting a model to say why it was written is the harder ask."
+    url: "https://arxiv.org/abs/2506.15453"
+    authors: ["Yusuf Sulistyo Nugroho", "Farah Danisha Salam", "Brittany Reid", "Raula Gaikovina Kula", "Kazumasa Shimari", "Kenichi Matsumoto"]
+    insts: [osaka, naist]
+    self: ["Raula Gaikovina Kula"]
+  - title: "Using LLMs for Security Advisory Investigations: How Far Are We?"
+    year: 2025
+    venue: "SIML"
+    kind: conf
+    themes: [sec, prof]
+    logline: "Handing security advisories to a language model, and measuring how far short of useful it falls."
+    url: "https://arxiv.org/abs/2506.13161"
+    authors: ["Bayu Fedra Abdullah", "Yusuf Sulistyo Nugroho", "Brittany Reid", "Raula Gaikovina Kula", "Kazumasa Shimari", "Kenichi Matsumoto"]
+    insts: [osaka, naist]
+    self: ["Raula Gaikovina Kula"]
+  - title: "What About Our Bug? A Study on the Responsiveness of NPM Package Maintainers"
+    year: 2025
+    venue: "ESEM"
+    kind: conf
+    themes: [eco, soc]
+    logline: "You filed the issue. Whether anyone answers, and how long you wait, across the npm maintainer population."
+    url: "https://dblp.org/search?q=What%20About%20Our%20Bug%3F%20A%20Study%20on%20the%20Responsiveness%20of%20NPM%20Package%20Maintainers"
+    authors: ["Mohammadreza Saeidi", "Ethan Thoma", "Raula Gaikovina Kula", "Gema Rodríguez-Pérez"]
+    insts: [osaka]
+    self: ["Raula Gaikovina Kula"]
   - title: "A Preliminary Study on Self-Contained Libraries in the NPM Ecosystem"
     year: 2024
     venue: "arXiv"
@@ -106,7 +466,7 @@ papers:
     themes: [prof]
     logline: "If a model can produce working code, what is left for human proficiency to signal — and how should we measure it?"
     url: "https://arxiv.org/abs/2405.01565"
-    authors: ["Gregorio Robles", "Christoph Treude", "Jesus M. Gonzalez-Barahona", "Raula Gaikovina Kula"]
+    authors: ["Gregorio Robles", "Christoph Treude", "Jesús M. González-Barahona", "Raula Gaikovina Kula"]
     insts: [urjc, smu, osaka]
     self: ["Raula Gaikovina Kula"]
   - title: "18 Million Links in Commit Messages: Purpose, Evolution, and Decay"

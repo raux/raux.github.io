@@ -95,3 +95,55 @@ venues:
     abbr: arXiv
     full: Book chapter
     publisher: arxiv
+  "ACM TOSEM":
+    abbr: TOSEM
+    full: Transactions on Software Engineering and Methodology
+    publisher: acm
+  "SANER":
+    abbr: SANER
+    full: Software Analysis, Evolution and Reengineering
+    publisher: ieee
+  "2030 Software Engineering Workshop":
+    abbr: SE 2030
+    full: 2030 Software Engineering Workshop
+    publisher: sigsoft
+  "Workshop":
+    abbr: Workshop
+    full: Venue not yet recorded
+    publisher: none
+  "ESEM":
+    abbr: ESEM
+    full: Empirical Software Engineering and Measurement
+    publisher: acm
+  "ICSME":
+    abbr: ICSME
+    full: Software Maintenance and Evolution
+    publisher: ieee
+  "ASEW":
+    abbr: ASEW
+    full: ASE Workshops
+    publisher: ieee
+  "SIML":
+    abbr: SIML
+    full: Smart Computing, IoT and Machine Learning
+    publisher: ieee
+  "SEiGS":
+    abbr: SEiGS
+    full: Software Engineering in the Global South
+    publisher: acm
+  "PROFES":
+    abbr: PROFES
+    full: Product-Focused Software Process Improvement
+    publisher: springer
+  "IDE Workshop":
+    abbr: IDE
+    full: Integrated Development Environments Workshop
+    publisher: acm
+  "BRIDGES":
+    abbr: BRIDGES
+    full: Bridging the Divides with Globally Engineered Software
+    publisher: sigsoft
+  "SE&M":
+    abbr: SE&M
+    full: Software Engineering and Management — book chapter
+    publisher: springer

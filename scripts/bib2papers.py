@@ -48,8 +48,11 @@ VALID_KINDS = ("journal", "conf", "preprint")
 # ── venue prettifying ────────────────────────────────────────────────────────
 # First regex to match wins. Add your own; order matters.
 VENUE_MAP = [
-    (r"transactions on software engineering",            "IEEE TSE"),
+    # longest-first: "…software engineering and methodology" must beat "…software engineering"
     (r"transactions on software engineering and methodology", "ACM TOSEM"),
+    (r"transactions on software engineering",            "IEEE TSE"),
+    # ESEM (the conference) must beat EMSE (the journal); ASEW must beat ASE
+    (r"empirical software engineering and measurement|\besem\b", "ESEM"),
     (r"empirical software engineering",                  "Empirical Software Engineering"),
     (r"ieee software",                                   "IEEE Software"),
     (r"journal of systems and software",                 "Journal of Systems and Software"),
@@ -58,7 +61,14 @@ VENUE_MAP = [
     (r"applied soft computing",                          "Applied Soft Computing"),
     (r"ieice transactions",                              "IEICE Transactions"),
     (r"journal of information processing",               "Journal of Information Processing"),
+    (r"automated software engineering workshops|\basew\b", "ASEW"),
     (r"automated software engineering|(\b|/)ase(\b|/)",  "ASE"),
+    (r"smart computing, iot and machine learning|\bsiml\b", "SIML"),
+    (r"software engineering in the global south|\bseigs\b", "SEiGS"),
+    (r"product-focused software process improvement|\bprofes\b", "PROFES"),
+    (r"integrated development environments",             "IDE Workshop"),
+    (r"bridging the divides|\bbridges\b",                "BRIDGES"),
+    (r"software engineering and management",             "SE&M"),
     (r"mining software repositories|(\b|/)msr(\b|/)",    "MSR"),
     (r"foundations of software engineering|esec/fse|(\b|/)fse(\b|/)", "ESEC/FSE"),
     (r"international conference on software engineering", "ICSE"),
@@ -190,6 +200,11 @@ def norm(s):
 
 
 # ── field derivation ─────────────────────────────────────────────────────────
+def canon(name, aliases):
+    """Fold a name variant ("Brittany Anne Reid") onto its canonical form."""
+    return aliases.get(norm(name), name)
+
+
 def authors_of(e):
     """BibTeX joins authors with ' and '. Accepts 'First Last' and 'Last, First'."""
     raw = e["fields"].get("author", "")
@@ -392,6 +407,7 @@ def build(log):
             people = yaml.safe_load(fh) or {}
     else:
         log("  bib/people.yaml missing — no authors will show an institution", warn=True)
+    alias_map = {norm(k): v for k, v in ((people.get("aliases") or {}).items())}
     reg = {}
     if os.path.exists(VENUES_IN):
         with open(VENUES_IN, encoding="utf-8") as fh:
@@ -417,7 +433,7 @@ def build(log):
         kind = kind_of(e, venue)
         rec = {
             "title": title, "year": year, "venue": venue, "kind": kind,
-            "authors": authors_of(e),
+            "authors": [canon(a, alias_map) for a in authors_of(e)],
             "themes": themes_of(title, venue, f.get("keywords", "")),
             "logline": "", "url": url_of(e, title),
         }

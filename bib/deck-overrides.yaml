@@ -152,3 +152,113 @@ entries:
   webservice2019:
     themes: [prof]
     logline: "Assembling a mashup from third-party APIs, treated as a multi-objective search problem."
+
+  # ── 2025-2026 ──
+  selfadmittedgenai2026:
+    themes: [prof, soc]
+    logline: "Developers who say out loud, in the code, that a model wrote this part — and what those admissions reveal."
+  bonsaide2026:
+    themes: [prof]
+    logline: "A vision for the IDE as a place where a person and a model shape code together, rather than take turns."
+  codeproficiencytextbooks2026:
+    themes: [prof]
+    logline: "Textbooks teach Python in a deliberate order. That order becomes a scale for how advanced a piece of real code is."
+  securitymd2026:
+    themes: [sec, soc]
+    logline: "Nearly every repository is nudged to publish a security policy. What the resulting SECURITY.md files actually say."
+  policyascode2026:
+    themes: [eco, review]
+    logline: "Policy written as code and checked like code: who adopts it, what they use it for, and who keeps it running."
+  humansintegrate2026:
+    themes: [review, prof]
+    logline: "Pull requests opened by agents, and how the humans around them cite, fold in and clean up after that work."
+  generatedcomprehend2026:
+    themes: [prof]
+    logline: "Agent-written Python in real repositories, measured against what matters downstream: can a person read it?"
+  smartpatchlinker2026:
+    themes: [review]
+    logline: "A tool that spots when two changes under review are really about the same thing."
+  pluginmaintenance2026:
+    themes: [eco, soc]
+    logline: "Plugin ecosystems whose users are not programmers, and what maintenance looks like when that is true."
+  forecastingenv2026:
+    themes: [prof]
+    logline: "Thirty-one researchers on where the developer's working environment goes once generative models live inside it."
+  maintenancesignals2026:
+    themes: [prof, eco]
+    logline: "Repositories that have taken up generative tooling, and whether their maintenance rhythm changes with it."
+  goodfirstissue2026:
+    themes: [soc]
+    logline: "The 'good first issue' label as a promise to newcomers, tracked over time against whether they actually arrive."
+  emojiactivism2026:
+    themes: [soc]
+    logline: "A flag in a repository name is a political act compressed into one character."
+  bridges2026:
+    themes: [soc]
+    logline: "A report from the workshop on building software engineering capacity across the places the field usually skips."
+  protestwarereactions2025:
+    themes: [soc, sec]
+    logline: "Two packages their own maintainers turned into protests, and the downstream reaction traced in detail."
+  nlproficiency2025:
+    themes: [prof]
+    logline: "The prompt is written in a human language, and how well it is written changes the code that comes back."
+  whataboutourbug2025:
+    themes: [eco, soc]
+    logline: "You filed the issue. Whether anyone answers, and how long you wait, across the npm maintainer population."
+  socialmediareactions2025:
+    themes: [soc, eco]
+    logline: "What happens to an AI-powered project the day it reaches the front page."
+  log4jlags2025:
+    themes: [sec, eco]
+    logline: "The most urgent patch in recent memory, and the delay between it existing and it arriving."
+  deprecatedlog4j2025:
+    themes: [sec, eco]
+    logline: "Deprecated is a label, not a lock. Who is still depending on versions that were retired."
+  vulnreporting2025:
+    themes: [sec, soc]
+    logline: "Every project invents its own front door for reporting a vulnerability. A taxonomy of the doors."
+  securitypolicyissues2025:
+    themes: [sec, soc]
+    logline: "What people actually argue about in issues that touch a project's security policy."
+  securitymddepchain2025:
+    themes: [sec, eco]
+    logline: "A security policy protects one package. Whether it protects anything further down the chain is another question."
+  pygress2025:
+    themes: [prof]
+    logline: "A tool that watches a Python project's code grow more advanced, or fail to, over its lifetime."
+  pngdigitaldivide2025:
+    themes: [soc]
+    logline: "What it takes to grow a software industry where the infrastructure the field assumes is not yet there."
+  educationalcodeexamples2025:
+    themes: [prof]
+    logline: "Mining textbooks for the small, deliberate examples that were written to teach one idea at a time."
+  notebookgenai2025:
+    themes: [prof]
+    logline: "In competition notebooks the humans write the prose and the model writes the code. Three cases of that split."
+  codereviewassignments2025:
+    themes: [review]
+    logline: "Who gets asked to review says something about who is presumed to own the code."
+  shonan2025:
+    themes: [prof]
+    logline: "A meeting report on what the development environment becomes when a foundation model sits inside it."
+  llmsecurityadvisory2025:
+    themes: [sec, prof]
+    logline: "Handing security advisories to a language model, and measuring how far short of useful it falls."
+  snippetintention2025:
+    themes: [prof]
+    logline: "A snippet says what it does. Getting a model to say why it was written is the harder ask."
+  rethinkingreuse2025:
+    themes: [eco, sec]
+    logline: "A vision paper on the packages at the very end of the dependency chain, and what reuse should mean there."
+  crossroads2025:
+    themes: [soc, eco]
+    logline: "A vision paper on what happens to open source licensing when the pressure to monetise arrives."
+  writingtopruning2025:
+    themes: [prof, eco]
+    logline: "A vision paper on a craft where the scarce skill becomes deciding what to cut, not what to add."
+  reasoningmodels2025:
+    themes: [prof]
+    logline: "A vision paper on what changes when the model shows its reasoning and the developer can argue with it."
+  dependabotfatigue2025:
+    themes: [sec, eco]
+    logline: "Dependabot files the alerts; nobody reads them all. A case for the bot negotiating instead of notifying."
