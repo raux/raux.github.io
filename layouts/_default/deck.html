@@ -2,6 +2,7 @@
 <html lang="{{ .Site.Language.LanguageCode }}">
 {{ $data := .Site.Data.papers }}
 {{ $venues := .Site.Data.venues }}
+{{ $insts := .Site.Data.institutions }}
 {{ $featured := index (where $data.papers "title" $data.featured) 0 }}
 {{ if not $featured }}{{ $featured = index $data.papers 0 }}{{ end }}
 <head>
@@ -239,8 +240,8 @@
   .plate.big .abbr{font-size:62px}
   .plate.big .abbr.long{font-size:46px}
   .plate.big .full{font-size:11px;max-width:360px;margin-top:11px}
-  .plate.big .pub{height:24px;right:24px;bottom:20px}
-  .plate.big .pub-t{font-size:11px;right:24px;bottom:20px}
+  .plate.big .pub{height:24px;right:24px;bottom:66px}
+  .plate.big .pub-t{font-size:11px;right:24px;bottom:68px}
   .plate.big .rule{width:5px}
 
   .art .yr{
@@ -262,6 +263,53 @@
     display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;
   }
   .venue{font-size:10.5px;color:var(--muted);letter-spacing:.05em;margin-top:auto}
+
+  /* byline — the first author carries the card */
+  .byline{
+    display:flex;align-items:baseline;gap:6px;margin-top:auto;
+    font-size:11.5px;line-height:1.3;min-width:0;
+  }
+  .byline .first{
+    font-weight:700;color:var(--text);
+    white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+  }
+  .byline .first.is-self{color:var(--accent-hi)}
+  .byline .rest{color:var(--dim);font-size:10.5px;white-space:nowrap;flex:none}
+  .byline .mine{
+    flex:none;width:5px;height:5px;border-radius:99px;background:var(--accent);
+    align-self:center;
+  }
+
+  /* institution chips */
+  .orgs{display:flex;flex-wrap:wrap;gap:4px;margin-top:8px}
+  .org{
+    display:inline-flex;align-items:center;gap:4px;
+    font-size:8.5px;letter-spacing:.09em;text-transform:uppercase;font-weight:600;
+    padding:3px 6px;border-radius:3px;color:#D6DEEC;
+    background:var(--c-bg);border:1px solid var(--c-br);
+    white-space:nowrap;
+  }
+  .org img{height:11px;width:auto;filter:brightness(0) invert(1);opacity:.9}
+  .org.more{color:var(--dim);background:none;border-color:var(--line)}
+
+  /* full credits in the detail sheet */
+  .credits{margin:0 0 20px}
+  .credits ol{
+    list-style:none;margin:0 0 14px;padding:0;
+    display:flex;flex-wrap:wrap;gap:6px 10px;font-size:13.5px;
+  }
+  .credits li{color:var(--muted);display:flex;align-items:baseline;gap:7px}
+  .credits li.first{color:var(--text);font-weight:700}
+  .credits li.self{color:var(--accent-hi)}
+  .credits li .role{
+    font-size:8.5px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;
+    color:var(--gold);border:1px solid rgba(240,180,41,.4);border-radius:3px;padding:2px 5px;
+  }
+  .credits li .aff{font-size:10.5px;color:var(--dim);letter-spacing:.02em}
+  .credits .orgs{gap:6px}
+  .credits .org{font-size:9.5px;padding:4px 8px}
+  .credits .org img{height:13px}
+  .no-authors{font-size:12px;color:var(--dim);margin:0 0 18px}
 
   .back{
     font-size:12px;color:var(--muted);text-decoration:none;white-space:nowrap;
@@ -345,6 +393,7 @@
 <body>
 <script id="papers-data" type="application/json" data-featured="{{ $data.featured }}">{{ $data.papers | jsonify | safeJS }}</script>
 <script id="venues-data" type="application/json" data-logos="{{ "/venues/" | relURL }}">{{ $venues | jsonify | safeJS }}</script>
+<script id="insts-data" type="application/json" data-logos="{{ "/institutions/" | relURL }}">{{ $insts | jsonify | safeJS }}</script>
 
 
 <header class="bar">
@@ -359,7 +408,7 @@
   <a class="back" href="{{ "/" | relLangURL }}">&#8592; raux.github.io</a>
   <label class="search">
     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke-width="2.4"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
-    <input id="q" type="search" placeholder="Search titles, venues, topics" autocomplete="off">
+    <input id="q" type="search" placeholder="Search titles, authors, venues" autocomplete="off">
   </label>
 </header>
 
@@ -429,9 +478,63 @@
     }catch(e){ raw = []; }
     return raw.map(function(p){
       return {t:p.title, y:+p.year, v:p.venue, k:p.kind,
-              th:(p.themes||["eco"]), d:(p.logline||""), u:(p.url||"#")};
+              th:(p.themes||["eco"]), d:(p.logline||""), u:(p.url||"#"),
+              authors:(p.authors||[]), insts:(p.insts||[]), self:(p.self||[])};
     });
   })();
+
+  /* ── institutions ─────────────────────────────────────── */
+  var IDATA = document.getElementById("insts-data");
+  var ILOGOS = (IDATA && IDATA.getAttribute("data-logos")) || "/institutions/";
+  var INSTS = (function(){
+    var v = {};
+    try{
+      v = JSON.parse(IDATA.textContent);
+      if(typeof v === "string") v = JSON.parse(v);
+    }catch(e){ v = {}; }
+    return v && typeof v === "object" ? v : {};
+  })();
+
+  /* "Supatsara Wattanakriengkrai" -> "S. Wattanakriengkrai" */
+  function shortName(n){
+    var parts = String(n).trim().split(/\s+/);
+    if(parts.length < 2) return n;
+    return parts[0].charAt(0) + ". " + parts[parts.length - 1];
+  }
+  function isSelf(p, name){ return (p.self || []).indexOf(name) > -1; }
+
+  function orgChip(key, withName){
+    var i = INSTS[key];
+    if(!i) return "";
+    var c = i.color || "#5C6580";
+    var style = '--c-bg:' + rgba(c, .30) + ';--c-br:' + rgba(c, .55);
+    var body = i.logo
+      ? '<img src="' + ILOGOS + encodeURIComponent(i.logo) + '" alt="" loading="lazy">' +
+        (withName ? esc(i.name) : "")
+      : esc(withName ? i.name : (i.short || key));
+    return '<span class="org" style="' + style + '" title="' + esc(i.name || key) + '">' +
+           body + '</span>';
+  }
+  function orgRow(p, withName){
+    var keys = p.insts || [];
+    if(!keys.length) return "";
+    var show = withName ? keys : keys.slice(0, 3);
+    var html = show.map(function(k){ return orgChip(k, withName); }).join("");
+    if(!withName && keys.length > show.length)
+      html += '<span class="org more">+' + (keys.length - show.length) + '</span>';
+    return '<div class="orgs">' + html + '</div>';
+  }
+
+  function byline(p){
+    var a = p.authors || [];
+    if(!a.length) return "";
+    var self = isSelf(p, a[0]);
+    var rest = a.length > 1 ? '<span class="rest">+' + (a.length - 1) + '</span>' : "";
+    var mine = (!self && (p.self || []).length)
+      ? '<span class="mine" title="Raula Gaikovina Kula is a co-author"></span>' : "";
+    return '<div class="byline"><span class="first' + (self ? " is-self" : "") + '">' +
+           esc(shortName(a[0])) + '</span>' + rest + mine + '</div>';
+  }
 
   /* ── venue plates ─────────────────────────────────────── */
   var VDATA = document.getElementById("venues-data");
@@ -568,7 +671,10 @@
     if(state.era==="2023"&&p.y<2023) return false;
     if(state.era==="2019"&&(p.y>2022||p.y<2019)) return false;
     if(state.q){
-      var hay=(p.t+" "+p.v+" "+p.y+" "+p.d+" "+p.th.join(" ")).toLowerCase();
+      var hay=(p.t+" "+p.v+" "+p.y+" "+p.d+" "+p.th.join(" ")+" "+
+              (p.authors||[]).join(" ")+" "+
+              (p.insts||[]).map(function(k){var i=INSTS[k];return i?i.name+" "+i.short:k;}).join(" ")
+             ).toLowerCase();
       var terms=state.q.toLowerCase().split(/\s+/).filter(Boolean),i;
       for(i=0;i<terms.length;i++) if(hay.indexOf(terms[i])<0) return false;
     }
@@ -585,9 +691,8 @@
         '<span class="kind k-'+p.k+'">'+KIND[p.k]+'</span>'+
         '<span class="yr mono">'+p.y+'</span>'+
       '</div>'+
-      '<div class="card-body"><h3></h3><div class="venue mono"></div></div>';
+      '<div class="card-body"><h3></h3>' + byline(p) + orgRow(p, false) + '</div>';
     b.querySelector("h3").textContent=p.t;
-    b.querySelector(".venue").textContent=p.v;
     b.addEventListener("click",function(){openSheet(p);});
     return b;
   }
@@ -663,6 +768,7 @@
         '<h2 id="sheetTitle"></h2>'+
         '<div class="meta"><span class="badge mono"></span><span class="dot"></span>'+
           '<span class="mono yr"></span><span class="dot"></span><span class="kd"></span></div>'+
+        '<div class="credits"></div>'+
         '<p class="abs"></p>'+
         '<div class="tags"></div>'+
         '<div class="hero-cta" style="margin-bottom:26px"><a class="btn btn-primary" target="_blank" rel="noopener">Open paper</a></div>'+
@@ -673,6 +779,17 @@
     sheet.querySelector(".badge").textContent=p.v;
     sheet.querySelector(".meta .yr").textContent=p.y;
     sheet.querySelector(".kd").textContent=KIND[p.k];
+    var cr = sheet.querySelector(".credits");
+    if((p.authors||[]).length){
+      var items = p.authors.map(function(n, i){
+        var cls = (i === 0 ? " first" : "") + (isSelf(p, n) ? " self" : "");
+        return '<li class="' + cls.trim() + '">' + esc(n) +
+               (i === 0 ? '<span class="role">First author</span>' : "") + '</li>';
+      }).join("");
+      cr.innerHTML = '<ol>' + items + '</ol>' + orgRow(p, true);
+    } else {
+      cr.innerHTML = '<p class="no-authors">No author list in the bibliography for this entry.</p>';
+    }
     sheet.querySelector(".abs").textContent=p.d;
     var a=sheet.querySelector("a.btn");
     a.href=p.u;

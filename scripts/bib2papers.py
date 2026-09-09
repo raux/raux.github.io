@@ -5,10 +5,12 @@ bib2papers.py — build data/papers.yaml (the research deck catalogue) from BibT
     bib/*.bib                  facts: title, year, venue, doi/url          (machine-owned)
     bib/deck-overrides.yaml    themes, loglines, featured, hidden entries  (human-owned)
     bib/venues.yaml            card art: abbreviation, publisher, brand hue (human-owned)
+    bib/people.yaml            where each author is now, and their institution (human-owned)
                  |
                  v
     data/papers.yaml           generated; do not hand-edit
     data/venues.yaml           generated; the plate for each venue in use
+    data/institutions.yaml     generated; the institutions in use
 
 The sources live in bib/ rather than data/ on purpose: Hugo parses everything in
 data/ as site data and aborts the build on a file it cannot unmarshal, which a
@@ -37,6 +39,8 @@ OUT = os.path.join(DATA, "papers.yaml")
 OVERRIDES = os.path.join(SRC, "deck-overrides.yaml")
 VENUES_IN = os.path.join(SRC, "venues.yaml")
 VENUES_OUT = os.path.join(DATA, "venues.yaml")
+PEOPLE_IN = os.path.join(SRC, "people.yaml")
+INST_OUT = os.path.join(DATA, "institutions.yaml")
 
 VALID_THEMES = ("eco", "sec", "prof", "soc", "review")
 VALID_KINDS = ("journal", "conf", "preprint")
@@ -186,6 +190,23 @@ def norm(s):
 
 
 # ── field derivation ─────────────────────────────────────────────────────────
+def authors_of(e):
+    """BibTeX joins authors with ' and '. Accepts 'First Last' and 'Last, First'."""
+    raw = e["fields"].get("author", "")
+    if not raw:
+        return []
+    out = []
+    for part in re.split(r"\s+and\s+", raw):
+        n = part.strip().strip(",")
+        if not n or n.lower() in ("others", "et al", "et al."):
+            continue
+        if "," in n:                       # "Kula, Raula Gaikovina"
+            last, _, first = n.partition(",")
+            n = (first.strip() + " " + last.strip()).strip()
+        out.append(re.sub(r"\s+", " ", n))
+    return out
+
+
 def venue_of(e):
     f = e["fields"]
     raw = f.get("journal") or f.get("booktitle") or f.get("publisher") or f.get("school") or ""
@@ -232,6 +253,50 @@ def themes_of(title, venue, keywords):
 # ── YAML emitting (we own the shape, so no dumper needed) ────────────────────
 def q(s):
     return '"' + str(s).replace("\\", "\\\\").replace('"', '\\"') + '"'
+
+
+def emit_institutions(papers, people, log):
+    """Resolve each author to an institution; emit only those actually in use."""
+    insts = (people.get("institutions") or {})
+    who = (people.get("people") or {})
+    seen, missing = {}, []
+    for p in papers:
+        keys = []
+        for name in p["authors"]:
+            rec = who.get(name)
+            if rec is None:
+                if name not in missing:
+                    missing.append(name)
+                continue
+            k = (rec or {}).get("institution") or ""
+            if k and k not in keys:
+                keys.append(k)
+            if k and k not in seen:
+                if k in insts:
+                    seen[k] = insts[k]
+                else:
+                    log("  institution %r is not in bib/people.yaml" % k, warn=True)
+        p["insts"] = keys
+        p["self"] = [n for n in p["authors"] if (who.get(n) or {}).get("self")]
+    if missing:
+        log("  %d author(s) not in bib/people.yaml, so they add no institution: %s"
+            % (len(missing), ", ".join(missing[:6]) + (" …" if len(missing) > 6 else "")),
+            warn=True)
+    blank = [n for n, r in who.items() if not (r or {}).get("institution")]
+    if blank:
+        log("  %d author(s) in bib/people.yaml still have no institution" % len(blank),
+            warn=True)
+
+    L = ["# GENERATED FILE — do not edit by hand.",
+         "# Edit bib/people.yaml instead, then run scripts/bib2papers.py", ""]
+    for k in sorted(seen):
+        v = seen[k] or {}
+        L += ["%s:" % q(k),
+              "  name: " + q(v.get("name") or k),
+              "  short: " + q(v.get("short") or k),
+              "  color: " + q(v.get("color") or "#5C6580"),
+              "  logo: " + q(v.get("logo") or "")]
+    return "\n".join(L) + "\n"
 
 
 def emit_venues(papers, reg, log):
@@ -285,6 +350,12 @@ def emit(papers, featured, sources):
             "    logline: " + q(p["logline"]),
             "    url: " + q(p["url"]),
         ]
+        if p.get("authors"):
+            L.append("    authors: [" + ", ".join(q(a) for a in p["authors"]) + "]")
+        if p.get("insts"):
+            L.append("    insts: [" + ", ".join(p["insts"]) + "]")
+        if p.get("self"):
+            L.append("    self: [" + ", ".join(q(a) for a in p["self"]) + "]")
     return "\n".join(L) + "\n"
 
 
@@ -315,6 +386,12 @@ def build(log):
     if os.path.exists(OVERRIDES):
         with open(OVERRIDES, encoding="utf-8") as fh:
             ov = yaml.safe_load(fh) or {}
+    people = {}
+    if os.path.exists(PEOPLE_IN):
+        with open(PEOPLE_IN, encoding="utf-8") as fh:
+            people = yaml.safe_load(fh) or {}
+    else:
+        log("  bib/people.yaml missing — no authors will show an institution", warn=True)
     reg = {}
     if os.path.exists(VENUES_IN):
         with open(VENUES_IN, encoding="utf-8") as fh:
@@ -340,6 +417,7 @@ def build(log):
         kind = kind_of(e, venue)
         rec = {
             "title": title, "year": year, "venue": venue, "kind": kind,
+            "authors": authors_of(e),
             "themes": themes_of(title, venue, f.get("keywords", "")),
             "logline": "", "url": url_of(e, title),
         }
@@ -353,6 +431,8 @@ def build(log):
             for field in ("venue", "logline", "url", "kind"):
                 if o.get(field):
                     rec[field] = o[field]
+            if o.get("authors"):
+                rec["authors"] = list(o["authors"])
             if o.get("themes"):
                 rec["themes"] = [t for t in o["themes"] if t in VALID_THEMES] or rec["themes"]
             if o.get("year"):
@@ -369,6 +449,8 @@ def build(log):
             keep, drop = (rec, prev) if (prev["kind"] == "preprint" and rec["kind"] != "preprint") else (prev, rec)
             if not keep["logline"] and drop["logline"]:
                 keep["logline"] = drop["logline"]
+            if not keep["authors"] and drop["authors"]:
+                keep["authors"] = drop["authors"]
             papers[papers.index(prev)] = keep
             seen[nt] = keep
             log("  merged preprint + published: " + title[:56])
@@ -400,8 +482,12 @@ def build(log):
             log("  featured %r not found — using the newest paper" % featured, warn=True)
         featured = papers[0]["title"] if papers else ""
 
+    inst_text = emit_institutions(papers, people, log)   # sets p["insts"] as a side effect
+    for p in papers:
+        if not p["authors"]:
+            log("  no authors in the .bib for: " + p["title"][:56], warn=True)
     return (emit(papers, featured, [os.path.basename(b) for b in bibs]),
-            emit_venues(papers, reg, log), papers)
+            emit_venues(papers, reg, log), inst_text, papers)
 
 
 def main():
@@ -419,7 +505,7 @@ def main():
         elif not a.quiet:
             print(msg)
 
-    text, venues_text, papers = build(log)
+    text, venues_text, inst_text, papers = build(log)
 
     def strip_stamp(s):
         return "\n".join(l for l in s.splitlines() if not l.startswith("# Last generated"))
@@ -428,7 +514,8 @@ def main():
         return open(path, encoding="utf-8").read() if os.path.exists(path) else ""
 
     changed = (strip_stamp(read(OUT)) != strip_stamp(text)
-               or strip_stamp(read(VENUES_OUT)) != strip_stamp(venues_text))
+               or strip_stamp(read(VENUES_OUT)) != strip_stamp(venues_text)
+               or strip_stamp(read(INST_OUT)) != strip_stamp(inst_text))
 
     if a.check:
         print("catalogue is %s" % ("STALE — run scripts/bib2papers.py" if changed else "up to date"))
@@ -439,7 +526,9 @@ def main():
             fh.write(text)
         with open(VENUES_OUT, "w", encoding="utf-8") as fh:
             fh.write(venues_text)
-        print("wrote data/papers.yaml + data/venues.yaml — %d papers, %d warning(s)"
+        with open(INST_OUT, "w", encoding="utf-8") as fh:
+            fh.write(inst_text)
+        print("wrote data/papers.yaml + venues.yaml + institutions.yaml — %d papers, %d warning(s)"
               % (len(papers), len(warnings)))
     else:
         print("catalogue already up to date — %d papers" % len(papers))

@@ -7,8 +7,10 @@ The deck at [`/papers/`](https://raux.github.io/papers/) is generated. Three fil
 | `bib/*.bib` | your reference manager | title, year, venue, DOI/URL |
 | `bib/deck-overrides.yaml` | you, by hand | themes, loglines, featured paper, hidden entries |
 | `bib/venues.yaml` | you, by hand | card art: abbreviation, publisher, brand colour per venue |
+| `bib/people.yaml` | you, by hand | where each author is now, and their institution |
 | `data/papers.yaml` | **generated — do not edit** | what the site reads |
 | `data/venues.yaml` | **generated — do not edit** | the plate for each venue in use |
+| `data/institutions.yaml` | **generated — do not edit** | the institutions in use |
 
 ## Adding papers
 
@@ -71,6 +73,35 @@ upgrade a wordmark to a real mark, drop the file into `static/venues/` and add `
 each publisher's brand guidelines. A venue missing from the registry gets a plain slate plate
 and a warning naming it.
 
+## Authors and institutions
+
+Author names and their order come from the `.bib`, so keeping the export current keeps the
+bylines current. A card shows the **first author** in bold, a `+N` for the rest, and a small
+accent dot when you are a co-author but not first; when you *are* first author your name is in
+the accent colour. The detail sheet lists everyone, tags the first author, and shows every
+distinct institution on the paper.
+
+BibTeX has no affiliation field, so `bib/people.yaml` carries that:
+
+```yaml
+institutions:
+  osaka: { name: "The University of Osaka", short: "Osaka", color: "#0F3B7C" }
+
+people:
+  "Raula Gaikovina Kula":
+    institution: osaka
+    self: true          # marks you — shown in the accent colour throughout
+  "Some Coauthor": { institution: "" }    # no chip, and the run warns
+```
+
+These are **current** affiliations, reused across all of a person's papers — so a 2019 paper
+shows where its authors are today, not where the work was done. People move, so this file needs
+an occasional pass; every author still missing an institution is counted in the run summary.
+
+To use a real university mark instead of a wordmark chip, add `logo: "osaka.svg"` to the
+institution and drop the file in `static/institutions/` — mind each university's brand
+guidelines, they are stricter than most publishers'.
+
 ## What the generator does on its own
 
 - **Venue abbreviation** — `IEEE Transactions on Software Engineering` → `IEEE TSE`, via
@@ -83,6 +114,9 @@ and a warning naming it.
   A guess, and meant to be overridden.
 - **Preprint merging** — when an arXiv entry and its published version share a title, only
   the published one is kept, inheriting the preprint's logline if it has none of its own.
+- **Authors** — parsed from the `.bib` `author` field, accepting both `First Last` and
+  `Last, First`, in printed order. A curated `authors:` list in the overrides wins if a parse
+  goes wrong.
 - **Sorting** — newest first, then alphabetical.
 
 ## Warnings worth acting on
