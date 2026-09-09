@@ -4,9 +4,11 @@ bib2papers.py — build data/papers.yaml (the research deck catalogue) from BibT
 
     bib/*.bib                  facts: title, year, venue, doi/url          (machine-owned)
     bib/deck-overrides.yaml    themes, loglines, featured, hidden entries  (human-owned)
+    bib/venues.yaml            card art: abbreviation, publisher, brand hue (human-owned)
                  |
                  v
     data/papers.yaml           generated; do not hand-edit
+    data/venues.yaml           generated; the plate for each venue in use
 
 The sources live in bib/ rather than data/ on purpose: Hugo parses everything in
 data/ as site data and aborts the build on a file it cannot unmarshal, which a
@@ -33,6 +35,8 @@ SRC = os.path.join(ROOT, "bib")            # inputs
 DATA = os.path.join(ROOT, "data")          # Hugo's data dir — generated output only
 OUT = os.path.join(DATA, "papers.yaml")
 OVERRIDES = os.path.join(SRC, "deck-overrides.yaml")
+VENUES_IN = os.path.join(SRC, "venues.yaml")
+VENUES_OUT = os.path.join(DATA, "venues.yaml")
 
 VALID_THEMES = ("eco", "sec", "prof", "soc", "review")
 VALID_KINDS = ("journal", "conf", "preprint")
@@ -230,6 +234,33 @@ def q(s):
     return '"' + str(s).replace("\\", "\\\\").replace('"', '\\"') + '"'
 
 
+def emit_venues(papers, reg, log):
+    """One plate per venue actually in use, with its publisher resolved."""
+    pubs = (reg.get("publishers") or {})
+    known = (reg.get("venues") or {})
+    fallback = pubs.get("none", {"name": "", "color": "#5C6580"})
+    L = [
+        "# GENERATED FILE — do not edit by hand.",
+        "# Edit bib/venues.yaml instead, then run scripts/bib2papers.py",
+        "",
+    ]
+    for venue in sorted({p["venue"] for p in papers}):
+        v = known.get(venue)
+        if not v:
+            log("  venue not in bib/venues.yaml, using a plain plate: " + venue, warn=True)
+            v = {"abbr": venue, "full": "", "publisher": "none"}
+        pub = pubs.get(v.get("publisher", "none"), fallback)
+        L += [
+            "%s:" % q(venue),
+            "  abbr: " + q(v.get("abbr") or venue),
+            "  full: " + q(v.get("full") or ""),
+            "  pub: " + q(pub.get("name") or ""),
+            "  color: " + q(pub.get("color") or fallback["color"]),
+            "  logo: " + q(pub.get("logo") or ""),
+        ]
+    return "\n".join(L) + "\n"
+
+
 def emit(papers, featured, sources):
     L = [
         "# GENERATED FILE — do not edit by hand.",
@@ -284,6 +315,12 @@ def build(log):
     if os.path.exists(OVERRIDES):
         with open(OVERRIDES, encoding="utf-8") as fh:
             ov = yaml.safe_load(fh) or {}
+    reg = {}
+    if os.path.exists(VENUES_IN):
+        with open(VENUES_IN, encoding="utf-8") as fh:
+            reg = yaml.safe_load(fh) or {}
+    else:
+        log("  bib/venues.yaml missing — every card gets a plain plate", warn=True)
     by_key = {norm(k): v or {} for k, v in (ov.get("entries") or {}).items()}
     used = set()
 
@@ -363,7 +400,8 @@ def build(log):
             log("  featured %r not found — using the newest paper" % featured, warn=True)
         featured = papers[0]["title"] if papers else ""
 
-    return emit(papers, featured, [os.path.basename(b) for b in bibs]), papers
+    return (emit(papers, featured, [os.path.basename(b) for b in bibs]),
+            emit_venues(papers, reg, log), papers)
 
 
 def main():
@@ -381,25 +419,30 @@ def main():
         elif not a.quiet:
             print(msg)
 
-    text, papers = build(log)
-
-    old = open(OUT, encoding="utf-8").read() if os.path.exists(OUT) else ""
+    text, venues_text, papers = build(log)
 
     def strip_stamp(s):
         return "\n".join(l for l in s.splitlines() if not l.startswith("# Last generated"))
 
-    changed = strip_stamp(old) != strip_stamp(text)
+    def read(path):
+        return open(path, encoding="utf-8").read() if os.path.exists(path) else ""
+
+    changed = (strip_stamp(read(OUT)) != strip_stamp(text)
+               or strip_stamp(read(VENUES_OUT)) != strip_stamp(venues_text))
 
     if a.check:
-        print("papers.yaml is %s" % ("STALE — run scripts/bib2papers.py" if changed else "up to date"))
+        print("catalogue is %s" % ("STALE — run scripts/bib2papers.py" if changed else "up to date"))
         return 1 if changed else 0
 
     if changed:
         with open(OUT, "w", encoding="utf-8") as fh:
             fh.write(text)
-        print("wrote data/papers.yaml — %d papers, %d warning(s)" % (len(papers), len(warnings)))
+        with open(VENUES_OUT, "w", encoding="utf-8") as fh:
+            fh.write(venues_text)
+        print("wrote data/papers.yaml + data/venues.yaml — %d papers, %d warning(s)"
+              % (len(papers), len(warnings)))
     else:
-        print("data/papers.yaml already up to date — %d papers" % len(papers))
+        print("catalogue already up to date — %d papers" % len(papers))
     return 0
 
 

@@ -1,2 +1,7 @@
+# Generated site output
 public
 resources
+
+# Local Pi agent state and generated working artifacts
+.pi/
+artifacts/

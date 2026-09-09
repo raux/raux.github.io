@@ -1,0 +1,97 @@
+# Venue registry for the deck's card art.
+#
+# Every venue string that appears in the .bib gets a plate: the abbreviation set
+# large, the full name beneath it, and the publisher's mark or wordmark, over a
+# wash of the publisher's brand colour.
+#
+#   abbr       what fills the card — keep it short, it is set at 38px
+#   full       the expansion, small caps beneath
+#   publisher  a key from the `publishers:` block below
+#
+# A venue with no entry here falls back to the venue string as its abbreviation
+# and a neutral slate plate. The generator warns so you can add it.
+
+publishers:
+  ieee:     { name: "IEEE",     color: "#00629B", logo: "ieee-cs.webp" }
+  acm:      { name: "ACM",      color: "#1B7AC4", logo: "acm.webp" }
+  sigsoft:  { name: "ACM SIGSOFT", color: "#0F6E8C", logo: "sigsoft.webp" }
+  springer: { name: "Springer", color: "#B33A2B" }
+  elsevier: { name: "Elsevier", color: "#D8642B" }
+  ieice:    { name: "IEICE",    color: "#1F6F5C" }
+  ipsj:     { name: "IPSJ",     color: "#2E5E9E" }
+  arxiv:    { name: "arXiv",    color: "#A6272C" }
+  none:     { name: "",         color: "#5C6580" }
+
+venues:
+  "IEEE TSE":
+    abbr: TSE
+    full: Transactions on Software Engineering
+    publisher: ieee
+  "IEEE Software":
+    abbr: IEEE SW
+    full: IEEE Software
+    publisher: ieee
+  "Empirical Software Engineering":
+    abbr: EMSE
+    full: Empirical Software Engineering
+    publisher: springer
+  "Journal of Systems and Software":
+    abbr: JSS
+    full: Journal of Systems and Software
+    publisher: elsevier
+  "Information and Software Technology":
+    abbr: IST
+    full: Information and Software Technology
+    publisher: elsevier
+  "Science of Computer Programming":
+    abbr: SCP
+    full: Science of Computer Programming
+    publisher: elsevier
+  "Applied Soft Computing":
+    abbr: ASOC
+    full: Applied Soft Computing
+    publisher: elsevier
+  "IEICE Transactions":
+    abbr: IEICE
+    full: Transactions on Information and Systems
+    publisher: ieice
+  "Journal of Information Processing":
+    abbr: JIP
+    full: Journal of Information Processing
+    publisher: ipsj
+  "ASE":
+    abbr: ASE
+    full: Automated Software Engineering
+    publisher: ieee
+  "MSR":
+    abbr: MSR
+    full: Mining Software Repositories
+    publisher: ieee
+  "ESEC/FSE":
+    abbr: FSE
+    full: Foundations of Software Engineering
+    publisher: sigsoft
+  "ICSE":
+    abbr: ICSE
+    full: International Conference on Software Engineering
+    publisher: ieee
+  "ICSE Companion":
+    abbr: ICSE
+    full: ICSE Companion
+    publisher: ieee
+  "PROMISE":
+    abbr: PROMISE
+    full: Predictive Models in Software Engineering
+    publisher: sigsoft
+  "PROMISE — Keynote":
+    abbr: PROMISE
+    full: Keynote
+    publisher: sigsoft
+  "arXiv":
+    abbr: arXiv
+    full: Preprint
+    publisher: arxiv
+  "arXiv — book chapter":
+    abbr: arXiv
+    full: Book chapter
+    publisher: arxiv
