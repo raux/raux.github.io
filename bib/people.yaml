@@ -12,6 +12,12 @@
 #
 # `self: true` marks the site owner, shown in the accent colour throughout.
 
+# Name variants seen across sources, folded onto one canonical person.
+# Key is the variant as it appears in the .bib; value is the name to display.
+aliases:
+  "Brittany Anne Reid": "Brittany Reid"
+  "Jesus M. Gonzalez-Barahona": "Jesús M. González-Barahona"
+
 institutions:
   osaka:       { name: "The University of Osaka", short: "Osaka", color: "#0F3B7C" }
   naist:       { name: "Nara Institute of Science and Technology", short: "NAIST", color: "#1F5FA8" }
@@ -143,3 +149,76 @@ people:
   "Wachirayana Wanprasert": { institution: "" }   # 1 paper
   "Winifred Kula Amini": { institution: "" }   # 1 paper
   "Yuki Ueda": { institution: "" }   # 1 paper
+
+  # ── added with the 2025-2026 records; affiliation not yet set ──
+  "Kazumasa Shimari": { institution: "" }   # 7 papers
+  "Benson Mirou": { institution: "" }   # 2 papers
+  "Chanikarn Jongyingyos": { institution: "" }   # 2 papers
+  "David Moreno-Lumbreras": { institution: "" }   # 2 papers
+  "Fabio Calefato": { institution: "" }   # 2 papers
+  "Gema Rodríguez-Pérez": { institution: "" }   # 2 papers
+  "Hidetake Tanaka": { institution: "" }   # 2 papers
+  "Islem Khemissi": { institution: "" }   # 2 papers
+  "Sushawapak Kancharoendee": { institution: "" }   # 2 papers
+  "Takashi Nakano": { institution: "" }   # 2 papers
+  "Thanat Phichitphanphong": { institution: "" }   # 2 papers
+  "Winifred Kula": { institution: "" }   # 2 papers
+  "Xing Hu": { institution: "" }   # 2 papers
+  "Yutaro Kashiwa": { institution: "" }   # 2 papers
+  "Akond Rahman": { institution: "" }   # 1 paper
+  "Amri Zadi Hudaya": { institution: "" }   # 1 paper
+  "Annie Vella": { institution: "" }   # 1 paper
+  "Bayu Fedra Abdullah": { institution: "" }   # 1 paper
+  "Bunradar Chatchaiyadech": { institution: "" }   # 1 paper
+  "Chayanid Termphaiboon": { institution: "" }   # 1 paper
+  "Coen De Roover": { institution: "" }   # 1 paper
+  "Daniel M. German": { institution: "" }   # 1 paper
+  "Denys Poshyvanyk": { institution: "" }   # 1 paper
+  "Earl T. Barr": { institution: "" }   # 1 paper
+  "Ethan Thoma": { institution: "" }   # 1 paper
+  "Farah Danisha Salam": { institution: "" }   # 1 paper
+  "Giovanni Rosa": { institution: "" }   # 1 paper
+  "Hajimu Iida": { institution: "" }   # 1 paper
+  "Haruhiko Yoshioka": { institution: "" }   # 1 paper
+  "Hirotatsu Hoshikawa": { institution: "" }   # 1 paper
+  "Indira Febriyanti": { institution: "" }   # 1 paper
+  "Jai Lal Lulla": { institution: "" }   # 1 paper
+  "Jin L.C. Guo": { institution: "" }   # 1 paper
+  "João F. Ferreira": { institution: "" }   # 1 paper
+  "Junjie Chen": { institution: "" }   # 1 paper
+  "Kazuma Yamasaki": { institution: "" }   # 1 paper
+  "Kelly Blincoe": { institution: "" }   # 1 paper
+  "Laurie Williams": { institution: "" }   # 1 paper
+  "Mahmoud Alfadel": { institution: "" }   # 1 paper
+  "Mairieli Wessel": { institution: "" }   # 1 paper
+  "Marco Gerosa": { institution: "" }   # 1 paper
+  "Markus Wagner": { institution: "" }   # 1 paper
+  "Masayuki Inaba": { institution: "" }   # 1 paper
+  "Michele Lanza": { institution: "" }   # 1 paper
+  "Mohammadreza Saeidi": { institution: "" }   # 1 paper
+  "Momoka Hirose": { institution: "" }   # 1 paper
+  "Nanthit Temkulkiat": { institution: "" }   # 1 paper
+  "Nicole Novielli": { institution: "" }   # 1 paper
+  "Olivier Nourry": { institution: "" }   # 1 paper
+  "Pattaraporn Sangaroonsilp": { institution: "" }   # 1 paper
+  "Prachnachai Meakpaiboonwattana": { institution: "" }   # 1 paper
+  "Priscilla Kevin": { institution: "" }   # 1 paper
+  "Reid Holmes": { institution: "" }   # 1 paper
+  "Rikuto Tsuchida": { institution: "" }   # 1 paper
+  "Rintaro Kanaji": { institution: "" }   # 1 paper
+  "Robert Hirschfeld": { institution: "" }   # 1 paper
+  "Ruben Opdebeeck": { institution: "" }   # 1 paper
+  "Rujiphart Charatvaraphan": { institution: "" }   # 1 paper
+  "Sankwi Abuzo": { institution: "" }   # 1 paper
+  "Shinobu Saito": { institution: "" }   # 1 paper
+  "Shinpei Hayashi": { institution: "" }   # 1 paper
+  "Sila Lertbanjongngam": { institution: "" }   # 1 paper
+  "Takashi Kobayashi": { institution: "" }   # 1 paper
+  "Tasha Settewong": { institution: "" }   # 1 paper
+  "Thai Mekratanavorakul": { institution: "" }   # 1 paper
+  "Thitirat Sukijprasert": { institution: "" }   # 1 paper
+  "Warittha Tarntong": { institution: "" }   # 1 paper
+  "Xin Xia": { institution: "" }   # 1 paper
+  "Yintong Huo": { institution: "" }   # 1 paper
+  "Zhongxin Liu": { institution: "" }   # 1 paper
+  "Jesús M. González-Barahona": { institution: "" }   # 2 papers

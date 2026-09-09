@@ -1,9 +1,21 @@
 # GENERATED FILE — do not edit by hand.
 # Edit bib/venues.yaml instead, then run scripts/bib2papers.py
 
+"ACM TOSEM":
+  abbr: "TOSEM"
+  full: "Transactions on Software Engineering and Methodology"
+  pub: "ACM"
+  color: "#1B7AC4"
+  logo: "acm.webp"
 "ASE":
   abbr: "ASE"
   full: "Automated Software Engineering"
+  pub: "IEEE"
+  color: "#00629B"
+  logo: "ieee-cs.webp"
+"ASEW":
+  abbr: "ASEW"
+  full: "ASE Workshops"
   pub: "IEEE"
   color: "#00629B"
   logo: "ieee-cs.webp"
@@ -13,12 +25,24 @@
   pub: "Elsevier"
   color: "#D8642B"
   logo: ""
+"BRIDGES":
+  abbr: "BRIDGES"
+  full: "Bridging the Divides with Globally Engineered Software"
+  pub: "ACM SIGSOFT"
+  color: "#0F6E8C"
+  logo: "sigsoft.webp"
 "ESEC/FSE":
   abbr: "FSE"
   full: "Foundations of Software Engineering"
   pub: "ACM SIGSOFT"
   color: "#0F6E8C"
   logo: "sigsoft.webp"
+"ESEM":
+  abbr: "ESEM"
+  full: "Empirical Software Engineering and Measurement"
+  pub: "ACM"
+  color: "#1B7AC4"
+  logo: "acm.webp"
 "Empirical Software Engineering":
   abbr: "EMSE"
   full: "Empirical Software Engineering"
@@ -31,6 +55,18 @@
   pub: "IEEE"
   color: "#00629B"
   logo: "ieee-cs.webp"
+"ICSME":
+  abbr: "ICSME"
+  full: "Software Maintenance and Evolution"
+  pub: "IEEE"
+  color: "#00629B"
+  logo: "ieee-cs.webp"
+"IDE Workshop":
+  abbr: "IDE"
+  full: "Integrated Development Environments Workshop"
+  pub: "ACM"
+  color: "#1B7AC4"
+  logo: "acm.webp"
 "IEEE Software":
   abbr: "IEEE SW"
   full: "IEEE Software"
@@ -73,12 +109,42 @@
   pub: "IEEE"
   color: "#00629B"
   logo: "ieee-cs.webp"
+"PROFES":
+  abbr: "PROFES"
+  full: "Product-Focused Software Process Improvement"
+  pub: "Springer"
+  color: "#B33A2B"
+  logo: ""
 "PROMISE — Keynote":
   abbr: "PROMISE"
   full: "Keynote"
   pub: "ACM SIGSOFT"
   color: "#0F6E8C"
   logo: "sigsoft.webp"
+"SANER":
+  abbr: "SANER"
+  full: "Software Analysis, Evolution and Reengineering"
+  pub: "IEEE"
+  color: "#00629B"
+  logo: "ieee-cs.webp"
+"SE&M":
+  abbr: "SE&M"
+  full: "Software Engineering and Management — book chapter"
+  pub: "Springer"
+  color: "#B33A2B"
+  logo: ""
+"SEiGS":
+  abbr: "SEiGS"
+  full: "Software Engineering in the Global South"
+  pub: "ACM"
+  color: "#1B7AC4"
+  logo: "acm.webp"
+"SIML":
+  abbr: "SIML"
+  full: "Smart Computing, IoT and Machine Learning"
+  pub: "IEEE"
+  color: "#00629B"
+  logo: "ieee-cs.webp"
 "Science of Computer Programming":
   abbr: "SCP"
   full: "Science of Computer Programming"
