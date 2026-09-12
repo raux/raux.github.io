@@ -17,12 +17,21 @@ Usage
     python scripts/deadlines.py refresh                   re-read every one
     python scripts/deadlines.py refresh msr-2027          re-read just one
     python scripts/deadlines.py list                      what is tracked
-    python scripts/deadlines.py remove msr-2027
+    python scripts/deadlines.py remove msr-2027           stop tracking one
+    python scripts/deadlines.py tracks icse-2027          what tracks it carries
+    python scripts/deadlines.py hide icse-2027 "Shadow PC"        drop a track
+    python scripts/deadlines.py hide icse-2027 --matching Workshop
+    python scripts/deadlines.py show icse-2027 "Shadow PC"        put it back
     python scripts/deadlines.py build                     write data/deadlines.yaml
     python scripts/deadlines.py build --check             exit 1 if stale (CI)
 
-`add` and `refresh` need network; `build` does not. Fetches are spaced out and
-send a descriptive User-Agent.
+Hiding is a filter, not a deletion: the rows stay in bib/conferences.yaml and
+survive `refresh`, so `show` brings them back without re-fetching. That matters
+because researchr aggregates co-located events — ICSE carries its workshops, so
+most of its 238 rows are not ICSE deadlines at all.
+
+`add` and `refresh` need network; everything else does not. Fetches are spaced
+out and send a descriptive User-Agent.
 """
 
 import argparse
@@ -169,7 +178,7 @@ def q(s):
     return '"' + str(s).replace("\\", "\\\\").replace('"', '\\"') + '"'
 
 
-def write_source(data):
+def write_source(data, hidden=None):
     L = ["# Conferences whose deadlines the board tracks.",
          "#",
          "# Add one with:  python scripts/deadlines.py add <slug-or-url>",
@@ -179,7 +188,18 @@ def write_source(data):
          "# dates page — edit `venue:` or `name:` freely, but expect the rest to be",
          "# replaced on the next refresh.",
          "",
-         "conferences:"]
+         ""]
+    hidden = {k: sorted(v) for k, v in (hidden or {}).items() if v}
+    if hidden:
+        L += ["# Tracks kept off the board. The rows below are untouched, so `show`",
+              "# restores them without re-fetching.",
+              "hidden:"]
+        for slug in sorted(hidden):
+            L.append("  %s:" % slug)
+            for t in hidden[slug]:
+                L.append("    - " + q(t))
+        L.append("")
+    L.append("conferences:")
     for slug in sorted(data, key=lambda s: (data[s].get("name") or s).lower()):
         c = data[slug]
         L += ["  %s:" % slug,
@@ -233,10 +253,14 @@ def pull(slug, venues, log):
     }
 
 
-def emit(data, today):
+def emit(data, today, hidden=None):
+    hidden = hidden or {}
     rows = []
     for slug, c in data.items():
+        drop = set(hidden.get(slug) or [])
         for d in c.get("deadlines") or []:
+            if d["track"] in drop:
+                continue
             rows.append((d["date"], slug, c, d))
     rows.sort(key=lambda r: (r[0], r[1]))
     L = ["# GENERATED FILE — do not edit by hand.",
@@ -266,8 +290,13 @@ def emit(data, today):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("command", choices=["add", "refresh", "list", "remove", "build"])
-    ap.add_argument("target", nargs="*", help="conference slug or researchr URL")
+    ap.add_argument("command",
+                    choices=["add", "refresh", "list", "remove", "build",
+                             "tracks", "hide", "show"])
+    ap.add_argument("target", nargs="*",
+                    help="conference slug or researchr URL; for hide/show, the track names")
+    ap.add_argument("--matching", metavar="TEXT",
+                    help="hide/show: every track whose name contains this (case-insensitive)")
     ap.add_argument("--check", action="store_true", help="build only: exit 1 if stale")
     ap.add_argument("--quiet", action="store_true")
     a = ap.parse_args()
@@ -281,7 +310,9 @@ def main():
         if not a.quiet:
             print(m)
 
-    data = (load(SRC, {"conferences": {}}).get("conferences") or {})
+    raw = load(SRC, {"conferences": {}})
+    data = raw.get("conferences") or {}
+    hidden = {k: list(v or []) for k, v in (raw.get("hidden") or {}).items()}
     venues = (load(VENUES, {}).get("venues") or {})
     today = dt.date.today()
 
@@ -292,9 +323,65 @@ def main():
         for slug in sorted(data):
             c = data[slug]
             future = [d for d in c.get("deadlines") or [] if d["date"] >= today.isoformat()]
-            print("%-18s %-34s %3d dates, %2d still ahead   fetched %s"
-                  % (slug, (c.get("name") or "")[:34], len(c.get("deadlines") or []),
-                     len(future), c.get("fetched") or "never"))
+            off = set(hidden.get(slug) or [])
+            note = "  (%d track%s hidden)" % (len(off), "" if len(off) == 1 else "s") if off else ""
+            print("%-18s %-22s %3d dates, %3d still ahead   fetched %s%s"
+                  % (slug, (c.get("name") or "")[:22], len(c.get("deadlines") or []),
+                     len(future), c.get("fetched") or "never", note))
+        return 0
+
+    def track_counts(slug):
+        c = data.get(slug)
+        if c is None:
+            sys.exit("error: not tracked: %s  (try: deadlines.py list)" % slug)
+        counts = {}
+        for d in c.get("deadlines") or []:
+            counts[d["track"]] = counts.get(d["track"], 0) + 1
+        return counts
+
+    if a.command == "tracks":
+        if not a.target:
+            sys.exit("error: which conference?  e.g. deadlines.py tracks icse-2027")
+        for t in a.target:
+            slug = slugify(t.rstrip("/").split("/")[-1])
+            counts = track_counts(slug)
+            off = set(hidden.get(slug) or [])
+            print("%s — %d tracks, %d hidden" % (slug, len(counts), len(off & set(counts))))
+            for name in sorted(counts, key=lambda n: (-counts[n], n.lower())):
+                print("  %-5s %3d  %s" % ("hidden" if name in off else "", counts[name], name))
+        return 0
+
+    if a.command in ("hide", "show"):
+        if not a.target:
+            sys.exit("error: which conference?  e.g. deadlines.py hide icse-2027 \"Shadow PC\"")
+        slug = slugify(a.target[0].rstrip("/").split("/")[-1])
+        counts = track_counts(slug)
+        names = list(a.target[1:])
+        if a.matching:
+            names += [n for n in counts if a.matching.lower() in n.lower()]
+        if not names:
+            sys.exit("error: name a track, or use --matching TEXT")
+        cur = set(hidden.get(slug) or [])
+        touched = 0
+        for n in names:
+            exact = n if n in counts else next(
+                (k for k in counts if k.lower() == n.lower()), None)
+            if exact is None:
+                print("  no such track in %s: %s" % (slug, n))
+                continue
+            if a.command == "hide" and exact not in cur:
+                cur.add(exact); touched += 1
+                print("  hidden   %3d  %s" % (counts[exact], exact))
+            elif a.command == "show" and exact in cur:
+                cur.discard(exact); touched += 1
+                print("  restored %3d  %s" % (counts[exact], exact))
+        hidden[slug] = sorted(cur)
+        write_source(data, hidden)
+        kept = sum(v for k, v in counts.items() if k not in cur)
+        print("%s: %d of %d dates now on the board (%d track%s hidden)"
+              % (slug, kept, sum(counts.values()), len(cur), "" if len(cur) == 1 else "s"))
+        if touched:
+            print("now run: python scripts/deadlines.py build")
         return 0
 
     if a.command == "remove":
@@ -305,8 +392,9 @@ def main():
             if data.pop(slug, None) is None:
                 print("not tracked: " + slug)
             else:
+                hidden.pop(slug, None)
                 print("removed " + slug)
-        write_source(data)
+        write_source(data, hidden)
         return 0
 
     if a.command in ("add", "refresh"):
@@ -326,14 +414,14 @@ def main():
                 data[slug] = pull(slug, venues, log)
             except Exception as e:
                 print("  %-16s FAILED: %s" % (slug, str(e)[:70]), file=sys.stderr)
-        write_source(data)
+        write_source(data, hidden)
         log("\nwrote bib/conferences.yaml — now run: python scripts/deadlines.py build")
         return 0
 
     # build
     if not data:
         sys.exit("error: nothing tracked — add a conference first")
-    text = emit(data, today)
+    text = emit(data, today, hidden)
 
     def strip_stamp(s):
         return "\n".join(l for l in s.splitlines() if not l.startswith("# Last generated"))
@@ -347,13 +435,20 @@ def main():
     if changed:
         with open(OUT, "w", encoding="utf-8") as fh:
             fh.write(text)
-    total = sum(len(c.get("deadlines") or []) for c in data.values())
-    ahead = sum(1 for c in data.values() for d in (c.get("deadlines") or [])
-                if d["date"] >= today.isoformat())
-    print("%s data/deadlines.yaml — %d dates across %d conferences, %d still ahead"
-          % ("wrote" if changed else "unchanged", total, len(data), ahead))
-    stale = [s for s, c in data.items()
-             if not any(d["date"] >= today.isoformat() for d in (c.get("deadlines") or []))]
+    iso = today.isoformat()
+
+    def kept(slug, c):
+        drop = set(hidden.get(slug) or [])
+        return [d for d in (c.get("deadlines") or []) if d["track"] not in drop]
+
+    on_board = {s: kept(s, c) for s, c in data.items()}
+    total = sum(len(v) for v in on_board.values())
+    ahead = sum(1 for v in on_board.values() for d in v if d["date"] >= iso)
+    suppressed = sum(len(c.get("deadlines") or []) for c in data.values()) - total
+    print("%s data/deadlines.yaml — %d dates across %d conferences, %d still ahead%s"
+          % ("wrote" if changed else "unchanged", total, len(data), ahead,
+             "  (%d hidden)" % suppressed if suppressed else ""))
+    stale = [s for s, v in on_board.items() if not any(d["date"] >= iso for d in v)]
     if stale:
         print("note: every date has passed for %s — refresh or remove" % ", ".join(sorted(stale)))
     return 0

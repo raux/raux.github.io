@@ -7,6 +7,25 @@
 # dates page — edit `venue:` or `name:` freely, but expect the rest to be
 # replaced on the next refresh.
 
+
+# Tracks kept off the board. The rows below are untouched, so `show`
+# restores them without re-fetching.
+hidden:
+  icse-2027:
+    - "CHASE Doctoral and Early Career Symposium (DECS)"
+    - "CHASE Research Track"
+    - "ICSE 2027 Competitions"
+    - "MSR Data and Tool Showcase Track"
+    - "MSR Industry Track"
+    - "MSR Junior PC"
+    - "MSR Mining Challenge"
+    - "MSR Registered Reports"
+    - "MSR Technical Papers"
+    - "Shadow PC"
+    - "Student Mentoring Workshop (SMeW)"
+    - "Student Volunteers"
+    - "Workshops"
+
 conferences:
   ase-2026:
     name: "ASE 2026"

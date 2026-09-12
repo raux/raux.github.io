@@ -1,7 +1,7 @@
 # GENERATED FILE — do not edit by hand.
 # Regenerate with:  python scripts/deadlines.py build
 #
-# Last generated 2026-09-12 · 446 dates across 7 conferences
+# Last generated 2026-09-12 · 376 dates across 7 conferences
 
 conferences:
   ase-2026:
@@ -174,13 +174,6 @@ dates:
     kind: notification
     tz: "AoE (UTC-12h)"
     url: "https://conf.researchr.org/track/eseiw-2026/eseiw-2026-esem---registered-reports-track"
-  - date: "2026-06-12"
-    conf: icse-2027
-    track: "Workshops"
-    label: "Workshop Proposal Submissions Deadline"
-    kind: submission
-    tz: "AoE (UTC-12h)"
-    url: "https://conf.researchr.org/track/icse-2027/icse-2027-workshops"
   - date: "2026-06-18"
     conf: ase-2026
     track: "Research Papers"
@@ -202,13 +195,6 @@ dates:
     kind: submission
     tz: "AoE (UTC-12h)"
     url: "https://conf.researchr.org/track/icse-2027/icse-2027-research-track"
-  - date: "2026-06-26"
-    conf: icse-2027
-    track: "ICSE 2027 Competitions"
-    label: "Submission of competition proposals"
-    kind: submission
-    tz: "AoE (UTC-12h)"
-    url: "https://conf.researchr.org/track/icse-2027/icse-2027-competition-track"
   - date: "2026-06-30"
     conf: ase-2026
     track: "Doctoral Symposium"
@@ -265,13 +251,6 @@ dates:
     kind: submission
     tz: "AoE (UTC-12h)"
     url: "https://conf.researchr.org/track/ase-2026/ase-2026-journal-first"
-  - date: "2026-07-07"
-    conf: icse-2027
-    track: "Shadow PC"
-    label: "Shadow PC applications due"
-    kind: submission
-    tz: "AoE (UTC-12h)"
-    url: "https://conf.researchr.org/track/icse-2027/icse-2027-shadow-research-track-program-committee"
   - date: "2026-07-08"
     conf: eseiw-2026
     track: "ESEM - Software Engineering in Practice Track"
@@ -300,13 +279,6 @@ dates:
     kind: notification
     tz: "AoE (UTC-12h)"
     url: "https://conf.researchr.org/track/eseiw-2026/eseiw-2026-emerging-results-and-vision-track"
-  - date: "2026-07-10"
-    conf: icse-2027
-    track: "ICSE 2027 Competitions"
-    label: "Notification of accepted proposals"
-    kind: submission
-    tz: "AoE (UTC-12h)"
-    url: "https://conf.researchr.org/track/icse-2027/icse-2027-competition-track"
   - date: "2026-07-11"
     conf: ase-2026
     track: "CPAchecker"
@@ -328,13 +300,6 @@ dates:
     kind: notification
     tz: "AoE (UTC-12h)"
     url: "https://conf.researchr.org/track/eseiw-2026/eseiw-2026-esem---technical-track"
-  - date: "2026-07-14"
-    conf: icse-2027
-    track: "Shadow PC"
-    label: "HotCRP account setup and ethics training due"
-    kind: submission
-    tz: "AoE (UTC-12h)"
-    url: "https://conf.researchr.org/track/icse-2027/icse-2027-shadow-research-track-program-committee"
   - date: "2026-07-15"
     conf: ase-2026
     track: "Artifact Evaluation"
@@ -426,13 +391,6 @@ dates:
     kind: notification
     tz: "AoE (UTC-12h)"
     url: "https://conf.researchr.org/track/icse-2027/icse-2027-industry-challenge"
-  - date: "2026-07-24"
-    conf: icse-2027
-    track: "Workshops"
-    label: "Workshop Proposal Acceptance Notification"
-    kind: notification
-    tz: "AoE (UTC-12h)"
-    url: "https://conf.researchr.org/track/icse-2027/icse-2027-workshops"
   - date: "2026-07-25"
     conf: ase-2026
     track: "AgenticDev"
@@ -539,13 +497,6 @@ dates:
     tz: "AoE (UTC-12h)"
     url: "https://conf.researchr.org/track/eseiw-2026/eseiw-2026-idoese---doctoral-symposium"
   - date: "2026-08-03"
-    conf: icse-2027
-    track: "MSR Mining Challenge"
-    label: "Deadline for Proposals"
-    kind: submission
-    tz: "AoE (UTC-12h)"
-    url: "https://conf.researchr.org/track/icse-2027/msr-2027-mining-challenge"
-  - date: "2026-08-03"
     conf: msr-2027
     track: "Mining Challenge"
     label: "Deadline for Proposals"
@@ -581,13 +532,6 @@ dates:
     tz: "AoE (UTC-12h)"
     url: "https://conf.researchr.org/track/ase-2026/ase-2026-artifact-evaluation"
   - date: "2026-08-07"
-    conf: icse-2027
-    track: "MSR Mining Challenge"
-    label: "Notification"
-    kind: notification
-    tz: "AoE (UTC-12h)"
-    url: "https://conf.researchr.org/track/icse-2027/msr-2027-mining-challenge"
-  - date: "2026-08-07"
     conf: msr-2027
     track: "Mining Challenge"
     label: "Notification"
@@ -615,13 +559,6 @@ dates:
     kind: notification
     tz: "AoE (UTC-12h)"
     url: "https://conf.researchr.org/track/ase-2026/ase-2026-artifact-evaluation"
-  - date: "2026-08-12"
-    conf: icse-2027
-    track: "ICSE 2027 Competitions"
-    label: "Submission of additional proposals"
-    kind: submission
-    tz: "AoE (UTC-12h)"
-    url: "https://conf.researchr.org/track/icse-2027/icse-2027-competition-track"
   - date: "2026-08-13"
     conf: ase-2026
     track: "ATIQSER"
@@ -643,13 +580,6 @@ dates:
     kind: submission
     tz: "AoE (UTC-12h)"
     url: "https://conf.researchr.org/home/ase-2026/swgeno-2026"
-  - date: "2026-08-14"
-    conf: icse-2027
-    track: "Shadow PC"
-    label: "Write and revise 2 reviews"
-    kind: other
-    tz: "AoE (UTC-12h)"
-    url: "https://conf.researchr.org/track/icse-2027/icse-2027-shadow-research-track-program-committee"
   - date: "2026-08-17"
     conf: eseiw-2026
     track: "ESEM - Technical Track"
@@ -657,13 +587,6 @@ dates:
     kind: camera
     tz: "AoE (UTC-12h)"
     url: "https://conf.researchr.org/track/eseiw-2026/eseiw-2026-esem---technical-track"
-  - date: "2026-08-18"
-    conf: icse-2027
-    track: "Shadow PC"
-    label: "Synchronous Zoom meetings to discuss initial reviews (7, 8, 16, or 17 UTC)"
-    kind: other
-    tz: "AoE (UTC-12h)"
-    url: "https://conf.researchr.org/track/icse-2027/icse-2027-shadow-research-track-program-committee"
   - date: "2026-08-19"
     conf: ase-2026
     track: "Artifact Evaluation"
@@ -671,13 +594,6 @@ dates:
     kind: notification
     tz: "AoE (UTC-12h)"
     url: "https://conf.researchr.org/track/ase-2026/ase-2026-artifact-evaluation"
-  - date: "2026-08-19"
-    conf: icse-2027
-    track: "ICSE 2027 Competitions"
-    label: "Notification of accepted additional proposals"
-    kind: submission
-    tz: "AoE (UTC-12h)"
-    url: "https://conf.researchr.org/track/icse-2027/icse-2027-competition-track"
   - date: "2026-08-20"
     conf: ase-2026
     track: "LiveWrite"
@@ -776,20 +692,6 @@ dates:
     kind: notification
     tz: "AoE (UTC-12h)"
     url: "https://conf.researchr.org/home/ase-2026/rase-2026"
-  - date: "2026-08-25"
-    conf: icse-2027
-    track: "Shadow PC"
-    label: "Paper bidding"
-    kind: other
-    tz: "AoE (UTC-12h)"
-    url: "https://conf.researchr.org/track/icse-2027/icse-2027-shadow-research-track-program-committee"
-  - date: "2026-08-27"
-    conf: icse-2027
-    track: "Workshops"
-    label: "Workshop Websites Online"
-    kind: other
-    tz: "AoE (UTC-12h)"
-    url: "https://conf.researchr.org/track/icse-2027/icse-2027-workshops"
   - date: "2026-08-28"
     conf: ase-2026
     track: "AISM"
@@ -882,13 +784,6 @@ dates:
     tz: "AoE (UTC-12h)"
     url: "https://conf.researchr.org/track/ase-2026/ase-2026-artifact-evaluation"
   - date: "2026-09-15"
-    conf: icse-2027
-    track: "MSR Junior PC"
-    label: "Junior PC Self-Nomination Deadline"
-    kind: other
-    tz: "AoE (UTC-12h)"
-    url: "https://conf.researchr.org/track/icse-2027/msr-2027-junior-pc"
-  - date: "2026-09-15"
     conf: msr-2027
     track: "Junior PC"
     label: "Junior PC Self-Nomination Deadline"
@@ -923,13 +818,6 @@ dates:
     kind: submission
     tz: "AoE (UTC-12h)"
     url: "https://conf.researchr.org/track/saner-2027/saner-2027-papers"
-  - date: "2026-09-29"
-    conf: icse-2027
-    track: "Shadow PC"
-    label: "Peer review for other reviews on the same paper due"
-    kind: submission
-    tz: "AoE (UTC-12h)"
-    url: "https://conf.researchr.org/track/icse-2027/icse-2027-shadow-research-track-program-committee"
   - date: "2026-10-02"
     conf: fse-2027
     track: "Research Papers"
@@ -938,26 +826,12 @@ dates:
     tz: "AoE (UTC-12h)"
     url: "https://conf.researchr.org/track/fse-2027/fse-2027-papers"
   - date: "2026-10-05"
-    conf: icse-2027
-    track: "MSR Junior PC"
-    label: "Announcement of Junior PC Members"
-    kind: other
-    tz: "AoE (UTC-12h)"
-    url: "https://conf.researchr.org/track/icse-2027/msr-2027-junior-pc"
-  - date: "2026-10-05"
     conf: msr-2027
     track: "Junior PC"
     label: "Announcement of Junior PC Members"
     kind: other
     tz: "AoE (UTC-12h)"
     url: "https://2027.msrconf.org/track/msr-2027-junior-pc"
-  - date: "2026-10-06"
-    conf: icse-2027
-    track: "Shadow PC"
-    label: "Synchronous Zoom meetings to prepare for discussions (8 or 17 UTC)"
-    kind: other
-    tz: "AoE (UTC-12h)"
-    url: "https://conf.researchr.org/track/icse-2027/icse-2027-shadow-research-track-program-committee"
   - date: "2026-10-07"
     conf: eseiw-2026
     track: "Hackathon MRPUA"
@@ -1035,27 +909,6 @@ dates:
     kind: submission
     tz: "AoE (UTC-12h)"
     url: "https://conf.researchr.org/track/chase-2027/chase-2027-papers"
-  - date: "2026-10-16"
-    conf: icse-2027
-    track: "CHASE Research Track"
-    label: "Abstract submission"
-    kind: submission
-    tz: "AoE (UTC-12h)"
-    url: "https://conf.researchr.org/track/icse-2027/chase-2027-papers"
-  - date: "2026-10-16"
-    conf: icse-2027
-    track: "Student Mentoring Workshop (SMeW)"
-    label: "Round 1 (applicants who will need a visa to visit Ireland)"
-    kind: other
-    tz: "AoE (UTC-12h)"
-    url: "https://conf.researchr.org/track/icse-2027/icse-2027-student-mentoring-workshop--smew-"
-  - date: "2026-10-18"
-    conf: icse-2027
-    track: "MSR Junior PC"
-    label: "MSR Review Tutorial"
-    kind: other
-    tz: "AoE (UTC-12h)"
-    url: "https://conf.researchr.org/track/icse-2027/msr-2027-junior-pc"
   - date: "2026-10-18"
     conf: msr-2027
     track: "Junior PC"
@@ -1121,25 +974,11 @@ dates:
     url: "https://conf.researchr.org/track/saner-2027/saner-2027-workshops-tutorials-track"
   - date: "2026-10-20"
     conf: icse-2027
-    track: "MSR Technical Papers"
-    label: "Abstract"
-    kind: submission
-    tz: "AoE (UTC-12h)"
-    url: "https://conf.researchr.org/track/icse-2027/msr-2027-technical-papers"
-  - date: "2026-10-20"
-    conf: icse-2027
     track: "Research Track"
     label: "Notification"
     kind: notification
     tz: "AoE (UTC-12h)"
     url: "https://conf.researchr.org/track/icse-2027/icse-2027-research-track"
-  - date: "2026-10-20"
-    conf: icse-2027
-    track: "Shadow PC"
-    label: "Discussions"
-    kind: other
-    tz: "AoE (UTC-12h)"
-    url: "https://conf.researchr.org/track/icse-2027/icse-2027-shadow-research-track-program-committee"
   - date: "2026-10-20"
     conf: msr-2027
     track: "Technical Papers"
@@ -1154,20 +993,6 @@ dates:
     kind: submission
     tz: "AoE (UTC-12h)"
     url: "https://conf.researchr.org/track/chase-2027/chase-2027-papers"
-  - date: "2026-10-23"
-    conf: icse-2027
-    track: "CHASE Research Track"
-    label: "Paper Submission"
-    kind: submission
-    tz: "AoE (UTC-12h)"
-    url: "https://conf.researchr.org/track/icse-2027/chase-2027-papers"
-  - date: "2026-10-23"
-    conf: icse-2027
-    track: "MSR Technical Papers"
-    label: "Paper Deadline"
-    kind: submission
-    tz: "AoE (UTC-12h)"
-    url: "https://conf.researchr.org/track/icse-2027/msr-2027-technical-papers"
   - date: "2026-10-23"
     conf: icse-2027
     track: "New Ideas and Emerging Results (NIER)"
@@ -1287,13 +1112,6 @@ dates:
     kind: submission
     tz: "AoE (UTC-12h)"
     url: "https://conf.researchr.org/track/icse-2027/TechDebt-2027-main"
-  - date: "2026-10-27"
-    conf: icse-2027
-    track: "Shadow PC"
-    label: "Release of Shadow PC reviews to the authors"
-    kind: other
-    tz: "AoE (UTC-12h)"
-    url: "https://conf.researchr.org/track/icse-2027/icse-2027-shadow-research-track-program-committee"
   - date: "2026-10-29"
     conf: icse-2027
     track: "ICPC Research Track"
@@ -1358,13 +1176,6 @@ dates:
     tz: "AoE (UTC-12h)"
     url: "https://conf.researchr.org/track/icse-2027/icpc-2027-research-track"
   - date: "2026-11-05"
-    conf: icse-2027
-    track: "MSR Data and Tool Showcase Track"
-    label: "Abstract Deadline"
-    kind: submission
-    tz: "AoE (UTC-12h)"
-    url: "https://conf.researchr.org/track/icse-2027/msr-2027-data-and-tool-showcase-track"
-  - date: "2026-11-05"
     conf: msr-2027
     track: "Data and Tool Showcase Track"
     label: "Abstract Deadline"
@@ -1427,13 +1238,6 @@ dates:
     kind: submission
     tz: "AoE (UTC-12h)"
     url: "https://conf.researchr.org/track/icse-2027/Formalise-2027-papers"
-  - date: "2026-11-10"
-    conf: icse-2027
-    track: "MSR Data and Tool Showcase Track"
-    label: "Paper Deadline"
-    kind: submission
-    tz: "AoE (UTC-12h)"
-    url: "https://conf.researchr.org/track/icse-2027/msr-2027-data-and-tool-showcase-track"
   - date: "2026-11-10"
     conf: msr-2027
     track: "Data and Tool Showcase Track"
@@ -1520,13 +1324,6 @@ dates:
     url: "https://conf.researchr.org/home/icse-2027/mo2re-2027"
   - date: "2026-11-13"
     conf: icse-2027
-    track: "MSR Registered Reports"
-    label: "Initial Report Abstract"
-    kind: submission
-    tz: "AoE (UTC-12h)"
-    url: "https://conf.researchr.org/track/icse-2027/msr-2027-registered-reports"
-  - date: "2026-11-13"
-    conf: icse-2027
     track: "NLBSE"
     label: "Paper submission"
     kind: submission
@@ -1589,13 +1386,6 @@ dates:
     tz: "AoE (UTC-12h)"
     url: "https://conf.researchr.org/home/icse-2027/uise-2027"
   - date: "2026-11-13"
-    conf: icse-2027
-    track: "Workshops"
-    label: "Workshop Papers Submission Deadline for all Workshops"
-    kind: submission
-    tz: "AoE (UTC-12h)"
-    url: "https://conf.researchr.org/track/icse-2027/icse-2027-workshops"
-  - date: "2026-11-13"
     conf: msr-2027
     track: "Registered Reports"
     label: "Initial Report Abstract"
@@ -1637,13 +1427,6 @@ dates:
     kind: submission
     tz: "AoE (UTC-12h)"
     url: "https://conf.researchr.org/track/icse-2027/icpc-2027-tool-demonstration"
-  - date: "2026-11-20"
-    conf: icse-2027
-    track: "MSR Registered Reports"
-    label: "Initial Report Submission"
-    kind: submission
-    tz: "AoE (UTC-12h)"
-    url: "https://conf.researchr.org/track/icse-2027/msr-2027-registered-reports"
   - date: "2026-11-20"
     conf: msr-2027
     track: "Registered Reports"
@@ -1709,25 +1492,11 @@ dates:
     url: "https://conf.researchr.org/track/saner-2027/saner-2027-papers"
   - date: "2026-12-03"
     conf: icse-2027
-    track: "MSR Technical Papers"
-    label: "Early Reject Notification"
-    kind: notification
-    tz: "AoE (UTC-12h)"
-    url: "https://conf.researchr.org/track/icse-2027/msr-2027-technical-papers"
-  - date: "2026-12-03"
-    conf: icse-2027
     track: "SEAMS Research Track"
     label: "Notifications"
     kind: notification
     tz: "AoE (UTC-12h)"
     url: "https://conf.researchr.org/track/icse-2027/seams-2027-research-track"
-  - date: "2026-12-03"
-    conf: icse-2027
-    track: "Student Mentoring Workshop (SMeW)"
-    label: "Round 2 (applicants who do not need a visa to visit Ireland)"
-    kind: other
-    tz: "AoE (UTC-12h)"
-    url: "https://conf.researchr.org/track/icse-2027/icse-2027-student-mentoring-workshop--smew-"
   - date: "2026-12-03"
     conf: msr-2027
     track: "Technical Papers"
@@ -1735,13 +1504,6 @@ dates:
     kind: notification
     tz: "AoE (UTC-12h)"
     url: "https://2027.msrconf.org/track/msr-2027-technical-papers"
-  - date: "2026-12-04"
-    conf: icse-2027
-    track: "ICSE 2027 Competitions"
-    label: "Submission of solution papers and organiser reports"
-    kind: submission
-    tz: "AoE (UTC-12h)"
-    url: "https://conf.researchr.org/track/icse-2027/icse-2027-competition-track"
   - date: "2026-12-05"
     conf: icse-2027
     track: "Doctoral Symposium"
@@ -1749,13 +1511,6 @@ dates:
     kind: notification
     tz: "AoE (UTC-12h)"
     url: "https://conf.researchr.org/track/icse-2027/icse-2027-doctoral-symposium"
-  - date: "2026-12-08"
-    conf: icse-2027
-    track: "MSR Technical Papers"
-    label: "Author Response Period"
-    kind: notification
-    tz: "AoE (UTC-12h)"
-    url: "https://conf.researchr.org/track/icse-2027/msr-2027-technical-papers"
   - date: "2026-12-08"
     conf: msr-2027
     track: "Technical Papers"
@@ -1960,13 +1715,6 @@ dates:
     tz: "AoE (UTC-12h)"
     url: "https://conf.researchr.org/home/icse-2027/uise-2027"
   - date: "2026-12-11"
-    conf: icse-2027
-    track: "Workshops"
-    label: "Workshop Papers Acceptance Notification"
-    kind: notification
-    tz: "AoE (UTC-12h)"
-    url: "https://conf.researchr.org/track/icse-2027/icse-2027-workshops"
-  - date: "2026-12-11"
     conf: saner-2027
     track: "Registered Report (RR) Track"
     label: "Authors submit a rebuttal letter and their revised report in a single PDF"
@@ -1980,20 +1728,6 @@ dates:
     kind: notification
     tz: "AoE (UTC-12h)"
     url: "https://conf.researchr.org/home/icse-2027/mo2re-2027"
-  - date: "2026-12-15"
-    conf: icse-2027
-    track: "Workshops"
-    label: "Workshop Papers info to ICSE Proceedings Chairs"
-    kind: camera
-    tz: "AoE (UTC-12h)"
-    url: "https://conf.researchr.org/track/icse-2027/icse-2027-workshops"
-  - date: "2026-12-16"
-    conf: icse-2027
-    track: "ICSE 2027 Competitions"
-    label: "Reviewer response for solution papers and organiser reports"
-    kind: notification
-    tz: "AoE (UTC-12h)"
-    url: "https://conf.researchr.org/track/icse-2027/icse-2027-competition-track"
   - date: "2026-12-18"
     conf: chase-2027
     track: "Research Track"
@@ -2008,13 +1742,6 @@ dates:
     kind: notification
     tz: "AoE (UTC-12h)"
     url: "https://conf.researchr.org/track/fse-2027/fse-2027-papers"
-  - date: "2026-12-18"
-    conf: icse-2027
-    track: "CHASE Research Track"
-    label: "Notification"
-    kind: notification
-    tz: "AoE (UTC-12h)"
-    url: "https://conf.researchr.org/track/icse-2027/chase-2027-papers"
   - date: "2026-12-18"
     conf: icse-2027
     track: "HUGS"
@@ -2036,20 +1763,6 @@ dates:
     kind: notification
     tz: "AoE (UTC-12h)"
     url: "https://conf.researchr.org/track/icse-2027/icse-2027-industry-challenge"
-  - date: "2026-12-18"
-    conf: icse-2027
-    track: "MSR Industry Track"
-    label: "Paper Deadline"
-    kind: submission
-    tz: "AoE (UTC-12h)"
-    url: "https://conf.researchr.org/track/icse-2027/msr-2027-industry-track"
-  - date: "2026-12-18"
-    conf: icse-2027
-    track: "MSR Mining Challenge"
-    label: "Abstract Deadline"
-    kind: submission
-    tz: "AoE (UTC-12h)"
-    url: "https://conf.researchr.org/track/icse-2027/msr-2027-mining-challenge"
   - date: "2026-12-18"
     conf: icse-2027
     track: "New Ideas and Emerging Results (NIER)"
@@ -2107,20 +1820,6 @@ dates:
     tz: "AoE (UTC-12h)"
     url: "https://conf.researchr.org/home/icse-2027/iwsib-2027"
   - date: "2026-12-23"
-    conf: icse-2027
-    track: "MSR Mining Challenge"
-    label: "Paper Deadline"
-    kind: submission
-    tz: "AoE (UTC-12h)"
-    url: "https://conf.researchr.org/track/icse-2027/msr-2027-mining-challenge"
-  - date: "2026-12-23"
-    conf: icse-2027
-    track: "MSR Registered Reports"
-    label: "Authors Receive PC Member's Reviews"
-    kind: other
-    tz: "AoE (UTC-12h)"
-    url: "https://conf.researchr.org/track/icse-2027/msr-2027-registered-reports"
-  - date: "2026-12-23"
     conf: msr-2027
     track: "Mining Challenge"
     label: "Paper Deadline"
@@ -2171,13 +1870,6 @@ dates:
     url: "https://conf.researchr.org/home/icse-2027/swebok-2027"
   - date: "2027-01-05"
     conf: icse-2027
-    track: "MSR Data and Tool Showcase Track"
-    label: "Acceptance Notification"
-    kind: notification
-    tz: "AoE (UTC-12h)"
-    url: "https://conf.researchr.org/track/icse-2027/msr-2027-data-and-tool-showcase-track"
-  - date: "2027-01-05"
-    conf: icse-2027
     track: "SEAMS Research Track"
     label: "Submissions of Revisions"
     kind: submission
@@ -2190,13 +1882,6 @@ dates:
     kind: notification
     tz: "AoE (UTC-12h)"
     url: "https://2027.msrconf.org/track/msr-2027-data-and-tool-showcase-track"
-  - date: "2027-01-06"
-    conf: icse-2027
-    track: "ICSE 2027 Competitions"
-    label: "Revisions due for solution papers and organiser reports"
-    kind: submission
-    tz: "AoE (UTC-12h)"
-    url: "https://conf.researchr.org/track/icse-2027/icse-2027-competition-track"
   - date: "2027-01-08"
     conf: icse-2027
     track: "AST"
@@ -2204,20 +1889,6 @@ dates:
     kind: notification
     tz: "AoE (UTC-12h)"
     url: "https://conf.researchr.org/home/icse-2027/ast-2027"
-  - date: "2027-01-08"
-    conf: icse-2027
-    track: "MSR Technical Papers"
-    label: "Author Notification"
-    kind: notification
-    tz: "AoE (UTC-12h)"
-    url: "https://conf.researchr.org/track/icse-2027/msr-2027-technical-papers"
-  - date: "2027-01-08"
-    conf: icse-2027
-    track: "Student Volunteers"
-    label: "Submission Deadline"
-    kind: submission
-    tz: "AoE (UTC-12h)"
-    url: "https://conf.researchr.org/track/icse-2027/icse-2027-student-volunteers"
   - date: "2027-01-08"
     conf: msr-2027
     track: "Technical Papers"
@@ -2360,13 +2031,6 @@ dates:
     url: "https://conf.researchr.org/track/icse-2027/Formalise-2027-papers"
   - date: "2027-01-11"
     conf: icse-2027
-    track: "MSR Industry Track"
-    label: "Author Notification"
-    kind: notification
-    tz: "AoE (UTC-12h)"
-    url: "https://conf.researchr.org/track/icse-2027/msr-2027-industry-track"
-  - date: "2027-01-11"
-    conf: icse-2027
     track: "TechDebt Technical Papers"
     label: "Acceptance Notification"
     kind: notification
@@ -2386,13 +2050,6 @@ dates:
     kind: submission
     tz: "AoE (UTC-12h)"
     url: "https://conf.researchr.org/track/saner-2027/saner-2027-registered-report-track"
-  - date: "2027-01-13"
-    conf: icse-2027
-    track: "ICSE 2027 Competitions"
-    label: "Final notification for solution papers and organiser reports"
-    kind: notification
-    tz: "AoE (UTC-12h)"
-    url: "https://conf.researchr.org/track/icse-2027/icse-2027-competition-track"
   - date: "2027-01-14"
     conf: icse-2027
     track: "ICPC Early Research Achievements (ERA)"
@@ -2414,13 +2071,6 @@ dates:
     kind: notification
     tz: "AoE (UTC-12h)"
     url: "https://conf.researchr.org/track/icse-2027/Formalise-2027-papers"
-  - date: "2027-01-15"
-    conf: icse-2027
-    track: "MSR Registered Reports"
-    label: "Response letter + Revised Report Submission"
-    kind: submission
-    tz: "AoE (UTC-12h)"
-    url: "https://conf.researchr.org/track/icse-2027/msr-2027-registered-reports"
   - date: "2027-01-15"
     conf: icse-2027
     track: "SEAMS Research Track"
@@ -2458,13 +2108,6 @@ dates:
     url: "https://conf.researchr.org/home/icse-2027/swebok-2027"
   - date: "2027-01-19"
     conf: icse-2027
-    track: "MSR Mining Challenge"
-    label: "Author Notification"
-    kind: notification
-    tz: "AoE (UTC-12h)"
-    url: "https://conf.researchr.org/track/icse-2027/msr-2027-mining-challenge"
-  - date: "2027-01-19"
-    conf: icse-2027
     track: "Software Engineering Education and Training (SEET)"
     label: "SEET Camera Ready"
     kind: camera
@@ -2491,13 +2134,6 @@ dates:
     kind: other
     tz: "AoE (UTC-12h)"
     url: "https://conf.researchr.org/home/icse-2027/hugs-2027"
-  - date: "2027-01-20"
-    conf: icse-2027
-    track: "ICSE 2027 Competitions"
-    label: "Camera-ready deadline for solution papers and organiser reports"
-    kind: submission
-    tz: "AoE (UTC-12h)"
-    url: "https://conf.researchr.org/track/icse-2027/icse-2027-competition-track"
   - date: "2027-01-20"
     conf: icse-2027
     track: "New Ideas and Emerging Results (NIER)"
@@ -2563,20 +2199,6 @@ dates:
     url: "https://conf.researchr.org/track/icse-2027/icpc-2027-replications-and-negative-results--rene-"
   - date: "2027-01-22"
     conf: icse-2027
-    track: "MSR Industry Track"
-    label: "Camera Ready Deadline"
-    kind: camera
-    tz: "AoE (UTC-12h)"
-    url: "https://conf.researchr.org/track/icse-2027/msr-2027-industry-track"
-  - date: "2027-01-22"
-    conf: icse-2027
-    track: "Student Volunteers"
-    label: "Interview Period"
-    kind: other
-    tz: "AoE (UTC-12h)"
-    url: "https://conf.researchr.org/track/icse-2027/icse-2027-student-volunteers"
-  - date: "2027-01-22"
-    conf: icse-2027
     track: "TechDebt Industry Track"
     label: "Submission deadline for talks"
     kind: submission
@@ -2603,13 +2225,6 @@ dates:
     kind: submission
     tz: "AoE (UTC-12h)"
     url: "https://conf.researchr.org/track/icse-2027/forge-2027-data-and-benchmarking-track"
-  - date: "2027-01-24"
-    conf: icse-2027
-    track: "MSR Data and Tool Showcase Track"
-    label: "Camera Ready Deadline"
-    kind: camera
-    tz: "AoE (UTC-12h)"
-    url: "https://conf.researchr.org/track/icse-2027/msr-2027-data-and-tool-showcase-track"
   - date: "2027-01-24"
     conf: icse-2027
     track: "TechDebt Journal First"
@@ -2646,20 +2261,6 @@ dates:
     tz: "AoE (UTC-12h)"
     url: "https://conf.researchr.org/track/icse-2027/icse-2027-doctoral-symposium"
   - date: "2027-01-26"
-    conf: icse-2027
-    track: "MSR Mining Challenge"
-    label: "Camera Ready Deadline"
-    kind: camera
-    tz: "AoE (UTC-12h)"
-    url: "https://conf.researchr.org/track/icse-2027/msr-2027-mining-challenge"
-  - date: "2027-01-26"
-    conf: icse-2027
-    track: "MSR Technical Papers"
-    label: "Camera Ready Deadline"
-    kind: camera
-    tz: "AoE (UTC-12h)"
-    url: "https://conf.researchr.org/track/icse-2027/msr-2027-technical-papers"
-  - date: "2027-01-26"
     conf: msr-2027
     track: "Mining Challenge"
     label: "Camera Ready Deadline"
@@ -2673,13 +2274,6 @@ dates:
     kind: camera
     tz: "AoE (UTC-12h)"
     url: "https://2027.msrconf.org/track/msr-2027-technical-papers"
-  - date: "2027-01-27"
-    conf: icse-2027
-    track: "Workshops"
-    label: "Workshop Front Matter"
-    kind: camera
-    tz: "AoE (UTC-12h)"
-    url: "https://conf.researchr.org/track/icse-2027/icse-2027-workshops"
   - date: "2027-01-28"
     conf: chase-2027
     track: "Doctoral and Early Career Symposium (DECS)"
@@ -2687,13 +2281,6 @@ dates:
     kind: submission
     tz: "AoE (UTC-12h)"
     url: "https://conf.researchr.org/track/chase-2027/chase-2027-decs-papers"
-  - date: "2027-01-28"
-    conf: icse-2027
-    track: "CHASE Doctoral and Early Career Symposium (DECS)"
-    label: "Deadline for submissions"
-    kind: submission
-    tz: "AoE (UTC-12h)"
-    url: "https://conf.researchr.org/track/icse-2027/chase-2027-decs-papers"
   - date: "2027-01-28"
     conf: icse-2027
     track: "ICPC Early Research Achievements (ERA)"
@@ -2778,13 +2365,6 @@ dates:
     kind: camera
     tz: "AoE (UTC-12h)"
     url: "https://conf.researchr.org/home/icse-2027/case2space-2027"
-  - date: "2027-01-29"
-    conf: icse-2027
-    track: "CHASE Research Track"
-    label: "Camera-ready Submission"
-    kind: submission
-    tz: "AoE (UTC-12h)"
-    url: "https://conf.researchr.org/track/icse-2027/chase-2027-papers"
   - date: "2027-01-29"
     conf: icse-2027
     track: "DTwiSE"
@@ -2899,13 +2479,6 @@ dates:
     url: "https://conf.researchr.org/home/icse-2027/swebok-2027"
   - date: "2027-01-29"
     conf: icse-2027
-    track: "Student Volunteers"
-    label: "Notification of Results"
-    kind: notification
-    tz: "AoE (UTC-12h)"
-    url: "https://conf.researchr.org/track/icse-2027/icse-2027-student-volunteers"
-  - date: "2027-01-29"
-    conf: icse-2027
     track: "TechDebt Technical Papers"
     label: "Camera Ready Deadline"
     kind: camera
@@ -2918,13 +2491,6 @@ dates:
     kind: camera
     tz: "AoE (UTC-12h)"
     url: "https://conf.researchr.org/home/icse-2027/uise-2027"
-  - date: "2027-01-29"
-    conf: icse-2027
-    track: "Workshops"
-    label: "Workshop Papers Camera Ready"
-    kind: camera
-    tz: "AoE (UTC-12h)"
-    url: "https://conf.researchr.org/track/icse-2027/icse-2027-workshops"
   - date: "2027-01-31"
     conf: icse-2027
     track: "TechDebt Tool Track"
@@ -2939,20 +2505,6 @@ dates:
     kind: notification
     tz: "AoE (UTC-12h)"
     url: "https://conf.researchr.org/track/chase-2027/chase-2027-decs-papers"
-  - date: "2027-02-04"
-    conf: icse-2027
-    track: "CHASE Doctoral and Early Career Symposium (DECS)"
-    label: "Notification of acceptance"
-    kind: notification
-    tz: "AoE (UTC-12h)"
-    url: "https://conf.researchr.org/track/icse-2027/chase-2027-decs-papers"
-  - date: "2027-02-04"
-    conf: icse-2027
-    track: "MSR Registered Reports"
-    label: "Stage 1 Notification"
-    kind: notification
-    tz: "AoE (UTC-12h)"
-    url: "https://conf.researchr.org/track/icse-2027/msr-2027-registered-reports"
   - date: "2027-02-04"
     conf: msr-2027
     track: "Registered Reports"
@@ -2989,13 +2541,6 @@ dates:
     tz: "AoE (UTC-12h)"
     url: "https://conf.researchr.org/track/icse-2027/icse-2027-artifact-evaluation"
   - date: "2027-02-28"
-    conf: icse-2027
-    track: "MSR Registered Reports"
-    label: "Accepted RR Report Submission"
-    kind: submission
-    tz: "AoE (UTC-12h)"
-    url: "https://conf.researchr.org/track/icse-2027/msr-2027-registered-reports"
-  - date: "2027-02-28"
     conf: msr-2027
     track: "Registered Reports"
     label: "Accepted RR Report Submission"
@@ -3016,13 +2561,6 @@ dates:
     kind: other
     tz: "AoE (UTC-12h)"
     url: "https://conf.researchr.org/track/chase-2027/chase-2027-decs-papers"
-  - date: "2027-03-11"
-    conf: icse-2027
-    track: "CHASE Doctoral and Early Career Symposium (DECS)"
-    label: "Feedback from committee"
-    kind: other
-    tz: "AoE (UTC-12h)"
-    url: "https://conf.researchr.org/track/icse-2027/chase-2027-decs-papers"
   - date: "2027-03-20"
     conf: fse-2027
     track: "Industry Papers"
@@ -3051,13 +2589,6 @@ dates:
     kind: submission
     tz: "AoE (UTC-12h)"
     url: "https://conf.researchr.org/track/chase-2027/chase-2027-decs-papers"
-  - date: "2027-04-01"
-    conf: icse-2027
-    track: "CHASE Doctoral and Early Career Symposium (DECS)"
-    label: "Final version of paper due"
-    kind: submission
-    tz: "AoE (UTC-12h)"
-    url: "https://conf.researchr.org/track/icse-2027/chase-2027-decs-papers"
   - date: "2027-04-03"
     conf: fse-2027
     track: "Industry Papers"
@@ -3072,13 +2603,6 @@ dates:
     kind: event
     tz: "AoE (UTC-12h)"
     url: "https://conf.researchr.org/track/chase-2027/chase-2027-decs-papers"
-  - date: "2027-04-08"
-    conf: icse-2027
-    track: "CHASE Doctoral and Early Career Symposium (DECS)"
-    label: "Virtual DECS Sessions"
-    kind: event
-    tz: "AoE (UTC-12h)"
-    url: "https://conf.researchr.org/track/icse-2027/chase-2027-decs-papers"
   - date: "2027-04-25"
     conf: icse-2027
     track: "IWSiB"
@@ -3116,13 +2640,6 @@ dates:
     url: "https://conf.researchr.org/home/icse-2027/ast-2027"
   - date: "2027-04-27"
     conf: icse-2027
-    track: "CHASE Doctoral and Early Career Symposium (DECS)"
-    label: "Participate in CHASE Conference"
-    kind: event
-    tz: "AoE (UTC-12h)"
-    url: "https://conf.researchr.org/track/icse-2027/chase-2027-decs-papers"
-  - date: "2027-04-27"
-    conf: icse-2027
     track: "GREENS"
     label: "Workshop Date"
     kind: other
@@ -3142,13 +2659,6 @@ dates:
     kind: event
     tz: "AoE (UTC-12h)"
     url: "https://conf.researchr.org/home/icse-2027/dtwise-2027"
-  - date: "2027-09-30"
-    conf: icse-2027
-    track: "MSR Registered Reports"
-    label: "Full Paper Submission to EMSE"
-    kind: submission
-    tz: "AoE (UTC-12h)"
-    url: "https://conf.researchr.org/track/icse-2027/msr-2027-registered-reports"
   - date: "2027-09-30"
     conf: msr-2027
     track: "Registered Reports"

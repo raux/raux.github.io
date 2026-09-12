@@ -179,7 +179,12 @@ python scripts/deadlines.py add https://conf.researchr.org/home/icse-2027
 python scripts/deadlines.py refresh                      # re-read every one
 python scripts/deadlines.py refresh saner-2027           # or just one
 python scripts/deadlines.py list                         # what is tracked, and how much is still ahead
-python scripts/deadlines.py remove icsme-2026
+python scripts/deadlines.py remove icsme-2026            # stop tracking one entirely
+
+python scripts/deadlines.py tracks icse-2027             # what tracks it carries, and how many dates each
+python scripts/deadlines.py hide icse-2027 "Shadow PC"   # drop a track from the board
+python scripts/deadlines.py hide icse-2027 --matching MSR
+python scripts/deadlines.py show icse-2027 "Shadow PC"   # put it back
 python scripts/deadlines.py build                        # write data/deadlines.yaml
 python scripts/deadlines.py build --check                # exit 1 if stale
 ```
@@ -205,8 +210,10 @@ replaced on the next refresh.
 
 - A conference whose dates have all passed is named in the `build` output, so it can be refreshed to
   its next edition or removed.
-- researchr aggregates co-located events, so ICSE 2027 carries its workshops — CHASE and TechDebt
-  rows appear under ICSE as well as on their own. Exclude a conference on the page, or stop tracking
-  the duplicate.
+- researchr aggregates co-located events, so ICSE 2027 carries its workshops: 62 tracks, including
+  full MSR and CHASE ones that also appear under those conferences on their own. `tracks` shows what
+  a conference is really carrying and `hide` prunes it. **Hiding is a filter, not a deletion** — the
+  rows stay in `bib/conferences.yaml` under a `hidden:` block, survive `refresh`, and `show` brings
+  them back with no re-fetch. Removing the duplicated ICSE tracks takes it from 238 dates to 168.
 - Dates are shown exactly as published, with the conference's stated timezone beside the row.
   **Always check the conference site before relying on one.**
