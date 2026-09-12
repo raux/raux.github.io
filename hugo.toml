@@ -67,6 +67,11 @@ hasCJKLanguage = true
             weight = 4
             pre = "<i class='fa fa-film'></i>"
         [[languages.ja.menus.main]]
+            name = "締切"
+            url = "/ja/deadlines/"
+            weight = 5
+            pre = "<i class='fa fa-calendar'></i>"
+        [[languages.ja.menus.main]]
             name = "タグ"
             url = "/ja/tags/"
             weight = 5
@@ -216,6 +221,11 @@ hasCJKLanguage = true
         url = "/papers/"
         weight = 4
         pre = "<i class='fa fa-film'></i>"
+    [[menus.main]]
+        name = "Deadlines"
+        url = "/deadlines/"
+        weight = 5
+        pre = "<i class='fa fa-calendar'></i>"
     [[menus.main]]
         name = "Tags"
         url = "/tags"

@@ -157,3 +157,56 @@ warn:   override matches nothing: nonexistentkeycheck
 The first means a new paper is on the site with a placeholder line. The second means an
 override lost its paper — usually a title edited in the `.bib`, or an entry you removed.
 Both appear in the Actions run summary.
+
+
+---
+
+# Deadline board
+
+A second, independent pipeline behind [`/deadlines/`](https://raux.github.io/deadlines/).
+
+| File | Owner | Contents |
+|---|---|---|
+| `bib/conferences.yaml` | you, plus the fetcher | which conferences to track, and every date read from them |
+| `data/deadlines.yaml` | **generated — do not edit** | what the page reads |
+
+Deadlines are not typed out by hand. `scripts/deadlines.py` reads each conference's own dates page
+on `conf.researchr.org`, so the board stays honest to its source.
+
+```bash
+python scripts/deadlines.py add msr-2027                 # add a conference
+python scripts/deadlines.py add https://conf.researchr.org/home/icse-2027
+python scripts/deadlines.py refresh                      # re-read every one
+python scripts/deadlines.py refresh saner-2027           # or just one
+python scripts/deadlines.py list                         # what is tracked, and how much is still ahead
+python scripts/deadlines.py remove icsme-2026
+python scripts/deadlines.py build                        # write data/deadlines.yaml
+python scripts/deadlines.py build --check                # exit 1 if stale
+```
+
+`add` and `refresh` need network and space their requests out; `build` is offline. Only `build`
+is needed in CI if the fetched data is committed.
+
+## What it works out on its own
+
+- **Dates.** A row reading `Wed 7 - Sun 18 Oct 2026` resolves to its **end**, since that is the date
+  the deadline actually lands on; the original text is kept as `raw`.
+- **Kind.** `submission`, `notification`, `camera`, `event` or `other`, from the label. This is what
+  makes the board usable — the page opens showing submissions only, because a conference page lists
+  four or five times as many notification and camera-ready dates.
+- **Venue plate.** `msr-2027` finds the `MSR` plate already defined in `bib/venues.yaml`, so the
+  board and the research deck use one visual vocabulary. `VENUE_ALIASES` in the script covers the
+  cases where the slug and the plate differ, such as ESEIW → ESEM.
+
+`name` and `venue` in `bib/conferences.yaml` are yours to edit; everything under `deadlines:` is
+replaced on the next refresh.
+
+## Things to know
+
+- A conference whose dates have all passed is named in the `build` output, so it can be refreshed to
+  its next edition or removed.
+- researchr aggregates co-located events, so ICSE 2027 carries its workshops — CHASE and TechDebt
+  rows appear under ICSE as well as on their own. Exclude a conference on the page, or stop tracking
+  the duplicate.
+- Dates are shown exactly as published, with the conference's stated timezone beside the row.
+  **Always check the conference site before relying on one.**
