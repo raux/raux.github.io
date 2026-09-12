@@ -1,10 +1,13 @@
+pinned: true
 spotlight:
-  - "Open Source at a Crossroads: The Future of Licensing Driven by Monetization"
-  - "18 Million Links in Commit Messages: Purpose, Evolution, and Decay"
-  - "The Life and Death of Software Ecosystems"
-  - "Analyzing First Contributions on GitHub: What Do Newcomers Do?"
-  - "Contributing Back to the Ecosystem: A User Survey of NPM Developers"
-  - "Ethical Considerations Toward Protestware"
+  - "Using High-Rising Cities to Visualize Performance in Real-Time"
+  - "We Live in a Society: Motivators for Contributions in an OSS Ecosystem"
+  - "Security by Documentation? Characterizing GitHub SECURITY.md Policy and Their Adoption in Python Libraries"
+  - "An Empirical Study of Package Management Issues via Stack Overflow"
+  - "Search-Based Peer Reviewers Recommendation in Modern Code Review"
+  - "Human to Document, AI to Code: Three Case Studies of Comparing GenAI for Notebook Competitions"
+  - "On Categorizing Open Source Software Security Vulnerability Reporting Mechanisms on GitHub"
+  - "What About Our Bug? A Study on the Responsiveness of NPM Package Maintainers"
 # Human-owned curation for the research deck.  Nothing here is ever overwritten.
 #
 # Facts (title, year, venue, url) come from data/*.bib.
@@ -24,7 +27,7 @@ spotlight:
 # The generator warns about any key here that matched no .bib entry, and about
 # any paper still missing a logline — so nothing goes stale silently.
 
-featured: "WhoReview: A Multi-objective Search-based Approach for Code Reviewers Recommendation"
+featured: "BonsAIDE: An Extended Vision for Human-AI Interaction in IDEs"
 entries:
   ethicalconsiderations2024:
     themes: [soc, eco]

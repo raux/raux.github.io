@@ -92,6 +92,9 @@ def write_key(text, key, value):
     """Replace a top-level scalar or list key, preserving the rest of the file."""
     if isinstance(value, list):
         block = key + ":\n" + "".join('  - "%s"\n' % v.replace('"', '\\"') for v in value)
+    elif isinstance(value, bool):
+        # unquoted, or YAML reads it as a string — and "false" is truthy
+        block = "%s: %s\n" % (key, "true" if value else "false")
     else:
         block = '%s: "%s"\n' % (key, str(value).replace('"', '\\"'))
     pattern = re.compile(r"^%s:.*?(?=^\S|\Z)" % re.escape(key), re.S | re.M)
@@ -104,7 +107,9 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--count", type=int, default=8, help="papers in the spotlight row (0 to skip)")
     ap.add_argument("--seed", help="any string; the same seed always picks the same papers")
-    ap.add_argument("--pin", help="force this title onto the billboard")
+    ap.add_argument("--pin", help="put this title on the billboard and hold it there")
+    ap.add_argument("--unpin", action="store_true",
+                    help="release a held billboard and let it rotate again")
     ap.add_argument("--dry-run", action="store_true")
     a = ap.parse_args()
 
@@ -125,8 +130,25 @@ def main():
     # left its hero at the end of the history, which would otherwise block it and
     # send the draw somewhere else — so ignore that entry when it is still the
     # paper currently on the billboard.
-    current = (load_yaml(OVERRIDES, {}) or {}).get("featured")
+    over = load_yaml(OVERRIDES, {}) or {}
+    current = over.get("featured")
     prior = recent[:-1] if (recent and current and recent[-1] == current) else recent
+
+    # A held billboard outranks the draw. Rotation still refreshes the Spotlight
+    # row — the point of holding is that one paper stays put, not that the page
+    # stops moving. `--pin` sets the hold, `--unpin` releases it.
+    held = bool(over.get("pinned")) and not a.unpin and not a.pin
+    if held and not current:
+        print("note: pinned: true but no featured: title — rotating instead")
+        held = False
+
+    if held:
+        match = [p for p in papers if p["title"] == current]
+        if not match:
+            print("note: pinned title is no longer in the catalogue — rotating instead")
+            held = False
+        else:
+            hero = match[0]
 
     if a.pin:
         want = re.sub(r"[^a-z0-9]", "", a.pin.lower())
@@ -136,12 +158,14 @@ def main():
         if not match:
             sys.exit("error: no paper matches %r" % a.pin)
         hero = match[0]
-    else:
+    elif not held:
         hero = pick(papers, 1, rng, newest, owner, set(prior[-AVOID_LAST:]))[0]
 
     spot = pick(papers, a.count, rng, newest, owner, {hero["title"]}) if a.count > 0 else []
 
-    print("billboard  %s (%s %s)" % (hero["title"][:64], hero["venue"], hero["year"]))
+    print("billboard  %s (%s %s)%s"
+          % (hero["title"][:64], hero["venue"], hero["year"],
+             "  [held]" if held or a.pin else ""))
     for p in spot:
         print("  spotlight  %-58s %s" % (p["title"][:58], p["year"]))
     if a.dry_run:
@@ -150,12 +174,18 @@ def main():
 
     text = open(OVERRIDES, encoding="utf-8").read()
     text = write_key(text, "featured", hero["title"])
+    if a.pin:
+        text = write_key(text, "pinned", True)
+    elif a.unpin:
+        text = write_key(text, "pinned", False)
     if a.count > 0:
         text = write_key(text, "spotlight", [p["title"] for p in spot])
     open(OVERRIDES, "w", encoding="utf-8").write(text)
 
     # A same-day re-run picks the same hero; don't grow the history (or the diff).
-    if not recent or recent[-1] != hero["title"]:
+    # A held hero never enters the history either — it is not a draw, and letting
+    # it accumulate would block the paper for weeks once the hold is released.
+    if not held and (not recent or recent[-1] != hero["title"]):
         recent.append(hero["title"])
     with open(HISTORY, "w", encoding="utf-8") as fh:
         fh.write("# Heroes already used, so the billboard does not repeat itself.\n")
@@ -164,6 +194,10 @@ def main():
             fh.write('  - "%s"\n' % t.replace('"', '\\"'))
 
     print("\nwrote bib/deck-overrides.yaml — now run scripts/bib2papers.py")
+    if a.pin:
+        print("the billboard is held here until: python scripts/feature.py --unpin")
+    elif a.unpin:
+        print("the billboard rotates again from the next run")
     return 0
 
 
