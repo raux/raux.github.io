@@ -65,11 +65,14 @@ MONTHS = {m: i + 1 for i, m in enumerate(
      "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"])}
 
 # What sort of date a row is. First match wins, so order matters.
+# Order matters: the first pattern to match wins, so the more specific
+# kinds go first.  "Camera-ready Submission Deadline" is a camera-ready
+# date, not a submission, and reads as one only if camera is tested first.
 KINDS = [
+    ("camera",       r"camera|final version|final copy|proceedings|front matter"),
     ("submission",   r"abstract"),
     ("submission",   r"submission|submit|paper deadline|deadline for|due|proposals"),
     ("notification", r"notification|notify|decision|acceptance|reject|response"),
-    ("camera",       r"camera|final version|final copy|proceedings|front matter"),
     ("event",        r"conference|workshop day|sessions|dates|symposium"),
 ]
 
@@ -301,7 +304,9 @@ def emit(data, today, hidden=None):
               "    conf: " + slug,
               "    track: " + q(d["track"]),
               "    label: " + q(d["label"]),
-              "    kind: " + d["kind"],
+              # classified here, not at fetch time, so improving the rules
+              # re-sorts the whole board without re-fetching anything
+              "    kind: " + classify(d["label"]),
               "    tz: " + q(d.get("tz") or ""),
               "    url: " + q(d.get("url") or c.get("url") or "")]
     return "\n".join(L) + "\n"

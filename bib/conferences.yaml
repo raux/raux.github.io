@@ -16,6 +16,10 @@ hidden:
   fse-2027:
     - "Industry Papers"
     - "Workshops"
+  icpc-2027:
+    - "Journal First"
+    - "Replications and Negative Results (RENE)"
+    - "Tool Demonstration"
   icse-2027:
     - "AGENT"
     - "AGENTVERIFY"
@@ -255,6 +259,126 @@ conferences:
         raw: "Sat 3 Apr 2027"
         tz: "AoE (UTC-12h)"
         url: "https://conf.researchr.org/track/fse-2027/fse-2027-industry-papers"
+
+  icpc-2027:
+    source: researchr
+    name: "ICPC 2027"
+    url: "https://conf.researchr.org/home/icpc-2027"
+    venue: "ICPC"
+    fetched: "2026-09-12"
+    deadlines:
+      - date: "2026-10-29"
+        track: "Research Track"
+        label: "Abstract Deadline"
+        kind: submission
+        raw: "Thu 29 Oct 2026"
+        tz: "AoE (UTC-12h)"
+        url: "https://conf.researchr.org/track/icpc-2027/icpc-2027-research-track"
+      - date: "2026-11-05"
+        track: "Research Track"
+        label: "Paper Submission Deadline"
+        kind: submission
+        raw: "Thu 5 Nov 2026"
+        tz: "AoE (UTC-12h)"
+        url: "https://conf.researchr.org/track/icpc-2027/icpc-2027-research-track"
+      - date: "2026-11-19"
+        track: "Early Research Achievements (ERA)"
+        label: "(Optional) Abstract registration"
+        kind: submission
+        raw: "Thu 19 Nov 2026"
+        tz: "AoE (UTC-12h)"
+        url: "https://conf.researchr.org/track/icpc-2027/icpc-2027-early-research-achievements--era-"
+      - date: "2026-11-19"
+        track: "Tool Demonstration"
+        label: "Paper Submission Deadline"
+        kind: submission
+        raw: "Thu 19 Nov 2026"
+        tz: "AoE (UTC-12h)"
+        url: "https://conf.researchr.org/track/icpc-2027/icpc-2027-tool-demonstration"
+      - date: "2026-11-26"
+        track: "Early Research Achievements (ERA)"
+        label: "Paper submission"
+        kind: submission
+        raw: "Thu 26 Nov 2026"
+        tz: "AoE (UTC-12h)"
+        url: "https://conf.researchr.org/track/icpc-2027/icpc-2027-early-research-achievements--era-"
+      - date: "2026-12-11"
+        track: "Replications and Negative Results (RENE)"
+        label: "Abstract Deadline"
+        kind: submission
+        raw: "Fri 11 Dec 2026"
+        tz: "AoE (UTC-12h)"
+        url: "https://conf.researchr.org/track/icpc-2027/icpc-2027-replications-and-negative-results--rene-"
+      - date: "2026-12-18"
+        track: "Replications and Negative Results (RENE)"
+        label: "Paper Submission Deadline"
+        kind: submission
+        raw: "Fri 18 Dec 2026"
+        tz: "AoE (UTC-12h)"
+        url: "https://conf.researchr.org/track/icpc-2027/icpc-2027-replications-and-negative-results--rene-"
+      - date: "2027-01-14"
+        track: "Early Research Achievements (ERA)"
+        label: "Author notification"
+        kind: notification
+        raw: "Thu 14 Jan 2027"
+        tz: "AoE (UTC-12h)"
+        url: "https://conf.researchr.org/track/icpc-2027/icpc-2027-early-research-achievements--era-"
+      - date: "2027-01-14"
+        track: "Research Track"
+        label: "Notification Deadline"
+        kind: notification
+        raw: "Thu 14 Jan 2027"
+        tz: "AoE (UTC-12h)"
+        url: "https://conf.researchr.org/track/icpc-2027/icpc-2027-research-track"
+      - date: "2027-01-16"
+        track: "Journal First"
+        label: "Journal First Submissions Deadline"
+        kind: submission
+        raw: "Sat 16 Jan 2027"
+        tz: "AoE (UTC-12h)"
+        url: "https://conf.researchr.org/track/icpc-2027/icpc-2027-journal-first"
+      - date: "2027-01-21"
+        track: "Tool Demonstration"
+        label: "Notification Deadline"
+        kind: notification
+        raw: "Thu 21 Jan 2027"
+        tz: "AoE (UTC-12h)"
+        url: "https://conf.researchr.org/track/icpc-2027/icpc-2027-tool-demonstration"
+      - date: "2027-01-22"
+        track: "Replications and Negative Results (RENE)"
+        label: "Notification Deadline"
+        kind: notification
+        raw: "Fri 22 Jan 2027"
+        tz: "AoE (UTC-12h)"
+        url: "https://conf.researchr.org/track/icpc-2027/icpc-2027-replications-and-negative-results--rene-"
+      - date: "2027-01-28"
+        track: "Early Research Achievements (ERA)"
+        label: "Camera ready"
+        kind: camera
+        raw: "Thu 28 Jan 2027"
+        tz: "AoE (UTC-12h)"
+        url: "https://conf.researchr.org/track/icpc-2027/icpc-2027-early-research-achievements--era-"
+      - date: "2027-01-28"
+        track: "Research Track"
+        label: "Camera-ready Submission Deadline"
+        kind: submission
+        raw: "Thu 28 Jan 2027"
+        tz: "AoE (UTC-12h)"
+        url: "https://conf.researchr.org/track/icpc-2027/icpc-2027-research-track"
+      - date: "2027-01-28"
+        track: "Tool Demonstration"
+        label: "Camera-Ready Deadline"
+        kind: camera
+        raw: "Thu 28 Jan 2027"
+        tz: "AoE (UTC-12h)"
+        url: "https://conf.researchr.org/track/icpc-2027/icpc-2027-tool-demonstration"
+      - date: "2027-01-29"
+        track: "Replications and Negative Results (RENE)"
+        label: "Camera-ready Submission Deadline"
+        kind: submission
+        raw: "Fri 29 Jan 2027"
+        tz: "AoE (UTC-12h)"
+        url: "https://conf.researchr.org/track/icpc-2027/icpc-2027-replications-and-negative-results--rene-"
 
   icse-2027:
     source: researchr
