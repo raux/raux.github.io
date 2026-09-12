@@ -1,5 +1,7 @@
 # Research deck pipeline
 
+*Site-wide change history lives in [`CHANGELOG.md`](../CHANGELOG.md).*
+
 The deck at [`/papers/`](https://raux.github.io/papers/) is generated. Three files feed it:
 
 | File | Owner | Contents |

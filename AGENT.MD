@@ -17,6 +17,7 @@ This repository publishes Raula Gaikovina Kula's academic and research website a
 | Deadline board | `content/deadlines.md`, `layouts/_default/deadlines.html`, `bib/conferences.yaml`, `data/deadlines.yaml` | The `/deadlines/` page displays generated conference and call-for-paper dates. |
 | Styling and client behaviour | `static/css/`, `static/js/`, `static/images/` | Site-specific CSS, browser JavaScript, and static assets. |
 | Translations | `content/**/*.ja.md`, `i18n/ja.toml`, `i18n/en.toml`, `i18n/zh.toml` | English is published at `/`; Japanese is published at `/ja/`. Keep route counterparts aligned when relevant. |
+| Change history | `CHANGELOG.md` | Dated entries, newest first. Add to **Unreleased** as you go; it is written for a reader, not generated from commits. |
 | Automation and deployment | `.github/workflows/` | PR builds and GitHub Pages deployment; paper-deck regeneration has its own workflow. |
 
 ## Data pipelines
