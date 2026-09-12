@@ -13,3 +13,6 @@ deadlines-preview.html
 # python bytecode from the pipeline scripts
 __pycache__/
 *.pyc
+
+# the PR description, staged for review; not part of the site
+pr-body.md
