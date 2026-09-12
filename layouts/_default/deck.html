@@ -463,9 +463,10 @@
 <main class="rows" id="rows"></main>
 
 <footer>
-  <b>{{ len $data.papers }} papers</b> &middot; generated from <span class="mono">data/publications.bib</span> and <span class="mono">data/deck-overrides.yaml</span>; the rows rebuild themselves when the bibliography changes.
+  <b>{{ len $data.papers }} papers</b> &middot; generated from <span class="mono">bib/publications.bib</span> and <span class="mono">bib/deck-overrides.yaml</span>; the rows rebuild themselves when the bibliography changes.
   Each card carries its venue's plate &mdash; abbreviation, publisher and brand colour from <span class="mono">bib/venues.yaml</span> &mdash; over a node-link texture seeded from the paper's own title, so no two cards in a row are identical.
-  arXiv entries link to the abstract page; everything else links to a DBLP title search.
+  A paper links to its DOI where the bibliography has one, an arXiv entry to its abstract page, and
+  anything with neither falls back to a DBLP title search.
   <a href="{{ "/posts/publications/" | relLangURL }}" style="color:var(--muted)">Full profiles and datasets &rarr;</a>
 </footer>
 
@@ -857,7 +858,12 @@
     sheet.querySelector(".abs").textContent=p.d;
     var a=sheet.querySelector("a.btn");
     a.href=p.u;
-    a.textContent=(p.u.indexOf("arxiv")>-1?"Read on arXiv":"Find on DBLP");
+    // The generator falls back to a DBLP title search only when the entry has
+    // neither a url nor a doi, so the label has to follow the link it got.
+    a.textContent=(p.u.indexOf("arxiv")>-1 ? "Read on arXiv"
+                  : p.u.indexOf("doi.org")>-1 ? "Read paper"
+                  : p.u.indexOf("dblp")>-1 ? "Find on DBLP"
+                  : "Read paper");
 
     var tags=sheet.querySelector(".tags");
     p.th.forEach(function(t){

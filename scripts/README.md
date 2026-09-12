@@ -83,15 +83,31 @@ and a warning naming it.
 python scripts/feature.py                    # a fresh random pick
 python scripts/feature.py --count 10         # longer Spotlight row (0 to skip it)
 python scripts/feature.py --seed 2026-09-09  # reproducible — CI can pass the date
-python scripts/feature.py --pin "Open Source at a Crossroads"   # choose the hero yourself
+python scripts/feature.py --pin "Open Source at a Crossroads"   # choose the hero, and hold it
+python scripts/feature.py --unpin            # let it rotate again
 python scripts/feature.py --dry-run          # print the pick, write nothing
 ```
 
-It **rotates on its own**: the *Rebuild paper deck* workflow runs every Monday, reshuffles with
-`--seed $(date -u +%F)`, commits the result and asks the site to redeploy. Only the schedule and
+## Holding the billboard
+
+`--pin` does not just choose a hero, it **keeps** one. It writes `pinned: true` into
+`bib/deck-overrides.yaml`, and every rotation after that leaves the billboard where it is and says
+`[held]`. `--unpin` releases it and the next run draws normally.
+
+The Spotlight row still reshuffles while a hold is in place — holding means one paper stays put, not
+that the page stops moving. A held hero is never written to `bib/feature-history.yaml` either: that
+file records draws so the draw does not repeat itself, and a paper you chose by hand is not a draw.
+Recording it would block it for a month of rotations the moment you released the hold.
+
+Two ways a hold degrades quietly rather than breaking: `pinned: true` with no `featured:` title, and
+a pinned title that is no longer in the catalogue. Both print a note and rotate.
+
+It **rotates on its own**: the *Rebuild paper deck* workflow runs **daily** at 09:00 JST, reshuffles
+with `--seed $(date -u +%F)`, commits the result and asks the site to redeploy. Only the schedule and
 an explicit "Run workflow" (with *rotate* ticked) reshuffle — a content push never moves the
-billboard out from under whatever you just wrote. To make it daily, change the cron in
-`.github/workflows/papers.yml` from `0 0 * * 1` to `0 0 * * *`.
+billboard out from under whatever you just wrote, and neither does anything while a hold is set. For
+a weekly billboard instead, change the cron in `.github/workflows/papers.yml` from `0 0 * * *` back
+to `0 0 * * 1`.
 
 Because the seed is the date, a re-run on the same day reproduces exactly the same pick and
 commits nothing.
@@ -99,7 +115,8 @@ commits nothing.
 The draw is weighted rather than uniform: recent work and papers where you are first author come
 up more often, and a paper whose logline is still the `Venue, year.` fallback is heavily
 discounted, since it makes a poor billboard. Heroes used recently are recorded in
-`bib/feature-history.yaml` and skipped, so the billboard does not repeat.
+`bib/feature-history.yaml` and skipped, so the billboard does not repeat: `AVOID_LAST` is counted in
+rotations rather than days, so its default of 30 is a month of the daily schedule.
 
 ## Authors and institutions
 
@@ -196,8 +213,13 @@ python scripts/deadlines.py new                          # hand-enter anything r
 `keep` is `hide` inverted: it keeps the tracks you name and hides every other one, which is how the
 board went from 376 dates to the research and NIER tracks alone.
 
-`add` and `refresh` need network and space their requests out; `build` is offline. Only `build`
-is needed in CI if the fetched data is committed.
+`add` and `refresh` need network and space their requests out; `build` is offline.
+
+It **refreshes on its own**: the *Refresh deadline board* workflow runs daily at 09:20 JST, re-reads
+every `researchr` conference, rebuilds `data/deadlines.yaml`, and commits only when something moved.
+Conference pages revise their dates without announcing it, which is the whole reason not to type
+them out by hand. A push that touches `bib/conferences.yaml` rebuilds from what is already stored
+rather than refetching, so editing the file by hand does not fire eight requests.
 
 ## What it works out on its own
 
@@ -287,8 +309,9 @@ Then `build`. Two things to know:
 - **`source: manual` is what protects it.** Without it the entry is treated as fetched, and the next
   `refresh` replaces everything under `deadlines:` — or fails trying, if the slug is not a real
   researchr conference.
-- **Leave `kind:` off.** It is worked out from the label at build time, so a hand-written row gets
-  the right tag, and improving the rules re-sorts the whole board with no re-fetch.
+- **There is no `kind:` field to write.** It is worked out from the label at build time and appears
+  only in the generated `data/deadlines.yaml`, so a hand-written row gets the right tag, and
+  improving the rules re-sorts the whole board with no re-fetch.
 
 `build` validates what it reads and names anything wrong rather than failing with a traceback:
 

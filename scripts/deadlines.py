@@ -269,7 +269,6 @@ def write_source(data, hidden=None):
             L += ["      - date: " + q(d["date"]),
                   "        track: " + q(d["track"]),
                   "        label: " + q(d["label"]),
-                  "        kind: " + d["kind"],
                   "        raw: " + q(d["raw"]),
                   "        tz: " + q(d.get("tz") or ""),
                   "        url: " + q(d.get("url") or "")]
@@ -288,7 +287,6 @@ def pull(slug, venues, log):
             dropped += 1
             continue
         r["date"] = iso
-        r["kind"] = classify(r["label"])
         out.append(r)
     out.sort(key=lambda r: (r["date"], r["track"], r["label"]))
     # a conference page can list the same row under several tracks
@@ -382,8 +380,9 @@ def emit(data, today, hidden=None):
               "    conf: " + slug,
               "    track: " + q(d["track"]),
               "    label: " + q(d["label"]),
-              # classified here, not at fetch time, so improving the rules
-              # re-sorts the whole board without re-fetching anything
+              # classified here rather than stored in bib/conferences.yaml, so
+              # improving the rules re-sorts the whole board with no re-fetch,
+              # and the editable file carries only what the source actually said
               "    kind: " + classify(d["label"]),
               "    tz: " + q(d.get("tz") or ""),
               "    url: " + q(d.get("url") or c.get("url") or "")]
@@ -524,7 +523,7 @@ def main():
                 sys.exit("error: %r is not a date in YYYY-MM-DD form" % dstr)
             deadlines.append({
                 "date": iso, "track": track, "label": label,
-                "kind": classify(label), "raw": iso, "tz": tz, "url": url,
+                "raw": iso, "tz": tz, "url": url,
             })
         deadlines.sort(key=lambda d: (d["date"], d["label"]))
 
@@ -536,7 +535,7 @@ def main():
         print("\nadded %s — %d date%s, kept out of every refresh"
               % (slug, len(deadlines), "" if len(deadlines) == 1 else "s"))
         for d in deadlines:
-            print("  %s  %-28s %s" % (d["date"], d["label"][:28], d["kind"]))
+            print("  %s  %-28s %s" % (d["date"], d["label"][:28], classify(d["label"])))
         print("\nnow run: python scripts/deadlines.py build")
         return 0
 
