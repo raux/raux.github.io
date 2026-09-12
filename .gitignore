@@ -8,3 +8,8 @@ artifacts/
 
 # local snapshot of /papers/ produced for review; not part of the site
 papers-preview.html
+deadlines-preview.html
+
+# python bytecode from the pipeline scripts
+__pycache__/
+*.pyc

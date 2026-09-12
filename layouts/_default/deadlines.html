@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.LanguageCode }}">
+{{ $dl := .Site.Data.deadlines }}
+{{ $venues := .Site.Data.venues }}
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Submission deadlines for the software engineering venues this group publishes in.">
+<title>Deadline Board</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=JetBrains+Mono:wght@400;600&family=Newsreader:opsz,wght@6..72,300;400&display=swap">
+<style>
+  :root{
+    --ink:#0A0D13; --ink-2:#10141d; --raise:#171d29; --raise-2:#1f2735;
+    --line:#2a3344; --text:#ECEFF6; --muted:#8D97AE; --dim:#5C6580;
+    --accent:#E23B3B; --accent-hi:#FF5C5C; --gold:#F0B429; --go:#3FB489;
+    --pad: clamp(18px, 4vw, 56px);
+  }
+  *{box-sizing:border-box}
+  img{max-width:100%}
+  body{
+    margin:0;background:var(--ink);color:var(--text);
+    font-family:"Archivo","Helvetica Neue",Arial,sans-serif;font-size:15px;line-height:1.5;
+  }
+  a{color:inherit}
+  button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+  :focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:3px}
+  .mono{font-family:"JetBrains Mono",ui-monospace,Menlo,monospace}
+
+  .bar{
+    position:sticky;top:0;z-index:40;display:flex;align-items:center;gap:clamp(12px,2vw,28px);
+    padding:14px var(--pad);background:linear-gradient(180deg,var(--ink) 60%,rgba(10,13,19,0));
+    backdrop-filter:blur(6px);
+  }
+  .brand{font-variation-settings:"wdth" 78;font-weight:900;font-size:22px;letter-spacing:.02em;
+    color:var(--accent);text-transform:uppercase;white-space:nowrap}
+  .brand span{color:var(--text)}
+  .bar nav{display:flex;gap:18px;flex:1;flex-wrap:wrap}
+  .bar nav a{font-size:13px;color:var(--muted);text-decoration:none;padding:4px 0;
+    border-bottom:2px solid transparent;transition:color .15s,border-color .15s}
+  .bar nav a:hover{color:var(--text);border-color:var(--accent)}
+
+  header.head{padding:8px var(--pad) 4px;max-width:1100px}
+  h1{margin:0 0 10px;font-variation-settings:"wdth" 74;font-weight:900;
+    font-size:clamp(32px,4.6vw,52px);line-height:.95;text-transform:uppercase;text-wrap:balance}
+  .lede{font-family:"Newsreader",Georgia,serif;font-size:17px;line-height:1.55;
+    color:#C7CEDD;max-width:62ch;margin:0 0 6px}
+  .stamp{font-size:11.5px;color:var(--dim);margin:0}
+
+  /* filters — same tri-state chips as the deck */
+  .filters{display:flex;align-items:flex-start;gap:10px;flex-wrap:wrap;row-gap:8px;
+    padding:20px var(--pad) 6px}
+  .facet{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+  .facet-label{font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);
+    font-weight:700;margin-right:2px}
+  .chip{padding:6px 13px;border-radius:999px;border:1px solid var(--line);font-size:12px;
+    color:var(--muted);letter-spacing:.03em;transition:all .15s;white-space:nowrap}
+  .chip:hover{color:var(--text);border-color:var(--dim)}
+  .chip[data-state="inc"]{background:var(--text);color:#0A0D13;border-color:var(--text);font-weight:700}
+  .chip[data-state="exc"]{background:rgba(226,59,59,.14);border-color:rgba(226,59,59,.55);
+    color:#FFB4B4;text-decoration:line-through;text-decoration-thickness:1px}
+  .chip .mk{display:inline-block;width:8px;margin-right:5px;text-align:center;font-weight:700;
+    opacity:.75;text-decoration:none}
+  .chip[data-state="off"] .mk{opacity:0}
+  .sep{width:1px;height:20px;background:var(--line);margin:0 6px;align-self:center}
+  .reset{font-size:11px;color:var(--accent-hi);text-decoration:underline;
+    text-underline-offset:3px;padding:6px 2px}
+  .reset[hidden]{display:none}
+  .count{margin-left:auto;font-size:12px;color:var(--dim);align-self:center}
+
+  /* the board */
+  main{padding:10px var(--pad) 80px}
+  .month{margin:30px 0 10px;display:flex;align-items:baseline;gap:12px}
+  .month h2{margin:0;font-size:15px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;
+    font-variation-settings:"wdth" 88}
+  .month .n{font-size:11.5px;color:var(--dim)}
+  ul.board{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+
+  li.dl{
+    display:grid;grid-template-columns:64px 108px 92px 1fr auto;align-items:center;gap:14px;
+    padding:11px 14px;background:var(--raise);border:1px solid var(--line);border-radius:6px;
+    border-left:3px solid var(--line);
+  }
+  li.dl[data-urg="now"]{border-left-color:var(--accent);background:linear-gradient(90deg,rgba(226,59,59,.10),var(--raise) 44%)}
+  li.dl[data-urg="soon"]{border-left-color:var(--gold)}
+  li.dl[data-urg="past"]{opacity:.42}
+  li.dl:hover{border-color:var(--dim)}
+
+  .when{display:flex;flex-direction:column;align-items:flex-start;line-height:1}
+  .when b{font-size:21px;font-weight:900;font-variation-settings:"wdth" 78}
+  .when small{font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);margin-top:3px}
+  li.dl[data-urg="now"] .when b{color:var(--accent-hi)}
+  li.dl[data-urg="soon"] .when b{color:var(--gold)}
+  li.dl[data-urg="past"] .when b{color:var(--dim);font-size:15px}
+
+  .date{font-size:12px;color:var(--muted);letter-spacing:.02em}
+  .vp{
+    display:inline-flex;align-items:center;justify-content:center;
+    font-variation-settings:"wdth" 76;font-weight:900;font-size:13px;letter-spacing:.02em;
+    padding:5px 9px;border-radius:4px;color:#EAF0FA;white-space:nowrap;
+    background:var(--vbg);border:1px solid var(--vbr);
+  }
+  .what{min-width:0}
+  .what b{display:block;font-size:14px;font-weight:700;line-height:1.25}
+  .what small{display:block;font-size:11.5px;color:var(--muted);margin-top:3px;
+    white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .kindtag{font-size:8.5px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;
+    padding:2px 6px;border-radius:3px;margin-left:8px;vertical-align:1px}
+  .k-submission{background:rgba(226,59,59,.18);color:var(--accent-hi)}
+  .k-notification{background:rgba(63,180,137,.16);color:#6FD3AF}
+  .k-camera{background:rgba(240,180,41,.16);color:var(--gold)}
+  .k-event{background:rgba(141,151,174,.18);color:#A9B3C8}
+  .k-other{background:rgba(141,151,174,.12);color:var(--dim)}
+
+  .acts{display:flex;gap:6px;align-items:center}
+  .act{font-size:11px;color:var(--muted);border:1px solid var(--line);border-radius:4px;
+    padding:5px 9px;text-decoration:none;white-space:nowrap;transition:all .15s}
+  .act:hover{color:var(--text);border-color:var(--dim);background:var(--raise-2)}
+  .tzn{font-size:10px;color:var(--dim);white-space:nowrap}
+
+  .empty{padding:50px 0;color:var(--dim);font-size:14px}
+  footer{border-top:1px solid var(--line);padding:26px var(--pad) 48px;color:var(--dim);
+    font-size:12px;line-height:1.7}
+  footer b{color:var(--muted);font-weight:600}
+
+  @media (prefers-reduced-motion: reduce){*{transition-duration:.01ms !important}}
+  @media (max-width:860px){
+    li.dl{grid-template-columns:56px 1fr;grid-template-areas:"when what" "when meta";row-gap:6px}
+    .when{grid-area:when}.what{grid-area:what}
+    .date,.vp{grid-area:meta;justify-self:start}
+    .acts{display:none}
+  }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="brand">RAUX<span>·DATES</span></div>
+  <nav>
+    <a href="{{ "/papers/" | relLangURL }}">Research deck</a>
+    <a href="{{ "/posts/" | relLangURL }}">Posts</a>
+    <a href="{{ "/" | relLangURL }}">&#8592; raux.github.io</a>
+  </nav>
+</header>
+
+<header class="head">
+  <h1>Deadline Board</h1>
+  <p class="lede">Submission dates for the venues this group actually publishes in, read from each
+  conference&rsquo;s own dates page rather than typed out by hand.</p>
+  <p class="stamp" id="stamp"></p>
+</header>
+
+<div class="filters" id="filters" role="group" aria-label="Filter deadlines">
+  <span class="count" id="count"></span>
+</div>
+
+<main id="board"></main>
+
+<footer>
+  <b>Where this comes from.</b> Each conference&rsquo;s dates page on
+  <span class="mono">conf.researchr.org</span>, fetched by <span class="mono">scripts/deadlines.py</span>
+  and generated into <span class="mono">data/deadlines.yaml</span>. Add one with
+  <span class="mono">python scripts/deadlines.py add &lt;slug&gt;</span>.
+  Dates are shown exactly as the conference publishes them; where a conference states a timezone it
+  is given beside the row, and <span class="mono">AoE</span> means anywhere-on-earth.
+  Always check the conference site before relying on a date.
+</footer>
+
+<script id="dl-data" type="application/json">{{ $dl | jsonify | safeJS }}</script>
+<script id="ven-data" type="application/json">{{ $venues | jsonify | safeJS }}</script>
+<script>
+(function(){
+  "use strict";
+  function parse(id){
+    var el=document.getElementById(id), v={};
+    try{ v=JSON.parse(el.textContent); if(typeof v==="string") v=JSON.parse(v); }catch(e){ v={}; }
+    return v||{};
+  }
+  var DATA=parse("dl-data"), VEN=parse("ven-data");
+  var CONFS=DATA.conferences||{}, DATES=DATA.dates||[];
+
+  var MONTH=["January","February","March","April","May","June","July","August","September","October","November","December"];
+  var SHORT=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+  var KINDS=[["submission","Submission"],["notification","Notification"],["camera","Camera-ready"],["event","Event"],["other","Other"]];
+
+  function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});}
+  function rgba(hex,a){
+    var h=String(hex||"").replace("#","");
+    if(h.length===3) h=h[0]+h[0]+h[1]+h[1]+h[2]+h[2];
+    var n=parseInt(h,16);
+    if(isNaN(n)) return "rgba(92,101,128,"+a+")";
+    return "rgba("+((n>>16)&255)+","+((n>>8)&255)+","+(n&255)+","+a+")";
+  }
+  function ymd(s){var p=String(s).split("-");return new Date(Date.UTC(+p[0],+p[1]-1,+p[2]));}
+  var TODAY=(function(){var n=new Date();return Date.UTC(n.getFullYear(),n.getMonth(),n.getDate());})();
+  function daysTo(s){ return Math.round((ymd(s).getTime()-TODAY)/86400000); }
+
+  function plate(conf){
+    var c=CONFS[conf]||{}, v=VEN[c.venue]||null;
+    var abbr=(v&&v.abbr)||(c.name||conf).split(" ")[0];
+    var col=(v&&v.color)||"#5C6580";
+    return '<span class="vp" style="--vbg:'+rgba(col,.30)+';--vbr:'+rgba(col,.55)+'" title="'+esc(c.name||conf)+'">'+esc(abbr)+'</span>';
+  }
+
+  /* calendar hand-offs: an all-day event on the deadline date */
+  function stamp(d,off){ var t=ymd(d); t.setUTCDate(t.getUTCDate()+(off||0));
+    return t.toISOString().slice(0,10).replace(/-/g,""); }
+  function gcal(r){
+    var c=CONFS[r.conf]||{};
+    var title=(c.name||r.conf)+" — "+r.label+(r.track?" ("+r.track+")":"");
+    return "https://calendar.google.com/calendar/render?action=TEMPLATE"
+      +"&text="+encodeURIComponent(title)
+      +"&dates="+stamp(r.date)+"/"+stamp(r.date,1)
+      +"&details="+encodeURIComponent((r.tz?"Timezone as published: "+r.tz+"\\n":"")+(r.url||c.url||""))
+      +"&location="+encodeURIComponent(c.url||"");
+  }
+  function ics(r){
+    var c=CONFS[r.conf]||{};
+    var title=(c.name||r.conf)+" - "+r.label+(r.track?" ("+r.track+")":"");
+    var body=["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//raux.github.io//deadline board//EN",
+      "BEGIN:VEVENT","UID:"+r.conf+"-"+r.date+"-"+Math.random().toString(36).slice(2)+"@raux.github.io",
+      "DTSTAMP:"+stamp(r.date)+"T000000Z","DTSTART;VALUE=DATE:"+stamp(r.date),
+      "DTEND;VALUE=DATE:"+stamp(r.date,1),"SUMMARY:"+title,
+      "DESCRIPTION:"+((r.tz?"Timezone as published: "+r.tz+" ":"")+(r.url||c.url||"")),
+      "URL:"+(r.url||c.url||""),"END:VEVENT","END:VCALENDAR"].join("\\r\\n");
+    var a=document.createElement("a");
+    a.href=URL.createObjectURL(new Blob([body],{type:"text/calendar"}));
+    a.download=r.conf+"-"+r.date+".ics";
+    document.body.appendChild(a); a.click();
+    setTimeout(function(){ URL.revokeObjectURL(a.href); a.remove(); },200);
+  }
+
+  /* ── filters: tri-state, same rules as the deck ───────────── */
+  var FACETS=[
+    {id:"conf", label:"Conference",
+     opts:Object.keys(CONFS).sort().map(function(k){ return [k,(CONFS[k].name||k)]; }),
+     test:function(r,v){ return r.conf===v; }},
+    {id:"kind", label:"Kind", opts:KINDS, test:function(r,v){ return r.kind===v; }},
+    {id:"when", label:"Horizon",
+     opts:[["30","next 30 days"],["90","next 90 days"],["past","already passed"]],
+     test:function(r,v){
+       var d=daysTo(r.date);
+       if(v==="30")   return d>=0 && d<=30;
+       if(v==="90")   return d>=0 && d<=90;
+       if(v==="past") return d<0;
+       return false;
+     }}
+  ];
+  var CYCLE={off:"inc",inc:"exc",exc:"off"}, MARK={off:"·",inc:"+",exc:"−"},
+      SAYS={off:"not filtered",inc:"included",exc:"excluded"};
+  /* Sensible opening state: what you can still submit to. */
+  var state={conf:{},kind:{submission:"inc"},when:{past:"exc"}};
+
+  function matches(r){
+    for(var i=0;i<FACETS.length;i++){
+      var f=FACETS[i], sel=state[f.id]||{}, anyInc=false, hit=false;
+      for(var v in sel){
+        if(!Object.prototype.hasOwnProperty.call(sel,v)) continue;
+        var m=f.test(r,v);
+        if(sel[v]==="exc"&&m) return false;
+        if(sel[v]==="inc"){ anyInc=true; if(m) hit=true; }
+      }
+      if(anyInc&&!hit) return false;
+    }
+    return true;
+  }
+
+  var filtersEl=document.getElementById("filters"), boardEl=document.getElementById("board"),
+      countEl=document.getElementById("count"), resetBtn;
+
+  function chipState(b,st){
+    b.dataset.state=st;
+    b.querySelector(".mk").textContent=MARK[st];
+    b.setAttribute("aria-label",b.dataset.label+" — "+SAYS[st]);
+    b.setAttribute("aria-pressed",String(st==="inc"));
+  }
+  function anyActive(){
+    for(var k in state) for(var v in state[k]) if(state[k][v]!=="off") return true;
+    return false;
+  }
+  function buildFilters(){
+    filtersEl.textContent="";
+    FACETS.forEach(function(f,i){
+      if(i){ var sp=document.createElement("span"); sp.className="sep"; filtersEl.appendChild(sp); }
+      var g=document.createElement("span"); g.className="facet";
+      var lab=document.createElement("span"); lab.className="facet-label"; lab.textContent=f.label;
+      g.appendChild(lab);
+      f.opts.forEach(function(o){
+        var b=document.createElement("button");
+        b.type="button"; b.className="chip";
+        b.dataset.label=o[1];
+        b.innerHTML='<span class="mk"></span>';
+        b.appendChild(document.createTextNode(o[1]));
+        chipState(b,(state[f.id]||{})[o[0]]||"off");
+        b.addEventListener("click",function(){
+          var next=CYCLE[b.dataset.state];
+          if(next==="off") delete state[f.id][o[0]]; else state[f.id][o[0]]=next;
+          chipState(b,next); resetBtn.hidden=!anyActive(); render();
+        });
+        g.appendChild(b);
+      });
+      filtersEl.appendChild(g);
+    });
+    resetBtn=document.createElement("button");
+    resetBtn.type="button"; resetBtn.className="reset"; resetBtn.textContent="Clear filters";
+    resetBtn.addEventListener("click",function(){
+      state={conf:{},kind:{},when:{}};
+      Array.prototype.forEach.call(filtersEl.querySelectorAll(".chip"),function(b){chipState(b,"off");});
+      resetBtn.hidden=true; render();
+    });
+    resetBtn.hidden=!anyActive();
+    filtersEl.appendChild(resetBtn);
+    filtersEl.appendChild(countEl);
+  }
+
+  function row(r){
+    var d=daysTo(r.date), dd=ymd(r.date), c=CONFS[r.conf]||{};
+    var urg = d<0 ? "past" : (d<=7 ? "now" : (d<=30 ? "soon" : "far"));
+    var big = d<0 ? "—" : (d===0 ? "today" : d);
+    var li=document.createElement("li");
+    li.className="dl"; li.dataset.urg=urg;
+    li.innerHTML=
+      '<span class="when"><b>'+esc(big)+'</b><small>'+(d<0?"passed":(d===1?"day":"days"))+'</small></span>'+
+      '<span class="date mono">'+dd.getUTCDate()+" "+SHORT[dd.getUTCMonth()]+" "+dd.getUTCFullYear()+'</span>'+
+      plate(r.conf)+
+      '<span class="what"><b>'+esc(r.label)+'<span class="kindtag k-'+esc(r.kind)+'">'+esc(r.kind)+'</span></b>'+
+        '<small>'+esc(r.track)+' · '+esc(c.name||r.conf)+'</small></span>'+
+      '<span class="acts">'+(r.tz?'<span class="tzn mono">'+esc(r.tz)+'</span>':"")+
+        '<a class="act" href="'+esc(gcal(r))+'" target="_blank" rel="noopener">Google</a>'+
+        '<button class="act ics" type="button">.ics</button>'+
+        (r.url?'<a class="act" href="'+esc(r.url)+'" target="_blank" rel="noopener">Track</a>':"")+
+      '</span>';
+    li.querySelector(".ics").addEventListener("click",function(){ ics(r); });
+    return li;
+  }
+
+  function render(){
+    var rows=DATES.filter(matches);
+    countEl.textContent=rows.length+" of "+DATES.length+" dates";
+    boardEl.textContent="";
+    if(!rows.length){
+      var e=document.createElement("div"); e.className="empty";
+      e.textContent="Nothing matches that. Try clearing a filter.";
+      boardEl.appendChild(e); return;
+    }
+    var cur=null, ul=null;
+    rows.forEach(function(r){
+      var dd=ymd(r.date), key=dd.getUTCFullYear()+"-"+dd.getUTCMonth();
+      if(key!==cur){
+        cur=key;
+        var h=document.createElement("div"); h.className="month";
+        h.innerHTML='<h2>'+MONTH[dd.getUTCMonth()]+" "+dd.getUTCFullYear()+'</h2><span class="n"></span>';
+        boardEl.appendChild(h);
+        ul=document.createElement("ul"); ul.className="board"; boardEl.appendChild(ul);
+        h.__n=h.querySelector(".n"); h.__c=0; ul.__h=h;
+      }
+      ul.appendChild(row(r));
+      ul.__h.__c++; ul.__h.__n.textContent=ul.__h.__c+(ul.__h.__c===1?" date":" dates");
+    });
+  }
+
+  var ahead=DATES.filter(function(r){ return daysTo(r.date)>=0; }).length;
+  document.getElementById("stamp").textContent=
+    DATES.length+" dates across "+Object.keys(CONFS).length+" conferences · "+
+    ahead+" still ahead · generated "+(DATA.generated||"from each conference's own page");
+
+  buildFilters();
+  render();
+})();
+</script>
+</body>
+</html>

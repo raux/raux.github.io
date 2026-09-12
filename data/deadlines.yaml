@@ -1,0 +1,325 @@
+# GENERATED FILE — do not edit by hand.
+# Regenerate with:  python scripts/deadlines.py build
+#
+# Last generated 2026-09-12 · 41 dates across 6 conferences
+
+conferences:
+  chase-2027:
+    source: researchr
+    name: "CHASE 2027"
+    url: "https://conf.researchr.org/home/chase-2027"
+    venue: "CHASE"
+  fse-2027:
+    source: researchr
+    name: "FSE 2027"
+    url: "https://conf.researchr.org/home/fse-2027"
+    venue: "ESEC/FSE"
+  icse-2027:
+    source: researchr
+    name: "ICSE 2027"
+    url: "https://conf.researchr.org/home/icse-2027"
+    venue: "ICSE"
+  icsme-2027:
+    source: researchr
+    name: "ICSME 2027"
+    url: "https://conf.researchr.org/home/icsme-2027"
+    venue: "ICSME"
+  msr-2027:
+    source: researchr
+    name: "MSR 2027"
+    url: "https://conf.researchr.org/home/msr-2027"
+    venue: "MSR"
+  saner-2027:
+    source: researchr
+    name: "SANER 2027"
+    url: "https://conf.researchr.org/home/saner-2027"
+    venue: "SANER"
+
+dates:
+  - date: "2026-06-23"
+    conf: icse-2027
+    track: "Research Track"
+    label: "(Mandatory) Abstract"
+    kind: submission
+    tz: "AoE (UTC-12h)"
+    url: "https://conf.researchr.org/track/icse-2027/icse-2027-research-track"
+  - date: "2026-06-30"
+    conf: icse-2027
+    track: "Research Track"
+    label: "Submission"
+    kind: submission
+    tz: "AoE (UTC-12h)"
+    url: "https://conf.researchr.org/track/icse-2027/icse-2027-research-track"
+  - date: "2026-09-21"
+    conf: saner-2027
+    track: "Research Track"
+    label: "Abstract submission (mandatory)"
+    kind: submission
+    tz: "AoE (UTC-12h)"
+    url: "https://conf.researchr.org/track/saner-2027/saner-2027-papers"
+  - date: "2026-09-25"
+    conf: icse-2027
+    track: "Research Track"
+    label: "Author response period (3 days)"
+    kind: notification
+    tz: "AoE (UTC-12h)"
+    url: "https://conf.researchr.org/track/icse-2027/icse-2027-research-track"
+  - date: "2026-09-25"
+    conf: saner-2027
+    track: "Research Track"
+    label: "Paper submission"
+    kind: submission
+    tz: "AoE (UTC-12h)"
+    url: "https://conf.researchr.org/track/saner-2027/saner-2027-papers"
+  - date: "2026-10-02"
+    conf: fse-2027
+    track: "Research Papers"
+    label: "Full paper submission"
+    kind: submission
+    tz: "AoE (UTC-12h)"
+    url: "https://conf.researchr.org/track/fse-2027/fse-2027-papers"
+  - date: "2026-10-16"
+    conf: chase-2027
+    track: "Research Track"
+    label: "Abstract submission"
+    kind: submission
+    tz: "AoE (UTC-12h)"
+    url: "https://conf.researchr.org/track/chase-2027/chase-2027-papers"
+  - date: "2026-10-19"
+    conf: saner-2027
+    track: "Early Research Achievement (ERA) Track"
+    label: "Abstract submission (mandatory)"
+    kind: submission
+    tz: "AoE (UTC-12h)"
+    url: "https://conf.researchr.org/track/saner-2027/saner-2027-early-research-achievement-era--track"
+  - date: "2026-10-20"
+    conf: icse-2027
+    track: "Research Track"
+    label: "Notification"
+    kind: notification
+    tz: "AoE (UTC-12h)"
+    url: "https://conf.researchr.org/track/icse-2027/icse-2027-research-track"
+  - date: "2026-10-20"
+    conf: msr-2027
+    track: "Technical Papers"
+    label: "Abstract"
+    kind: submission
+    tz: "AoE (UTC-12h)"
+    url: "https://2027.msrconf.org/track/msr-2027-technical-papers"
+  - date: "2026-10-23"
+    conf: chase-2027
+    track: "Research Track"
+    label: "Paper Submission"
+    kind: submission
+    tz: "AoE (UTC-12h)"
+    url: "https://conf.researchr.org/track/chase-2027/chase-2027-papers"
+  - date: "2026-10-23"
+    conf: icse-2027
+    track: "New Ideas and Emerging Results (NIER)"
+    label: "Submissions Deadline"
+    kind: submission
+    tz: "AoE (UTC-12h)"
+    url: "https://conf.researchr.org/track/icse-2027/icse-2027-new-ideas-and-emerging-results--nier-"
+  - date: "2026-10-23"
+    conf: msr-2027
+    track: "Technical Papers"
+    label: "Paper Deadline"
+    kind: submission
+    tz: "AoE (UTC-12h)"
+    url: "https://2027.msrconf.org/track/msr-2027-technical-papers"
+  - date: "2026-10-23"
+    conf: saner-2027
+    track: "Early Research Achievement (ERA) Track"
+    label: "Paper submission deadline"
+    kind: submission
+    tz: "AoE (UTC-12h)"
+    url: "https://conf.researchr.org/track/saner-2027/saner-2027-early-research-achievement-era--track"
+  - date: "2026-11-17"
+    conf: icse-2027
+    track: "Research Track"
+    label: "Revision due"
+    kind: submission
+    tz: "AoE (UTC-12h)"
+    url: "https://conf.researchr.org/track/icse-2027/icse-2027-research-track"
+  - date: "2026-11-24"
+    conf: icse-2027
+    track: "Research Track"
+    label: "Camera-ready (of directly accepted papers)"
+    kind: camera
+    tz: "AoE (UTC-12h)"
+    url: "https://conf.researchr.org/track/icse-2027/icse-2027-research-track"
+  - date: "2026-12-01"
+    conf: saner-2027
+    track: "Research Track"
+    label: "Notification"
+    kind: notification
+    tz: "AoE (UTC-12h)"
+    url: "https://conf.researchr.org/track/saner-2027/saner-2027-papers"
+  - date: "2026-12-03"
+    conf: msr-2027
+    track: "Technical Papers"
+    label: "Early Reject Notification"
+    kind: notification
+    tz: "AoE (UTC-12h)"
+    url: "https://2027.msrconf.org/track/msr-2027-technical-papers"
+  - date: "2026-12-08"
+    conf: msr-2027
+    track: "Technical Papers"
+    label: "Author Response Period"
+    kind: notification
+    tz: "AoE (UTC-12h)"
+    url: "https://2027.msrconf.org/track/msr-2027-technical-papers"
+  - date: "2026-12-08"
+    conf: saner-2027
+    track: "Early Research Achievement (ERA) Track"
+    label: "Notifications"
+    kind: notification
+    tz: "AoE (UTC-12h)"
+    url: "https://conf.researchr.org/track/saner-2027/saner-2027-early-research-achievement-era--track"
+  - date: "2026-12-18"
+    conf: chase-2027
+    track: "Research Track"
+    label: "Notification"
+    kind: notification
+    tz: "AoE (UTC-12h)"
+    url: "https://conf.researchr.org/track/chase-2027/chase-2027-papers"
+  - date: "2026-12-18"
+    conf: fse-2027
+    track: "Research Papers"
+    label: "Author response period"
+    kind: notification
+    tz: "AoE (UTC-12h)"
+    url: "https://conf.researchr.org/track/fse-2027/fse-2027-papers"
+  - date: "2026-12-18"
+    conf: icse-2027
+    track: "New Ideas and Emerging Results (NIER)"
+    label: "Acceptance Notification"
+    kind: notification
+    tz: "AoE (UTC-12h)"
+    url: "https://conf.researchr.org/track/icse-2027/icse-2027-new-ideas-and-emerging-results--nier-"
+  - date: "2026-12-18"
+    conf: icse-2027
+    track: "Research Track"
+    label: "Final decision (of major revision papers)"
+    kind: notification
+    tz: "AoE (UTC-12h)"
+    url: "https://conf.researchr.org/track/icse-2027/icse-2027-research-track"
+  - date: "2027-01-08"
+    conf: msr-2027
+    track: "Technical Papers"
+    label: "Author Notification"
+    kind: notification
+    tz: "AoE (UTC-12h)"
+    url: "https://2027.msrconf.org/track/msr-2027-technical-papers"
+  - date: "2027-01-08"
+    conf: saner-2027
+    track: "Early Research Achievement (ERA) Track"
+    label: "Author registration deadline"
+    kind: other
+    tz: "AoE (UTC-12h)"
+    url: "https://conf.researchr.org/track/saner-2027/saner-2027-early-research-achievement-era--track"
+  - date: "2027-01-08"
+    conf: saner-2027
+    track: "Early Research Achievement (ERA) Track"
+    label: "Camera Ready"
+    kind: camera
+    tz: "AoE (UTC-12h)"
+    url: "https://conf.researchr.org/track/saner-2027/saner-2027-early-research-achievement-era--track"
+  - date: "2027-01-08"
+    conf: saner-2027
+    track: "Research Track"
+    label: "Author registration"
+    kind: other
+    tz: "AoE (UTC-12h)"
+    url: "https://conf.researchr.org/track/saner-2027/saner-2027-papers"
+  - date: "2027-01-08"
+    conf: saner-2027
+    track: "Research Track"
+    label: "Camera Ready"
+    kind: camera
+    tz: "AoE (UTC-12h)"
+    url: "https://conf.researchr.org/track/saner-2027/saner-2027-papers"
+  - date: "2027-01-20"
+    conf: icse-2027
+    track: "New Ideas and Emerging Results (NIER)"
+    label: "Camera Ready"
+    kind: camera
+    tz: "AoE (UTC-12h)"
+    url: "https://conf.researchr.org/track/icse-2027/icse-2027-new-ideas-and-emerging-results--nier-"
+  - date: "2027-01-22"
+    conf: fse-2027
+    track: "Research Papers"
+    label: "Initial notification"
+    kind: notification
+    tz: "AoE (UTC-12h)"
+    url: "https://conf.researchr.org/track/fse-2027/fse-2027-papers"
+  - date: "2027-01-25"
+    conf: icse-2027
+    track: "Research Track"
+    label: "Camera-ready (of accepted major revision papers)"
+    kind: camera
+    tz: "AoE (UTC-12h)"
+    url: "https://conf.researchr.org/track/icse-2027/icse-2027-research-track"
+  - date: "2027-01-26"
+    conf: msr-2027
+    track: "Technical Papers"
+    label: "Camera Ready Deadline"
+    kind: camera
+    tz: "AoE (UTC-12h)"
+    url: "https://2027.msrconf.org/track/msr-2027-technical-papers"
+  - date: "2027-01-29"
+    conf: chase-2027
+    track: "Research Track"
+    label: "Camera-ready Submission"
+    kind: submission
+    tz: "AoE (UTC-12h)"
+    url: "https://conf.researchr.org/track/chase-2027/chase-2027-papers"
+  - date: "2027-03-05"
+    conf: fse-2027
+    track: "Research Papers"
+    label: "Major revision submission"
+    kind: submission
+    tz: "AoE (UTC-12h)"
+    url: "https://conf.researchr.org/track/fse-2027/fse-2027-papers"
+  - date: "2027-03-05"
+    conf: icsme-2027
+    track: "Research Papers Track"
+    label: "Paper Submission"
+    kind: submission
+    tz: "AoE (UTC-12h)"
+    url: "https://conf.researchr.org/track/icsme-2027/icsme-2027-papers"
+  - date: "2027-03-31"
+    conf: fse-2027
+    track: "Research Papers"
+    label: "Final notification"
+    kind: notification
+    tz: "AoE (UTC-12h)"
+    url: "https://conf.researchr.org/track/fse-2027/fse-2027-papers"
+  - date: "2027-05-02"
+    conf: icsme-2027
+    track: "Research Papers Track"
+    label: "Early Decisions Notification"
+    kind: notification
+    tz: "AoE (UTC-12h)"
+    url: "https://conf.researchr.org/track/icsme-2027/icsme-2027-papers"
+  - date: "2027-05-07"
+    conf: icsme-2027
+    track: "Research Papers Track"
+    label: "Author Response Period"
+    kind: notification
+    tz: "AoE (UTC-12h)"
+    url: "https://conf.researchr.org/track/icsme-2027/icsme-2027-papers"
+  - date: "2027-05-28"
+    conf: icsme-2027
+    track: "Research Papers Track"
+    label: "Final Notification"
+    kind: notification
+    tz: "AoE (UTC-12h)"
+    url: "https://conf.researchr.org/track/icsme-2027/icsme-2027-papers"
+  - date: "2027-06-25"
+    conf: icsme-2027
+    track: "Research Papers Track"
+    label: "Camera-Ready Deadline"
+    kind: camera
+    tz: "AoE (UTC-12h)"
+    url: "https://conf.researchr.org/track/icsme-2027/icsme-2027-papers"

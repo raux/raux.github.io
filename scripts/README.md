@@ -157,3 +157,119 @@ warn:   override matches nothing: nonexistentkeycheck
 The first means a new paper is on the site with a placeholder line. The second means an
 override lost its paper — usually a title edited in the `.bib`, or an entry you removed.
 Both appear in the Actions run summary.
+
+
+---
+
+# Deadline board
+
+A second, independent pipeline behind [`/deadlines/`](https://raux.github.io/deadlines/).
+
+| File | Owner | Contents |
+|---|---|---|
+| `bib/conferences.yaml` | you, plus the fetcher | which conferences to track, and every date read from them |
+| `data/deadlines.yaml` | **generated — do not edit** | what the page reads |
+
+Conference deadlines are not typed out by hand: `scripts/deadlines.py` reads each conference's own
+dates page on `conf.researchr.org`, so the board stays honest to its source. Journal special issues
+and anything else researchr does not carry are entered with `new`, below.
+
+```bash
+python scripts/deadlines.py add msr-2027                 # add a conference
+python scripts/deadlines.py add https://conf.researchr.org/home/icse-2027
+python scripts/deadlines.py refresh                      # re-read every one
+python scripts/deadlines.py refresh saner-2027           # or just one
+python scripts/deadlines.py list                         # what is tracked, and how much is still ahead
+python scripts/deadlines.py remove icsme-2026            # stop tracking one entirely
+
+python scripts/deadlines.py tracks icse-2027             # what tracks it carries, and how many dates each
+python scripts/deadlines.py hide icse-2027 "Shadow PC"   # drop a track from the board
+python scripts/deadlines.py hide icse-2027 --matching MSR
+python scripts/deadlines.py show icse-2027 "Shadow PC"   # put it back
+python scripts/deadlines.py keep icse-2027 --matching "Research Track,NIER"   # hide everything else
+python scripts/deadlines.py build                        # write data/deadlines.yaml
+python scripts/deadlines.py build --check                # exit 1 if stale
+
+python scripts/deadlines.py new                          # hand-enter anything researchr does not carry
+```
+
+`keep` is `hide` inverted: it keeps the tracks you name and hides every other one, which is how the
+board went from 376 dates to the research and NIER tracks alone.
+
+`add` and `refresh` need network and space their requests out; `build` is offline. Only `build`
+is needed in CI if the fetched data is committed.
+
+## What it works out on its own
+
+- **Dates.** A row reading `Wed 7 - Sun 18 Oct 2026` resolves to its **end**, since that is the date
+  the deadline actually lands on; the original text is kept as `raw`.
+- **Kind.** `submission`, `notification`, `camera`, `event` or `other`, from the label. This is what
+  makes the board usable — the page opens showing submissions only, because a conference page lists
+  four or five times as many notification and camera-ready dates.
+- **Venue plate.** `msr-2027` finds the `MSR` plate already defined in `bib/venues.yaml`, so the
+  board and the research deck use one visual vocabulary. `VENUE_ALIASES` in the script covers the
+  cases where the slug and the plate differ, such as ESEIW → ESEM.
+
+`name` and `venue` in `bib/conferences.yaml` are yours to edit; everything under `deadlines:` is
+replaced on the next refresh.
+
+## Journals, special issues, and anything else off researchr
+
+Not every deadline has a researchr page — journal special issues and smaller calls usually live on a
+publisher's own page. `new` enters one by hand. Run it bare and it asks:
+
+```
+$ python scripts/deadlines.py new
+Name (e.g. 'TOSEM Special Issue on Agentic SE'): TOSEM Special Issue on Agentic Software Engineering
+Short id [tosem-special-issue-on-agentic-software-engineering]:
+Call-for-papers URL: https://dl.acm.org/journal/tosem/calls-for-papers
+Venue key from bib/venues.yaml (blank for none): ACM TOSEM
+Track name [Submission]: Special Issue
+Timezone as published (e.g. 'AoE (UTC-12h)'): AoE (UTC-12h)
+  date 1 (YYYY-MM-DD, blank to finish): 2027-02-15
+  label [Paper submission]:
+  date 2 (YYYY-MM-DD, blank to finish): 2027-05-30
+  label [Paper submission]: First-round notification
+  date 3 (YYYY-MM-DD, blank to finish):
+added tosem-special-issue-on-agentic-software-engineering — 2 dates, kept out of every refresh
+```
+
+or drive it entirely from flags, which is what to do when scripting or when the shell is not
+interactive:
+
+```bash
+python scripts/deadlines.py new \
+  --name "TOSEM Special Issue on Agentic Software Engineering" \
+  --url https://dl.acm.org/journal/tosem/calls-for-papers \
+  --venue "ACM TOSEM" --track "Special Issue" --tz "AoE (UTC-12h)" \
+  --date 2027-02-15 --label "Paper submission" \
+  --date 2027-05-30 --label "First-round notification"
+```
+
+Each conference in `bib/conferences.yaml` now carries a `source:`, and it decides who owns the dates:
+
+| `source` | Where the dates come from | What `refresh` does |
+|---|---|---|
+| `researchr` | the conference's dates page | re-reads it, replacing `deadlines:` wholesale |
+| `manual` | you, via `new` or by editing the file | **nothing — it is skipped by name** |
+
+So a hand-entered row is safe to edit in place: nothing overwrites it. `refresh` says so rather than
+silently passing over it, and naming a manual entry explicitly is an error, not a no-op. Everything
+downstream treats the two the same — `list`, `remove`, `hide`/`show`/`keep`, `build`, the venue
+plate, the countdown, the `.ics` download. `list` prints `by hand` where a fetched entry shows its
+last fetch date.
+
+To retire one, `remove` it like any other; to correct a date, edit `bib/conferences.yaml` and
+`build`.
+
+## Things to know
+
+- A conference whose dates have all passed is named in the `build` output, so it can be refreshed to
+  its next edition or removed.
+- researchr aggregates co-located events, so ICSE 2027 carries its workshops: 62 tracks, including
+  full MSR and CHASE ones that also appear under those conferences on their own. `tracks` shows what
+  a conference is really carrying and `hide` prunes it. **Hiding is a filter, not a deletion** — the
+  rows stay in `bib/conferences.yaml` under a `hidden:` block, survive `refresh`, and `show` brings
+  them back with no re-fetch. Removing the duplicated ICSE tracks takes it from 238 dates to 168.
+- Dates are shown exactly as published, with the conference's stated timezone beside the row.
+  **Always check the conference site before relying on one.**
