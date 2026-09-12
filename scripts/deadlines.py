@@ -65,11 +65,19 @@ MONTHS = {m: i + 1 for i, m in enumerate(
      "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"])}
 
 # What sort of date a row is. First match wins, so order matters.
+# Order matters: the first pattern to match wins, so the more specific
+# kinds go first.  "Camera-ready Submission Deadline" is a camera-ready
+# date, not a submission, and reads as one only if camera is tested first.
 KINDS = [
+    ("camera",       r"camera|final version|final copy|proceedings|front matter"),
+    # Programme-committee dates.  Conferences publish these on the same page
+    # as author deadlines, and "Final Reviews Due" reads as a submission if
+    # you only look for "due".  They are nothing an author has to act on.
+    ("other",        r"review(s)? due|assigned for review|bidding|pc meeting|"
+                     r"review(ing)? period"),
     ("submission",   r"abstract"),
     ("submission",   r"submission|submit|paper deadline|deadline for|due|proposals"),
     ("notification", r"notification|notify|decision|acceptance|reject|response"),
-    ("camera",       r"camera|final version|final copy|proceedings|front matter"),
     ("event",        r"conference|workshop day|sessions|dates|symposium"),
 ]
 
@@ -91,8 +99,13 @@ def strip_tags(s):
     """Tags become a space, not nothing — researchr hangs "new" badges off labels,
     and stripping them bare gives "Abstract deadlinenew"."""
     t = html.unescape(re.sub(r"<[^>]+>", " ", s)).replace("\xa0", " ")
+    # Invisible formatting characters survive a copy-paste into a CFP and then
+    # sit at the head of a label, where they are impossible to see and break
+    # sorting and matching.  Word joiner, zero-widths, BOM, soft hyphen.
+    t = re.sub(r"[\u200b-\u200d\u2060\ufeff\u00ad\u180e]", "", t)
     t = re.sub(r"\s+", " ", t).strip()
-    return re.sub(r"\s+(new|NEW|updated|UPDATED)$", "", t).strip()
+    t = re.sub(r"\s+(new|NEW|updated|UPDATED)$", "", t).strip()
+    return t.rstrip(":").strip()
 
 
 def parse_dates_page(text):
@@ -197,12 +210,39 @@ def q(s):
 def write_source(data, hidden=None):
     L = ["# Conferences whose deadlines the board tracks.",
          "#",
-         "# Add one with:  python scripts/deadlines.py add <slug-or-url>",
-         "# Re-read all:   python scripts/deadlines.py refresh",
+         "#   python scripts/deadlines.py add <slug-or-url>   track a researchr conference",
+         "#   python scripts/deadlines.py new                 enter one by hand",
+         "#   python scripts/deadlines.py refresh             re-read the fetched ones",
+         "#   python scripts/deadlines.py build               write data/deadlines.yaml",
          "#",
-         "# Everything under `deadlines:` is fetched from the conference's own",
-         "# dates page — edit `venue:` or `name:` freely, but expect the rest to be",
-         "# replaced on the next refresh.",
+         "# `source:` decides who owns the dates.",
+         "#",
+         "#   researchr  read from the conference's own dates page.  `name:` and",
+         "#              `venue:` are yours, but everything under `deadlines:` is",
+         "#              REPLACED on the next refresh — do not hand-edit it.",
+         "#   manual     yours entirely.  `refresh` skips it by name and never",
+         "#              overwrites it.  Use this for journal special issues and",
+         "#              anything with no researchr page.",
+         "#",
+         "# To add one by hand, copy this block under `conferences:` and run",
+         "# `build` — it checks what you wrote and names anything wrong.",
+         "#",
+         "#   my-venue-2027:",
+         "#     source: manual",
+         "#     name: \"My Venue 2027\"",
+         "#     url: \"https://example.org/cfp\"",
+         "#     venue: \"MSR\"            # a key from bib/venues.yaml, or \"\" for a plain plate",
+         "#     fetched: \"\"",
+         "#     deadlines:",
+         "#       - date: \"2027-03-15\"  # YYYY-MM-DD; a range takes its LAST day",
+         "#         track: \"Research Track\"",
+         "#         label: \"Paper submission\"",
+         "#         tz: \"AoE (UTC-12h)\"  # shown beside the row, exactly as published",
+         "#         url: \"\"              # the track page, if it has its own",
+         "#",
+         "# `kind:` (submission / notification / camera / event / other) is worked",
+         "# out from the label at build time, so you can leave it off or leave a",
+         "# stale one in place.",
          "",
          ""]
     hidden = {k: sorted(v) for k, v in (hidden or {}).items() if v}
@@ -271,6 +311,47 @@ def pull(slug, venues, log):
     }
 
 
+def validate(data):
+    """bib/conferences.yaml is meant to be hand-editable, so a typo in it should
+    say what and where rather than surface as a KeyError three frames down."""
+    problems = []
+    for slug in sorted(data):
+        c = data[slug] or {}
+        if not isinstance(c, dict):
+            problems.append("%s: expected a block of fields, found %s"
+                            % (slug, type(c).__name__))
+            continue
+        src = c.get("source") or "researchr"
+        if src not in ("researchr", "manual"):
+            problems.append("%s: source is %r — it must be 'researchr' (re-fetched) "
+                            "or 'manual' (never overwritten)" % (slug, src))
+        rows = c.get("deadlines")
+        if rows is None:
+            problems.append("%s: no deadlines: block" % slug)
+            continue
+        if not isinstance(rows, list):
+            problems.append("%s: deadlines: must be a list of rows" % slug)
+            continue
+        for i, d in enumerate(rows, 1):
+            where = "%s, deadline %d" % (slug, i)
+            if not isinstance(d, dict):
+                problems.append("%s: expected date/track/label fields" % where)
+                continue
+            for field in ("date", "track", "label"):
+                if not str(d.get(field) or "").strip():
+                    problems.append("%s: %s is missing" % (where, field))
+            raw = str(d.get("date") or "").strip()
+            if raw:
+                try:
+                    dt.date.fromisoformat(raw)
+                except ValueError:
+                    problems.append("%s: date %r is not YYYY-MM-DD" % (where, raw))
+    if problems:
+        sys.exit("error: bib/conferences.yaml does not look right\n  "
+                 + "\n  ".join(problems[:20])
+                 + ("\n  ... and %d more" % (len(problems) - 20) if len(problems) > 20 else ""))
+
+
 def emit(data, today, hidden=None):
     hidden = hidden or {}
     rows = []
@@ -301,7 +382,9 @@ def emit(data, today, hidden=None):
               "    conf: " + slug,
               "    track: " + q(d["track"]),
               "    label: " + q(d["label"]),
-              "    kind: " + d["kind"],
+              # classified here, not at fetch time, so improving the rules
+              # re-sorts the whole board without re-fetching anything
+              "    kind: " + classify(d["label"]),
               "    tz: " + q(d.get("tz") or ""),
               "    url: " + q(d.get("url") or c.get("url") or "")]
     return "\n".join(L) + "\n"
@@ -565,6 +648,7 @@ def main():
     # build
     if not data:
         sys.exit("error: nothing tracked — add a conference first")
+    validate(data)
     text = emit(data, today, hidden)
 
     def strip_stamp(s):

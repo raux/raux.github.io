@@ -1,21 +1,59 @@
 # Conferences whose deadlines the board tracks.
 #
-# Add one with:  python scripts/deadlines.py add <slug-or-url>
-# Re-read all:   python scripts/deadlines.py refresh
+#   python scripts/deadlines.py add <slug-or-url>   track a researchr conference
+#   python scripts/deadlines.py new                 enter one by hand
+#   python scripts/deadlines.py refresh             re-read the fetched ones
+#   python scripts/deadlines.py build               write data/deadlines.yaml
 #
-# Everything under `deadlines:` is fetched from the conference's own
-# dates page — edit `venue:` or `name:` freely, but expect the rest to be
-# replaced on the next refresh.
+# `source:` decides who owns the dates.
+#
+#   researchr  read from the conference's own dates page.  `name:` and
+#              `venue:` are yours, but everything under `deadlines:` is
+#              REPLACED on the next refresh — do not hand-edit it.
+#   manual     yours entirely.  `refresh` skips it by name and never
+#              overwrites it.  Use this for journal special issues and
+#              anything with no researchr page.
+#
+# To add one by hand, copy this block under `conferences:` and run
+# `build` — it checks what you wrote and names anything wrong.
+#
+#   my-venue-2027:
+#     source: manual
+#     name: "My Venue 2027"
+#     url: "https://example.org/cfp"
+#     venue: "MSR"            # a key from bib/venues.yaml, or "" for a plain plate
+#     fetched: ""
+#     deadlines:
+#       - date: "2027-03-15"  # YYYY-MM-DD; a range takes its LAST day
+#         track: "Research Track"
+#         label: "Paper submission"
+#         tz: "AoE (UTC-12h)"  # shown beside the row, exactly as published
+#         url: ""              # the track page, if it has its own
+#
+# `kind:` (submission / notification / camera / event / other) is worked
+# out from the label at build time, so you can leave it off or leave a
+# stale one in place.
 
 
 # Tracks kept off the board. The rows below are untouched, so `show`
 # restores them without re-fetching.
 hidden:
+  apsec-2026:
+    - "Doctoral Symposium"
+    - "Local Student Forum"
+    - "Posters"
+    - "Software Engineering in Practices (SEIP)"
+    - "Tool Demonstration"
+    - "Tutorials"
   chase-2027:
     - "Doctoral and Early Career Symposium (DECS)"
   fse-2027:
     - "Industry Papers"
     - "Workshops"
+  icpc-2027:
+    - "Journal First"
+    - "Replications and Negative Results (RENE)"
+    - "Tool Demonstration"
   icse-2027:
     - "AGENT"
     - "AGENTVERIFY"
@@ -93,6 +131,210 @@ hidden:
     - "Workshops & Tutorials (W&T)"
 
 conferences:
+  apsec-2026:
+    source: researchr
+    name: "APSEC 2026"
+    url: "https://conf.researchr.org/home/apsec-2026"
+    venue: "APSEC"
+    fetched: "2026-09-12"
+    deadlines:
+      - date: "2026-07-13"
+        track: "Technical Track"
+        label: "Abstract Submission Deadline (Optional)"
+        kind: submission
+        raw: "Mon 13 Jul 2026"
+        tz: "AoE (Anywhere on Earth)"
+        url: "https://conf.researchr.org/track/apsec-2026/apsec-2026-technical-track"
+      - date: "2026-07-20"
+        track: "Technical Track"
+        label: "Full Paper Submission"
+        kind: submission
+        raw: "Mon 20 Jul 2026"
+        tz: "AoE (Anywhere on Earth)"
+        url: "https://conf.researchr.org/track/apsec-2026/apsec-2026-technical-track"
+      - date: "2026-07-24"
+        track: "Technical Track"
+        label: "Papers assigned for review"
+        kind: other
+        raw: "Fri 24 Jul 2026 12:00"
+        tz: "AoE (Anywhere on Earth)"
+        url: "https://conf.researchr.org/track/apsec-2026/apsec-2026-technical-track"
+      - date: "2026-07-28"
+        track: "Technical Track"
+        label: "Paper Bidding Period"
+        kind: other
+        raw: "Fri 24 - Tue 28 Jul 2026"
+        tz: "AoE (Anywhere on Earth)"
+        url: "https://conf.researchr.org/track/apsec-2026/apsec-2026-technical-track"
+      - date: "2026-08-10"
+        track: "Early Research Achievements (ERA)"
+        label: "Submission deadline"
+        kind: submission
+        raw: "Mon 10 Aug 2026"
+        tz: "AoE (UTC-12h)"
+        url: "https://conf.researchr.org/track/apsec-2026/apsec-2026-papers"
+      - date: "2026-08-20"
+        track: "Technical Track"
+        label: "First Half of Reviews Due"
+        kind: other
+        raw: "Thu 20 Aug 2026"
+        tz: "AoE (Anywhere on Earth)"
+        url: "https://conf.researchr.org/track/apsec-2026/apsec-2026-technical-track"
+      - date: "2026-08-24"
+        track: "Software Engineering in Practices (SEIP)"
+        label: "Submission deadline"
+        kind: submission
+        raw: "Mon 24 Aug 2026"
+        tz: "AoE (Anywhere on Earth)"
+        url: "https://conf.researchr.org/track/apsec-2026/apsec-2026-software-engineering-in-practices"
+      - date: "2026-08-24"
+        track: "Tutorials"
+        label: "Tutorial Submission Deadline"
+        kind: submission
+        raw: "Mon 24 Aug 2026"
+        tz: "AoE (UTC-12h)"
+        url: "https://conf.researchr.org/track/apsec-2026/apsec-2026-tutorials"
+      - date: "2026-09-04"
+        track: "Technical Track"
+        label: "Final Reviews Due"
+        kind: other
+        raw: "Fri 4 Sep 2026"
+        tz: "AoE (Anywhere on Earth)"
+        url: "https://conf.researchr.org/track/apsec-2026/apsec-2026-technical-track"
+      - date: "2026-09-14"
+        track: "Technical Track"
+        label: "Author Notification"
+        kind: notification
+        raw: "Mon 14 Sep 2026"
+        tz: "AoE (Anywhere on Earth)"
+        url: "https://conf.researchr.org/track/apsec-2026/apsec-2026-technical-track"
+      - date: "2026-09-14"
+        track: "Tool Demonstration"
+        label: "Abstract Submission Deadline"
+        kind: submission
+        raw: "Mon 14 Sep 2026"
+        tz: "AoE (UTC-12h)"
+        url: "https://conf.researchr.org/track/apsec-2026/apsec-2026-tool-demonstration"
+      - date: "2026-09-21"
+        track: "Posters"
+        label: "Submission Deadline"
+        kind: submission
+        raw: "Mon 21 Sep 2026"
+        tz: "AoE (UTC-12h)"
+        url: "https://conf.researchr.org/track/apsec-2026/apsec-2026-posters"
+      - date: "2026-09-21"
+        track: "Tool Demonstration"
+        label: "Submission Deadline"
+        kind: submission
+        raw: "Mon 21 Sep 2026"
+        tz: "AoE (UTC-12h)"
+        url: "https://conf.researchr.org/track/apsec-2026/apsec-2026-tool-demonstration"
+      - date: "2026-09-21"
+        track: "Tutorials"
+        label: "Notifications"
+        kind: notification
+        raw: "Mon 21 Sep 2026"
+        tz: "AoE (UTC-12h)"
+        url: "https://conf.researchr.org/track/apsec-2026/apsec-2026-tutorials"
+      - date: "2026-09-28"
+        track: "Early Research Achievements (ERA)"
+        label: "Author Notification"
+        kind: notification
+        raw: "Mon 28 Sep 2026"
+        tz: "AoE (UTC-12h)"
+        url: "https://conf.researchr.org/track/apsec-2026/apsec-2026-papers"
+      - date: "2026-09-28"
+        track: "Software Engineering in Practices (SEIP)"
+        label: "Author Notification"
+        kind: notification
+        raw: "Mon 28 Sep 2026"
+        tz: "AoE (Anywhere on Earth)"
+        url: "https://conf.researchr.org/track/apsec-2026/apsec-2026-software-engineering-in-practices"
+      - date: "2026-10-05"
+        track: "Doctoral Symposium"
+        label: "Submission Deadline"
+        kind: submission
+        raw: "Mon 5 Oct 2026"
+        tz: "AoE (UTC+8h)"
+        url: "https://conf.researchr.org/track/apsec-2026/apsec-2026-doctoral-symposium"
+      - date: "2026-10-05"
+        track: "Local Student Forum"
+        label: "Submission Deadline"
+        kind: submission
+        raw: "Mon 5 Oct 2026"
+        tz: "AoE (UTC+8h)"
+        url: "https://conf.researchr.org/track/apsec-2026/apsec-2026-local-student-forum"
+      - date: "2026-10-12"
+        track: "Posters"
+        label: "Acceptance Notification"
+        kind: notification
+        raw: "Mon 12 Oct 2026"
+        tz: "AoE (UTC-12h)"
+        url: "https://conf.researchr.org/track/apsec-2026/apsec-2026-posters"
+      - date: "2026-10-12"
+        track: "Tool Demonstration"
+        label: "Acceptance Notification"
+        kind: notification
+        raw: "Mon 12 Oct 2026"
+        tz: "AoE (UTC-12h)"
+        url: "https://conf.researchr.org/track/apsec-2026/apsec-2026-tool-demonstration"
+      - date: "2026-10-19"
+        track: "Doctoral Symposium"
+        label: "Acceptance Notification"
+        kind: notification
+        raw: "Mon 19 Oct 2026"
+        tz: "AoE (UTC+8h)"
+        url: "https://conf.researchr.org/track/apsec-2026/apsec-2026-doctoral-symposium"
+      - date: "2026-10-19"
+        track: "Early Research Achievements (ERA)"
+        label: "Camera-Ready Deadline"
+        kind: camera
+        raw: "Mon 19 Oct 2026"
+        tz: "AoE (UTC-12h)"
+        url: "https://conf.researchr.org/track/apsec-2026/apsec-2026-papers"
+      - date: "2026-10-19"
+        track: "Local Student Forum"
+        label: "Acceptance Notification"
+        kind: notification
+        raw: "Mon 19 Oct 2026"
+        tz: "AoE (UTC+8h)"
+        url: "https://conf.researchr.org/track/apsec-2026/apsec-2026-local-student-forum"
+      - date: "2026-10-19"
+        track: "Software Engineering in Practices (SEIP)"
+        label: "Camera-Ready Deadline"
+        kind: camera
+        raw: "Mon 19 Oct 2026"
+        tz: "AoE (Anywhere on Earth)"
+        url: "https://conf.researchr.org/track/apsec-2026/apsec-2026-software-engineering-in-practices"
+      - date: "2026-10-19"
+        track: "Technical Track"
+        label: "Camera-Ready Deadline"
+        kind: camera
+        raw: "Mon 19 Oct 2026"
+        tz: "AoE (Anywhere on Earth)"
+        url: "https://conf.researchr.org/track/apsec-2026/apsec-2026-technical-track"
+      - date: "2026-10-31"
+        track: "Posters"
+        label: "Camera-Ready Deadline"
+        kind: camera
+        raw: "Sat 31 Oct 2026"
+        tz: "AoE (UTC-12h)"
+        url: "https://conf.researchr.org/track/apsec-2026/apsec-2026-posters"
+      - date: "2026-10-31"
+        track: "Tool Demonstration"
+        label: "Camera-Ready Deadline"
+        kind: camera
+        raw: "Sat 31 Oct 2026"
+        tz: "AoE (UTC-12h)"
+        url: "https://conf.researchr.org/track/apsec-2026/apsec-2026-tool-demonstration"
+      - date: "2026-12-09"
+        track: "Posters"
+        label: "Posters Presentation"
+        kind: other
+        raw: "Wed 9 Dec 2026"
+        tz: "AoE (UTC-12h)"
+        url: "https://conf.researchr.org/track/apsec-2026/apsec-2026-posters"
+
   chase-2027:
     source: researchr
     name: "CHASE 2027"
@@ -255,6 +497,126 @@ conferences:
         raw: "Sat 3 Apr 2027"
         tz: "AoE (UTC-12h)"
         url: "https://conf.researchr.org/track/fse-2027/fse-2027-industry-papers"
+
+  icpc-2027:
+    source: researchr
+    name: "ICPC 2027"
+    url: "https://conf.researchr.org/home/icpc-2027"
+    venue: "ICPC"
+    fetched: "2026-09-12"
+    deadlines:
+      - date: "2026-10-29"
+        track: "Research Track"
+        label: "Abstract Deadline"
+        kind: submission
+        raw: "Thu 29 Oct 2026"
+        tz: "AoE (UTC-12h)"
+        url: "https://conf.researchr.org/track/icpc-2027/icpc-2027-research-track"
+      - date: "2026-11-05"
+        track: "Research Track"
+        label: "Paper Submission Deadline"
+        kind: submission
+        raw: "Thu 5 Nov 2026"
+        tz: "AoE (UTC-12h)"
+        url: "https://conf.researchr.org/track/icpc-2027/icpc-2027-research-track"
+      - date: "2026-11-19"
+        track: "Early Research Achievements (ERA)"
+        label: "(Optional) Abstract registration"
+        kind: submission
+        raw: "Thu 19 Nov 2026"
+        tz: "AoE (UTC-12h)"
+        url: "https://conf.researchr.org/track/icpc-2027/icpc-2027-early-research-achievements--era-"
+      - date: "2026-11-19"
+        track: "Tool Demonstration"
+        label: "Paper Submission Deadline"
+        kind: submission
+        raw: "Thu 19 Nov 2026"
+        tz: "AoE (UTC-12h)"
+        url: "https://conf.researchr.org/track/icpc-2027/icpc-2027-tool-demonstration"
+      - date: "2026-11-26"
+        track: "Early Research Achievements (ERA)"
+        label: "Paper submission"
+        kind: submission
+        raw: "Thu 26 Nov 2026"
+        tz: "AoE (UTC-12h)"
+        url: "https://conf.researchr.org/track/icpc-2027/icpc-2027-early-research-achievements--era-"
+      - date: "2026-12-11"
+        track: "Replications and Negative Results (RENE)"
+        label: "Abstract Deadline"
+        kind: submission
+        raw: "Fri 11 Dec 2026"
+        tz: "AoE (UTC-12h)"
+        url: "https://conf.researchr.org/track/icpc-2027/icpc-2027-replications-and-negative-results--rene-"
+      - date: "2026-12-18"
+        track: "Replications and Negative Results (RENE)"
+        label: "Paper Submission Deadline"
+        kind: submission
+        raw: "Fri 18 Dec 2026"
+        tz: "AoE (UTC-12h)"
+        url: "https://conf.researchr.org/track/icpc-2027/icpc-2027-replications-and-negative-results--rene-"
+      - date: "2027-01-14"
+        track: "Early Research Achievements (ERA)"
+        label: "Author notification"
+        kind: notification
+        raw: "Thu 14 Jan 2027"
+        tz: "AoE (UTC-12h)"
+        url: "https://conf.researchr.org/track/icpc-2027/icpc-2027-early-research-achievements--era-"
+      - date: "2027-01-14"
+        track: "Research Track"
+        label: "Notification Deadline"
+        kind: notification
+        raw: "Thu 14 Jan 2027"
+        tz: "AoE (UTC-12h)"
+        url: "https://conf.researchr.org/track/icpc-2027/icpc-2027-research-track"
+      - date: "2027-01-16"
+        track: "Journal First"
+        label: "Journal First Submissions Deadline"
+        kind: submission
+        raw: "Sat 16 Jan 2027"
+        tz: "AoE (UTC-12h)"
+        url: "https://conf.researchr.org/track/icpc-2027/icpc-2027-journal-first"
+      - date: "2027-01-21"
+        track: "Tool Demonstration"
+        label: "Notification Deadline"
+        kind: notification
+        raw: "Thu 21 Jan 2027"
+        tz: "AoE (UTC-12h)"
+        url: "https://conf.researchr.org/track/icpc-2027/icpc-2027-tool-demonstration"
+      - date: "2027-01-22"
+        track: "Replications and Negative Results (RENE)"
+        label: "Notification Deadline"
+        kind: notification
+        raw: "Fri 22 Jan 2027"
+        tz: "AoE (UTC-12h)"
+        url: "https://conf.researchr.org/track/icpc-2027/icpc-2027-replications-and-negative-results--rene-"
+      - date: "2027-01-28"
+        track: "Early Research Achievements (ERA)"
+        label: "Camera ready"
+        kind: camera
+        raw: "Thu 28 Jan 2027"
+        tz: "AoE (UTC-12h)"
+        url: "https://conf.researchr.org/track/icpc-2027/icpc-2027-early-research-achievements--era-"
+      - date: "2027-01-28"
+        track: "Research Track"
+        label: "Camera-ready Submission Deadline"
+        kind: submission
+        raw: "Thu 28 Jan 2027"
+        tz: "AoE (UTC-12h)"
+        url: "https://conf.researchr.org/track/icpc-2027/icpc-2027-research-track"
+      - date: "2027-01-28"
+        track: "Tool Demonstration"
+        label: "Camera-Ready Deadline"
+        kind: camera
+        raw: "Thu 28 Jan 2027"
+        tz: "AoE (UTC-12h)"
+        url: "https://conf.researchr.org/track/icpc-2027/icpc-2027-tool-demonstration"
+      - date: "2027-01-29"
+        track: "Replications and Negative Results (RENE)"
+        label: "Camera-ready Submission Deadline"
+        kind: submission
+        raw: "Fri 29 Jan 2027"
+        tz: "AoE (UTC-12h)"
+        url: "https://conf.researchr.org/track/icpc-2027/icpc-2027-replications-and-negative-results--rene-"
 
   icse-2027:
     source: researchr

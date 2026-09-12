@@ -1,9 +1,14 @@
 # GENERATED FILE — do not edit by hand.
 # Regenerate with:  python scripts/deadlines.py build
 #
-# Last generated 2026-09-12 · 41 dates across 6 conferences
+# Last generated 2026-09-12 · 60 dates across 8 conferences
 
 conferences:
+  apsec-2026:
+    source: researchr
+    name: "APSEC 2026"
+    url: "https://conf.researchr.org/home/apsec-2026"
+    venue: "APSEC"
   chase-2027:
     source: researchr
     name: "CHASE 2027"
@@ -14,6 +19,11 @@ conferences:
     name: "FSE 2027"
     url: "https://conf.researchr.org/home/fse-2027"
     venue: "ESEC/FSE"
+  icpc-2027:
+    source: researchr
+    name: "ICPC 2027"
+    url: "https://conf.researchr.org/home/icpc-2027"
+    venue: "ICPC"
   icse-2027:
     source: researchr
     name: "ICSE 2027"
@@ -50,6 +60,62 @@ dates:
     kind: submission
     tz: "AoE (UTC-12h)"
     url: "https://conf.researchr.org/track/icse-2027/icse-2027-research-track"
+  - date: "2026-07-13"
+    conf: apsec-2026
+    track: "Technical Track"
+    label: "Abstract Submission Deadline (Optional)"
+    kind: submission
+    tz: "AoE (Anywhere on Earth)"
+    url: "https://conf.researchr.org/track/apsec-2026/apsec-2026-technical-track"
+  - date: "2026-07-20"
+    conf: apsec-2026
+    track: "Technical Track"
+    label: "Full Paper Submission"
+    kind: submission
+    tz: "AoE (Anywhere on Earth)"
+    url: "https://conf.researchr.org/track/apsec-2026/apsec-2026-technical-track"
+  - date: "2026-07-24"
+    conf: apsec-2026
+    track: "Technical Track"
+    label: "Papers assigned for review"
+    kind: other
+    tz: "AoE (Anywhere on Earth)"
+    url: "https://conf.researchr.org/track/apsec-2026/apsec-2026-technical-track"
+  - date: "2026-07-28"
+    conf: apsec-2026
+    track: "Technical Track"
+    label: "Paper Bidding Period"
+    kind: other
+    tz: "AoE (Anywhere on Earth)"
+    url: "https://conf.researchr.org/track/apsec-2026/apsec-2026-technical-track"
+  - date: "2026-08-10"
+    conf: apsec-2026
+    track: "Early Research Achievements (ERA)"
+    label: "Submission deadline"
+    kind: submission
+    tz: "AoE (UTC-12h)"
+    url: "https://conf.researchr.org/track/apsec-2026/apsec-2026-papers"
+  - date: "2026-08-20"
+    conf: apsec-2026
+    track: "Technical Track"
+    label: "First Half of Reviews Due"
+    kind: other
+    tz: "AoE (Anywhere on Earth)"
+    url: "https://conf.researchr.org/track/apsec-2026/apsec-2026-technical-track"
+  - date: "2026-09-04"
+    conf: apsec-2026
+    track: "Technical Track"
+    label: "Final Reviews Due"
+    kind: other
+    tz: "AoE (Anywhere on Earth)"
+    url: "https://conf.researchr.org/track/apsec-2026/apsec-2026-technical-track"
+  - date: "2026-09-14"
+    conf: apsec-2026
+    track: "Technical Track"
+    label: "Author Notification"
+    kind: notification
+    tz: "AoE (Anywhere on Earth)"
+    url: "https://conf.researchr.org/track/apsec-2026/apsec-2026-technical-track"
   - date: "2026-09-21"
     conf: saner-2027
     track: "Research Track"
@@ -71,6 +137,13 @@ dates:
     kind: submission
     tz: "AoE (UTC-12h)"
     url: "https://conf.researchr.org/track/saner-2027/saner-2027-papers"
+  - date: "2026-09-28"
+    conf: apsec-2026
+    track: "Early Research Achievements (ERA)"
+    label: "Author Notification"
+    kind: notification
+    tz: "AoE (UTC-12h)"
+    url: "https://conf.researchr.org/track/apsec-2026/apsec-2026-papers"
   - date: "2026-10-02"
     conf: fse-2027
     track: "Research Papers"
@@ -85,6 +158,20 @@ dates:
     kind: submission
     tz: "AoE (UTC-12h)"
     url: "https://conf.researchr.org/track/chase-2027/chase-2027-papers"
+  - date: "2026-10-19"
+    conf: apsec-2026
+    track: "Early Research Achievements (ERA)"
+    label: "Camera-Ready Deadline"
+    kind: camera
+    tz: "AoE (UTC-12h)"
+    url: "https://conf.researchr.org/track/apsec-2026/apsec-2026-papers"
+  - date: "2026-10-19"
+    conf: apsec-2026
+    track: "Technical Track"
+    label: "Camera-Ready Deadline"
+    kind: camera
+    tz: "AoE (Anywhere on Earth)"
+    url: "https://conf.researchr.org/track/apsec-2026/apsec-2026-technical-track"
   - date: "2026-10-19"
     conf: saner-2027
     track: "Early Research Achievement (ERA) Track"
@@ -134,6 +221,20 @@ dates:
     kind: submission
     tz: "AoE (UTC-12h)"
     url: "https://conf.researchr.org/track/saner-2027/saner-2027-early-research-achievement-era--track"
+  - date: "2026-10-29"
+    conf: icpc-2027
+    track: "Research Track"
+    label: "Abstract Deadline"
+    kind: submission
+    tz: "AoE (UTC-12h)"
+    url: "https://conf.researchr.org/track/icpc-2027/icpc-2027-research-track"
+  - date: "2026-11-05"
+    conf: icpc-2027
+    track: "Research Track"
+    label: "Paper Submission Deadline"
+    kind: submission
+    tz: "AoE (UTC-12h)"
+    url: "https://conf.researchr.org/track/icpc-2027/icpc-2027-research-track"
   - date: "2026-11-17"
     conf: icse-2027
     track: "Research Track"
@@ -141,6 +242,13 @@ dates:
     kind: submission
     tz: "AoE (UTC-12h)"
     url: "https://conf.researchr.org/track/icse-2027/icse-2027-research-track"
+  - date: "2026-11-19"
+    conf: icpc-2027
+    track: "Early Research Achievements (ERA)"
+    label: "(Optional) Abstract registration"
+    kind: submission
+    tz: "AoE (UTC-12h)"
+    url: "https://conf.researchr.org/track/icpc-2027/icpc-2027-early-research-achievements--era-"
   - date: "2026-11-24"
     conf: icse-2027
     track: "Research Track"
@@ -148,6 +256,13 @@ dates:
     kind: camera
     tz: "AoE (UTC-12h)"
     url: "https://conf.researchr.org/track/icse-2027/icse-2027-research-track"
+  - date: "2026-11-26"
+    conf: icpc-2027
+    track: "Early Research Achievements (ERA)"
+    label: "Paper submission"
+    kind: submission
+    tz: "AoE (UTC-12h)"
+    url: "https://conf.researchr.org/track/icpc-2027/icpc-2027-early-research-achievements--era-"
   - date: "2026-12-01"
     conf: saner-2027
     track: "Research Track"
@@ -239,6 +354,20 @@ dates:
     kind: camera
     tz: "AoE (UTC-12h)"
     url: "https://conf.researchr.org/track/saner-2027/saner-2027-papers"
+  - date: "2027-01-14"
+    conf: icpc-2027
+    track: "Early Research Achievements (ERA)"
+    label: "Author notification"
+    kind: notification
+    tz: "AoE (UTC-12h)"
+    url: "https://conf.researchr.org/track/icpc-2027/icpc-2027-early-research-achievements--era-"
+  - date: "2027-01-14"
+    conf: icpc-2027
+    track: "Research Track"
+    label: "Notification Deadline"
+    kind: notification
+    tz: "AoE (UTC-12h)"
+    url: "https://conf.researchr.org/track/icpc-2027/icpc-2027-research-track"
   - date: "2027-01-20"
     conf: icse-2027
     track: "New Ideas and Emerging Results (NIER)"
@@ -267,11 +396,25 @@ dates:
     kind: camera
     tz: "AoE (UTC-12h)"
     url: "https://2027.msrconf.org/track/msr-2027-technical-papers"
+  - date: "2027-01-28"
+    conf: icpc-2027
+    track: "Early Research Achievements (ERA)"
+    label: "Camera ready"
+    kind: camera
+    tz: "AoE (UTC-12h)"
+    url: "https://conf.researchr.org/track/icpc-2027/icpc-2027-early-research-achievements--era-"
+  - date: "2027-01-28"
+    conf: icpc-2027
+    track: "Research Track"
+    label: "Camera-ready Submission Deadline"
+    kind: camera
+    tz: "AoE (UTC-12h)"
+    url: "https://conf.researchr.org/track/icpc-2027/icpc-2027-research-track"
   - date: "2027-01-29"
     conf: chase-2027
     track: "Research Track"
     label: "Camera-ready Submission"
-    kind: submission
+    kind: camera
     tz: "AoE (UTC-12h)"
     url: "https://conf.researchr.org/track/chase-2027/chase-2027-papers"
   - date: "2027-03-05"

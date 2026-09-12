@@ -262,6 +262,49 @@ last fetch date.
 To retire one, `remove` it like any other; to correct a date, edit `bib/conferences.yaml` and
 `build`.
 
+## Editing the file directly
+
+`new` is a convenience, not a gate — `bib/conferences.yaml` is the data, and hand-writing a block
+under `conferences:` works just as well. The file opens with a copy-paste template:
+
+```yaml
+  my-venue-2027:
+    source: manual
+    name: "My Venue 2027"
+    url: "https://example.org/cfp"
+    venue: "MSR"            # a key from bib/venues.yaml, or "" for a plain plate
+    fetched: ""
+    deadlines:
+      - date: "2027-03-15"  # YYYY-MM-DD; a range takes its LAST day
+        track: "Research Track"
+        label: "Paper submission"
+        tz: "AoE (UTC-12h)"  # shown beside the row, exactly as published
+        url: ""              # the track page, if it has its own
+```
+
+Then `build`. Two things to know:
+
+- **`source: manual` is what protects it.** Without it the entry is treated as fetched, and the next
+  `refresh` replaces everything under `deadlines:` — or fails trying, if the slug is not a real
+  researchr conference.
+- **Leave `kind:` off.** It is worked out from the label at build time, so a hand-written row gets
+  the right tag, and improving the rules re-sorts the whole board with no re-fetch.
+
+`build` validates what it reads and names anything wrong rather than failing with a traceback:
+
+```
+error: bib/conferences.yaml does not look right
+  my-hand-added-venue: source is 'reserachr' — it must be 'researchr' (re-fetched) or 'manual' (never overwritten)
+  my-hand-added-venue, deadline 1: date '15 March 2027' is not YYYY-MM-DD
+  my-hand-added-venue, deadline 2: track is missing
+```
+
+Nothing is written when it complains, and `build --check` catches the same mistakes in CI.
+
+The same applies to a **fetched** conference: `name:` and `venue:` are yours to edit and survive a
+refresh, but anything under its `deadlines:` is replaced wholesale. To correct a fetched date
+permanently, change `source:` to `manual` — the entry stops being re-read from then on.
+
 ## Things to know
 
 - A conference whose dates have all passed is named in the `build` output, so it can be refreshed to
