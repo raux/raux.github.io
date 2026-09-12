@@ -213,8 +213,13 @@ python scripts/deadlines.py new                          # hand-enter anything r
 `keep` is `hide` inverted: it keeps the tracks you name and hides every other one, which is how the
 board went from 376 dates to the research and NIER tracks alone.
 
-`add` and `refresh` need network and space their requests out; `build` is offline. Only `build`
-is needed in CI if the fetched data is committed.
+`add` and `refresh` need network and space their requests out; `build` is offline.
+
+It **refreshes on its own**: the *Refresh deadline board* workflow runs daily at 09:20 JST, re-reads
+every `researchr` conference, rebuilds `data/deadlines.yaml`, and commits only when something moved.
+Conference pages revise their dates without announcing it, which is the whole reason not to type
+them out by hand. A push that touches `bib/conferences.yaml` rebuilds from what is already stored
+rather than refetching, so editing the file by hand does not fire eight requests.
 
 ## What it works out on its own
 
@@ -304,8 +309,9 @@ Then `build`. Two things to know:
 - **`source: manual` is what protects it.** Without it the entry is treated as fetched, and the next
   `refresh` replaces everything under `deadlines:` — or fails trying, if the slug is not a real
   researchr conference.
-- **Leave `kind:` off.** It is worked out from the label at build time, so a hand-written row gets
-  the right tag, and improving the rules re-sorts the whole board with no re-fetch.
+- **There is no `kind:` field to write.** It is worked out from the label at build time and appears
+  only in the generated `data/deadlines.yaml`, so a hand-written row gets the right tag, and
+  improving the rules re-sorts the whole board with no re-fetch.
 
 `build` validates what it reads and names anything wrong rather than failing with a traceback:
 

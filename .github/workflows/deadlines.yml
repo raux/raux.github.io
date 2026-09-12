@@ -1,0 +1,118 @@
+# Re-reads each tracked conference's dates page and rebuilds the deadline board.
+#
+#   bib/conferences.yaml  ->  data/deadlines.yaml  ->  /deadlines/
+#
+# Conference pages move their dates without announcing it, so this refetches
+# daily. Hand-entered entries (source: manual) are skipped and never overwritten,
+# and hidden tracks survive a refresh.
+name: Refresh deadline board
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - "bib/conferences.yaml"
+      - "scripts/deadlines.py"
+  pull_request:
+    branches: [master]
+    paths:
+      - "bib/conferences.yaml"
+      - "data/deadlines.yaml"
+      - "scripts/deadlines.py"
+  # Daily, 09:20 JST — twenty minutes after the paper deck, so the two
+  # never race for the same commit.
+  schedule:
+    - cron: "20 0 * * *"
+  workflow_dispatch:
+    inputs:
+      refetch:
+        description: "Re-read every conference page (off: rebuild from what is stored)"
+        type: boolean
+        default: true
+
+permissions:
+  contents: write # commit the regenerated board
+  actions: write # re-trigger the site deploy afterwards
+
+concurrency:
+  group: deadline-board
+  cancel-in-progress: false
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  board:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install --quiet pyyaml
+
+      # Only the schedule and an explicit dispatch go to the network. A push
+      # rebuilds from what is already stored, so editing the YAML by hand does
+      # not trigger 8 fetches.
+      - name: Re-read the conference pages
+        if: github.event_name == 'schedule' || github.event.inputs.refetch == 'true'
+        run: |
+          set -o pipefail
+          {
+            echo '### Deadline board — refreshed'
+            echo '```'
+            python scripts/deadlines.py refresh 2>&1
+            echo '```'
+          } | tee -a "$GITHUB_STEP_SUMMARY"
+
+      # On a pull request, only report. Nothing is written or committed.
+      - name: Check the board is current
+        if: github.event_name == 'pull_request'
+        run: |
+          set -o pipefail
+          {
+            echo '### Deadline board — check'
+            echo '```'
+            python scripts/deadlines.py build --check 2>&1
+            echo '```'
+          } | tee -a "$GITHUB_STEP_SUMMARY"
+
+      - name: Rebuild the board
+        if: github.event_name != 'pull_request'
+        run: |
+          set -o pipefail
+          {
+            echo '### Deadline board — rebuilt'
+            echo '```'
+            python scripts/deadlines.py build 2>&1
+            echo '```'
+          } | tee -a "$GITHUB_STEP_SUMMARY"
+
+      - name: Commit
+        if: github.event_name != 'pull_request'
+        id: commit
+        run: |
+          git add bib/conferences.yaml data/deadlines.yaml
+          if git diff --cached --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "No dates moved."
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore(deadlines): refresh the board [skip ci]"
+          git push
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      # A push made with GITHUB_TOKEN does not start other workflows, so the
+      # site deploy has to be asked for explicitly.
+      - name: Redeploy the site
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh workflow run hugo.yml   --ref master || echo "hugo.yml not dispatchable"
+          gh workflow run deploy.yml --ref master || echo "deploy.yml not dispatchable"
