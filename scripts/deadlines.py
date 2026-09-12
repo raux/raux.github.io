@@ -22,6 +22,7 @@ Usage
     python scripts/deadlines.py hide icse-2027 "Shadow PC"        drop a track
     python scripts/deadlines.py hide icse-2027 --matching Workshop
     python scripts/deadlines.py show icse-2027 "Shadow PC"        put it back
+    python scripts/deadlines.py keep icse-2027 "Research Track"   hide everything else
     python scripts/deadlines.py build                     write data/deadlines.yaml
     python scripts/deadlines.py build --check             exit 1 if stale (CI)
 
@@ -292,11 +293,12 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("command",
                     choices=["add", "refresh", "list", "remove", "build",
-                             "tracks", "hide", "show"])
+                             "tracks", "hide", "show", "keep"])
     ap.add_argument("target", nargs="*",
                     help="conference slug or researchr URL; for hide/show, the track names")
     ap.add_argument("--matching", metavar="TEXT",
-                    help="hide/show: every track whose name contains this (case-insensitive)")
+                    help="hide/show/keep: tracks whose name contains this (case-insensitive); "
+                         "comma-separate for several")
     ap.add_argument("--check", action="store_true", help="build only: exit 1 if stale")
     ap.add_argument("--quiet", action="store_true")
     a = ap.parse_args()
@@ -351,14 +353,46 @@ def main():
                 print("  %-5s %3d  %s" % ("hidden" if name in off else "", counts[name], name))
         return 0
 
+    if a.command == "keep":
+        if len(a.target) < 1:
+            sys.exit('error: deadlines.py keep <conference> "Research Track" [more...]')
+        slug = slugify(a.target[0].rstrip("/").split("/")[-1])
+        counts = track_counts(slug)
+        wanted = set()
+        for n in a.target[1:]:
+            exact = n if n in counts else next(
+                (k for k in counts if k.lower() == n.lower()), None)
+            if exact is None:
+                print("  no such track in %s: %s" % (slug, n))
+            else:
+                wanted.add(exact)
+        for frag in (a.matching or "").split(","):
+            frag = frag.strip()
+            if frag:
+                wanted |= {k for k in counts if frag.lower() in k.lower()}
+        if not wanted:
+            sys.exit("error: nothing matched, so everything would be hidden — refusing")
+        hidden[slug] = sorted(set(counts) - wanted)
+        write_source(data, hidden)
+        for k in sorted(wanted, key=lambda n: (-counts[n], n.lower())):
+            print("  kept   %3d  %s" % (counts[k], k))
+        kept_n = sum(counts[k] for k in wanted)
+        print("%s: %d of %d dates now on the board (%d of %d tracks hidden)"
+              % (slug, kept_n, sum(counts.values()),
+                 len(hidden[slug]), len(counts)))
+        print("now run: python scripts/deadlines.py build")
+        return 0
+
     if a.command in ("hide", "show"):
         if not a.target:
             sys.exit("error: which conference?  e.g. deadlines.py hide icse-2027 \"Shadow PC\"")
         slug = slugify(a.target[0].rstrip("/").split("/")[-1])
         counts = track_counts(slug)
         names = list(a.target[1:])
-        if a.matching:
-            names += [n for n in counts if a.matching.lower() in n.lower()]
+        for frag in (a.matching or "").split(","):
+            frag = frag.strip()
+            if frag:
+                names += [n for n in counts if frag.lower() in n.lower()]
         if not names:
             sys.exit("error: name a track, or use --matching TEXT")
         cur = set(hidden.get(slug) or [])
