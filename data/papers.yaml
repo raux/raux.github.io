@@ -4,17 +4,19 @@
 #   facts     <- bib/publications.bib
 #   curation  <- bib/deck-overrides.yaml  (themes, loglines, featured)
 #
-# Last generated 2026-09-09 · 127 papers
+# Last generated 2026-09-12 · 127 papers
 
-featured: "WhoReview: A Multi-objective Search-based Approach for Code Reviewers Recommendation"
+featured: "BonsAIDE: An Extended Vision for Human-AI Interaction in IDEs"
 
 spotlight:
-  - "Open Source at a Crossroads: The Future of Licensing Driven by Monetization"
-  - "18 Million Links in Commit Messages: Purpose, Evolution, and Decay"
-  - "The Life and Death of Software Ecosystems"
-  - "Analyzing First Contributions on GitHub: What Do Newcomers Do?"
-  - "Contributing Back to the Ecosystem: A User Survey of NPM Developers"
-  - "Ethical Considerations Toward Protestware"
+  - "Using High-Rising Cities to Visualize Performance in Real-Time"
+  - "We Live in a Society: Motivators for Contributions in an OSS Ecosystem"
+  - "Security by Documentation? Characterizing GitHub SECURITY.md Policy and Their Adoption in Python Libraries"
+  - "An Empirical Study of Package Management Issues via Stack Overflow"
+  - "Search-Based Peer Reviewers Recommendation in Modern Code Review"
+  - "Human to Document, AI to Code: Three Case Studies of Comparing GenAI for Notebook Competitions"
+  - "On Categorizing Open Source Software Security Vulnerability Reporting Mechanisms on GitHub"
+  - "What About Our Bug? A Study on the Responsiveness of NPM Package Maintainers"
 
 papers:
   - title: "A Longitudinal Analysis of Good First Issue Practices and Newcomer Pull Requests in Popular OSS Projects"
@@ -43,9 +45,9 @@ papers:
     kind: journal
     themes: [prof]
     logline: "A vision for the IDE as a place where a person and a model shape code together, rather than take turns."
-    url: "https://dblp.org/search?q=BonsAIDE%3A%20An%20Extended%20Vision%20for%20Human-AI%20Interaction%20in%20IDEs"
+    url: "https://doi.org/10.1145/3793681"
     authors: ["David Moreno-Lumbreras", "Raula Gaikovina Kula", "Christoph Treude"]
-    insts: [osaka, smu]
+    insts: [urjc, osaka, smu]
     self: ["Raula Gaikovina Kula"]
   - title: "Determining Code Proficiency Levels from Python Textbooks"
     year: 2026
@@ -95,7 +97,7 @@ papers:
     logline: "Plugin ecosystems whose users are not programmers, and what maintenance looks like when that is true."
     url: "https://dblp.org/search?q=Not%20Only%20for%20Developers%3A%20Exploring%20Plugin%20Maintenance%20for%20Knowledge-Centric%20Communities"
     authors: ["Giovanni Rosa", "David Moreno-Lumbreras", "Raula Gaikovina Kula"]
-    insts: [osaka]
+    insts: [urjc, osaka]
     self: ["Raula Gaikovina Kula"]
   - title: "On the Usage of Emojis to Signal Activism in GitHub Repositories"
     year: 2026
