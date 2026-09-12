@@ -70,6 +70,11 @@ MONTHS = {m: i + 1 for i, m in enumerate(
 # date, not a submission, and reads as one only if camera is tested first.
 KINDS = [
     ("camera",       r"camera|final version|final copy|proceedings|front matter"),
+    # Programme-committee dates.  Conferences publish these on the same page
+    # as author deadlines, and "Final Reviews Due" reads as a submission if
+    # you only look for "due".  They are nothing an author has to act on.
+    ("other",        r"review(s)? due|assigned for review|bidding|pc meeting|"
+                     r"review(ing)? period"),
     ("submission",   r"abstract"),
     ("submission",   r"submission|submit|paper deadline|deadline for|due|proposals"),
     ("notification", r"notification|notify|decision|acceptance|reject|response"),
@@ -94,8 +99,13 @@ def strip_tags(s):
     """Tags become a space, not nothing — researchr hangs "new" badges off labels,
     and stripping them bare gives "Abstract deadlinenew"."""
     t = html.unescape(re.sub(r"<[^>]+>", " ", s)).replace("\xa0", " ")
+    # Invisible formatting characters survive a copy-paste into a CFP and then
+    # sit at the head of a label, where they are impossible to see and break
+    # sorting and matching.  Word joiner, zero-widths, BOM, soft hyphen.
+    t = re.sub(r"[\u200b-\u200d\u2060\ufeff\u00ad\u180e]", "", t)
     t = re.sub(r"\s+", " ", t).strip()
-    return re.sub(r"\s+(new|NEW|updated|UPDATED)$", "", t).strip()
+    t = re.sub(r"\s+(new|NEW|updated|UPDATED)$", "", t).strip()
+    return t.rstrip(":").strip()
 
 
 def parse_dates_page(text):
