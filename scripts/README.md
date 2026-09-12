@@ -170,8 +170,9 @@ A second, independent pipeline behind [`/deadlines/`](https://raux.github.io/dea
 | `bib/conferences.yaml` | you, plus the fetcher | which conferences to track, and every date read from them |
 | `data/deadlines.yaml` | **generated — do not edit** | what the page reads |
 
-Deadlines are not typed out by hand. `scripts/deadlines.py` reads each conference's own dates page
-on `conf.researchr.org`, so the board stays honest to its source.
+Conference deadlines are not typed out by hand: `scripts/deadlines.py` reads each conference's own
+dates page on `conf.researchr.org`, so the board stays honest to its source. Journal special issues
+and anything else researchr does not carry are entered with `new`, below.
 
 ```bash
 python scripts/deadlines.py add msr-2027                 # add a conference
@@ -185,9 +186,15 @@ python scripts/deadlines.py tracks icse-2027             # what tracks it carrie
 python scripts/deadlines.py hide icse-2027 "Shadow PC"   # drop a track from the board
 python scripts/deadlines.py hide icse-2027 --matching MSR
 python scripts/deadlines.py show icse-2027 "Shadow PC"   # put it back
+python scripts/deadlines.py keep icse-2027 --matching "Research Track,NIER"   # hide everything else
 python scripts/deadlines.py build                        # write data/deadlines.yaml
 python scripts/deadlines.py build --check                # exit 1 if stale
+
+python scripts/deadlines.py new                          # hand-enter anything researchr does not carry
 ```
+
+`keep` is `hide` inverted: it keeps the tracks you name and hides every other one, which is how the
+board went from 376 dates to the research and NIER tracks alone.
 
 `add` and `refresh` need network and space their requests out; `build` is offline. Only `build`
 is needed in CI if the fetched data is committed.
@@ -205,6 +212,55 @@ is needed in CI if the fetched data is committed.
 
 `name` and `venue` in `bib/conferences.yaml` are yours to edit; everything under `deadlines:` is
 replaced on the next refresh.
+
+## Journals, special issues, and anything else off researchr
+
+Not every deadline has a researchr page — journal special issues and smaller calls usually live on a
+publisher's own page. `new` enters one by hand. Run it bare and it asks:
+
+```
+$ python scripts/deadlines.py new
+Name (e.g. 'TOSEM Special Issue on Agentic SE'): TOSEM Special Issue on Agentic Software Engineering
+Short id [tosem-special-issue-on-agentic-software-engineering]:
+Call-for-papers URL: https://dl.acm.org/journal/tosem/calls-for-papers
+Venue key from bib/venues.yaml (blank for none): ACM TOSEM
+Track name [Submission]: Special Issue
+Timezone as published (e.g. 'AoE (UTC-12h)'): AoE (UTC-12h)
+  date 1 (YYYY-MM-DD, blank to finish): 2027-02-15
+  label [Paper submission]:
+  date 2 (YYYY-MM-DD, blank to finish): 2027-05-30
+  label [Paper submission]: First-round notification
+  date 3 (YYYY-MM-DD, blank to finish):
+added tosem-special-issue-on-agentic-software-engineering — 2 dates, kept out of every refresh
+```
+
+or drive it entirely from flags, which is what to do when scripting or when the shell is not
+interactive:
+
+```bash
+python scripts/deadlines.py new \
+  --name "TOSEM Special Issue on Agentic Software Engineering" \
+  --url https://dl.acm.org/journal/tosem/calls-for-papers \
+  --venue "ACM TOSEM" --track "Special Issue" --tz "AoE (UTC-12h)" \
+  --date 2027-02-15 --label "Paper submission" \
+  --date 2027-05-30 --label "First-round notification"
+```
+
+Each conference in `bib/conferences.yaml` now carries a `source:`, and it decides who owns the dates:
+
+| `source` | Where the dates come from | What `refresh` does |
+|---|---|---|
+| `researchr` | the conference's dates page | re-reads it, replacing `deadlines:` wholesale |
+| `manual` | you, via `new` or by editing the file | **nothing — it is skipped by name** |
+
+So a hand-entered row is safe to edit in place: nothing overwrites it. `refresh` says so rather than
+silently passing over it, and naming a manual entry explicitly is an error, not a no-op. Everything
+downstream treats the two the same — `list`, `remove`, `hide`/`show`/`keep`, `build`, the venue
+plate, the countdown, the `.ics` download. `list` prints `by hand` where a fetched entry shows its
+last fetch date.
+
+To retire one, `remove` it like any other; to correct a date, edit `bib/conferences.yaml` and
+`build`.
 
 ## Things to know
 

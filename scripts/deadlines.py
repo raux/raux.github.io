@@ -12,7 +12,8 @@ into a hand-typed list.
     data/deadlines.yaml     generated; what the site reads
 
 Usage
-    python scripts/deadlines.py add msr-2027              add a conference
+    python scripts/deadlines.py new                       add anything by hand (journals, CFPs)
+    python scripts/deadlines.py add msr-2027              add a conference from researchr
     python scripts/deadlines.py add https://conf.researchr.org/home/icse-2027
     python scripts/deadlines.py refresh                   re-read every one
     python scripts/deadlines.py refresh msr-2027          re-read just one
@@ -25,6 +26,11 @@ Usage
     python scripts/deadlines.py keep icse-2027 "Research Track"   hide everything else
     python scripts/deadlines.py build                     write data/deadlines.yaml
     python scripts/deadlines.py build --check             exit 1 if stale (CI)
+
+Two kinds of entry live side by side. A `researchr` entry is fetched and is
+replaced wholesale on the next `refresh`. A `manual` entry — a journal special
+issue, a CFP with no researchr page, anything you typed — is never fetched and
+never overwritten; `refresh` skips it by design.
 
 Hiding is a filter, not a deletion: the rows stay in bib/conferences.yaml and
 survive `refresh`, so `show` brings them back without re-fetching. That matters
@@ -70,6 +76,15 @@ KINDS = [
 
 def slugify(s):
     return re.sub(r"[^a-z0-9-]", "", s.lower().replace(" ", "-"))
+
+
+def trim_slug(s, limit=48):
+    """Long names make unusable ids, but cutting mid-word gives
+    ...-software-engineer for ...-software-engineering.  Cut at a hyphen."""
+    if len(s) <= limit:
+        return s
+    cut = s[:limit + 1].rsplit("-", 1)[0]
+    return (cut or s[:limit]).rstrip("-")
 
 
 def strip_tags(s):
@@ -204,6 +219,7 @@ def write_source(data, hidden=None):
     for slug in sorted(data, key=lambda s: (data[s].get("name") or s).lower()):
         c = data[slug]
         L += ["  %s:" % slug,
+              "    source: " + (c.get("source") or "researchr"),
               "    name: " + q(c.get("name") or slug),
               "    url: " + q(c.get("url") or ""),
               "    venue: " + q(c.get("venue") or ""),
@@ -246,6 +262,7 @@ def pull(slug, venues, log):
     log("  %-16s %3d dates%s" % (slug, len(uniq),
         "  (%d rows had no parseable date)" % dropped if dropped else ""))
     return {
+        "source": "researchr",
         "name": conference_title(slug, page),
         "url": HOME_URL % slug,
         "venue": guess_venue(slug, venues),
@@ -274,6 +291,7 @@ def emit(data, today, hidden=None):
     for slug in sorted(data):
         c = data[slug]
         L += ["  %s:" % slug,
+              "    source: " + (c.get("source") or "researchr"),
               "    name: " + q(c.get("name") or slug),
               "    url: " + q(c.get("url") or ""),
               "    venue: " + q(c.get("venue") or "")]
@@ -293,7 +311,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("command",
                     choices=["add", "refresh", "list", "remove", "build",
-                             "tracks", "hide", "show", "keep"])
+                             "tracks", "hide", "show", "keep", "new"])
     ap.add_argument("target", nargs="*",
                     help="conference slug or researchr URL; for hide/show, the track names")
     ap.add_argument("--matching", metavar="TEXT",
@@ -301,6 +319,17 @@ def main():
                          "comma-separate for several")
     ap.add_argument("--check", action="store_true", help="build only: exit 1 if stale")
     ap.add_argument("--quiet", action="store_true")
+    # `new` may be driven by flags instead of prompts, for scripting
+    ap.add_argument("--name", help="new: what to call it, e.g. 'TOSEM Special Issue on X'")
+    ap.add_argument("--slug", help="new: short id; derived from --name when omitted")
+    ap.add_argument("--venue", help="new: a key from bib/venues.yaml, e.g. 'ACM TOSEM'")
+    ap.add_argument("--url", help="new: the call-for-papers page")
+    ap.add_argument("--date", action="append", metavar="YYYY-MM-DD",
+                    help="new: a deadline; repeatable, paired with --label")
+    ap.add_argument("--label", action="append",
+                    help="new: what that date is, e.g. 'Paper submission'")
+    ap.add_argument("--track", help="new: track name for every date (default: Submission)")
+    ap.add_argument("--tz", help="new: timezone as published, e.g. 'AoE (UTC-12h)'")
     a = ap.parse_args()
 
     try:
@@ -322,14 +351,17 @@ def main():
         if not data:
             print("nothing tracked yet — try: python scripts/deadlines.py add msr-2027")
             return 0
+        w = max(len(s) for s in data)
+        n = min(34, max(len(c.get("name") or "") for c in data.values()))
         for slug in sorted(data):
             c = data[slug]
             future = [d for d in c.get("deadlines") or [] if d["date"] >= today.isoformat()]
             off = set(hidden.get(slug) or [])
             note = "  (%d track%s hidden)" % (len(off), "" if len(off) == 1 else "s") if off else ""
-            print("%-18s %-22s %3d dates, %3d still ahead   fetched %s%s"
-                  % (slug, (c.get("name") or "")[:22], len(c.get("deadlines") or []),
-                     len(future), c.get("fetched") or "never", note))
+            src = "by hand" if c.get("source") == "manual" else (c.get("fetched") or "never")
+            print("%-*s  %-*s %3d dates, %3d still ahead   %s%s"
+                  % (w, slug, n, (c.get("name") or "")[:n], len(c.get("deadlines") or []),
+                     len(future), src, note))
         return 0
 
     def track_counts(slug):
@@ -351,6 +383,78 @@ def main():
             print("%s — %d tracks, %d hidden" % (slug, len(counts), len(off & set(counts))))
             for name in sorted(counts, key=lambda n: (-counts[n], n.lower())):
                 print("  %-5s %3d  %s" % ("hidden" if name in off else "", counts[name], name))
+        return 0
+
+    if a.command == "new":
+        interactive = not (a.name and a.date)
+
+        def ask(prompt, default=""):
+            try:
+                v = input(prompt + (" [%s]" % default if default else "") + ": ").strip()
+            except EOFError:
+                v = ""
+            return v or default
+
+        if interactive:
+            print("Adding an entry by hand — for a journal special issue, a CFP with no")
+            print("researchr page, or anything else. Leave a date blank to finish.")
+            print("This entry will never be fetched or overwritten by `refresh`.\n")
+            if a.venue is None and venues:
+                print("venue keys available: " + ", ".join(sorted(venues)[:12]) + " …\n")
+
+        name = a.name or ask("Name (e.g. 'TOSEM Special Issue on Agentic SE')")
+        if not name:
+            sys.exit("error: a name is required")
+        slug = trim_slug(slugify(a.slug or name)) or "entry"
+        if slug in data and (data[slug].get("source") != "manual"):
+            sys.exit("error: %s already exists and is fetched from researchr" % slug)
+        venue = a.venue if a.venue is not None else (ask("Venue plate key (optional)") if interactive else "")
+        if venue and venue not in venues:
+            near = [k for k in venues if venue.lower() in k.lower()]
+            print("  note: %r is not in bib/venues.yaml%s — the row will use a plain plate"
+                  % (venue, ("; did you mean %s?" % ", ".join(near[:3])) if near else ""))
+        url = a.url if a.url is not None else (ask("Call-for-papers URL (optional)") if interactive else "")
+        track = a.track or (ask("Track", "Submission") if interactive else "Submission")
+        tz = a.tz if a.tz is not None else (ask("Timezone as published (optional)") if interactive else "")
+
+        rows = []
+        if a.date:
+            labels = a.label or []
+            for i, dstr in enumerate(a.date):
+                rows.append((dstr, labels[i] if i < len(labels) else "Submission"))
+        else:
+            while True:
+                dstr = ask("\nDeadline date (YYYY-MM-DD, blank to finish)")
+                if not dstr:
+                    break
+                label = ask("  What is it", "Paper submission")
+                rows.append((dstr, label))
+
+        if not rows:
+            sys.exit("error: no dates given")
+
+        deadlines = []
+        for dstr, label in rows:
+            try:
+                iso = dt.date.fromisoformat(dstr.strip()).isoformat()
+            except ValueError:
+                sys.exit("error: %r is not a date in YYYY-MM-DD form" % dstr)
+            deadlines.append({
+                "date": iso, "track": track, "label": label,
+                "kind": classify(label), "raw": iso, "tz": tz, "url": url,
+            })
+        deadlines.sort(key=lambda d: (d["date"], d["label"]))
+
+        data[slug] = {
+            "source": "manual", "name": name, "url": url, "venue": venue,
+            "fetched": "", "deadlines": deadlines,
+        }
+        write_source(data, hidden)
+        print("\nadded %s — %d date%s, kept out of every refresh"
+              % (slug, len(deadlines), "" if len(deadlines) == 1 else "s"))
+        for d in deadlines:
+            print("  %s  %-28s %s" % (d["date"], d["label"][:28], d["kind"]))
+        print("\nnow run: python scripts/deadlines.py build")
         return 0
 
     if a.command == "keep":
@@ -437,9 +541,15 @@ def main():
                 sys.exit("error: give a conference slug or researchr URL")
             slugs = [slugify(t.rstrip("/").split("/")[-1]) for t in a.target]
         else:
-            slugs = [slugify(t.rstrip("/").split("/")[-1]) for t in a.target] or sorted(data)
+            asked = [slugify(t.rstrip("/").split("/")[-1]) for t in a.target]
+            slugs = asked or sorted(data)
+            manual = [s for s in slugs if (data.get(s) or {}).get("source") == "manual"]
+            if manual:
+                for m in manual:
+                    log("  %-16s skipped — a hand-entered entry is never re-fetched" % m)
+                slugs = [s for s in slugs if s not in manual]
             if not slugs:
-                sys.exit("error: nothing tracked yet")
+                sys.exit("error: nothing to fetch" if asked else "error: nothing tracked yet")
         log("reading %d conference page%s" % (len(slugs), "" if len(slugs) == 1 else "s"))
         for i, slug in enumerate(slugs):
             if i:

@@ -94,6 +94,7 @@ hidden:
 
 conferences:
   chase-2027:
+    source: researchr
     name: "CHASE 2027"
     url: "https://conf.researchr.org/home/chase-2027"
     venue: "CHASE"
@@ -171,6 +172,7 @@ conferences:
         url: "https://conf.researchr.org/track/chase-2027/chase-2027-decs-papers"
 
   fse-2027:
+    source: researchr
     name: "FSE 2027"
     url: "https://conf.researchr.org/home/fse-2027"
     venue: "ESEC/FSE"
@@ -255,6 +257,7 @@ conferences:
         url: "https://conf.researchr.org/track/fse-2027/fse-2027-industry-papers"
 
   icse-2027:
+    source: researchr
     name: "ICSE 2027"
     url: "https://conf.researchr.org/home/icse-2027"
     venue: "ICSE"
@@ -1928,6 +1931,7 @@ conferences:
         url: "https://conf.researchr.org/track/icse-2027/msr-2027-registered-reports"
 
   icsme-2027:
+    source: researchr
     name: "ICSME 2027"
     url: "https://conf.researchr.org/home/icsme-2027"
     venue: "ICSME"
@@ -1970,6 +1974,7 @@ conferences:
         url: "https://conf.researchr.org/track/icsme-2027/icsme-2027-papers"
 
   msr-2027:
+    source: researchr
     name: "MSR 2027"
     url: "https://conf.researchr.org/home/msr-2027"
     venue: "MSR"
@@ -2180,6 +2185,7 @@ conferences:
         url: "https://2027.msrconf.org/track/msr-2027-registered-reports"
 
   saner-2027:
+    source: researchr
     name: "SANER 2027"
     url: "https://conf.researchr.org/home/saner-2027"
     venue: "SANER"

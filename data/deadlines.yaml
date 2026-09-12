@@ -5,26 +5,32 @@
 
 conferences:
   chase-2027:
+    source: researchr
     name: "CHASE 2027"
     url: "https://conf.researchr.org/home/chase-2027"
     venue: "CHASE"
   fse-2027:
+    source: researchr
     name: "FSE 2027"
     url: "https://conf.researchr.org/home/fse-2027"
     venue: "ESEC/FSE"
   icse-2027:
+    source: researchr
     name: "ICSE 2027"
     url: "https://conf.researchr.org/home/icse-2027"
     venue: "ICSE"
   icsme-2027:
+    source: researchr
     name: "ICSME 2027"
     url: "https://conf.researchr.org/home/icsme-2027"
     venue: "ICSME"
   msr-2027:
+    source: researchr
     name: "MSR 2027"
     url: "https://conf.researchr.org/home/msr-2027"
     venue: "MSR"
   saner-2027:
+    source: researchr
     name: "SANER 2027"
     url: "https://conf.researchr.org/home/saner-2027"
     venue: "SANER"
