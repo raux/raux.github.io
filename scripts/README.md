@@ -83,15 +83,31 @@ and a warning naming it.
 python scripts/feature.py                    # a fresh random pick
 python scripts/feature.py --count 10         # longer Spotlight row (0 to skip it)
 python scripts/feature.py --seed 2026-09-09  # reproducible — CI can pass the date
-python scripts/feature.py --pin "Open Source at a Crossroads"   # choose the hero yourself
+python scripts/feature.py --pin "Open Source at a Crossroads"   # choose the hero, and hold it
+python scripts/feature.py --unpin            # let it rotate again
 python scripts/feature.py --dry-run          # print the pick, write nothing
 ```
 
-It **rotates on its own**: the *Rebuild paper deck* workflow runs every Monday, reshuffles with
-`--seed $(date -u +%F)`, commits the result and asks the site to redeploy. Only the schedule and
+## Holding the billboard
+
+`--pin` does not just choose a hero, it **keeps** one. It writes `pinned: true` into
+`bib/deck-overrides.yaml`, and every rotation after that leaves the billboard where it is and says
+`[held]`. `--unpin` releases it and the next run draws normally.
+
+The Spotlight row still reshuffles while a hold is in place — holding means one paper stays put, not
+that the page stops moving. A held hero is never written to `bib/feature-history.yaml` either: that
+file records draws so the draw does not repeat itself, and a paper you chose by hand is not a draw.
+Recording it would block it for a month of rotations the moment you released the hold.
+
+Two ways a hold degrades quietly rather than breaking: `pinned: true` with no `featured:` title, and
+a pinned title that is no longer in the catalogue. Both print a note and rotate.
+
+It **rotates on its own**: the *Rebuild paper deck* workflow runs **daily** at 09:00 JST, reshuffles
+with `--seed $(date -u +%F)`, commits the result and asks the site to redeploy. Only the schedule and
 an explicit "Run workflow" (with *rotate* ticked) reshuffle — a content push never moves the
-billboard out from under whatever you just wrote. To make it daily, change the cron in
-`.github/workflows/papers.yml` from `0 0 * * 1` to `0 0 * * *`.
+billboard out from under whatever you just wrote, and neither does anything while a hold is set. For
+a weekly billboard instead, change the cron in `.github/workflows/papers.yml` from `0 0 * * *` back
+to `0 0 * * 1`.
 
 Because the seed is the date, a re-run on the same day reproduces exactly the same pick and
 commits nothing.
@@ -99,7 +115,8 @@ commits nothing.
 The draw is weighted rather than uniform: recent work and papers where you are first author come
 up more often, and a paper whose logline is still the `Venue, year.` fallback is heavily
 discounted, since it makes a poor billboard. Heroes used recently are recorded in
-`bib/feature-history.yaml` and skipped, so the billboard does not repeat.
+`bib/feature-history.yaml` and skipped, so the billboard does not repeat: `AVOID_LAST` is counted in
+rotations rather than days, so its default of 30 is a month of the daily schedule.
 
 ## Authors and institutions
 

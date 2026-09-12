@@ -36,7 +36,9 @@ PEOPLE = os.path.join(SRC, "people.yaml")
 HISTORY = os.path.join(SRC, "feature-history.yaml")
 PAPERS = os.path.join(ROOT, "data", "papers.yaml")
 
-AVOID_LAST = 8          # don't reuse a hero seen this recently
+AVOID_LAST = 30         # don't reuse a hero seen this recently — counted in
+                        # rotations, not days, so this is a month of a daily
+                        # schedule and over half a year of a weekly one
 RECENCY_HALF_LIFE = 4   # years; a paper this old is half as likely as a new one
 SELF_BOOST = 2.0        # weight multiplier when the owner is first author
 NO_LOGLINE_PENALTY = 0.2
@@ -125,14 +127,18 @@ def main():
 
     hist = load_yaml(HISTORY, {"recent": []})
     recent = list(hist.get("recent") or [])
+    last_seed = hist.get("last_seed")
 
-    # A re-run with the same seed must reproduce the same pick. The previous run
+    # A re-run with the SAME seed must reproduce the same pick. The previous run
     # left its hero at the end of the history, which would otherwise block it and
-    # send the draw somewhere else — so ignore that entry when it is still the
-    # paper currently on the billboard.
+    # send the draw somewhere else — so ignore that entry, but only when this run
+    # is that same run repeated. Ignoring it unconditionally unblocks the current
+    # hero for every draw, which on a daily schedule shows up as the billboard
+    # picking the same paper two days running.
+    same_seed = bool(a.seed) and last_seed == a.seed
     over = load_yaml(OVERRIDES, {}) or {}
     current = over.get("featured")
-    prior = recent[:-1] if (recent and current and recent[-1] == current) else recent
+    prior = recent[:-1] if (same_seed and recent and current and recent[-1] == current) else recent
 
     # A held billboard outranks the draw. Rotation still refreshes the Spotlight
     # row — the point of holding is that one paper stays put, not that the page
@@ -182,15 +188,22 @@ def main():
         text = write_key(text, "spotlight", [p["title"] for p in spot])
     open(OVERRIDES, "w", encoding="utf-8").write(text)
 
-    # A same-day re-run picks the same hero; don't grow the history (or the diff).
-    # A held hero never enters the history either — it is not a draw, and letting
-    # it accumulate would block the paper for weeks once the hold is released.
-    if not held and (not recent or recent[-1] != hero["title"]):
+    # The history records draws, so that the draw does not repeat itself. A hero
+    # you chose by hand is not a draw: neither `--pin` nor a run that honours an
+    # existing hold writes one, since doing so would block that paper for a month
+    # of rotations the moment the hold is released. A same-seed re-run picks the
+    # same hero and must not grow the history (or the diff) either.
+    drawn = not held and not a.pin
+    if drawn and (not recent or recent[-1] != hero["title"]):
         recent.append(hero["title"])
     with open(HISTORY, "w", encoding="utf-8") as fh:
         fh.write("# Heroes already used, so the billboard does not repeat itself.\n")
-        fh.write("# scripts/feature.py appends here; trim it freely.\n\nrecent:\n")
-        for t in recent[-40:]:
+        fh.write("# scripts/feature.py appends here; trim it freely.\n\n")
+        # Which seed produced the last entry, so a re-run of that same seed can
+        # reproduce it while a new seed still treats it as spent.
+        fh.write('last_seed: "%s"\n\n' % ((a.seed or "") if drawn else (last_seed or "")))
+        fh.write("recent:\n")
+        for t in recent[-(AVOID_LAST + 10):]:
             fh.write('  - "%s"\n' % t.replace('"', '\\"'))
 
     print("\nwrote bib/deck-overrides.yaml — now run scripts/bib2papers.py")

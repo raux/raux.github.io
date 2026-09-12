@@ -1,13 +1,13 @@
 pinned: true
 spotlight:
-  - "Using High-Rising Cities to Visualize Performance in Real-Time"
-  - "We Live in a Society: Motivators for Contributions in an OSS Ecosystem"
-  - "Security by Documentation? Characterizing GitHub SECURITY.md Policy and Their Adoption in Python Libraries"
-  - "An Empirical Study of Package Management Issues via Stack Overflow"
-  - "Search-Based Peer Reviewers Recommendation in Modern Code Review"
-  - "Human to Document, AI to Code: Three Case Studies of Comparing GenAI for Notebook Competitions"
-  - "On Categorizing Open Source Software Security Vulnerability Reporting Mechanisms on GitHub"
-  - "What About Our Bug? A Study on the Responsiveness of NPM Package Maintainers"
+  - "An Exploratory Study on Library Aging by Monitoring Client Usage in a Software Ecosystem"
+  - "Contributing Back to the Ecosystem: A User Survey of NPM Developers"
+  - "How Are Project-Specific Forums Utilized? Participation, Content, and Sentiment in the Eclipse Ecosystem"
+  - "Visualizing the Evolution of Systems and Their Library Dependencies"
+  - "The Ever-Evolving Promises of Data in Software Ecosystems"
+  - "Forecasting Developer Environments with GenAI: A Research Perspective"
+  - "Special Issue on Software Health of Software Ecosystems"
+  - "The Shift from Writing to Pruning Software: A Bonsai-Inspired IDE for Reshaping AI Generated Code"
 # Human-owned curation for the research deck.  Nothing here is ever overwritten.
 #
 # Facts (title, year, venue, url) come from data/*.bib.

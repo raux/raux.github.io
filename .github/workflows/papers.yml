@@ -3,7 +3,8 @@
 #   bib/*.bib   +  bib/deck-overrides.yaml  ->  data/papers.yaml  ->  /papers/
 #
 # Drop a new BibTeX export into bib/, push, and the deck updates itself.
-# On a schedule it also reshuffles the billboard and the Spotlight row.
+# On a schedule it also reshuffles the billboard and the Spotlight row — daily,
+# unless the billboard is held (`feature.py --pin`), which it honours.
 name: Rebuild paper deck
 
 on:
@@ -21,9 +22,9 @@ on:
       - "bib/**"
       - "data/papers.yaml"
       - "scripts/bib2papers.py"
-  # Monday 09:00 JST. For a daily billboard use "0 0 * * *" instead.
+  # Daily, 09:00 JST. For a weekly billboard use "0 0 * * 1" instead.
   schedule:
-    - cron: "0 0 * * 1"
+    - cron: "0 0 * * *"
   workflow_dispatch:
     inputs:
       rotate:

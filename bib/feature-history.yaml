@@ -1,6 +1,8 @@
 # Heroes already used, so the billboard does not repeat itself.
 # scripts/feature.py appends here; trim it freely.
 
+last_seed: ""
+
 recent:
   - "Lessons from the Long Tail: Analysing Unsafe Dependency Updates across Software Ecosystems"
   - "WhoReview: A Multi-objective Search-based Approach for Code Reviewers Recommendation"
