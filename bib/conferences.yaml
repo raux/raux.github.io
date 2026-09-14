@@ -379,7 +379,7 @@ conferences:
     source: manual
     name: "Evaluation of Qualitative Aspects of Intelligent Software Assistants"
     url: "https://www.sciencedirect.com/special-issue/336952/evaluation-of-qualitative-aspects-of-intelligent-software-assistants"
-    venue: "Elsevier SI"
+    venue: "Information and Software Technology"
     fetched: ""
     deadlines:
       - date: "2026-12-13"

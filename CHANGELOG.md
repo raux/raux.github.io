@@ -35,8 +35,8 @@ Branch `feature/papers-2025-2026`. 20 commits.
   `bib/conferences.yaml`, survive a refresh, and come back with no re-fetch. This is what
   makes the board readable — researchr serves ICSE's 62 co-located tracks under ICSE, so
   383 fetched dates across 96 tracks become 60 across 12. One hand-entered row alongside them: the
-  Elsevier special issue on *Evaluation of Qualitative Aspects of Intelligent Software Assistants*,
-  due 13 December 2026.
+  *Information and Software Technology* special issue on *Evaluation of Qualitative Aspects of
+  Intelligent Software Assistants*, due 13 December 2026.
 - **A held billboard.** `feature.py --pin` now *keeps* a paper on the billboard instead of
   merely setting it; `--unpin` releases it. The Spotlight row still rotates underneath.
 - **Daily rotation in CI**, for both pages: the paper deck reshuffles at 09:00 JST and the
