@@ -16,3 +16,6 @@ __pycache__/
 
 # the PR description, staged for review; not part of the site
 pr-body.md
+
+# previews saved out of the chat; not part of the site
+Claude outputs/
