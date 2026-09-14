@@ -14,9 +14,11 @@ This repository publishes Raula Gaikovina Kula's academic and research website a
 | Home and shared structure | `layouts/index.html`, `layouts/_default/baseof.html`, `layouts/partials/` | The home page and reusable header, footer, menu, search, metadata, and widget templates. |
 | Posts and profile | `content/posts/`, `content/about/` | Markdown content; Japanese translations use the `.ja.md` suffix. |
 | Research deck | `content/papers.md`, `layouts/_default/deck.html`, `bib/`, `data/papers.yaml` | The `/papers/` page is generated from bibliography and curation data. Read `scripts/README.md` before changing this pipeline. |
+| Student ticker | `layouts/shortcodes/students.html`, `data/students.yaml`, `static/students/` | The `{{< students >}}` shortcode on `/posts/students/`. Hand-maintained, no generator. A person with no photo gets a monogram. |
 | Deadline board | `content/deadlines.md`, `layouts/_default/deadlines.html`, `bib/conferences.yaml`, `data/deadlines.yaml` | The `/deadlines/` page displays generated conference and call-for-paper dates. |
 | Styling and client behaviour | `static/css/`, `static/js/`, `static/images/` | Site-specific CSS, browser JavaScript, and static assets. |
 | Translations | `content/**/*.ja.md`, `i18n/ja.toml`, `i18n/en.toml`, `i18n/zh.toml` | English is published at `/`; Japanese is published at `/ja/`. Keep route counterparts aligned when relevant. |
+| Change history | `CHANGELOG.md` | Dated entries, newest first. Add to **Unreleased** as you go; it is written for a reader, not generated from commits. |
 | Automation and deployment | `.github/workflows/` | PR builds and GitHub Pages deployment; paper-deck regeneration has its own workflow. |
 
 ## Data pipelines
@@ -90,7 +92,8 @@ GitHub Actions builds pull requests targeting `master`. Pushes to `master` trigg
 
 ## Safety notes
 
-- Do not hand-edit generated `data/*.yaml` pipeline outputs.
+- Do not hand-edit generated `data/*.yaml` pipeline outputs. The one exception is
+  `data/students.yaml`, which has no generator and is maintained by hand; its header says so.
 - Do not commit `public/` build output unless the task explicitly requires it.
 - Treat `bib/deck-overrides.yaml`, `bib/venues.yaml`, `bib/people.yaml`, and
   `bib/conferences.yaml` as curated source data; preserve existing entries and comments.

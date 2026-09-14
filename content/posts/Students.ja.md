@@ -74,13 +74,17 @@ https://naist-se.github.io/PNG-BRIDGES/
 
 # 2018年以降に共同指導した学生
 
+2018年以降、共同指導教員・審査委員として20名の博士課程学生に関わってきました。修了生15名、在学中5名です。
+
+{{< students >}}
+
 ### 修了生（15名）
 
-**博士課程学生の共同指導教員・審査委員（10名）**：Saya Onoue（2019年）、Toshiki Hirao（2020年）、Shade Ruangwan（2020年）、Yusuf Sulistyo Nugroho（2020年）、Bodin Chinthanet（2021年）、Keitaro Nakasai（2021年）、Dong Wang（2022年）、Syful Islam（2022年）、Yuki Ueda（2022年）、Pattaraporn Tulathum（2022年）、Supavas Sitthithanasakul（2023年）、Supatsara Wattanakriengkrai（2024年）、Ifraz Rehman（2024年）、Tao Xiao（2024年）、Fan Youmei（2025年）
+Saya Onoue（2019年）、Toshiki Hirao（2020年）、Shade Ruangwan（2020年）、Yusuf Sulistyo Nugroho（2020年）、Bodin Chinthanet（2021年）、Keitaro Nakasai（2021年）、Dong Wang（2022年）、Syful Islam（2022年）、Yuki Ueda（2022年）、Pattaraporn Tulathum（2022年）、Supavas Sitthithanasakul（2023年）、Supatsara Wattanakriengkrai（2024年）、Ifraz Rehman（2024年）、Tao Xiao（2024年）、Youmei Fan（2025年）
 
-### 2025年現在（5名）
+### 在学中（5名）
 
-現在共同指導している博士課程学生：Ani Hovhannisiyan、Ruksit Rojpaisarnkit、Jaisri Pongchai、Lenz Neritz、Indira Febriyanti
+奈良先端科学技術大学院大学（NAIST、客員教授として）で共同指導している博士課程学生：Ani Hovhannisyan、Ruksit Rojpaisarnkit、Lenz Nerit、Pongchai Jaisri、Indira Febriyanti
 
 # 教育
 

@@ -375,6 +375,20 @@ conferences:
         tz: "AoE (UTC-12h)"
         url: "https://conf.researchr.org/track/chase-2027/chase-2027-decs-papers"
 
+  si-intelligent-software-assistants:
+    source: manual
+    name: "Evaluation of Qualitative Aspects of Intelligent Software Assistants"
+    url: "https://www.sciencedirect.com/special-issue/336952/evaluation-of-qualitative-aspects-of-intelligent-software-assistants"
+    venue: "Information and Software Technology"
+    fetched: ""
+    deadlines:
+      - date: "2026-12-13"
+        track: "Special Issue"
+        label: "Manuscript submission"
+        raw: "2026-12-13"
+        tz: ""
+        url: "https://www.sciencedirect.com/special-issue/336952/evaluation-of-qualitative-aspects-of-intelligent-software-assistants"
+
   fse-2027:
     source: researchr
     name: "FSE 2027"
