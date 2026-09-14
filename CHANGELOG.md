@@ -34,7 +34,9 @@ Branch `feature/papers-2025-2026`. 20 commits.
   watching, and `keep` inverts it. Hiding is a filter, not a deletion: hidden rows stay in
   `bib/conferences.yaml`, survive a refresh, and come back with no re-fetch. This is what
   makes the board readable — researchr serves ICSE's 62 co-located tracks under ICSE, so
-  383 fetched dates across 96 tracks become 60 across 12.
+  383 fetched dates across 96 tracks become 60 across 12. One hand-entered row alongside them: the
+  Elsevier special issue on *Evaluation of Qualitative Aspects of Intelligent Software Assistants*,
+  due 13 December 2026.
 - **A held billboard.** `feature.py --pin` now *keeps* a paper on the billboard instead of
   merely setting it; `--unpin` releases it. The Spotlight row still rotates underneath.
 - **Daily rotation in CI**, for both pages: the paper deck reshuffles at 09:00 JST and the
@@ -61,6 +63,9 @@ Branch `feature/papers-2025-2026`. 20 commits.
   Interaction in IDEs* (ACM TOSEM 2026), with its DOI as the link.
 - **`AVOID_LAST` 8 → 30.** The no-repeat window counts rotations, not days, so the old
   value meant eight days once rotation went daily.
+- **An unknown `venue:` key is now taken literally** as the plate's label, so a hand-entered row can
+  carry a short tag without inventing a registry entry. Falling back to the first word of the name
+  only works when the name starts with the venue (`MSR 2027`), not when it is a title.
 - **`kind:` is no longer stored in `bib/conferences.yaml`.** It is derived from the label
   at build time, so improving the rules re-sorts the whole board with no re-fetch, and the
   editable file carries only what the conference actually published.

@@ -196,7 +196,12 @@
 
   function plate(conf){
     var c=CONFS[conf]||{}, v=VEN[c.venue]||null;
-    var abbr=(v&&v.abbr)||(c.name||conf).split(" ")[0];
+    // A venue key that is in bib/venues.yaml brings its own abbreviation and
+    // colour. One that is not is taken literally, so a hand-entered row can
+    // carry a short label without inventing a registry entry for it. Falling
+    // back to the first word of the name is the last resort, and only sensible
+    // when the name starts with the venue ("MSR 2027"), not when it is a title.
+    var abbr=(v&&v.abbr)||c.venue||(c.name||conf).split(" ")[0];
     var col=(v&&v.color)||"#5C6580";
     return '<span class="vp" style="--vbg:'+rgba(col,.30)+';--vbr:'+rgba(col,.55)+'" title="'+esc(c.name||conf)+'">'+esc(abbr)+'</span>';
   }

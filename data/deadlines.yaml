@@ -1,7 +1,7 @@
 # GENERATED FILE — do not edit by hand.
 # Regenerate with:  python scripts/deadlines.py build
 #
-# Last generated 2026-09-12 · 60 dates across 8 conferences
+# Last generated 2026-09-14 · 61 dates across 9 conferences
 
 conferences:
   apsec-2026:
@@ -44,6 +44,11 @@ conferences:
     name: "SANER 2027"
     url: "https://conf.researchr.org/home/saner-2027"
     venue: "SANER"
+  si-intelligent-software-assistants:
+    source: manual
+    name: "Evaluation of Qualitative Aspects of Intelligent Software Assistants"
+    url: "https://www.sciencedirect.com/special-issue/336952/evaluation-of-qualitative-aspects-of-intelligent-software-assistants"
+    venue: "Elsevier SI"
 
 dates:
   - date: "2026-06-23"
@@ -291,6 +296,13 @@ dates:
     kind: notification
     tz: "AoE (UTC-12h)"
     url: "https://conf.researchr.org/track/saner-2027/saner-2027-early-research-achievement-era--track"
+  - date: "2026-12-13"
+    conf: si-intelligent-software-assistants
+    track: "Special Issue"
+    label: "Manuscript submission"
+    kind: submission
+    tz: ""
+    url: "https://www.sciencedirect.com/special-issue/336952/evaluation-of-qualitative-aspects-of-intelligent-software-assistants"
   - date: "2026-12-18"
     conf: chase-2027
     track: "Research Track"
