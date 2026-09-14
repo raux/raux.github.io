@@ -41,6 +41,15 @@ Branch `feature/papers-2025-2026`. 20 commits.
   merely setting it; `--unpin` releases it. The Spotlight row still rotates underneath.
 - **Daily rotation in CI**, for both pages: the paper deck reshuffles at 09:00 JST and the
   deadline board re-fetches at 09:20, each committing only when something actually moved.
+- **Student ticker on `/posts/students/`.** A `{{< students >}}` shortcode over
+  `data/students.yaml`: two drifting rows of the twenty doctoral students co-supervised since 2018,
+  each card carrying their year, current position and a link to their own page. Photos go in
+  `static/students/`; a person without one gets a monogram tinted from their place in the list, so
+  the row reads as finished from the first build rather than as a wall of broken images. The drift
+  pauses on hover and focus, and stops entirely on the first deliberate scroll, under
+  `prefers-reduced-motion`, and on touch.
+- Alongside it, twenty current positions verified against each person's own public profile, and
+  four corrections to the names on that page — see below.
 - **`AGENT.MD`**, a map of the repository: where things live, what is generated, and which
   checks to run before a PR.
 - **`bib/conferences.yaml` is safe to edit by hand.** It opens with a copy-paste template,
@@ -71,6 +80,13 @@ Branch `feature/papers-2025-2026`. 20 commits.
   editable file carries only what the conference actually published.
 
 ### Fixed
+
+- **The students page had a stale count and four wrong names.** The heading read
+  *Graduated (15)* over a line saying *doctoral course students (10)* with fifteen names under it.
+  Two names were in the wrong order — **Youmei Fan** and **Pongchai Jaisri** both published
+  given-name-first — and two were misspelt against every source, including the lab's own roster:
+  *Hovhannisiyan* → **Hovhannisyan**, *Neritz* → **Nerit**. The page also implied the current five
+  are at Osaka; they are NAIST students, supervised through an affiliate appointment.
 
 - **Venue abbreviations matched first, not most-specific**, so `ACM TOSEM` rendered as
   `IEEE TSE`. The same trap caught `ESEM`/`EMSE`, `ASEW`/`ASE` and `IWESEP`.

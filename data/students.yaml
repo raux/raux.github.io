@@ -1,0 +1,159 @@
+# Co-supervised doctoral students, for the ticker on /posts/students/.
+#
+# HAND-MAINTAINED — the one file in data/ that is not generated. There is no
+# fetcher for this; people move, and only you know where they went.
+#
+#   photo:  a file in static/students/ (e.g. "tao-xiao.jpg"). Leave it empty
+#           and the ticker draws a monogram from their initials instead, so a
+#           missing photo looks deliberate rather than broken.
+#           Square images, 400x400 or larger. Ask each person for one they
+#           like rather than lifting their staff photo — see static/students/README.md.
+#   url:    where the reader goes on click. Their own homepage where they keep
+#           one, otherwise a university or conference profile.
+#   now:    current role, short enough to read at a glance. Leave empty when
+#           you do not know; the ticker then shows only the year.
+#   since:  the year `now` was last true, so a stale line is visible as stale.
+#
+# Order is the order they appear. Graduated first, by year, then current.
+
+graduated:
+  - name: "Saya Onoue"
+    year: 2019
+    photo: ""
+    url: "https://dblp.org/pid/142/6737.html"
+    now: ""
+    since: ""
+
+  - name: "Toshiki Hirao"
+    year: 2020
+    photo: ""
+    url: "https://sdlab.naist.jp/en/authors/toshiki-hirao/"
+    now: "Founder & CEO, dTosh Inc."
+    since: 2026
+
+  - name: "Shade Ruangwan"
+    year: 2020
+    photo: ""
+    url: "https://conf.researchr.org/profile/msr-2022/shaderuangwan"
+    now: "Researcher, Fujitsu Research"
+    since: 2022
+
+  - name: "Yusuf Sulistyo Nugroho"
+    year: 2020
+    photo: ""
+    url: "https://www.ums.ac.id/en/profile/yusuf-sulistyo-nugroho"
+    now: "Lecturer, Universitas Muhammadiyah Surakarta"
+    since: 2026
+
+  - name: "Bodin Chinthanet"
+    year: 2021
+    photo: ""
+    url: "https://bchinthanet.com/"
+    now: "Senior Data Scientist, TAO BIN"
+    since: 2026
+
+  - name: "Keitaro Nakasai"
+    year: 2021
+    photo: ""
+    url: "https://researchmap.jp/keitaro_nakasai?lang=en"
+    now: "Lecturer, Kindai University"
+    since: 2026
+
+  - name: "Dong Wang"
+    year: 2022
+    photo: ""
+    url: "https://dong-w.github.io/"
+    now: "Associate Professor, Tianjin University"
+    since: 2026
+
+  - name: "Syful Islam"
+    year: 2022
+    photo: ""
+    url: "https://syful-is.github.io/"
+    now: "Assistant Professor, Gopalganj Science & Technology University"
+    since: 2026
+
+  - name: "Yuki Ueda"
+    year: 2022
+    photo: ""
+    url: ""
+    now: ""
+    since: ""
+
+  - name: "Pattaraporn Tulathum"
+    year: 2022
+    photo: ""
+    url: ""
+    now: ""
+    since: ""
+
+  - name: "Supavas Sitthithanasakul"
+    year: 2023
+    photo: ""
+    url: "https://scholar.google.com/citations?user=QGjS-lcAAAAJ"
+    now: ""
+    since: ""
+
+  - name: "Supatsara Wattanakriengkrai"
+    year: 2024
+    photo: ""
+    url: "https://conf.researchr.org/profile/supatsarawattanakriengkrai"
+    now: "Researcher, NAIST"
+    since: 2026
+
+  - name: "Ifraz Rehman"
+    year: 2024
+    photo: ""
+    url: "https://scholar.google.com/citations?user=q3gXDJIAAAAJ"
+    now: ""
+    since: ""
+
+  - name: "Tao Xiao"
+    year: 2024
+    photo: ""
+    url: "https://tao-xiao.github.io/"
+    now: "Assistant Professor, Kyushu University"
+    since: 2026
+
+  - name: "Youmei Fan"
+    year: 2025
+    photo: ""
+    url: "https://fanyoumei.github.io/"
+    now: "Assistant Professor, NAIST"
+    since: 2026
+
+current:
+  - name: "Ani Hovhannisyan"
+    stage: "D3"
+    photo: ""
+    url: "https://naist-se.github.io/en/"
+    now: "NAIST"
+    since: 2026
+
+  - name: "Ruksit Rojpaisarnkit"
+    stage: "D3"
+    photo: ""
+    url: "https://naist-se.github.io/en/"
+    now: "NAIST"
+    since: 2026
+
+  - name: "Lenz Nerit"
+    stage: "D3"
+    photo: ""
+    url: "https://naist-se.github.io/en/"
+    now: "NAIST"
+    since: 2026
+
+  - name: "Pongchai Jaisri"
+    stage: "D2"
+    photo: ""
+    url: "https://naist-se.github.io/en/"
+    now: "NAIST"
+    since: 2026
+
+  - name: "Indira Febriyanti"
+    stage: "D2"
+    photo: ""
+    url: "https://naist-se.github.io/en/"
+    now: "NAIST"
+    since: 2026

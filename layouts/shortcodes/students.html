@@ -1,0 +1,198 @@
+{{/*
+  Student ticker.  Usage in a post:
+
+      {{< students >}}                     both rows
+      {{< students group="graduated" >}}
+      {{< students group="current" >}}
+
+  Reads data/students.yaml.  A person with no `photo` gets a monogram tinted
+  from their position in the list, so the row looks finished before a single
+  photograph arrives.  Drop a square image into static/students/ and fill in
+  `photo:` to replace them one at a time.
+
+  The track holds two copies of the row and drifts left by exactly half its
+  width plus half a gap, which puts copy two where copy one began — so the
+  loop has no seam.  Change the gap in CSS and change the 6px with it.
+*/}}
+
+{{- $d := .Site.Data.students -}}
+{{- $group := .Get "group" | default "both" -}}
+{{- $uid := printf "stx%d" now.UnixNano -}}
+
+<div class="stx" id="{{ $uid }}">
+
+{{- $groups := slice
+      (dict "key" "graduated" "label" "Graduated" "rows" $d.graduated)
+      (dict "key" "current"   "label" "Now supervising" "rows" $d.current) -}}
+
+{{- range $groups }}
+{{- if and .rows (or (eq $group "both") (eq $group .key)) }}
+
+  <section class="stx-row" data-row="{{ .key }}" aria-label="{{ .label }}">
+    <header class="stx-head">
+      <span class="stx-label">{{ .label }}</span>
+      <span class="stx-n">{{ len .rows }}</span>
+    </header>
+
+    <div class="stx-view">
+      <div class="stx-track">
+        {{- $rows := .rows }}
+        {{- range $copy := slice 0 1 }}
+        {{- range $i, $p := $rows }}
+
+          {{- $initials := "" }}
+          {{- range $wi, $w := first 2 (split $p.name " ") }}
+            {{- $initials = printf "%s%s" $initials (upper (substr $w 0 1)) }}
+          {{- end }}
+
+          {{- /* evenly spaced hues; 47 and 360 share no factor, so 15 in a row all differ */}}
+          {{- $hue := mod (mul (add $i 1) 47) 360 }}
+
+          {{- $tag := "" }}
+          {{- with $p.stage }}{{ $tag = . }}{{ else }}{{ $tag = printf "%v" $p.year }}{{ end }}
+
+          {{- $inner := printf `<span class="stx-pic">%s<span class="stx-tag">%s</span></span><span class="stx-name">%s</span><span class="stx-now%s">%s</span>`
+                (cond (ne (printf "%v" $p.photo) "")
+                      (printf `<img src="%s" alt="%s" loading="lazy" width="76" height="76">` (printf "/students/%v" $p.photo | relURL) $p.name)
+                      (printf `<span class="stx-mono" style="--hue:%d" aria-hidden="true">%s</span>` $hue $initials))
+                $tag
+                $p.name
+                (cond (ne (printf "%v" $p.now) "") "" " stx-quiet")
+                (cond (ne (printf "%v" $p.now) "") (printf "%v" $p.now) "&mdash;") }}
+
+          {{- if ne (printf "%v" $p.url) "" }}
+          <a class="stx-card" href="{{ $p.url }}" target="_blank" rel="noopener"
+             {{- if $copy }} aria-hidden="true" tabindex="-1"{{ end }}>{{ $inner | safeHTML }}</a>
+          {{- else }}
+          <div class="stx-card"{{ if $copy }} aria-hidden="true"{{ end }}>{{ $inner | safeHTML }}</div>
+          {{- end }}
+
+        {{- end }}
+        {{- end }}
+      </div>
+    </div>
+  </section>
+
+{{- end }}
+{{- end }}
+
+</div>
+
+<style>
+.stx{
+  --stx-ink:#0D1117; --stx-raise:#161C25; --stx-line:#283140;
+  --stx-text:#EAEEF5; --stx-muted:#909BAD; --stx-dim:#616C7E;
+  --stx-accent:#E23B3B;
+  --stx-gap:12px;
+  margin:34px 0; color:var(--stx-text);
+  font-family:"Archivo","Helvetica Neue",Arial,sans-serif;
+}
+.stx-row{
+  background:var(--stx-ink); border:1px solid var(--stx-line); border-radius:8px;
+  padding:16px 0 18px; margin:0 0 14px; overflow:hidden;
+}
+.stx-head{display:flex; align-items:baseline; gap:9px; padding:0 18px 13px; margin:0}
+.stx-label{
+  font-size:10.5px; letter-spacing:.16em; text-transform:uppercase;
+  font-weight:800; color:var(--stx-muted);
+}
+.stx-n{
+  font-family:"JetBrains Mono",ui-monospace,Menlo,monospace;
+  font-size:10.5px; color:var(--stx-dim); font-variant-numeric:tabular-nums;
+}
+
+.stx-view{overflow-x:auto; overflow-y:hidden; scrollbar-width:none; -ms-overflow-style:none}
+.stx-view::-webkit-scrollbar{display:none}
+
+/* No side padding here: the drift maths below assumes the track is exactly
+   two copies and the gaps between them, nothing else. Cards bleed to the
+   row's edge, which is what a ticker should do anyway. */
+.stx-track{
+  display:flex; gap:var(--stx-gap); width:max-content; margin:0; padding:0;
+  animation:stx-drift 78s linear infinite;
+}
+.stx-row:hover .stx-track,
+.stx-row:focus-within .stx-track{animation-play-state:paused}
+@keyframes stx-drift{
+  from{transform:translateX(0)}
+  to{transform:translateX(calc(-50% - (var(--stx-gap) / 2)))}
+}
+
+.stx-card{
+  flex:0 0 auto; width:132px; display:flex; flex-direction:column; align-items:center;
+  text-align:center; gap:2px; padding:10px 8px 12px; border-radius:7px;
+  background:var(--stx-raise); border:1px solid transparent;
+  text-decoration:none; color:inherit; transition:border-color .16s, transform .16s;
+}
+.stx-card:first-child{margin-left:18px}
+.stx-card:last-child{margin-right:18px}
+a.stx-card:hover, a.stx-card:focus-visible{
+  border-color:var(--stx-accent); transform:translateY(-2px);
+}
+a.stx-card:focus-visible{outline:2px solid var(--stx-accent); outline-offset:2px}
+
+.stx-pic{position:relative; display:block; width:76px; height:76px; margin-bottom:9px}
+.stx-pic img{
+  width:76px; height:76px; max-width:100%; border-radius:50%; object-fit:cover;
+  display:block; background:#202836;
+}
+.stx-mono{
+  width:76px; height:76px; border-radius:50%; display:flex;
+  align-items:center; justify-content:center;
+  font-variation-settings:"wdth" 80; font-weight:800; font-size:25px;
+  color:hsl(var(--hue) 58% 86%);
+  background:linear-gradient(150deg, hsl(var(--hue) 34% 26%), hsl(var(--hue) 30% 17%));
+  border:1px solid hsl(var(--hue) 30% 34%);
+}
+.stx-tag{
+  position:absolute; right:-3px; bottom:-3px;
+  font-family:"JetBrains Mono",ui-monospace,Menlo,monospace;
+  font-size:9.5px; font-weight:700;
+  padding:2px 5px; border-radius:4px;
+  background:var(--stx-ink); border:1px solid var(--stx-line); color:var(--stx-muted);
+  font-variant-numeric:tabular-nums;
+}
+.stx-name{
+  font-size:12.5px; font-weight:700; line-height:1.25;
+  overflow-wrap:anywhere; hyphens:auto;
+}
+.stx-now{
+  font-size:10.5px; line-height:1.35; color:var(--stx-muted);
+  overflow-wrap:anywhere;
+}
+.stx-quiet{color:var(--stx-dim)}
+
+/* No drift for anyone who asked for less motion, and none on touch, where the
+   row gets swiped rather than watched. Both fall back to a plain scroller. */
+@media (prefers-reduced-motion: reduce){ .stx-track{animation:none} }
+@media (hover:none){ .stx-track{animation:none} }
+
+@media (max-width:520px){
+  .stx-card{width:116px}
+  .stx-pic, .stx-pic img, .stx-mono{width:64px; height:64px}
+  .stx-mono{font-size:21px}
+}
+</style>
+
+<script>
+(function(){
+  var root = document.getElementById("{{ $uid }}");
+  if (!root) return;
+  Array.prototype.forEach.call(root.querySelectorAll(".stx-row"), function(row){
+    var view = row.querySelector(".stx-view"),
+        track = row.querySelector(".stx-track");
+    if (!view || !track) return;
+    // Scrolling by hand should not fight the drift, so the first deliberate
+    // scroll stops it for good rather than pausing while the pointer is down.
+    function stop(){
+      track.style.animation = "none";
+      view.removeEventListener("wheel", stop);
+      view.removeEventListener("touchstart", stop);
+      view.removeEventListener("pointerdown", stop);
+    }
+    view.addEventListener("wheel", stop, {passive:true});
+    view.addEventListener("touchstart", stop, {passive:true});
+    view.addEventListener("pointerdown", stop);
+  });
+})();
+</script>
