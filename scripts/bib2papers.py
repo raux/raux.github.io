@@ -86,6 +86,11 @@ VENUE_MAP = [
     (r"integrated development environments",             "IDE Workshop"),
     (r"bridging the divides|\bbridges\b",                "BRIDGES"),
     (r"software engineering and management",             "SE&M"),
+    # EASE and SNPD both contain "software engineering"; neither contains the
+    # ICSE phrase, but keep them above it so intent stays obvious.
+    (r"evaluation and assessment in software engineering|\bease\b", "EASE"),
+    (r"artificial intelligence, networking|\bsnpd\b",   "SNPD"),
+    (r"forum for information retrieval evaluation|\bfire\b", "FIRE"),
     (r"mining software repositories|(\b|/)msr(\b|/)",    "MSR"),
     (r"foundations of software engineering|esec/fse|(\b|/)fse(\b|/)", "ESEC/FSE"),
     (r"international conference on software engineering", "ICSE"),

@@ -4,7 +4,7 @@
 #   facts     <- bib/publications.bib
 #   curation  <- bib/deck-overrides.yaml  (themes, loglines, featured)
 #
-# Last generated 2026-10-20 · 127 papers
+# Last generated 2026-10-20 · 156 papers
 
 featured: "BonsAIDE: An Extended Vision for Human-AI Interaction in IDEs"
 
@@ -649,6 +649,16 @@ papers:
     authors: ["Dong Wang", "Masanari Kondo", "Yasutaka Kamei", "Raula Gaikovina Kula", "Naoyasu Ubayashi"]
     insts: [tianjin, kyushu, osaka]
     self: ["Raula Gaikovina Kula"]
+  - title: "An Empirical Evaluation of Competitive Programming AI: A Case Study of AlphaCode"
+    year: 2022
+    venue: "IWSC"
+    kind: conf
+    themes: [prof]
+    logline: "An early, sceptical look at whether a competitive-programming AI writes code anyone would keep."
+    url: "https://dblp.org/search?q=An%20Empirical%20Evaluation%20of%20Competitive%20Programming%20AI%3A%20A%20Case%20Study%20of%20AlphaCode"
+    authors: ["Sila Lertbanjongngam", "Bodin Chinthanet", "Takashi Ishio", "Raula Gaikovina Kula", "Pattara Leelaprute", "Bundit Manaskasemsak", "Arnon Rungsawang", "Kenichi Matsumoto"]
+    insts: [fun, osaka, naist]
+    self: ["Raula Gaikovina Kula"]
   - title: "An Exploration of npm Package Co-Usage Examples from Stack Overflow"
     year: 2022
     venue: "IEICE Transactions"
@@ -668,6 +678,16 @@ papers:
     url: "https://dblp.org/search?q=Analyzing%20First%20Contributions%20on%20GitHub%3A%20What%20Do%20Newcomers%20Do"
     authors: ["Vikram N. Subramanian", "Ifraz Rehman", "Meiyappan Nagappan", "Raula Gaikovina Kula"]
     insts: [waterloo, osaka]
+    self: ["Raula Gaikovina Kula"]
+  - title: "Bug-Fix Variants: Visualizing Unique Source Code Changes across GitHub Forks"
+    year: 2022
+    venue: "VISSOFT"
+    kind: conf
+    themes: [eco]
+    logline: "The same bug, fixed differently across forks, drawn side by side so the divergence shows."
+    url: "https://dblp.org/search?q=Bug-Fix%20Variants%3A%20Visualizing%20Unique%20Source%20Code%20Changes%20across%20GitHub%20Forks"
+    authors: ["Daigo Imamura", "Takashi Ishio", "Raula Gaikovina Kula", "Kenichi Matsumoto"]
+    insts: [fun, osaka, naist]
     self: ["Raula Gaikovina Kula"]
   - title: "Challenges for Inclusion in Software Engineering: The Case of the Emerging Papua New Guinean Society"
     year: 2022
@@ -689,6 +709,26 @@ papers:
     authors: ["Tao Xiao", "Dong Wang", "Shane McIntosh", "Hideaki Hata", "Raula Gaikovina Kula", "Takashi Ishio", "Kenichi Matsumoto"]
     insts: [kyushu, tianjin, waterloo, shinshu, osaka, fun, naist]
     self: ["Raula Gaikovina Kula"]
+  - title: "Does Coding in Pythonic Zen Peak Performance? Preliminary Experiments of Nine Pythonic Idioms at Scale"
+    year: 2022
+    venue: "ICPC"
+    kind: conf
+    themes: [prof]
+    logline: "Nine Pythonic idioms benchmarked at scale, asking whether writing it beautifully also makes it fast."
+    url: "https://dblp.org/search?q=Does%20Coding%20in%20Pythonic%20Zen%20Peak%20Performance%3F%20Preliminary%20Experiments%20of%20Nine%20Pythonic%20Idioms%20at%20Scale"
+    authors: ["Pattara Leelaprute", "Bodin Chinthanet", "Supatsara Wattanakriengkrai", "Raula Gaikovina Kula", "Pongchai Jaisri", "Takashi Ishio"]
+    insts: [naist, osaka, fun]
+    self: ["Raula Gaikovina Kula"]
+  - title: "GitHub Discussions: An Exploratory Study of Early Adoption"
+    year: 2022
+    venue: "Empirical Software Engineering"
+    kind: journal
+    themes: [soc]
+    logline: "What projects did with GitHub Discussions in the first months it existed, before any norms had formed."
+    url: "https://dblp.org/search?q=GitHub%20Discussions%3A%20An%20Exploratory%20Study%20of%20Early%20Adoption"
+    authors: ["Hideaki Hata", "Nicole Novielli", "Sebastian Baltes", "Raula Gaikovina Kula", "Christoph Treude"]
+    insts: [shinshu, heidelberg, osaka, smu]
+    self: ["Raula Gaikovina Kula"]
   - title: "GitHub Repositories with Links to Academic Papers: Public Access, Traceability, and Evolution"
     year: 2022
     venue: "Journal of Systems and Software"
@@ -699,6 +739,66 @@ papers:
     authors: ["Supatsara Wattanakriengkrai", "Bodin Chinthanet", "Hideaki Hata", "Raula Gaikovina Kula", "Christoph Treude", "Jin Guo", "Kenichi Matsumoto"]
     insts: [naist, shinshu, osaka, smu]
     self: ["Raula Gaikovina Kula"]
+  - title: "In War and Peace: The Impact of World Politics on Software Ecosystems"
+    year: 2022
+    venue: "ESEC/FSE"
+    kind: conf
+    themes: [soc, eco]
+    logline: "The year open source found out it has a foreign policy, told through the packages caught in it."
+    url: "https://dblp.org/search?q=In%20War%20and%20Peace%3A%20The%20Impact%20of%20World%20Politics%20on%20Software%20Ecosystems"
+    authors: ["Raula Gaikovina Kula", "Christoph Treude"]
+    insts: [osaka, smu]
+    self: ["Raula Gaikovina Kula"]
+  - title: "Newcomer OSS-Candidates: Characterizing Contributions of Novice Developers to GitHub"
+    year: 2022
+    venue: "Empirical Software Engineering"
+    kind: journal
+    themes: [soc]
+    logline: "The journal-length answer to what novice developers contribute before the project counts them."
+    url: "https://dblp.org/search?q=Newcomer%20OSS-Candidates%3A%20Characterizing%20Contributions%20of%20Novice%20Developers%20to%20GitHub"
+    authors: ["Ifraz Rehman", "Dong Wang", "Raula Gaikovina Kula", "Takashi Ishio", "Kenichi Matsumoto"]
+    insts: [tianjin, osaka, fun, naist]
+    self: ["Raula Gaikovina Kula"]
+  - title: "On the Use of Refactoring in Security Vulnerability Fixes: An Exploratory Study on Maven Libraries"
+    year: 2022
+    venue: "EASE"
+    kind: conf
+    themes: [sec]
+    logline: "How often a Maven security fix quietly refactors the code around it, and why that complicates trusting the patch."
+    url: "https://dblp.org/search?q=On%20the%20Use%20of%20Refactoring%20in%20Security%20Vulnerability%20Fixes%3A%20An%20Exploratory%20Study%20on%20Maven%20Libraries"
+    authors: ["Ayano Ikegami", "Raula Gaikovina Kula", "Bodin Chinthanet", "Vittunyuta Maeprasart", "Ali Ouni", "Takashi Ishio", "Kenichi Matsumoto"]
+    insts: [osaka, ets, fun, naist]
+    self: ["Raula Gaikovina Kula"]
+  - title: "pycefr: Python Competency Level through Code Analysis"
+    year: 2022
+    venue: "ICPC"
+    kind: conf
+    themes: [prof]
+    logline: "A CEFR-style scale for Python, rating code by how advanced the language it uses is."
+    url: "https://dblp.org/search?q=pycefr%3A%20Python%20Competency%20Level%20through%20Code%20Analysis"
+    authors: ["Gregorio Robles", "Raula Gaikovina Kula", "Chaiyong Ragkhitwetsagul", "Tattiya Sakulniwat", "Kenichi Matsumoto", "Jesús M. González-Barahona"]
+    insts: [urjc, osaka, mahidol, naist]
+    self: ["Raula Gaikovina Kula"]
+  - title: "Reusing My Own Code: Preliminary Results for Competitive Coding in Jupyter Notebooks"
+    year: 2022
+    venue: "APSEC"
+    kind: conf
+    themes: [prof]
+    logline: "How often competitive programmers reach back into their own old notebooks rather than writing it again."
+    url: "https://dblp.org/search?q=Reusing%20My%20Own%20Code%3A%20Preliminary%20Results%20for%20Competitive%20Coding%20in%20Jupyter%20Notebooks"
+    authors: ["Natanon Ritta", "Tasha Settewong", "Raula Gaikovina Kula", "Chaiyong Ragkhitwetsagul", "Thanwadee Sunetnanta", "Kenichi Matsumoto"]
+    insts: [osaka, mahidol, naist]
+    self: ["Raula Gaikovina Kula"]
+  - title: "SojiTantei: Function-Call Reachability Detection of Vulnerable Code for npm Packages"
+    year: 2022
+    venue: "IEICE Transactions"
+    kind: journal
+    themes: [sec]
+    logline: "Whether the vulnerable function in your npm dependency is ever actually called — reachability, not just presence."
+    url: "https://dblp.org/search?q=SojiTantei%3A%20Function-Call%20Reachability%20Detection%20of%20Vulnerable%20Code%20for%20npm%20Packages"
+    authors: ["Bodin Chinthanet", "Raula Gaikovina Kula", "Rodrigo Elizalde Zapata", "Takashi Ishio", "Kenichi Matsumoto", "Akinori Ihara"]
+    insts: [osaka, fun, naist]
+    self: ["Raula Gaikovina Kula"]
   - title: "Special Issue on Software Health of Software Ecosystems"
     year: 2022
     venue: "Science of Computer Programming"
@@ -708,6 +808,46 @@ papers:
     url: "https://dblp.org/search?q=Special%20Issue%20on%20Software%20Health%20of%20Software%20Ecosystems"
     authors: ["Eleni Constantinou", "Dario Di Nucci", "Raula Gaikovina Kula", "Henrique Rocha"]
     insts: [osaka]
+    self: ["Raula Gaikovina Kula"]
+  - title: "V-Achilles: An Interactive Visualization of Transitive Security Vulnerabilities"
+    year: 2022
+    venue: "ASE"
+    kind: conf
+    themes: [sec, eco]
+    logline: "Drawing the dependency graph so a transitive vulnerability is visible instead of buried three levels down."
+    url: "https://dblp.org/search?q=V-Achilles%3A%20An%20Interactive%20Visualization%20of%20Transitive%20Security%20Vulnerabilities"
+    authors: ["Vipawan Jarukitpipat", "Klinton Chhun", "Wachirayana Wanprasert", "Chaiyong Ragkhitwetsagul", "Morakot Choetkiertikul", "Thanwadee Sunetnanta", "Raula Gaikovina Kula", "Bodin Chinthanet", "Takashi Ishio", "Kenichi Matsumoto"]
+    insts: [mahidol, osaka, fun, naist]
+    self: ["Raula Gaikovina Kula"]
+  - title: "Visualizing Contributor Code Competency for PyPI Libraries: Preliminary Results"
+    year: 2022
+    venue: "APSEC"
+    kind: conf
+    themes: [prof]
+    logline: "Reading a contributor's Python level off the code they have actually shipped to PyPI."
+    url: "https://dblp.org/search?q=Visualizing%20Contributor%20Code%20Competency%20for%20PyPI%20Libraries%3A%20Preliminary%20Results"
+    authors: ["Indira Febriyanti", "Raula Gaikovina Kula", "Ruksit Rojpaisarnkit", "Kanchanok Kannee", "Yusuf Sulistyo Nugroho", "Kenichi Matsumoto"]
+    insts: [osaka, naist]
+    self: ["Raula Gaikovina Kula"]
+  - title: "Why Visualize Data When Coding? Preliminary Categories for Coding in Jupyter Notebooks"
+    year: 2022
+    venue: "APSEC"
+    kind: conf
+    themes: [prof]
+    logline: "The reasons people stop mid-notebook to draw a plot, sorted into categories."
+    url: "https://dblp.org/search?q=Why%20Visualize%20Data%20When%20Coding%3F%20Preliminary%20Categories%20for%20Coding%20in%20Jupyter%20Notebooks"
+    authors: ["Tasha Settewong", "Natanon Ritta", "Raula Gaikovina Kula", "Chaiyong Ragkhitwetsagul", "Thanwadee Sunetnanta", "Kenichi Matsumoto"]
+    insts: [osaka, mahidol, naist]
+    self: ["Raula Gaikovina Kula"]
+  - title: "Anti-patterns in Modern Code Review: Symptoms and Prevalence"
+    year: 2021
+    venue: "SANER"
+    kind: conf
+    themes: [review]
+    logline: "The review habits everyone recognises and nobody measures — named, then counted."
+    url: "https://dblp.org/search?q=Anti-patterns%20in%20Modern%20Code%20Review%3A%20Symptoms%20and%20Prevalence"
+    authors: ["Moataz Chouchen", "Ali Ouni", "Raula Gaikovina Kula", "Dong Wang", "Patanamon Thongtanunam", "Mohamed Wiem Mkaouer", "Kenichi Matsumoto"]
+    insts: [ets, osaka, tianjin, melbourne, umflint, naist]
     self: ["Raula Gaikovina Kula"]
   - title: "Automatic Patch Linkage Detection in Code Review Using Textual Content and File Location Features"
     year: 2021
@@ -729,6 +869,26 @@ papers:
     authors: ["Dong Wang", "Yuki Ueda", "Raula Gaikovina Kula", "Takashi Ishio", "Kenichi Matsumoto"]
     insts: [tianjin, osaka, fun, naist]
     self: ["Raula Gaikovina Kula"]
+  - title: "Contrasting Third-Party Package Management User Experience"
+    year: 2021
+    venue: "ICSME"
+    kind: conf
+    themes: [eco, prof]
+    logline: "What developers say about npm, Maven and the rest when asked to put them side by side."
+    url: "https://dblp.org/search?q=Contrasting%20Third-Party%20Package%20Management%20User%20Experience"
+    authors: ["Syful Islam", "Raula Gaikovina Kula", "Christoph Treude", "Bodin Chinthanet", "Takashi Ishio", "Kenichi Matsumoto"]
+    insts: [osaka, smu, fun, naist]
+    self: ["Raula Gaikovina Kula"]
+  - title: "Does Code Review Promote Conformance? A Study of OpenStack Patches"
+    year: 2021
+    venue: "MSR"
+    kind: conf
+    themes: [review]
+    logline: "Whether review actually makes OpenStack patches conform to the project's conventions, or merely makes them land."
+    url: "https://dblp.org/search?q=Does%20Code%20Review%20Promote%20Conformance%3F%20A%20Study%20of%20OpenStack%20Patches"
+    authors: ["Panyawut Sri-Iesaranusorn", "Raula Gaikovina Kula", "Takashi Ishio"]
+    insts: [osaka, fun]
+    self: ["Raula Gaikovina Kula"]
   - title: "How Are Project-Specific Forums Utilized? Participation, Content, and Sentiment in the Eclipse Ecosystem"
     year: 2021
     venue: "Empirical Software Engineering"
@@ -738,6 +898,16 @@ papers:
     url: "https://dblp.org/search?q=How%20are%20project-specific%20forums%20utilized%20Eclipse%20ecosystem"
     authors: ["Yusuf Sulistyo Nugroho", "Syful Islam", "Keitaro Nakasai", "Ifraz Rehman", "Hideaki Hata", "Raula Gaikovina Kula", "Meiyappan Nagappan", "Kenichi Matsumoto"]
     insts: [shinshu, osaka, waterloo, naist]
+    self: ["Raula Gaikovina Kula"]
+  - title: "Interactive ChatBots for Software Engineering: A Case Study of Code Reviewer Recommendation"
+    year: 2021
+    venue: "SNPD"
+    kind: conf
+    themes: [review]
+    logline: "Putting reviewer recommendation behind a chat interface, to see whether anyone would talk to it."
+    url: "https://dblp.org/search?q=Interactive%20ChatBots%20for%20Software%20Engineering%3A%20A%20Case%20Study%20of%20Code%20Reviewer%20Recommendation"
+    authors: ["Noppadol Assavakamhaenghan", "Raula Gaikovina Kula", "Kenichi Matsumoto"]
+    insts: [osaka, naist]
     self: ["Raula Gaikovina Kula"]
   - title: "Lags in the Release, Adoption, and Propagation of npm Vulnerability Fixes"
     year: 2021
@@ -749,6 +919,26 @@ papers:
     authors: ["Bodin Chinthanet", "Raula Gaikovina Kula", "Shane McIntosh", "Takashi Ishio", "Akinori Ihara", "Kenichi Matsumoto"]
     insts: [osaka, waterloo, fun, naist]
     self: ["Raula Gaikovina Kula"]
+  - title: "Research Artifact: The Potential of Meta-Maintenance on GitHub"
+    year: 2021
+    venue: "ICSE Companion"
+    kind: conf
+    themes: [eco]
+    logline: "The dataset and tooling behind the meta-maintenance study, released so the claim can be checked."
+    url: "https://dblp.org/search?q=Research%20Artifact%3A%20The%20Potential%20of%20Meta-Maintenance%20on%20GitHub"
+    authors: ["Hideaki Hata", "Raula Gaikovina Kula", "Takashi Ishio", "Christoph Treude"]
+    insts: [shinshu, osaka, fun, smu]
+    self: ["Raula Gaikovina Kula"]
+  - title: "Same File, Different Changes: The Potential of Meta-Maintenance on GitHub"
+    year: 2021
+    venue: "ICSE"
+    kind: conf
+    themes: [eco]
+    logline: "The same file lives in thousands of repositories and is fixed separately in each. What if that maintenance were shared?"
+    url: "https://dblp.org/search?q=Same%20File%2C%20Different%20Changes%3A%20The%20Potential%20of%20Meta-Maintenance%20on%20GitHub"
+    authors: ["Hideaki Hata", "Raula Gaikovina Kula", "Takashi Ishio", "Christoph Treude"]
+    insts: [shinshu, osaka, fun, smu]
+    self: ["Raula Gaikovina Kula"]
   - title: "Understanding Shared Links and Their Intentions to Meet Information Needs in Modern Code Review"
     year: 2021
     venue: "Empirical Software Engineering"
@@ -759,6 +949,16 @@ papers:
     authors: ["Dong Wang", "Tao Xiao", "Patanamon Thongtanunam", "Raula Gaikovina Kula", "Kenichi Matsumoto"]
     insts: [tianjin, kyushu, melbourne, osaka, naist]
     self: ["Raula Gaikovina Kula"]
+  - title: "Which Dependency Was Updated? Exploring Who Changes Dependencies in npm Packages"
+    year: 2021
+    venue: "SNPD"
+    kind: conf
+    themes: [eco]
+    logline: "Who on a team actually touches the dependency file — and what that says about how updates really happen."
+    url: "https://dblp.org/search?q=Which%20Dependency%20Was%20Updated%3F%20Exploring%20Who%20Changes%20Dependencies%20in%20npm%20Packages"
+    authors: ["Vittunyuta Maeprasart", "Ayano Ikegami", "Raula Gaikovina Kula", "Kenichi Matsumoto"]
+    insts: [osaka, naist]
+    self: ["Raula Gaikovina Kula"]
   - title: "WhoReview: A Multi-objective Search-based Approach for Code Reviewers Recommendation"
     year: 2021
     venue: "Applied Soft Computing"
@@ -768,6 +968,66 @@ papers:
     url: "https://dblp.org/search?q=WhoReview%20multi-objective%20search-based%20code%20reviewers%20recommendation"
     authors: ["Moataz Chouchen", "Ali Ouni", "Mohamed Wiem Mkaouer", "Raula Gaikovina Kula", "Katsuro Inoue"]
     insts: [ets, umflint, osaka, ritsumeikan]
+    self: ["Raula Gaikovina Kula"]
+  - title: "Code-Based Vulnerability Detection in Node.js Applications: How Far Are We?"
+    year: 2020
+    venue: "ASE"
+    kind: conf
+    themes: [sec]
+    logline: "Whether code-level vulnerability detection holds up on real Node.js applications, or only in the paper it was proposed in."
+    url: "https://dblp.org/search?q=Code-Based%20Vulnerability%20Detection%20in%20Node.js%20Applications%3A%20How%20Far%20Are%20We%3F"
+    authors: ["Bodin Chinthanet", "Serena Elisa Ponta", "Henrik Plate", "Antonino Sabetta", "Raula Gaikovina Kula", "Takashi Ishio", "Kenichi Matsumoto"]
+    insts: [osaka, fun, naist]
+    self: ["Raula Gaikovina Kula"]
+  - title: "Kode_Stylers: Author Identification through Naturalness of Code: An Ensemble Approach"
+    year: 2020
+    venue: "FIRE"
+    kind: conf
+    themes: [prof]
+    logline: "Identifying who wrote a piece of code from how natural it reads — an ensemble entry to the shared task."
+    url: "https://dblp.org/search?q=Kode_Stylers%3A%20Author%20Identification%20through%20Naturalness%20of%20Code%3A%20An%20Ensemble%20Approach"
+    authors: ["Panyawut Sri-Iesaranusorn", "Supatsara Wattanakriengkrai", "Teyon Son", "Takeru Tanaka", "Christopher Wiraatmaja", "Takashi Ishio", "Raula Gaikovina Kula"]
+    insts: [naist, fun, osaka]
+    self: ["Raula Gaikovina Kula"]
+  - title: "Newcomer Candidate: Characterizing Contributions of a Novice Developer to GitHub"
+    year: 2020
+    venue: "ICSME"
+    kind: conf
+    themes: [soc]
+    logline: "What a first-time contributor does on GitHub before anyone counts them as a contributor."
+    url: "https://dblp.org/search?q=Newcomer%20Candidate%3A%20Characterizing%20Contributions%20of%20a%20Novice%20Developer%20to%20GitHub"
+    authors: ["Ifraz Rehman", "Dong Wang", "Raula Gaikovina Kula", "Takashi Ishio", "Kenichi Matsumoto"]
+    insts: [tianjin, osaka, fun, naist]
+    self: ["Raula Gaikovina Kula"]
+  - title: "Recommending Peer Reviewers in Modern Code Review: A Multi-objective Search-based Approach"
+    year: 2020
+    venue: "GECCO"
+    kind: conf
+    themes: [review]
+    logline: "The conference version of WhoReview: reviewer assignment posed as multi-objective search."
+    url: "https://dblp.org/search?q=Recommending%20Peer%20Reviewers%20in%20Modern%20Code%20Review%3A%20A%20Multi-objective%20Search-based%20Approach"
+    authors: ["Moataz Chouchen", "Ali Ouni", "Mohamed Wiem Mkaouer", "Raula Gaikovina Kula", "Katsuro Inoue"]
+    insts: [ets, umflint, osaka, ritsumeikan]
+    self: ["Raula Gaikovina Kula"]
+  - title: "Teddy: Automatic Recommendation of Pythonic Idiom Usage for Pull-Based Software Projects"
+    year: 2020
+    venue: "ICSME"
+    kind: conf
+    themes: [prof]
+    logline: "A tool that notices un-Pythonic code in a pull request and offers the idiom instead."
+    url: "https://dblp.org/search?q=Teddy%3A%20Automatic%20Recommendation%20of%20Pythonic%20Idiom%20Usage%20for%20Pull-Based%20Software%20Projects"
+    authors: ["Purit Phan-Udom", "Naruedon Wattanakul", "Tattiya Sakulniwat", "Chaiyong Ragkhitwetsagul", "Thanwadee Sunetnanta", "Morakot Choetkiertikul", "Raula Gaikovina Kula"]
+    insts: [mahidol, osaka]
+    self: ["Raula Gaikovina Kula"]
+  - title: "9.6 Million Links in Source Code Comments: Purpose, Evolution, and Decay"
+    year: 2019
+    venue: "ICSE"
+    kind: conf
+    themes: [soc, eco]
+    logline: "Nine and a half million URLs buried in source comments — what they point at, and how many have already rotted."
+    url: "https://dblp.org/search?q=9.6%20Million%20Links%20in%20Source%20Code%20Comments%3A%20Purpose%2C%20Evolution%2C%20and%20Decay"
+    authors: ["Hideaki Hata", "Christoph Treude", "Raula Gaikovina Kula", "Takashi Ishio"]
+    insts: [shinshu, smu, osaka, fun]
     self: ["Raula Gaikovina Kula"]
   - title: "A Topological Analysis of Communication Channels for Knowledge Sharing in Contemporary GitHub Projects"
     year: 2019
@@ -789,6 +1049,26 @@ papers:
     authors: ["Shohei Ikeda", "Akinori Ihara", "Raula Gaikovina Kula", "Kenichi Matsumoto"]
     insts: [osaka, naist]
     self: ["Raula Gaikovina Kula"]
+  - title: "How Do Contributors Impact Code Naturalness? An Exploratory Study of 50 Python Projects"
+    year: 2019
+    venue: "IWESEP"
+    kind: conf
+    themes: [prof]
+    logline: "Whether code reads as natural turns out to depend on who wrote it, measured across fifty Python projects."
+    url: "https://dblp.org/search?q=How%20Do%20Contributors%20Impact%20Code%20Naturalness%3F%20An%20Exploratory%20Study%20of%2050%20Python%20Projects"
+    authors: ["Thanadon Bunkerd", "Dong Wang", "Raula Gaikovina Kula", "Chaiyong Ragkhitwetsagul", "Morakot Choetkiertikul", "Thanwadee Sunetnanta", "Takashi Ishio", "Kenichi Matsumoto"]
+    insts: [tianjin, osaka, mahidol, fun, naist]
+    self: ["Raula Gaikovina Kula"]
+  - title: "Software Team Member Configurations: A Study of Team Effectiveness in Moodle"
+    year: 2019
+    venue: "IWESEP"
+    kind: conf
+    themes: [soc]
+    logline: "Which combinations of people actually made Moodle's teams effective, and which quietly did not."
+    url: "https://dblp.org/search?q=Software%20Team%20Member%20Configurations%3A%20A%20Study%20of%20Team%20Effectiveness%20in%20Moodle"
+    authors: ["Noppadol Assavakamhaenghan", "Morakot Choetkiertikul", "Suppawong Tuarob", "Raula Gaikovina Kula", "Hideaki Hata", "Chaiyong Ragkhitwetsagul", "Thanwadee Sunetnanta", "Kenichi Matsumoto"]
+    insts: [mahidol, osaka, shinshu, naist]
+    self: ["Raula Gaikovina Kula"]
   - title: "Understanding Developer Commenting in Code Reviews"
     year: 2019
     venue: "IEICE Transactions"
@@ -798,6 +1078,16 @@ papers:
     url: "https://dblp.org/search?q=Understanding%20Developer%20Commenting%20in%20Code%20Reviews"
     authors: ["Toshiki Hirao", "Raula Gaikovina Kula", "Akinori Ihara", "Kenichi Matsumoto"]
     insts: [osaka, naist]
+    self: ["Raula Gaikovina Kula"]
+  - title: "Visualizing the Usage of Pythonic Idioms Over Time: A Case Study of the with open Idiom"
+    year: 2019
+    venue: "IWESEP"
+    kind: conf
+    themes: [prof]
+    logline: "One Python idiom, `with open`, tracked as it spread through real projects year by year."
+    url: "https://dblp.org/search?q=Visualizing%20the%20Usage%20of%20Pythonic%20Idioms%20Over%20Time%3A%20A%20Case%20Study%20of%20the%20with%20open%20Idiom"
+    authors: ["Tattiya Sakulniwat", "Raula Gaikovina Kula", "Chaiyong Ragkhitwetsagul", "Morakot Choetkiertikul", "Thanwadee Sunetnanta", "Dong Wang", "Takashi Ishio", "Kenichi Matsumoto"]
+    insts: [osaka, mahidol, tianjin, fun, naist]
     self: ["Raula Gaikovina Kula"]
   - title: "Web Service API Recommendation for Automated Mashup Creation Using Multi-objective Evolutionary Search"
     year: 2019

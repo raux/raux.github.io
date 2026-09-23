@@ -417,3 +417,92 @@ entries:
   clonegraph2009:
     themes: [prof]
     logline: "Clones that have drifted apart far enough that ordinary detectors miss them."
+
+  # ── 2019-2022 proceedings, recovered 2026-09-23 ──
+  links96million2019:
+    themes: [soc, eco]
+    logline: "Nine and a half million URLs buried in source comments — what they point at, and how many have already rotted."
+  codenaturalness2019:
+    themes: [prof]
+    logline: "Whether code reads as natural turns out to depend on who wrote it, measured across fifty Python projects."
+  teamconfig2019:
+    themes: [soc]
+    logline: "Which combinations of people actually made Moodle's teams effective, and which quietly did not."
+  withopenidiom2019:
+    themes: [prof]
+    logline: "One Python idiom, `with open`, tracked as it spread through real projects year by year."
+  kodestylers2020:
+    themes: [prof]
+    logline: "Identifying who wrote a piece of code from how natural it reads — an ensemble entry to the shared task."
+  peerreviewsearch2020:
+    themes: [review]
+    logline: "The conference version of WhoReview: reviewer assignment posed as multi-objective search."
+  teddy2020:
+    themes: [prof]
+    logline: "A tool that notices un-Pythonic code in a pull request and offers the idiom instead."
+  newcomercandidate2020:
+    themes: [soc]
+    logline: "What a first-time contributor does on GitHub before anyone counts them as a contributor."
+  nodejsvulndetect2020:
+    themes: [sec]
+    logline: "Whether code-level vulnerability detection holds up on real Node.js applications, or only in the paper it was proposed in."
+  metamaintenance2021:
+    themes: [eco]
+    logline: "The same file lives in thousands of repositories and is fixed separately in each. What if that maintenance were shared?"
+  metamaintenanceartifact2021:
+    themes: [eco]
+    logline: "The dataset and tooling behind the meta-maintenance study, released so the claim can be checked."
+  pkgmanagerux2021:
+    themes: [eco, prof]
+    logline: "What developers say about npm, Maven and the rest when asked to put them side by side."
+  reviewconformance2021:
+    themes: [review]
+    logline: "Whether review actually makes OpenStack patches conform to the project's conventions, or merely makes them land."
+  whichdependency2021:
+    themes: [eco]
+    logline: "Who on a team actually touches the dependency file — and what that says about how updates really happen."
+  reviewchatbots2021:
+    themes: [review]
+    logline: "Putting reviewer recommendation behind a chat interface, to see whether anyone would talk to it."
+  reviewantipatterns2021:
+    themes: [review]
+    logline: "The review habits everyone recognises and nobody measures — named, then counted."
+  githubdiscussions2022:
+    themes: [soc]
+    logline: "What projects did with GitHub Discussions in the first months it existed, before any norms had formed."
+  newcomerosscandidates2022:
+    themes: [soc]
+    logline: "The journal-length answer to what novice developers contribute before the project counts them."
+  sojitantei2022:
+    themes: [sec]
+    logline: "Whether the vulnerable function in your npm dependency is ever actually called — reachability, not just presence."
+  reusingowncode2022:
+    themes: [prof]
+    logline: "How often competitive programmers reach back into their own old notebooks rather than writing it again."
+  whyvisualizedata2022:
+    themes: [prof]
+    logline: "The reasons people stop mid-notebook to draw a plot, sorted into categories."
+  pypicompetency2022:
+    themes: [prof]
+    logline: "Reading a contributor's Python level off the code they have actually shipped to PyPI."
+  refactorvulnfixes2022:
+    themes: [sec]
+    logline: "How often a Maven security fix quietly refactors the code around it, and why that complicates trusting the patch."
+  pycefr2022:
+    themes: [prof]
+    logline: "A CEFR-style scale for Python, rating code by how advanced the language it uses is."
+  pythoniczen2022:
+    themes: [prof]
+    logline: "Nine Pythonic idioms benchmarked at scale, asking whether writing it beautifully also makes it fast."
+  alphacode2022:
+    themes: [prof]
+    logline: "An early, sceptical look at whether a competitive-programming AI writes code anyone would keep."
+  vachilles2022:
+    themes: [sec, eco]
+    logline: "Drawing the dependency graph so a transitive vulnerability is visible instead of buried three levels down."
+  warandpeace2022:
+    themes: [soc, eco]
+    logline: "The year open source found out it has a foreign policy, told through the packages caught in it."
+  bugfixvariants2022:
+    themes: [eco]
+    logline: "The same bug, fixed differently across forks, drawn side by side so the divergence shows."

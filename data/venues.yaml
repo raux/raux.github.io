@@ -55,6 +55,12 @@
   pub: "ACM"
   color: "#1B7AC4"
   logo: "acm.webp"
+"EASE":
+  abbr: "EASE"
+  full: "Evaluation and Assessment in Software Engineering"
+  pub: "ACM"
+  color: "#1B7AC4"
+  logo: "acm.webp"
 "ESEC/FSE":
   abbr: "FSE"
   full: "Foundations of Software Engineering"
@@ -73,6 +79,12 @@
   pub: "Springer"
   color: "#B33A2B"
   logo: ""
+"FIRE":
+  abbr: "FIRE"
+  full: "Forum for Information Retrieval Evaluation"
+  pub: "ACM"
+  color: "#1B7AC4"
+  logo: "acm.webp"
 "GECCO":
   abbr: "GECCO"
   full: "Genetic and Evolutionary Computation"
@@ -82,6 +94,12 @@
 "ICPC":
   abbr: "ICPC"
   full: "International Conference on Program Comprehension"
+  pub: "IEEE"
+  color: "#00629B"
+  logo: "ieee-cs.webp"
+"ICSE":
+  abbr: "ICSE"
+  full: "International Conference on Software Engineering"
   pub: "IEEE"
   color: "#00629B"
   logo: "ieee-cs.webp"
@@ -232,6 +250,12 @@
 "SIML":
   abbr: "SIML"
   full: "Smart Computing, IoT and Machine Learning"
+  pub: "IEEE"
+  color: "#00629B"
+  logo: "ieee-cs.webp"
+"SNPD":
+  abbr: "SNPD"
+  full: "Software Engineering, Artificial Intelligence and Networking"
   pub: "IEEE"
   color: "#00629B"
   logo: "ieee-cs.webp"
