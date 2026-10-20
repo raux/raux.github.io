@@ -4,19 +4,19 @@
 #   facts     <- bib/publications.bib
 #   curation  <- bib/deck-overrides.yaml  (themes, loglines, featured)
 #
-# Last generated 2026-09-12 · 127 papers
+# Last generated 2026-10-20 · 127 papers
 
 featured: "BonsAIDE: An Extended Vision for Human-AI Interaction in IDEs"
 
 spotlight:
-  - "An Exploratory Study on Library Aging by Monitoring Client Usage in a Software Ecosystem"
-  - "Contributing Back to the Ecosystem: A User Survey of NPM Developers"
-  - "How Are Project-Specific Forums Utilized? Participation, Content, and Sentiment in the Eclipse Ecosystem"
-  - "Visualizing the Evolution of Systems and Their Library Dependencies"
-  - "The Ever-Evolving Promises of Data in Software Ecosystems"
-  - "Forecasting Developer Environments with GenAI: A Research Perspective"
-  - "Special Issue on Software Health of Software Ecosystems"
-  - "The Shift from Writing to Pruning Software: A Bonsai-Inspired IDE for Reshaping AI Generated Code"
+  - "Report on BRIdging the Divides with Globally Engineered Software (BRIDGES) 2026"
+  - "Understanding the Role of External Pull Requests in the NPM Ecosystem"
+  - "Quantitative Analysis of Maintenance Processes at the Micro Level"
+  - "Extracting Insights from the Topology of the JavaScript Package Ecosystem"
+  - "Meta-Maintenance for Dockerfiles: Are We There Yet?"
+  - "Lags in the Release, Adoption, and Propagation of npm Vulnerability Fixes"
+  - "Can We Benchmark Code Review Studies? A Systematic Mapping Study of Methodology, Dataset, and Metric"
+  - "Rethinking Reuse in Dependency Supply Chains: Initial Analysis of NPM Packages at the End of the Chain"
 
 papers:
   - title: "A Longitudinal Analysis of Good First Issue Practices and Newcomer Pull Requests in Popular OSS Projects"
