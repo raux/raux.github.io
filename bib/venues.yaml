@@ -167,6 +167,18 @@ venues:
     abbr: IWSC
     full: International Workshop on Software Clones
     publisher: ieee
+  "EASE":
+    abbr: EASE
+    full: Evaluation and Assessment in Software Engineering
+    publisher: acm
+  "FIRE":
+    abbr: FIRE
+    full: Forum for Information Retrieval Evaluation
+    publisher: acm
+  "SNPD":
+    abbr: SNPD
+    full: Software Engineering, Artificial Intelligence and Networking
+    publisher: ieee
   "GECCO":
     abbr: GECCO
     full: Genetic and Evolutionary Computation

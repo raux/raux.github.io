@@ -58,8 +58,12 @@ Branch `feature/papers-2025-2026`. 20 commits.
 
 ### Changed
 
-- **The catalogue is complete: 43 papers → 127, spanning 2019-2024 → 2009-2026**, every one
-  with its author list. 44 venue plates, 15 institutions.
+- **The catalogue is complete: 43 papers → 156, spanning 2019-2024 → 2009-2026**, every one
+  with its author list. 48 venue plates, 15 institutions.
+- **The 2019-2022 proceedings, recovered.** The first import took journal articles for those years
+  and almost no conference papers, which left 2020 empty and 2019 at four. 29 papers added from
+  DBLP — 26 of them conference papers — taking that window from 16 to 45 and the record from 127 to
+  156. New plates for EASE, SNPD and FIRE, and aliases for three co-authors DBLP prints two ways.
 - **Bylines and affiliations.** Cards show the first author in bold with a `+N` for the
   rest, and the accent colour when Kula is first author. The detail sheet lists everyone,
   tags the first author, and shows every distinct institution on the paper. Affiliations

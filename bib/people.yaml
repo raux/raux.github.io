@@ -17,6 +17,10 @@
 aliases:
   "Brittany Anne Reid": "Brittany Reid"
   "Jesus M. Gonzalez-Barahona": "Jesús M. González-Barahona"
+  # DBLP prints these three both ways across the 2019-2022 proceedings
+  "Motaz Chouchen": "Moataz Chouchen"
+  "Panyawut Sriiesaranusorn": "Panyawut Sri-Iesaranusorn"
+  "Rodrigo Eliza Zapata": "Rodrigo Elizalde Zapata"
 
 institutions:
   osaka:       { name: "The University of Osaka", short: "Osaka", color: "#0F3B7C" }
@@ -254,3 +258,18 @@ people:
   "Yong Jin": { institution: "" }   # 1 paper
   "Yoshihiko Fukushima": { institution: "" }   # 1 paper
   "Yuki Yano": { institution: "" }   # 1 paper
+
+  # ── added with the 2019-2022 proceedings ──
+  "Tattiya Sakulniwat": { institution: "" }
+  "Ayano Ikegami": { institution: "" }
+  "Natanon Ritta": { institution: "" }
+  "Daigo Imamura": { institution: "" }
+  "Panyawut Sri-Iesaranusorn": { institution: "" }
+  "Serena Elisa Ponta": { institution: "" }
+  "Henrik Plate": { institution: "" }
+  "Antonino Sabetta": { institution: "" }
+  "Christopher Wiraatmaja": { institution: "" }
+  "Purit Phan-Udom": { institution: "" }
+  "Naruedon Wattanakul": { institution: "" }
+  "Thanadon Bunkerd": { institution: "" }
+  "Suppawong Tuarob": { institution: "" }
