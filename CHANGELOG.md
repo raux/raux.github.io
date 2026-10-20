@@ -17,6 +17,15 @@ Branch `feature/papers-2025-2026`. 20 commits.
 
 ### Added
 
+- **Rotating post images.** The top banner and the card thumbnails of every post now
+  take a different picture each day from the folder `assets/rotate/`, chosen at build time
+  (Japan time) with a per-post offset (its rank among the posts), so posts differ from each other but a post's banner and
+  cards agree. Drop any `.jpg`/`.png`/`.webp` in the folder and it joins the rotation; Hugo
+  resizes it at build time (1600 px banner, 640 px card). `pin_image: true` in a post's front
+  matter keeps its own `image:`. Seeded with the eight existing photos (four moved out of
+  `static/images/`). `deploy.yml` gained a daily 00:05 JST schedule so the site rebuilds and the
+  pictures change. The `HUGO_ROTATE_DATE` variable previews another day.
+  `scripts/test-rotation.sh` builds the site for fixed dates and checks the result.
 - **Deadline board at `/deadlines/`.** Submission dates for the venues this group
   publishes in, read from each conference's own dates page on `conf.researchr.org` rather
   than typed out by hand. Each row carries a live countdown, the venue plate, the kind of

@@ -68,7 +68,9 @@
 
 {{ else if eq .Kind "page" }}
     <div class="hero">
-        {{ with .Params.image }}
+        {{ $img := .Params.image }}
+        {{ with partial "rotating-image.html" . }}{{ $img = .full }}{{ end }}
+        {{ with $img }}
             <div class="hero-img">
                 <img class="lazyload" src="/images/thumbnail.gif" data-src="{{ . }}" alt="">
             </div>
@@ -121,7 +123,9 @@
 {{ else if eq .Kind "term" }}
     <div class="hero">
         {{ $firstChild := index .Pages 0 }}
-            {{ with $firstChild.Params.image }}
+            {{ $img := $firstChild.Params.image }}
+            {{ with partial "rotating-image.html" $firstChild }}{{ $img = .full }}{{ end }}
+            {{ with $img }}
                 <div class="hero-img">
                     <img class="lazyload" src="/images/thumbnail.gif" data-src="{{ . }}" alt="">
                 </div>

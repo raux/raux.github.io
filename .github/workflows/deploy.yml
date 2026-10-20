@@ -7,6 +7,9 @@ on:
         branches: [master]
     # allows "Rebuild paper deck" to ask for a redeploy after it commits
     workflow_dispatch:
+    # a daily rebuild, 00:05 Japan time, so the rotating post images change each day
+    schedule:
+        - cron: "5 15 * * *"
 
 jobs:
     build:
