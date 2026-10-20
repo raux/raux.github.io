@@ -76,6 +76,10 @@ python scripts/deadlines.py build --check
 - Keep visual changes in `static/css/_custom.css` when possible; use other stylesheet files only
   for the component they already own.
 - Place new public images and browser assets in `static/`; Hugo copies them to the site root.
+- Post banners and card thumbnails rotate daily through the pictures in `assets/rotate/`
+  (`layouts/partials/rotating-image.html`). To add pictures, drop files in that folder; Hugo
+  resizes them at build time. A post opts out with `pin_image: true`. The daily rebuild is the
+  `schedule:` trigger in `deploy.yml`. `HUGO_ROTATE_DATE=YYYY-MM-DD` previews another day.
 
 ## Validation and deployment
 
@@ -85,6 +89,7 @@ Before a PR, run the applicable checks:
 hugo --minify --gc
 python scripts/bib2papers.py --check       # when paper-deck inputs change
 python scripts/deadlines.py build --check  # when deadline inputs change
+bash scripts/test-rotation.sh              # when rotating-image templates or assets/rotate change
 ```
 
 GitHub Actions builds pull requests targeting `master`. Pushes to `master` trigger

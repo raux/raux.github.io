@@ -2,7 +2,9 @@
 <a href="{{ .Permalink }}">
     <div class="list-item">
         <div class="icon-other-root">
-            {{ with .Params.image }}
+            {{ $img := .Params.image }}
+            {{ with partial "rotating-image.html" . }}{{ $img = .thumb }}{{ end }}
+            {{ with $img }}
                 <div class="icon-other" style="background-image: url( {{ . }} );"></div>
             {{ else }}
                 <div class="icon-other" style="background-image: url( {{ .Site.Params.page.defaultPostImg }} );"></div>

@@ -1,0 +1,54 @@
+{{- /*
+  rotating-image.html: picks today's picture for a post.
+
+  Call:   {{ $r := partial "rotating-image.html" . }}
+  Result: a dict {"full": url, "thumb": url}, or false when the post should
+          keep its own image (pin_image: true, not a post, or an empty folder).
+
+  The pool is every image in assets/rotate/. Hugo resizes each one at build
+  time, so the originals can be as large as they come off a camera.
+
+  The choice is made at build time, from the calendar day (Japan time) plus an
+  offset from the post's rank among posts. So:
+    - the picture changes once a day, whenever the site is rebuilt
+    - different posts show different pictures on the same day
+    - a post's banner and its cards always agree, in both languages
+
+  HUGO_ROTATE_DATE=2026-12-25 pins "today" for testing.
+*/ -}}
+{{- $result := false -}}
+{{- if and (eq .Section "posts") (not .Params.pin_image) -}}
+  {{- $pool := sort (where (resources.Match "rotate/*") "MediaType.MainType" "image") "Name" -}}
+  {{- $n := len $pool -}}
+  {{- if gt $n 0 -}}
+    {{- $now := now -}}
+    {{- with getenv "HUGO_ROTATE_DATE" -}}
+      {{- $now = time . -}}
+    {{- end -}}
+    {{- $day := div (add $now.Unix 32400) 86400 -}}
+    {{- /* per-post offset: this post's rank among all posts (by name), so no two posts share a
+         picture while the folder holds at least as many pictures as there are posts. Ranked on
+         the default language so en and ja agree. A post missing from that list falls back to a hash. */ -}}
+    {{- $keys := slice -}}
+    {{- /* Sites.First was removed in Hugo 0.127 and Sites.Default only exists from then on */ -}}
+    {{- $default := "" -}}
+    {{- if ge (string hugo.Version) "0.127.0" -}}
+      {{- $default = site.Sites.Default -}}
+    {{- else -}}
+      {{- $default = site.Sites.First -}}
+    {{- end -}}
+    {{- range where $default.RegularPages "Section" "posts" -}}
+      {{- $keys = $keys | append .TranslationKey -}}
+    {{- end -}}
+    {{- $keys = sort (uniq $keys) -}}
+    {{- $offset := int (print "0x" (substr (md5 .TranslationKey) 0 6)) -}}
+    {{- range $i, $k := $keys -}}
+      {{- if eq $k $.TranslationKey -}}{{- $offset = $i -}}{{- end -}}
+    {{- end -}}
+    {{- $pick := index $pool (mod (add $day $offset) $n) -}}
+    {{- $full := $pick.Fit "1600x1000 q80 jpg" -}}
+    {{- $thumb := $pick.Fit "640x400 q80 jpg" -}}
+    {{- $result = dict "full" $full.RelPermalink "thumb" $thumb.RelPermalink -}}
+  {{- end -}}
+{{- end -}}
+{{- return $result -}}

@@ -7,7 +7,9 @@
         <div class="taxo-card">
             <div class="folder-rear"></div>
                 {{ $firstChild := index .Pages 0 }}
-                {{ with $firstChild.Params.image }}
+                {{ $img := $firstChild.Params.image }}
+                {{ with partial "rotating-image.html" $firstChild }}{{ $img = .thumb }}{{ end }}
+                {{ with $img }}
                     <div class="taxo-img" style="background-image: url( {{ . }} );"></div>
                 {{ else }}
                     <div class="taxo-img" style="background-image: url( {{ $categorypostsImg }} );"></div>
