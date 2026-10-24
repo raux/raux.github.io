@@ -4,19 +4,19 @@
 #   facts     <- bib/publications.bib
 #   curation  <- bib/deck-overrides.yaml  (themes, loglines, featured)
 #
-# Last generated 2026-10-20 · 156 papers
+# Last generated 2026-10-24 · 156 papers
 
 featured: "BonsAIDE: An Extended Vision for Human-AI Interaction in IDEs"
 
 spotlight:
-  - "Report on BRIdging the Divides with Globally Engineered Software (BRIDGES) 2026"
-  - "Understanding the Role of External Pull Requests in the NPM Ecosystem"
-  - "Quantitative Analysis of Maintenance Processes at the Micro Level"
-  - "Extracting Insights from the Topology of the JavaScript Package Ecosystem"
-  - "Meta-Maintenance for Dockerfiles: Are We There Yet?"
-  - "Lags in the Release, Adoption, and Propagation of npm Vulnerability Fixes"
-  - "Can We Benchmark Code Review Studies? A Systematic Mapping Study of Methodology, Dataset, and Metric"
-  - "Rethinking Reuse in Dependency Supply Chains: Initial Analysis of NPM Packages at the End of the Chain"
+  - "Exploring the SECURITY.md in the Dependency Chain: Preliminary Analysis of the PyPI Ecosystem"
+  - "Maintenance Signals in AI-Assisted GitHub Repositories: Evidence from GenAI Adopters"
+  - "Intertwining Communities: Exploring Libraries that Cross Software Ecosystems"
+  - "Determining Code Proficiency Levels from Python Textbooks"
+  - "An Empirical Study of Package Management Issues via Stack Overflow"
+  - "Extracting Educational Code Examples from Python Textbooks"
+  - "Anti-patterns in Modern Code Review: Symptoms and Prevalence"
+  - "Repeated Builds During Code Review: An Empirical Study of the OpenStack Community"
 
 papers:
   - title: "A Longitudinal Analysis of Good First Issue Practices and Newcomer Pull Requests in Popular OSS Projects"
