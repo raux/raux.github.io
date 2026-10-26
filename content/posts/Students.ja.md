@@ -1,7 +1,7 @@
 ---
 title: "学術貢献、研究助成、学生指導、教育"
 date: 2025-01-25T16:46:16+08:00
-lastmod: 2026-07-15T00:00:00+09:00
+lastmod: 2026-10-26T00:00:00+09:00
 draft: false
 categories: ['活動']
 tags: []
@@ -15,7 +15,7 @@ image: "/images/kipuri.jpg"
 
 NII湘南会議の第[70回](https://shonan.nii.ac.jp/seminars/070/)、[99回](https://shonan.nii.ac.jp/seminars/099/)、[191回](https://shonan.nii.ac.jp/seminars/191/)、[194回](https://shonan.nii.ac.jp/seminars/194/)、[192回](https://shonan.nii.ac.jp/seminars/192/)、[176回](https://shonan.nii.ac.jp/seminars/176/)に参加しました。
 
-また、NII湘南会議の第[207回](https://shonan.nii.ac.jp/seminars/207/)、[222回](https://shonan.nii.ac.jp/seminars/222/)を主催しています。
+また、NII湘南会議の第[207回](https://shonan.nii.ac.jp/seminars/207/)、[222回](https://shonan.nii.ac.jp/seminars/222/)、[228回](https://shonan.nii.ac.jp/seminars/228/)を主催しています。
 
 # ソフトウェアの研究と教育を結びつける国際ワークショップ（WIREDS）
 

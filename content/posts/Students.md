@@ -3,7 +3,7 @@ title: "Service, Grants, Students and Teaching"
 date: 2025-01-25T16:46:16+08:00
 
 # format for string: "xxxx-xx-xx"
-lastmod: 2026-07-15T00:00:00+09:00
+lastmod: 2026-10-26T00:00:00+09:00
 
 # set false when you want the post publish
 draft: false
@@ -29,7 +29,7 @@ image: "/images/kipuri.jpg"
 
 Attended Shonan meetings #:[70](https://shonan.nii.ac.jp/seminars/070/), [99](https://shonan.nii.ac.jp/seminars/099/), [191](https://shonan.nii.ac.jp/seminars/191/), [194](https://shonan.nii.ac.jp/seminars/194/), [192](https://shonan.nii.ac.jp/seminars/192/), [176](https://shonan.nii.ac.jp/seminars/176/), 
 
-I have been hosting some Shonan Meetings #: [207](https://shonan.nii.ac.jp/seminars/207/), [222](https://shonan.nii.ac.jp/seminars/222/)
+I have been hosting some Shonan Meetings #: [207](https://shonan.nii.ac.jp/seminars/207/), [222](https://shonan.nii.ac.jp/seminars/222/), [228](https://shonan.nii.ac.jp/seminars/228/)
 
 # International Workshop on Intertwining Research & Education on Software (WIREDS)
 Software powers our everyday lives. The First International Workshop on Intertwining Research & Education on Software (WIREDS2024) is a pioneering initiative designed to bridge the gap between research and education within the Japanese software community to bring top class research to the global community.
