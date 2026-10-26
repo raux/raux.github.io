@@ -4,19 +4,19 @@
 #   facts     <- bib/publications.bib
 #   curation  <- bib/deck-overrides.yaml  (themes, loglines, featured)
 #
-# Last generated 2026-10-20 · 156 papers
+# Last generated 2026-10-26 · 156 papers
 
 featured: "BonsAIDE: An Extended Vision for Human-AI Interaction in IDEs"
 
 spotlight:
-  - "Report on BRIdging the Divides with Globally Engineered Software (BRIDGES) 2026"
-  - "Understanding the Role of External Pull Requests in the NPM Ecosystem"
-  - "Quantitative Analysis of Maintenance Processes at the Micro Level"
-  - "Extracting Insights from the Topology of the JavaScript Package Ecosystem"
-  - "Meta-Maintenance for Dockerfiles: Are We There Yet?"
-  - "Lags in the Release, Adoption, and Propagation of npm Vulnerability Fixes"
-  - "Can We Benchmark Code Review Studies? A Systematic Mapping Study of Methodology, Dataset, and Metric"
-  - "Rethinking Reuse in Dependency Supply Chains: Initial Analysis of NPM Packages at the End of the Chain"
+  - "Going Viral: Case Studies on the Impact of Protestware"
+  - "A Longitudinal Analysis of Good First Issue Practices and Newcomer Pull Requests in Popular OSS Projects"
+  - "On Updating Library Dependencies in OSS Projects"
+  - "Contributing Back to the Ecosystem: A User Survey of NPM Developers"
+  - "Maintenance Signals in AI-Assisted GitHub Repositories: Evidence from GenAI Adopters"
+  - "Security by Documentation? Characterizing GitHub SECURITY.md Policy and Their Adoption in Python Libraries"
+  - "How Natural Language Proficiency Shapes GenAI Code for Software Engineering Tasks"
+  - "What About Our Bug? A Study on the Responsiveness of NPM Package Maintainers"
 
 papers:
   - title: "A Longitudinal Analysis of Good First Issue Practices and Newcomer Pull Requests in Popular OSS Projects"
