@@ -1,7 +1,7 @@
 # GENERATED FILE — do not edit by hand.
 # Regenerate with:  python scripts/deadlines.py build
 #
-# Last generated 2026-10-20 · 91 dates across 9 conferences
+# Last generated 2026-10-26 · 98 dates across 9 conferences
 
 conferences:
   apsec-2026:
@@ -156,13 +156,6 @@ dates:
     kind: submission
     tz: "AoE (UTC-12h)"
     url: "https://conf.researchr.org/track/fse-2027/fse-2027-papers"
-  - date: "2026-10-16"
-    conf: chase-2027
-    track: "Research Track"
-    label: "Abstract submission"
-    kind: submission
-    tz: "AoE (UTC-12h)"
-    url: "https://conf.researchr.org/track/chase-2027/chase-2027-papers"
   - date: "2026-10-19"
     conf: apsec-2026
     track: "Early Research Achievements (ERA)"
@@ -201,7 +194,7 @@ dates:
   - date: "2026-10-23"
     conf: chase-2027
     track: "Research Track"
-    label: "Paper Submission"
+    label: "Abstract submission"
     kind: submission
     tz: "AoE (UTC-12h)"
     url: "https://conf.researchr.org/track/chase-2027/chase-2027-papers"
@@ -233,6 +226,13 @@ dates:
     kind: submission
     tz: "AoE (UTC-12h)"
     url: "https://conf.researchr.org/track/icpc-2027/icpc-2027-research-track"
+  - date: "2026-10-30"
+    conf: chase-2027
+    track: "Research Track"
+    label: "Paper Submission"
+    kind: submission
+    tz: "AoE (UTC-12h)"
+    url: "https://conf.researchr.org/track/chase-2027/chase-2027-papers"
   - date: "2026-10-30"
     conf: icse-2027
     track: "FormaliSE Artifact Track"
@@ -535,6 +535,13 @@ dates:
     tz: "AoE (UTC-12h)"
     url: "https://conf.researchr.org/track/icse-2027/icse-2027-research-track"
   - date: "2027-01-26"
+    conf: fse-2027
+    track: "Tool Demonstrations"
+    label: "Submission deadline"
+    kind: submission
+    tz: "AoE (UTC-12h)"
+    url: "https://conf.researchr.org/track/fse-2027/fse-2027-demonstrations"
+  - date: "2027-01-26"
     conf: msr-2027
     track: "Technical Papers"
     label: "Camera Ready Deadline"
@@ -604,6 +611,13 @@ dates:
     kind: camera
     tz: "AoE (UTC-12h)"
     url: "https://conf.researchr.org/home/icse-2027/wsese-2027"
+  - date: "2027-02-25"
+    conf: fse-2027
+    track: "Journal-First Paper"
+    label: "Submission deadline"
+    kind: submission
+    tz: "AoE (UTC-12h)"
+    url: "https://conf.researchr.org/track/fse-2027/fse-2027-journal-first"
   - date: "2027-03-01"
     conf: icse-2027
     track: "MSR Awards"
@@ -632,6 +646,20 @@ dates:
     kind: submission
     tz: "AoE (UTC-12h)"
     url: "https://conf.researchr.org/track/icsme-2027/icsme-2027-papers"
+  - date: "2027-03-17"
+    conf: fse-2027
+    track: "Tool Demonstrations"
+    label: "Notification to authors"
+    kind: notification
+    tz: "AoE (UTC-12h)"
+    url: "https://conf.researchr.org/track/fse-2027/fse-2027-demonstrations"
+  - date: "2027-03-25"
+    conf: fse-2027
+    track: "Journal-First Paper"
+    label: "Author notification"
+    kind: notification
+    tz: "AoE (UTC-12h)"
+    url: "https://conf.researchr.org/track/fse-2027/fse-2027-journal-first"
   - date: "2027-03-26"
     conf: fse-2027
     track: "Software Engineering Education"
@@ -646,6 +674,13 @@ dates:
     kind: notification
     tz: "AoE (UTC-12h)"
     url: "https://conf.researchr.org/track/fse-2027/fse-2027-papers"
+  - date: "2027-04-02"
+    conf: fse-2027
+    track: "Tool Demonstrations"
+    label: "Camera-ready deadline"
+    kind: camera
+    tz: "AoE (UTC-12h)"
+    url: "https://conf.researchr.org/track/fse-2027/fse-2027-demonstrations"
   - date: "2027-04-16"
     conf: fse-2027
     track: "Software Engineering Education"
@@ -688,3 +723,17 @@ dates:
     kind: camera
     tz: "AoE (UTC-12h)"
     url: "https://conf.researchr.org/track/icsme-2027/icsme-2027-papers"
+  - date: "2027-07-16"
+    conf: fse-2027
+    track: "Journal-First Paper"
+    label: "Conference"
+    kind: event
+    tz: "AoE (UTC-12h)"
+    url: "https://conf.researchr.org/track/fse-2027/fse-2027-journal-first"
+  - date: "2027-07-16"
+    conf: fse-2027
+    track: "Tool Demonstrations"
+    label: "Conference"
+    kind: event
+    tz: "AoE (UTC-12h)"
+    url: "https://conf.researchr.org/track/fse-2027/fse-2027-demonstrations"
