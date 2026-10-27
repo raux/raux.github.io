@@ -13,8 +13,10 @@
                     <div class="xian-r"></div>
                 </div>
                 <div class="terms-row">
-                    {{ range first .Site.Params.page.maxHomePostCount .Site.RegularPages }}
-                    {{ if and (not .Params.hideFromHomePage) (eq $kind "home") }}
+                    {{/* drop hideFromHomePage pages first, then take the newest N, so hidden pages never use up a slot */}}
+                    {{ $homePosts := where .Site.RegularPages "Params.hidefromhomepage" "ne" true }}
+                    {{ range first .Site.Params.page.maxHomePostCount $homePosts }}
+                    {{ if eq $kind "home" }}
                     <div class="terms-root">
                         {{ partial "widgets/post-card.html" . }}
                     </div>
