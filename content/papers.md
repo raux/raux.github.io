@@ -6,6 +6,9 @@ lastmod: 2026-09-09T00:00:00+09:00
 # set false when you want the post publish
 draft: false
 
+# keep this page out of the home page's "latest posts"; it stays in the top menu
+hideFromHomePage: true
+
 # Renders layouts/_default/deck.html, driven by data/papers.yaml
 layout: "deck"
 
