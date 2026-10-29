@@ -75,6 +75,9 @@ KINDS = [
     # you only look for "due".  They are nothing an author has to act on.
     ("other",        r"review(s)? due|assigned for review|bidding|pc meeting|"
                      r"review(ing)? period"),
+    # "Submission Notification" is the date you hear back, not a date to submit by,
+    # so notification has to be tried before the words "submission" and "abstract".
+    ("notification", r"notification|notify"),
     ("submission",   r"abstract"),
     ("submission",   r"submission|submit|paper deadline|deadline for|due|proposals"),
     ("notification", r"notification|notify|decision|acceptance|reject|response"),

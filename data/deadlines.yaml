@@ -1,7 +1,7 @@
 # GENERATED FILE — do not edit by hand.
 # Regenerate with:  python scripts/deadlines.py build
 #
-# Last generated 2026-10-26 · 98 dates across 9 conferences
+# Last generated 2026-10-29 · 111 dates across 10 conferences
 
 conferences:
   apsec-2026:
@@ -14,6 +14,11 @@ conferences:
     name: "CHASE 2027"
     url: "https://conf.researchr.org/home/chase-2027"
     venue: "CHASE"
+  ease-2027:
+    source: researchr
+    name: "EASE 2027"
+    url: "https://conf.researchr.org/home/ease-2027"
+    venue: "EASE"
   fse-2027:
     source: researchr
     name: "FSE 2027"
@@ -472,6 +477,13 @@ dates:
     tz: "AoE (UTC-12h)"
     url: "https://conf.researchr.org/track/icpc-2027/icpc-2027-research-track"
   - date: "2027-01-15"
+    conf: ease-2027
+    track: "Research Papers"
+    label: "Abstract Submission deadline"
+    kind: submission
+    tz: "AoE (UTC-12h)"
+    url: "https://conf.researchr.org/track/ease-2027/ease-2027-papers"
+  - date: "2027-01-15"
     conf: icse-2027
     track: "FormaliSE Artifact Track"
     label: "Artifact Notification"
@@ -506,6 +518,13 @@ dates:
     kind: camera
     tz: "AoE (UTC-12h)"
     url: "https://conf.researchr.org/track/icse-2027/icse-2027-new-ideas-and-emerging-results--nier-"
+  - date: "2027-01-22"
+    conf: ease-2027
+    track: "Research Papers"
+    label: "Submission deadline"
+    kind: submission
+    tz: "AoE (UTC-12h)"
+    url: "https://conf.researchr.org/track/ease-2027/ease-2027-papers"
   - date: "2027-01-22"
     conf: fse-2027
     track: "Research Papers"
@@ -611,6 +630,20 @@ dates:
     kind: camera
     tz: "AoE (UTC-12h)"
     url: "https://conf.researchr.org/home/icse-2027/wsese-2027"
+  - date: "2027-02-22"
+    conf: ease-2027
+    track: "Industry Papers"
+    label: "Abstract Submission Deadline"
+    kind: submission
+    tz: "AoE (UTC-12h)"
+    url: "https://conf.researchr.org/track/ease-2027/ease-2027-industry-papers"
+  - date: "2027-02-22"
+    conf: ease-2027
+    track: "Short Papers and Emerging Results"
+    label: "Abstract Submission Deadline"
+    kind: submission
+    tz: "AoE (UTC-12h)"
+    url: "https://conf.researchr.org/track/ease-2027/ease-2027-short-papers-and-emerging-results"
   - date: "2027-02-25"
     conf: fse-2027
     track: "Journal-First Paper"
@@ -618,6 +651,20 @@ dates:
     kind: submission
     tz: "AoE (UTC-12h)"
     url: "https://conf.researchr.org/track/fse-2027/fse-2027-journal-first"
+  - date: "2027-03-01"
+    conf: ease-2027
+    track: "Industry Papers"
+    label: "Full Paper Submission"
+    kind: submission
+    tz: "AoE (UTC-12h)"
+    url: "https://conf.researchr.org/track/ease-2027/ease-2027-industry-papers"
+  - date: "2027-03-01"
+    conf: ease-2027
+    track: "Short Papers and Emerging Results"
+    label: "Full paper Submission Deadline"
+    kind: submission
+    tz: "AoE (UTC-12h)"
+    url: "https://conf.researchr.org/track/ease-2027/ease-2027-short-papers-and-emerging-results"
   - date: "2027-03-01"
     conf: icse-2027
     track: "MSR Awards"
@@ -646,6 +693,20 @@ dates:
     kind: submission
     tz: "AoE (UTC-12h)"
     url: "https://conf.researchr.org/track/icsme-2027/icsme-2027-papers"
+  - date: "2027-03-12"
+    conf: ease-2027
+    track: "Research Papers"
+    label: "Notification"
+    kind: notification
+    tz: "AoE (UTC-12h)"
+    url: "https://conf.researchr.org/track/ease-2027/ease-2027-papers"
+  - date: "2027-03-16"
+    conf: ease-2027
+    track: "Posters and Vision"
+    label: "Submission Deadline"
+    kind: submission
+    tz: "AoE (UTC-12h)"
+    url: "https://conf.researchr.org/track/ease-2027/ease-2027-posters-and-vision"
   - date: "2027-03-17"
     conf: fse-2027
     track: "Tool Demonstrations"
@@ -681,6 +742,20 @@ dates:
     kind: camera
     tz: "AoE (UTC-12h)"
     url: "https://conf.researchr.org/track/fse-2027/fse-2027-demonstrations"
+  - date: "2027-04-05"
+    conf: ease-2027
+    track: "Short Papers and Emerging Results"
+    label: "Submission Notification"
+    kind: notification
+    tz: "AoE (UTC-12h)"
+    url: "https://conf.researchr.org/track/ease-2027/ease-2027-short-papers-and-emerging-results"
+  - date: "2027-04-12"
+    conf: ease-2027
+    track: "Industry Papers"
+    label: "Submission Notification"
+    kind: notification
+    tz: "AoE (UTC-12h)"
+    url: "https://conf.researchr.org/track/ease-2027/ease-2027-industry-papers"
   - date: "2027-04-16"
     conf: fse-2027
     track: "Software Engineering Education"
@@ -688,6 +763,13 @@ dates:
     kind: camera
     tz: "AoE (UTC-12h)"
     url: "https://conf.researchr.org/track/fse-2027/fse-2027-software-engineering-education"
+  - date: "2027-04-19"
+    conf: ease-2027
+    track: "Short Papers and Emerging Results"
+    label: "Camera Ready Deadline"
+    kind: camera
+    tz: "AoE (UTC-12h)"
+    url: "https://conf.researchr.org/track/ease-2027/ease-2027-short-papers-and-emerging-results"
   - date: "2027-04-26"
     conf: icse-2027
     track: "WSESE"
@@ -695,6 +777,13 @@ dates:
     kind: other
     tz: "AoE (UTC-12h)"
     url: "https://conf.researchr.org/home/icse-2027/wsese-2027"
+  - date: "2027-04-28"
+    conf: ease-2027
+    track: "Posters and Vision"
+    label: "Notification Deadline"
+    kind: notification
+    tz: "AoE (UTC-12h)"
+    url: "https://conf.researchr.org/track/ease-2027/ease-2027-posters-and-vision"
   - date: "2027-05-02"
     conf: icsme-2027
     track: "Research Papers Track"
@@ -702,6 +791,13 @@ dates:
     kind: notification
     tz: "AoE (UTC-12h)"
     url: "https://conf.researchr.org/track/icsme-2027/icsme-2027-papers"
+  - date: "2027-05-05"
+    conf: ease-2027
+    track: "Posters and Vision"
+    label: "Camera ready"
+    kind: camera
+    tz: "AoE (UTC-12h)"
+    url: "https://conf.researchr.org/track/ease-2027/ease-2027-posters-and-vision"
   - date: "2027-05-07"
     conf: icsme-2027
     track: "Research Papers Track"
