@@ -4,19 +4,19 @@
 #   facts     <- bib/publications.bib
 #   curation  <- bib/deck-overrides.yaml  (themes, loglines, featured)
 #
-# Last generated 2026-10-26 · 156 papers
+# Last generated 2026-10-31 · 156 papers
 
 featured: "BonsAIDE: An Extended Vision for Human-AI Interaction in IDEs"
 
 spotlight:
+  - "Using Profiling Metrics to Categorise Peer Review Types in the Android Project"
+  - "Do Developers Depend on Deprecated Library Versions? A Mining Study of Log4j"
+  - "Social Media Reactions to Open Source Promotions: AI-Powered GitHub Projects on Hacker News"
+  - "Ethical Considerations Toward Protestware"
+  - "Humans Integrate, Agents Fix: How Agent-Authored Pull Requests Are Referenced in Practice"
+  - "Report on BRIdging the Divides with Globally Engineered Software (BRIDGES) 2026"
   - "Going Viral: Case Studies on the Impact of Protestware"
-  - "A Longitudinal Analysis of Good First Issue Practices and Newcomer Pull Requests in Popular OSS Projects"
-  - "On Updating Library Dependencies in OSS Projects"
-  - "Contributing Back to the Ecosystem: A User Survey of NPM Developers"
-  - "Maintenance Signals in AI-Assisted GitHub Repositories: Evidence from GenAI Adopters"
-  - "Security by Documentation? Characterizing GitHub SECURITY.md Policy and Their Adoption in Python Libraries"
-  - "How Natural Language Proficiency Shapes GenAI Code for Software Engineering Tasks"
-  - "What About Our Bug? A Study on the Responsiveness of NPM Package Maintainers"
+  - "Experimental Study of Quantitative Analysis of Maintenance Effort Using Program Slicing-Based Metrics"
 
 papers:
   - title: "A Longitudinal Analysis of Good First Issue Practices and Newcomer Pull Requests in Popular OSS Projects"

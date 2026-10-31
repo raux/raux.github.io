@@ -1,13 +1,13 @@
 pinned: true
 spotlight:
+  - "Using Profiling Metrics to Categorise Peer Review Types in the Android Project"
+  - "Do Developers Depend on Deprecated Library Versions? A Mining Study of Log4j"
+  - "Social Media Reactions to Open Source Promotions: AI-Powered GitHub Projects on Hacker News"
+  - "Ethical Considerations Toward Protestware"
+  - "Humans Integrate, Agents Fix: How Agent-Authored Pull Requests Are Referenced in Practice"
+  - "Report on BRIdging the Divides with Globally Engineered Software (BRIDGES) 2026"
   - "Going Viral: Case Studies on the Impact of Protestware"
-  - "A Longitudinal Analysis of Good First Issue Practices and Newcomer Pull Requests in Popular OSS Projects"
-  - "On Updating Library Dependencies in OSS Projects"
-  - "Contributing Back to the Ecosystem: A User Survey of NPM Developers"
-  - "Maintenance Signals in AI-Assisted GitHub Repositories: Evidence from GenAI Adopters"
-  - "Security by Documentation? Characterizing GitHub SECURITY.md Policy and Their Adoption in Python Libraries"
-  - "How Natural Language Proficiency Shapes GenAI Code for Software Engineering Tasks"
-  - "What About Our Bug? A Study on the Responsiveness of NPM Package Maintainers"
+  - "Experimental Study of Quantitative Analysis of Maintenance Effort Using Program Slicing-Based Metrics"
 # Human-owned curation for the research deck.  Nothing here is ever overwritten.
 #
 # Facts (title, year, venue, url) come from data/*.bib.
