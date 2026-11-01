@@ -140,7 +140,7 @@ conferences:
     name: "APSEC 2026"
     url: "https://conf.researchr.org/home/apsec-2026"
     venue: "APSEC"
-    fetched: "2026-10-31"
+    fetched: "2026-11-01"
     deadlines:
       - date: "2026-07-13"
         track: "Technical Track"
@@ -316,7 +316,7 @@ conferences:
     name: "CHASE 2027"
     url: "https://conf.researchr.org/home/chase-2027"
     venue: "CHASE"
-    fetched: "2026-10-31"
+    fetched: "2026-11-01"
     deadlines:
       - date: "2026-10-23"
         track: "Research Track"
@@ -384,7 +384,7 @@ conferences:
     name: "EASE 2027"
     url: "https://conf.researchr.org/home/ease-2027"
     venue: "EASE"
-    fetched: "2026-10-31"
+    fetched: "2026-11-01"
     deadlines:
       - date: "2026-12-02"
         track: "Workshops"
@@ -586,7 +586,7 @@ conferences:
     name: "FSE 2027"
     url: "https://conf.researchr.org/home/fse-2027"
     venue: "ESEC/FSE"
-    fetched: "2026-10-31"
+    fetched: "2026-11-01"
     deadlines:
       - date: "2026-10-02"
         track: "Research Papers"
@@ -720,7 +720,7 @@ conferences:
     name: "ICPC 2027"
     url: "https://conf.researchr.org/home/icpc-2027"
     venue: "ICPC"
-    fetched: "2026-10-31"
+    fetched: "2026-11-01"
     deadlines:
       - date: "2026-10-29"
         track: "Research Track"
@@ -824,7 +824,7 @@ conferences:
     name: "ICSE 2027"
     url: "https://conf.researchr.org/home/icse-2027"
     venue: "ICSE"
-    fetched: "2026-10-31"
+    fetched: "2026-11-01"
     deadlines:
       - date: "2026-06-12"
         track: "Workshops"
@@ -2464,7 +2464,7 @@ conferences:
     name: "ICSME 2027"
     url: "https://conf.researchr.org/home/icsme-2027"
     venue: "ICSME"
-    fetched: "2026-10-31"
+    fetched: "2026-11-01"
     deadlines:
       - date: "2027-03-05"
         track: "Research Papers Track"
@@ -2502,7 +2502,7 @@ conferences:
     name: "MSR 2027"
     url: "https://conf.researchr.org/home/msr-2027"
     venue: "MSR"
-    fetched: "2026-10-31"
+    fetched: "2026-11-01"
     deadlines:
       - date: "2026-08-03"
         track: "Mining Challenge"
@@ -2696,7 +2696,7 @@ conferences:
     name: "SANER 2027"
     url: "https://conf.researchr.org/home/saner-2027"
     venue: "SANER"
-    fetched: "2026-10-31"
+    fetched: "2026-11-01"
     deadlines:
       - date: "2026-07-27"
         track: "Workshops & Tutorials (W&T)"
