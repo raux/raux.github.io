@@ -1,13 +1,13 @@
 pinned: true
 spotlight:
-  - "Using Profiling Metrics to Categorise Peer Review Types in the Android Project"
-  - "Do Developers Depend on Deprecated Library Versions? A Mining Study of Log4j"
-  - "Social Media Reactions to Open Source Promotions: AI-Powered GitHub Projects on Hacker News"
-  - "Ethical Considerations Toward Protestware"
+  - "Reducing Alert Fatigue via AI-Assisted Negotiation: A Case for Dependabot"
+  - "Characterising Contributions that Coincide with Vulnerability Mitigation in NPM Libraries"
+  - "Mining for Lags in Updating Critical Security Threats: A Case Study of Log4j Library"
   - "Humans Integrate, Agents Fix: How Agent-Authored Pull Requests Are Referenced in Practice"
-  - "Report on BRIdging the Divides with Globally Engineered Software (BRIDGES) 2026"
-  - "Going Viral: Case Studies on the Impact of Protestware"
-  - "Experimental Study of Quantitative Analysis of Maintenance Effort Using Program Slicing-Based Metrics"
+  - "SoL Mantra: Visualizing Update Opportunities Based on Library Coexistence"
+  - "Repeated Builds During Code Review: An Empirical Study of the OpenStack Community"
+  - "Ethical Considerations Toward Protestware"
+  - "Security by Documentation? Characterizing GitHub SECURITY.md Policy and Their Adoption in Python Libraries"
 # Human-owned curation for the research deck.  Nothing here is ever overwritten.
 #
 # Facts (title, year, venue, url) come from data/*.bib.
