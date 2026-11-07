@@ -1,13 +1,13 @@
 pinned: true
 spotlight:
-  - "Reducing Alert Fatigue via AI-Assisted Negotiation: A Case for Dependabot"
-  - "Characterising Contributions that Coincide with Vulnerability Mitigation in NPM Libraries"
+  - "Interactive ChatBots for Software Engineering: A Case Study of Code Reviewer Recommendation"
+  - "9.6 Million Links in Source Code Comments: Purpose, Evolution, and Decay"
+  - "Who Does What During a Code Review? Datasets of OSS Peer Review Repositories"
+  - "The Ever-Evolving Promises of Data in Software Ecosystems"
+  - "A Longitudinal Analysis of Good First Issue Practices and Newcomer Pull Requests in Popular OSS Projects"
+  - "PyGress: Tool for Analyzing the Progression of Code Proficiency in Python OSS Projects"
   - "Mining for Lags in Updating Critical Security Threats: A Case Study of Log4j Library"
-  - "Humans Integrate, Agents Fix: How Agent-Authored Pull Requests Are Referenced in Practice"
-  - "SoL Mantra: Visualizing Update Opportunities Based on Library Coexistence"
-  - "Repeated Builds During Code Review: An Empirical Study of the OpenStack Community"
-  - "Ethical Considerations Toward Protestware"
-  - "Security by Documentation? Characterizing GitHub SECURITY.md Policy and Their Adoption in Python Libraries"
+  - "An Empirical Study of Policy as Code: Adoption, Purpose, and Maintenance"
 # Human-owned curation for the research deck.  Nothing here is ever overwritten.
 #
 # Facts (title, year, venue, url) come from data/*.bib.
