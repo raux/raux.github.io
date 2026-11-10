@@ -1,13 +1,13 @@
 pinned: true
 spotlight:
-  - "Interactive ChatBots for Software Engineering: A Case Study of Code Reviewer Recommendation"
-  - "9.6 Million Links in Source Code Comments: Purpose, Evolution, and Decay"
-  - "Who Does What During a Code Review? Datasets of OSS Peer Review Repositories"
-  - "The Ever-Evolving Promises of Data in Software Ecosystems"
-  - "A Longitudinal Analysis of Good First Issue Practices and Newcomer Pull Requests in Popular OSS Projects"
-  - "PyGress: Tool for Analyzing the Progression of Code Proficiency in Python OSS Projects"
-  - "Mining for Lags in Updating Critical Security Threats: A Case Study of Log4j Library"
-  - "An Empirical Study of Policy as Code: Adoption, Purpose, and Maintenance"
+  - "Kode_Stylers: Author Identification through Naturalness of Code: An Ensemble Approach"
+  - "Forecasting Developer Environments with GenAI: A Research Perspective"
+  - "Maintenance Signals in AI-Assisted GitHub Repositories: Evidence from GenAI Adopters"
+  - "Drop it All or Pick it Up? How Developers Responded to the Log4JShell Vulnerability"
+  - "Rethinking Reuse in Dependency Supply Chains: Initial Analysis of NPM Packages at the End of the Chain"
+  - "An Empirical Study of Security-Policy Related Issues in Open Source Projects"
+  - "What Do Practitioners Ask About Code Clone? A Preliminary Investigation of Stack Overflow"
+  - "Automatic Patch Linkage Detection in Code Review Using Textual Content and File Location Features"
 # Human-owned curation for the research deck.  Nothing here is ever overwritten.
 #
 # Facts (title, year, venue, url) come from data/*.bib.
