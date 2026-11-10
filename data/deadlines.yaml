@@ -1,7 +1,7 @@
 # GENERATED FILE — do not edit by hand.
 # Regenerate with:  python scripts/deadlines.py build
 #
-# Last generated 2026-11-07 · 136 dates across 10 conferences
+# Last generated 2026-11-10 · 135 dates across 10 conferences
 
 conferences:
   apsec-2026:
@@ -290,7 +290,7 @@ dates:
   - date: "2026-11-13"
     conf: icse-2027
     track: "SE4ALL"
-    label: "Paper Submission Deadline"
+    label: "SE4ALL Paper Submission Deadline"
     kind: submission
     tz: "AoE (UTC-12h)"
     url: "https://conf.researchr.org/home/icse-2027/se4all-2027"
@@ -581,13 +581,6 @@ dates:
     kind: camera
     tz: "AoE (UTC-12h)"
     url: "https://conf.researchr.org/track/icse-2027/icse-2027-new-ideas-and-emerging-results--nier-"
-  - date: "2027-01-20"
-    conf: icse-2027
-    track: "SE4ALL"
-    label: "Accepted papers and programme published"
-    kind: other
-    tz: "AoE (UTC-12h)"
-    url: "https://conf.researchr.org/home/icse-2027/se4all-2027"
   - date: "2027-01-22"
     conf: ease-2027
     track: "Research Papers"
