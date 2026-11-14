@@ -1,7 +1,7 @@
 # GENERATED FILE — do not edit by hand.
 # Regenerate with:  python scripts/deadlines.py build
 #
-# Last generated 2026-11-10 · 135 dates across 10 conferences
+# Last generated 2026-11-14 · 149 dates across 10 conferences
 
 conferences:
   apsec-2026:
@@ -289,11 +289,11 @@ dates:
     url: "https://conf.researchr.org/home/icse-2027/raise-2027"
   - date: "2026-11-13"
     conf: icse-2027
-    track: "SE4ALL"
-    label: "SE4ALL Paper Submission Deadline"
+    track: "WSESE"
+    label: "Submission of papers"
     kind: submission
     tz: "AoE (UTC-12h)"
-    url: "https://conf.researchr.org/home/icse-2027/se4all-2027"
+    url: "https://conf.researchr.org/home/icse-2027/wsese-2027"
   - date: "2026-11-17"
     conf: icse-2027
     track: "Research Track"
@@ -301,6 +301,13 @@ dates:
     kind: submission
     tz: "AoE (UTC-12h)"
     url: "https://conf.researchr.org/track/icse-2027/icse-2027-research-track"
+  - date: "2026-11-17"
+    conf: icse-2027
+    track: "TrustedSoftwAIr"
+    label: "Extended Paper Submission Deadline"
+    kind: submission
+    tz: "AoE (UTC-12h)"
+    url: "https://conf.researchr.org/home/icse-2027/trustedsoftwair-2027"
   - date: "2026-11-19"
     conf: icpc-2027
     track: "Early Research Achievements (ERA)"
@@ -310,11 +317,25 @@ dates:
     url: "https://conf.researchr.org/track/icpc-2027/icpc-2027-early-research-achievements--era-"
   - date: "2026-11-20"
     conf: icse-2027
+    track: "EnCyCriS"
+    label: "Paper submission"
+    kind: submission
+    tz: "AoE (UTC-12h)"
+    url: "https://conf.researchr.org/home/icse-2027/encycris-2027"
+  - date: "2026-11-20"
+    conf: icse-2027
     track: "RAISE"
     label: "Paper Submission"
     kind: submission
     tz: "AoE (UTC-12h)"
     url: "https://conf.researchr.org/home/icse-2027/raise-2027"
+  - date: "2026-11-20"
+    conf: icse-2027
+    track: "SE4ALL"
+    label: "SE4ALL Paper Submission Deadline"
+    kind: submission
+    tz: "AoE (UTC-12h)"
+    url: "https://conf.researchr.org/home/icse-2027/se4all-2027"
   - date: "2026-11-23"
     conf: icse-2027
     track: "MSR Awards"
@@ -343,13 +364,6 @@ dates:
     kind: submission
     tz: "AoE (UTC-12h)"
     url: "https://conf.researchr.org/track/icpc-2027/icpc-2027-early-research-achievements--era-"
-  - date: "2026-11-27"
-    conf: icse-2027
-    track: "WSESE"
-    label: "Submission of papers"
-    kind: submission
-    tz: "AoE (UTC-12h)"
-    url: "https://conf.researchr.org/home/icse-2027/wsese-2027"
   - date: "2026-12-01"
     conf: icse-2027
     track: "SEAMS Artifact Track"
@@ -378,6 +392,13 @@ dates:
     kind: submission
     tz: "AoE (UTC-12h)"
     url: "https://conf.researchr.org/track/icse-2027/mobilesoft-2027-research-track"
+  - date: "2026-12-06"
+    conf: icse-2027
+    track: "EnCyCriS"
+    label: "Paper Acceptance Notification"
+    kind: notification
+    tz: "AoE (UTC-12h)"
+    url: "https://conf.researchr.org/home/icse-2027/encycris-2027"
   - date: "2026-12-07"
     conf: icse-2027
     track: "SEAMS Artifact Track"
@@ -399,6 +420,13 @@ dates:
     kind: notification
     tz: "AoE (UTC-12h)"
     url: "https://conf.researchr.org/track/saner-2027/saner-2027-early-research-achievement-era--track"
+  - date: "2026-12-08"
+    conf: saner-2027
+    track: "Journal First Track"
+    label: "Paper submission deadline"
+    kind: submission
+    tz: "AoE (UTC-12h)"
+    url: "https://conf.researchr.org/track/saner-2027/saner-2027-journal-first-track"
   - date: "2026-12-11"
     conf: icse-2027
     track: "Q-SE"
@@ -469,6 +497,13 @@ dates:
     kind: submission
     tz: "AoE (UTC-12h)"
     url: "https://conf.researchr.org/track/saner-2027/saner-2027-doctoral-symposium-track"
+  - date: "2026-12-22"
+    conf: saner-2027
+    track: "Journal First Track"
+    label: "Notifications"
+    kind: notification
+    tz: "AoE (UTC-12h)"
+    url: "https://conf.researchr.org/track/saner-2027/saner-2027-journal-first-track"
   - date: "2027-01-08"
     conf: icse-2027
     track: "MOBILESoft Research Track"
@@ -497,6 +532,13 @@ dates:
     kind: camera
     tz: "AoE (UTC-12h)"
     url: "https://conf.researchr.org/track/saner-2027/saner-2027-early-research-achievement-era--track"
+  - date: "2027-01-08"
+    conf: saner-2027
+    track: "Journal First Track"
+    label: "Author registration deadline"
+    kind: other
+    tz: "AoE (UTC-12h)"
+    url: "https://conf.researchr.org/track/saner-2027/saner-2027-journal-first-track"
   - date: "2027-01-08"
     conf: saner-2027
     track: "Research Track"
@@ -660,6 +702,13 @@ dates:
     url: "https://conf.researchr.org/track/fse-2027/fse-2027-software-engineering-education"
   - date: "2027-01-29"
     conf: icse-2027
+    track: "EnCyCriS"
+    label: "Camera-ready papers"
+    kind: camera
+    tz: "AoE (UTC-12h)"
+    url: "https://conf.researchr.org/home/icse-2027/encycris-2027"
+  - date: "2027-01-29"
+    conf: icse-2027
     track: "FormaliSE Artifact Track"
     label: "Camera-ready Submission"
     kind: camera
@@ -721,6 +770,13 @@ dates:
     kind: camera
     tz: "AoE (UTC-12h)"
     url: "https://conf.researchr.org/track/saner-2027/saner-2027-doctoral-symposium-track"
+  - date: "2027-01-30"
+    conf: icsme-2027
+    track: "Workshop and Panel"
+    label: "Workshop proposal submission"
+    kind: submission
+    tz: "AoE (UTC-12h)"
+    url: "https://conf.researchr.org/track/icsme-2027/icsme-2027-workshop-and-panel"
   - date: "2027-02-12"
     conf: fse-2027
     track: "Ideas, Visions and Reflections"
@@ -728,6 +784,13 @@ dates:
     kind: submission
     tz: "AoE (UTC-12h)"
     url: "https://conf.researchr.org/track/fse-2027/fse-2027-ideas-visions-and-reflections"
+  - date: "2027-02-19"
+    conf: icsme-2027
+    track: "Research Papers Track"
+    label: "Abstract Submission"
+    kind: submission
+    tz: "AoE (UTC-12h)"
+    url: "https://conf.researchr.org/track/icsme-2027/icsme-2027-papers"
   - date: "2027-02-22"
     conf: ease-2027
     track: "Industry Papers"
@@ -756,6 +819,13 @@ dates:
     kind: submission
     tz: "AoE (UTC-12h)"
     url: "https://conf.researchr.org/track/fse-2027/fse-2027-journal-first"
+  - date: "2027-02-26"
+    conf: icsme-2027
+    track: "Research Papers Track"
+    label: "Paper Submission"
+    kind: submission
+    tz: "AoE (UTC-12h)"
+    url: "https://conf.researchr.org/track/icsme-2027/icsme-2027-papers"
   - date: "2027-03-01"
     conf: ease-2027
     track: "Industry Papers"
@@ -798,13 +868,6 @@ dates:
     kind: submission
     tz: "AoE (UTC-12h)"
     url: "https://conf.researchr.org/track/fse-2027/fse-2027-papers"
-  - date: "2027-03-05"
-    conf: icsme-2027
-    track: "Research Papers Track"
-    label: "Paper Submission"
-    kind: submission
-    tz: "AoE (UTC-12h)"
-    url: "https://conf.researchr.org/track/icsme-2027/icsme-2027-papers"
   - date: "2027-03-12"
     conf: ease-2027
     track: "Research Papers"
@@ -826,6 +889,13 @@ dates:
     kind: submission
     tz: "AoE (UTC-12h)"
     url: "https://conf.researchr.org/track/ease-2027/ease-2027-ai-models---data"
+  - date: "2027-03-15"
+    conf: icsme-2027
+    track: "Workshop and Panel"
+    label: "Notification of results"
+    kind: notification
+    tz: "AoE (UTC-12h)"
+    url: "https://conf.researchr.org/track/icsme-2027/icsme-2027-workshop-and-panel"
   - date: "2027-03-16"
     conf: ease-2027
     track: "Posters and Vision"
@@ -919,6 +989,20 @@ dates:
     url: "https://conf.researchr.org/track/ease-2027/ease-2027-short-papers-and-emerging-results"
   - date: "2027-04-25"
     conf: icse-2027
+    track: "EnCyCriS"
+    label: "Workshop date"
+    kind: other
+    tz: "AoE (UTC-12h)"
+    url: "https://conf.researchr.org/home/icse-2027/encycris-2027"
+  - date: "2027-04-25"
+    conf: icse-2027
+    track: "Q-SE"
+    label: "Workshop date"
+    kind: other
+    tz: "AoE (UTC-12h)"
+    url: "https://conf.researchr.org/home/icse-2027/q-se-2027"
+  - date: "2027-04-25"
+    conf: icse-2027
     track: "RAISE"
     label: "Tentative Workshop Date"
     kind: other
@@ -931,6 +1015,13 @@ dates:
     kind: other
     tz: "AoE (UTC-12h)"
     url: "https://conf.researchr.org/home/icse-2027/wsese-2027"
+  - date: "2027-04-26"
+    conf: icsme-2027
+    track: "Research Papers Track"
+    label: "Early Decisions Notification"
+    kind: notification
+    tz: "AoE (UTC-12h)"
+    url: "https://conf.researchr.org/track/icsme-2027/icsme-2027-papers"
   - date: "2027-04-28"
     conf: ease-2027
     track: "Posters and Vision"
@@ -945,6 +1036,13 @@ dates:
     kind: camera
     tz: "AoE (UTC-12h)"
     url: "https://conf.researchr.org/track/ease-2027/ease-2027-ai-models---data"
+  - date: "2027-04-30"
+    conf: icsme-2027
+    track: "Research Papers Track"
+    label: "Author Response Period"
+    kind: notification
+    tz: "AoE (UTC-12h)"
+    url: "https://conf.researchr.org/track/icsme-2027/icsme-2027-papers"
   - date: "2027-05-01"
     conf: icse-2027
     track: "SE4ALL"
@@ -952,13 +1050,6 @@ dates:
     kind: event
     tz: "AoE (UTC-12h)"
     url: "https://conf.researchr.org/home/icse-2027/se4all-2027"
-  - date: "2027-05-02"
-    conf: icsme-2027
-    track: "Research Papers Track"
-    label: "Early Decisions Notification"
-    kind: notification
-    tz: "AoE (UTC-12h)"
-    url: "https://conf.researchr.org/track/icsme-2027/icsme-2027-papers"
   - date: "2027-05-05"
     conf: ease-2027
     track: "Posters and Vision"
@@ -966,20 +1057,27 @@ dates:
     kind: camera
     tz: "AoE (UTC-12h)"
     url: "https://conf.researchr.org/track/ease-2027/ease-2027-posters-and-vision"
-  - date: "2027-05-07"
-    conf: icsme-2027
-    track: "Research Papers Track"
-    label: "Author Response Period"
-    kind: notification
-    tz: "AoE (UTC-12h)"
-    url: "https://conf.researchr.org/track/icsme-2027/icsme-2027-papers"
-  - date: "2027-05-28"
+  - date: "2027-05-25"
     conf: icsme-2027
     track: "Research Papers Track"
     label: "Final Notification"
     kind: notification
     tz: "AoE (UTC-12h)"
     url: "https://conf.researchr.org/track/icsme-2027/icsme-2027-papers"
+  - date: "2027-06-11"
+    conf: icsme-2027
+    track: "Student Volunteer"
+    label: "Application Deadline"
+    kind: other
+    tz: "AoE (UTC-12h)"
+    url: "https://conf.researchr.org/track/icsme-2027/icsme-2027-student-volunteer"
+  - date: "2027-06-21"
+    conf: icsme-2027
+    track: "Student Volunteer"
+    label: "Notification"
+    kind: notification
+    tz: "AoE (UTC-12h)"
+    url: "https://conf.researchr.org/track/icsme-2027/icsme-2027-student-volunteer"
   - date: "2027-06-25"
     conf: icsme-2027
     track: "Research Papers Track"
