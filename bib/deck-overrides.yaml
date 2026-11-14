@@ -1,13 +1,13 @@
 pinned: true
 spotlight:
-  - "Kode_Stylers: Author Identification through Naturalness of Code: An Ensemble Approach"
-  - "Forecasting Developer Environments with GenAI: A Research Perspective"
-  - "Maintenance Signals in AI-Assisted GitHub Repositories: Evidence from GenAI Adopters"
-  - "Drop it All or Pick it Up? How Developers Responded to the Log4JShell Vulnerability"
+  - "Why Visualize Data When Coding? Preliminary Categories for Coding in Jupyter Notebooks"
+  - "Report on BRIdging the Divides with Globally Engineered Software (BRIDGES) 2026"
+  - "Anti-patterns in Modern Code Review: Symptoms and Prevalence"
+  - "Giving Back: Contributions Congruent to Library Dependency Changes in a Software Ecosystem"
+  - "What About Our Bug? A Study on the Responsiveness of NPM Package Maintainers"
+  - "Developer Reactions to Protestware in Open Source Software: The Cases of color.js and es5.ext"
   - "Rethinking Reuse in Dependency Supply Chains: Initial Analysis of NPM Packages at the End of the Chain"
-  - "An Empirical Study of Security-Policy Related Issues in Open Source Projects"
-  - "What Do Practitioners Ask About Code Clone? A Preliminary Investigation of Stack Overflow"
-  - "Automatic Patch Linkage Detection in Code Review Using Textual Content and File Location Features"
+  - "Intertwining Communities: Exploring Libraries that Cross Software Ecosystems"
 # Human-owned curation for the research deck.  Nothing here is ever overwritten.
 #
 # Facts (title, year, venue, url) come from data/*.bib.
