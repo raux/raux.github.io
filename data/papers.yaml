@@ -4,19 +4,19 @@
 #   facts     <- bib/publications.bib
 #   curation  <- bib/deck-overrides.yaml  (themes, loglines, featured)
 #
-# Last generated 2026-11-10 · 156 papers
+# Last generated 2026-11-16 · 156 papers
 
 featured: "BonsAIDE: An Extended Vision for Human-AI Interaction in IDEs"
 
 spotlight:
-  - "Kode_Stylers: Author Identification through Naturalness of Code: An Ensemble Approach"
-  - "Forecasting Developer Environments with GenAI: A Research Perspective"
-  - "Maintenance Signals in AI-Assisted GitHub Repositories: Evidence from GenAI Adopters"
-  - "Drop it All or Pick it Up? How Developers Responded to the Log4JShell Vulnerability"
-  - "Rethinking Reuse in Dependency Supply Chains: Initial Analysis of NPM Packages at the End of the Chain"
-  - "An Empirical Study of Security-Policy Related Issues in Open Source Projects"
   - "What Do Practitioners Ask About Code Clone? A Preliminary Investigation of Stack Overflow"
-  - "Automatic Patch Linkage Detection in Code Review Using Textual Content and File Location Features"
+  - "Interacting with AI Reasoning Models: Harnessing \"Thoughts\" for AI-Driven Software Engineering"
+  - "Search-Based Software Library Recommendation Using Multi-Objective Optimization"
+  - "An Empirical Study of Security-Policy Related Issues in Open Source Projects"
+  - "Code-Based Vulnerability Detection in Node.js Applications: How Far Are We?"
+  - "Modeling Library Dependencies and Updates in Large Software Repository Universes"
+  - "Understanding the Role of Images on Stack Overflow"
+  - "Reusing My Own Code: Preliminary Results for Competitive Coding in Jupyter Notebooks"
 
 papers:
   - title: "A Longitudinal Analysis of Good First Issue Practices and Newcomer Pull Requests in Popular OSS Projects"
