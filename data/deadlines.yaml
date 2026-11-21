@@ -1,7 +1,7 @@
 # GENERATED FILE — do not edit by hand.
 # Regenerate with:  python scripts/deadlines.py build
 #
-# Last generated 2026-11-16 · 151 dates across 10 conferences
+# Last generated 2026-11-21 · 152 dates across 10 conferences
 
 conferences:
   apsec-2026:
@@ -282,13 +282,6 @@ dates:
     url: "https://conf.researchr.org/home/icse-2027/q-se-2027"
   - date: "2026-11-13"
     conf: icse-2027
-    track: "RAISE"
-    label: "Abstract submission"
-    kind: submission
-    tz: "AoE (UTC-12h)"
-    url: "https://conf.researchr.org/home/icse-2027/raise-2027"
-  - date: "2026-11-13"
-    conf: icse-2027
     track: "WSESE"
     label: "Submission of papers"
     kind: submission
@@ -555,6 +548,13 @@ dates:
     url: "https://conf.researchr.org/track/saner-2027/saner-2027-papers"
   - date: "2027-01-11"
     conf: icse-2027
+    track: "CAIN Journal-First Track"
+    label: "Submission deadline"
+    kind: submission
+    tz: "AoE (UTC-12h)"
+    url: "https://conf.researchr.org/track/icse-2027/cain-2027-journal-first"
+  - date: "2027-01-11"
+    conf: icse-2027
     track: "FormaliSE Artifact Track"
     label: "Paper Notification"
     kind: notification
@@ -651,6 +651,13 @@ dates:
     kind: notification
     tz: "AoE (UTC-12h)"
     url: "https://conf.researchr.org/track/icse-2027/seams-2027-journal-first-track"
+  - date: "2027-01-25"
+    conf: icse-2027
+    track: "CAIN Journal-First Track"
+    label: "Notification"
+    kind: notification
+    tz: "AoE (UTC-12h)"
+    url: "https://conf.researchr.org/track/icse-2027/cain-2027-journal-first"
   - date: "2027-01-25"
     conf: icse-2027
     track: "Research Track"
