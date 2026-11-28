@@ -1,13 +1,13 @@
 pinned: true
 spotlight:
+  - "Mining for Lags in Updating Critical Security Threats: A Case Study of Log4j Library"
+  - "Social Media Reactions to Open Source Promotions: AI-Powered GitHub Projects on Hacker News"
+  - "Determining Code Proficiency Levels from Python Textbooks"
+  - "Challenges for Inclusion in Software Engineering: The Case of the Emerging Papua New Guinean Society"
   - "What Do Practitioners Ask About Code Clone? A Preliminary Investigation of Stack Overflow"
-  - "Interacting with AI Reasoning Models: Harnessing \"Thoughts\" for AI-Driven Software Engineering"
-  - "Search-Based Software Library Recommendation Using Multi-Objective Optimization"
-  - "An Empirical Study of Security-Policy Related Issues in Open Source Projects"
-  - "Code-Based Vulnerability Detection in Node.js Applications: How Far Are We?"
-  - "Modeling Library Dependencies and Updates in Large Software Repository Universes"
-  - "Understanding the Role of Images on Stack Overflow"
-  - "Reusing My Own Code: Preliminary Results for Competitive Coding in Jupyter Notebooks"
+  - "Which Dependency Was Updated? Exploring Who Changes Dependencies in npm Packages"
+  - "Report on BRIdging the Divides with Globally Engineered Software (BRIDGES) 2026"
+  - "Ethical Considerations Toward Protestware"
 # Human-owned curation for the research deck.  Nothing here is ever overwritten.
 #
 # Facts (title, year, venue, url) come from data/*.bib.
